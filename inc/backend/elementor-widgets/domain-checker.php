@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly (security measu
 /**
  * Widget Name: Section Heading 
  */
-class Engitech_SearchDomain extends Widget_Base{
+class Valkiriapps_SearchDomain extends Widget_Base{
 
  	// The get_name() method is a simple one, you just need to return a widget name that will be used in the code.
 	public function get_name() {
@@ -14,7 +14,7 @@ class Engitech_SearchDomain extends Widget_Base{
 
 	// The get_title() method, which again, is a very simple one, you need to return the widget title that will be displayed as the widget label.
 	public function get_title() {
-		return __( 'Engitech Domain Checker', 'engitech' );
+		return __( 'Valkiriapps Domain Checker', 'valkiriapps' );
 	}
 
 	// The get_icon() method, is an optional but recommended method, it lets you set the widget icon. you can use any of the eicon or font-awesome icons, simply return the class name as a string.
@@ -24,7 +24,7 @@ class Engitech_SearchDomain extends Widget_Base{
 
 	// The get_categories method, lets you set the category of the widget, return the category name as a string.
 	public function get_categories() {
-		return [ 'category_engitech' ];
+		return [ 'category_valkiriapps' ];
 	}
 
 	protected function register_controls() {
@@ -33,34 +33,34 @@ class Engitech_SearchDomain extends Widget_Base{
 		$this->start_controls_section(
 			'content_section',
 			[
-				'label' => __( 'Form', 'engitech' ),
+				'label' => __( 'Form', 'valkiriapps' ),
 			]
 		);
 
 		$this->add_control(
 			'placeholder',
 			[
-				'label' => __( 'Input Placeholder', 'engitech' ),
+				'label' => __( 'Input Placeholder', 'valkiriapps' ),
 				'type' => Controls_Manager::TEXTAREA,
-				'default' => __( 'Search for tour domain here', 'engitech' ),
+				'default' => __( 'Search for tour domain here', 'valkiriapps' ),
 				'label_block' => true,
 			]
 		);
 		$this->add_control(
 			'label_btn',
 			[
-				'label' => __( 'Label Button', 'engitech' ),
+				'label' => __( 'Label Button', 'valkiriapps' ),
 				'type' => Controls_Manager::TEXTAREA,
-				'default' => __( 'Search', 'engitech' ),
+				'default' => __( 'Search', 'valkiriapps' ),
 				'label_block' => true,
 			]
 		);
 		$this->add_control(
 			'link',
 			[
-				'label' => __( 'Action', 'engitech' ),
+				'label' => __( 'Action', 'valkiriapps' ),
 				'type' => Controls_Manager::URL,
-				'placeholder' => __( 'https://your-link.com', 'engitech' ),
+				'placeholder' => __( 'https://your-link.com', 'valkiriapps' ),
 				'default' => [
 					'url' => '#',
 				],
@@ -70,23 +70,23 @@ class Engitech_SearchDomain extends Widget_Base{
 		$this->add_responsive_control(
 			'text_align',
 			[
-				'label' => __( 'Alignment', 'engitech' ),
+				'label' => __( 'Alignment', 'valkiriapps' ),
 				'type' => Controls_Manager::CHOOSE,
 				'options' => [
 					'left'    => [
-						'title' => __( 'Left', 'engitech' ),
+						'title' => __( 'Left', 'valkiriapps' ),
 						'icon' => 'eicon-text-align-left',
 					],
 					'center' => [
-						'title' => __( 'Center', 'engitech' ),
+						'title' => __( 'Center', 'valkiriapps' ),
 						'icon' => 'eicon-text-align-center',
 					],
 					'right' => [
-						'title' => __( 'Right', 'engitech' ),
+						'title' => __( 'Right', 'valkiriapps' ),
 						'icon' => 'eicon-text-align-right',
 					],
 				],
-				// 'prefix_class' => 'engitech%s-align-',
+				// 'prefix_class' => 'valkiriapps%s-align-',
 				'selectors' => [
 					'{{WRAPPER}} .ot-domain-checker' => 'text-align: {{VALUE}};',
 				],
@@ -99,7 +99,7 @@ class Engitech_SearchDomain extends Widget_Base{
 		$this->start_controls_section(
 			'style_section',
 			[
-				'label' => __( 'Style Form', 'engitech' ),
+				'label' => __( 'Style Form', 'valkiriapps' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -108,7 +108,7 @@ class Engitech_SearchDomain extends Widget_Base{
 		$this->add_control(
 			'heading_input',
 			[
-				'label' => __( 'Input', 'engitech' ),
+				'label' => __( 'Input', 'valkiriapps' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -116,7 +116,7 @@ class Engitech_SearchDomain extends Widget_Base{
 		$this->add_control(
 			'input_bg',
 			[
-				'label' => __( 'Background', 'engitech' ),
+				'label' => __( 'Background', 'valkiriapps' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -127,7 +127,7 @@ class Engitech_SearchDomain extends Widget_Base{
 		$this->add_control(
 			'input_color',
 			[
-				'label' => __( 'Color', 'engitech' ),
+				'label' => __( 'Color', 'valkiriapps' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -145,7 +145,7 @@ class Engitech_SearchDomain extends Widget_Base{
 		$this->add_control(
 			'input_radius',
 			[
-				'label' => __( 'Border Radius', 'engitech' ),
+				'label' => __( 'Border Radius', 'valkiriapps' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%' ],
 				'selectors' => [
@@ -158,7 +158,7 @@ class Engitech_SearchDomain extends Widget_Base{
 		$this->add_control(
 			'heading_btn',
 			[
-				'label' => __( 'Button', 'engitech' ),
+				'label' => __( 'Button', 'valkiriapps' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -174,7 +174,7 @@ class Engitech_SearchDomain extends Widget_Base{
 		$this->add_control(
 			'btn_radius',
 			[
-				'label' => __( 'Border Radius', 'engitech' ),
+				'label' => __( 'Border Radius', 'valkiriapps' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%' ],
 				'selectors' => [
@@ -189,14 +189,14 @@ class Engitech_SearchDomain extends Widget_Base{
 		$this->start_controls_tab(
 			'tab_button_normal',
 			[
-				'label' => __( 'Normal', 'engitech' ),
+				'label' => __( 'Normal', 'valkiriapps' ),
 			]
 		);
 
 		$this->add_control(
 			'button_text_color',
 			[
-				'label' => __( 'Text Color', 'engitech' ),
+				'label' => __( 'Text Color', 'valkiriapps' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -208,7 +208,7 @@ class Engitech_SearchDomain extends Widget_Base{
 		$this->add_control(
 			'background_color',
 			[
-				'label' => __( 'Background Color', 'engitech' ),
+				'label' => __( 'Background Color', 'valkiriapps' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .octf-btn' => 'background-color: {{VALUE}};',
@@ -221,14 +221,14 @@ class Engitech_SearchDomain extends Widget_Base{
 		$this->start_controls_tab(
 			'tab_button_hover',
 			[
-				'label' => __( 'Hover', 'engitech' ),
+				'label' => __( 'Hover', 'valkiriapps' ),
 			]
 		);
 
 		$this->add_control(
 			'hover_color',
 			[
-				'label' => __( 'Text Color', 'engitech' ),
+				'label' => __( 'Text Color', 'valkiriapps' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .octf-btn:hover, {{WRAPPER}} .octf-btn:focus' => 'color: {{VALUE}};',
@@ -239,7 +239,7 @@ class Engitech_SearchDomain extends Widget_Base{
 		$this->add_control(
 			'button_background_hover_color',
 			[
-				'label' => __( 'Background Color', 'engitech' ),
+				'label' => __( 'Background Color', 'valkiriapps' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .octf-btn:hover, {{WRAPPER}} .octf-btn:focus' => 'background-color: {{VALUE}};',
@@ -283,4 +283,4 @@ class Engitech_SearchDomain extends Widget_Base{
 	protected function content_template() {}
 }
 // After the Schedule class is defined, I must register the new widget class with Elementor:
-Plugin::instance()->widgets_manager->register( new Engitech_SearchDomain() );
+Plugin::instance()->widgets_manager->register( new Valkiriapps_SearchDomain() );

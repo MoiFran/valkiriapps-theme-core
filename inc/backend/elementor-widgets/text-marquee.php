@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly (security measu
 /**
  * Widget Name: Text Marquee
  */
-class Engitech_Text_Marquee extends Widget_Base{
+class Valkiriapps_Text_Marquee extends Widget_Base{
 
  	// The get_name() method is a simple one, you just need to return a widget name that will be used in the code.
 	public function get_name() {
@@ -14,7 +14,7 @@ class Engitech_Text_Marquee extends Widget_Base{
 
 	// The get_title() method, which again, is a very simple one, you need to return the widget title that will be displayed as the widget label.
 	public function get_title() {
-		return __( 'Engitech Text Marquee', 'engitech' );
+		return __( 'Valkiriapps Text Marquee', 'valkiriapps' );
 	}
 
 	// The get_icon() method, is an optional but recommended method, it lets you set the widget icon. you can use any of the eicon or font-awesome icons, simply return the class name as a string.
@@ -24,7 +24,7 @@ class Engitech_Text_Marquee extends Widget_Base{
 
 	// The get_categories method, lets you set the category of the widget, return the category name as a string.
 	public function get_categories() {
-		return [ 'category_engitech' ];
+		return [ 'category_valkiriapps' ];
 	}
 
 	protected function register_controls() {
@@ -32,7 +32,7 @@ class Engitech_Text_Marquee extends Widget_Base{
 		$this->start_controls_section(
 			'section_industries',
 			[
-				'label' => __( 'Text', 'engitech' ),
+				'label' => __( 'Text', 'valkiriapps' ),
 			]
 		);
 		$repeater = new Repeater();
@@ -40,15 +40,15 @@ class Engitech_Text_Marquee extends Widget_Base{
 		$repeater->add_control(
 			'ititle',
 			[
-				'label' => __( 'Title', 'engitech' ),
+				'label' => __( 'Title', 'valkiriapps' ),
 				'type' => Controls_Manager::TEXT,
-				'default' => __( 'Business & Finance', 'engitech' ),
+				'default' => __( 'Business & Finance', 'valkiriapps' ),
 			]
         );
         $repeater->add_control(
 			'dots_color',
 			[
-				'label' => esc_html__( 'Dot Color', 'engitech' ),
+				'label' => esc_html__( 'Dot Color', 'valkiriapps' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} {{CURRENT_ITEM}} h6:before' => 'background: {{VALUE}};',
@@ -64,13 +64,13 @@ class Engitech_Text_Marquee extends Widget_Base{
 		        'show_label'  => false,
 		        'default'     => [
 		            [
-						'ititle'	  => __( 'Helthcare', 'engitech' ),
+						'ititle'	  => __( 'Helthcare', 'valkiriapps' ),
 		            ],
 		            [
-                       'ititle'	  => __( 'Manufacturing', 'engitech' ),
+                       'ititle'	  => __( 'Manufacturing', 'valkiriapps' ),
                     ],
                     [
-                    	'ititle'	  => __( 'Logistics', 'engitech' ),
+                    	'ititle'	  => __( 'Logistics', 'valkiriapps' ),
                     ]
                	],
 		        'fields'      => $repeater->get_controls(),
@@ -84,10 +84,10 @@ class Engitech_Text_Marquee extends Widget_Base{
 		$this->add_control(
 			'marquee_show',
 			[
-				'label' => __( 'Marquee To Show', 'engitech' ),
+				'label' => __( 'Marquee To Show', 'valkiriapps' ),
 				'type' => Controls_Manager::SELECT,
 				'options' => [
-					'' => __( 'Default', 'engitech' ),
+					'' => __( 'Default', 'valkiriapps' ),
 				] + $slides_show,
 				'separator' => 'before',
 			]
@@ -99,14 +99,14 @@ class Engitech_Text_Marquee extends Widget_Base{
 		$this->start_controls_section(
 			'style_tcontent',
 			[
-				'label' => __( 'General', 'engitech' ),
+				'label' => __( 'General', 'valkiriapps' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 			]
 		);
 		$this->add_responsive_control(
 			'height',
 			[
-				'label' => esc_html__( 'Height', 'engitech' ),
+				'label' => esc_html__( 'Height', 'valkiriapps' ),
 				'type' => Controls_Manager::SLIDER,
 				'default' => [
 					'unit' => 'px',
@@ -136,7 +136,7 @@ class Engitech_Text_Marquee extends Widget_Base{
 		$this->add_control(
 			'item_bg',
 			[
-				'label' => __( 'Background Color', 'engitech' ),
+				'label' => __( 'Background Color', 'valkiriapps' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -154,7 +154,7 @@ class Engitech_Text_Marquee extends Widget_Base{
 		$this->add_responsive_control(
 			'item_radius',
 			[
-				'label' => __( 'Border Radius', 'engitech' ),
+				'label' => __( 'Border Radius', 'valkiriapps' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', 'em', '%' ],
 				'selectors' => [
@@ -165,7 +165,7 @@ class Engitech_Text_Marquee extends Widget_Base{
 		$this->add_responsive_control(
 			'item_padding',
 			[
-				'label' => __( 'Padding Box', 'engitech' ),
+				'label' => __( 'Padding Box', 'valkiriapps' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', 'em', '%' ],
 				'selectors' => [
@@ -177,7 +177,7 @@ class Engitech_Text_Marquee extends Widget_Base{
 		$this->add_control(
 			'tcontent_color',
 			[
-				'label' => __( 'Text Color', 'engitech' ),
+				'label' => __( 'Text Color', 'valkiriapps' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -215,5 +215,5 @@ class Engitech_Text_Marquee extends Widget_Base{
 	}
 
 }
-// After the Engitech_Text_Marquee class is defined, I must register the new widget class with Elementor:
-Plugin::instance()->widgets_manager->register( new Engitech_Text_Marquee() );
+// After the Valkiriapps_Text_Marquee class is defined, I must register the new widget class with Elementor:
+Plugin::instance()->widgets_manager->register( new Valkiriapps_Text_Marquee() );

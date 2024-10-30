@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly (security measu
 /**
  * Widget Name: Image Slider
  */
-class Engitech_Image_Carousel3 extends Widget_Base{
+class Valkiriapps_Image_Carousel3 extends Widget_Base{
 
  	// The get_name() method is a simple one, you just need to return a widget name that will be used in the code.
 	public function get_name() {
@@ -14,7 +14,7 @@ class Engitech_Image_Carousel3 extends Widget_Base{
 
 	// The get_title() method, which again, is a very simple one, you need to return the widget title that will be displayed as the widget label.
 	public function get_title() {
-		return __( 'Engitech Image Slider', 'engitech' );
+		return __( 'Valkiriapps Image Slider', 'valkiriapps' );
 	}
 
 	// The get_icon() method, is an optional but recommended method, it lets you set the widget icon. you can use any of the eicon or font-awesome icons, simply return the class name as a string.
@@ -24,7 +24,7 @@ class Engitech_Image_Carousel3 extends Widget_Base{
 
 	// The get_categories method, lets you set the category of the widget, return the category name as a string.
 	public function get_categories() {
-		return [ 'category_engitech' ];
+		return [ 'category_valkiriapps' ];
 	}
 
 	protected function register_controls() {
@@ -32,7 +32,7 @@ class Engitech_Image_Carousel3 extends Widget_Base{
 		$this->start_controls_section(
 			'content_section',
 			[
-				'label' => __( 'Images Slider', 'engitech' ),
+				'label' => __( 'Images Slider', 'valkiriapps' ),
 			]
 		);
 
@@ -40,15 +40,15 @@ class Engitech_Image_Carousel3 extends Widget_Base{
 		$repeater->add_control(
 			'title',
 			[
-				'label' => __( 'Name', 'engitech' ),
+				'label' => __( 'Name', 'valkiriapps' ),
 				'type' => Controls_Manager::TEXT,
-				'default' => __( '', 'engitech' ),
+				'default' => __( '', 'valkiriapps' ),
 			]
 		);
 		$repeater->add_control(
 			'image_partner',
 			[
-				'label' => __( 'Image', 'engitech' ),
+				'label' => __( 'Image', 'valkiriapps' ),
 				'type' => Controls_Manager::MEDIA,
 				'default' => [
 					'url' => Utils::get_placeholder_image_src(),
@@ -58,7 +58,7 @@ class Engitech_Image_Carousel3 extends Widget_Base{
 		$repeater->add_control(
 			'image_link',
 			[
-				'label' => __( 'Link', 'engitech' ),
+				'label' => __( 'Link', 'valkiriapps' ),
 				'type' => Controls_Manager::URL,
 				'default' => [],
 			]
@@ -88,9 +88,9 @@ class Engitech_Image_Carousel3 extends Widget_Base{
 		$this->add_control(
 			'btn_text',
 			[
-				'label' => __( 'Button Text', 'engitech' ),
+				'label' => __( 'Button Text', 'valkiriapps' ),
 				'type' => Controls_Manager::TEXT,
-				'default' => __( 'Case Studies', 'engitech' ),
+				'default' => __( 'Case Studies', 'valkiriapps' ),
 			]
 		);
 
@@ -99,7 +99,7 @@ class Engitech_Image_Carousel3 extends Widget_Base{
 		$this->add_control(
 			'heading_option_slider',
 			[
-				'label' => esc_html__( 'Slider Option', 'engitech' ),
+				'label' => esc_html__( 'Slider Option', 'valkiriapps' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -108,12 +108,12 @@ class Engitech_Image_Carousel3 extends Widget_Base{
 		$this->add_control(
 			'center_mode',
 			[
-				'label' => __( 'Center Mode', 'engitech' ),
+				'label' => __( 'Center Mode', 'valkiriapps' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'false',
 				'options' => [
-					'true' => __( 'Yes', 'engitech' ),
-					'false' => __( 'No', 'engitech' ),
+					'true' => __( 'Yes', 'valkiriapps' ),
+					'false' => __( 'No', 'valkiriapps' ),
 				]
 			]
 		);
@@ -124,10 +124,10 @@ class Engitech_Image_Carousel3 extends Widget_Base{
 		$this->add_responsive_control(
 			'slides_show',
 			[
-				'label' => __( 'Slides To Show', 'engitech' ),
+				'label' => __( 'Slides To Show', 'valkiriapps' ),
 				'type' => Controls_Manager::SELECT,
 				'options' => [
-					'' => __( 'Default', 'engitech' ),
+					'' => __( 'Default', 'valkiriapps' ),
 				] + $slides_show,
 				'default' => ''
 			]
@@ -136,11 +136,11 @@ class Engitech_Image_Carousel3 extends Widget_Base{
 		$this->add_responsive_control(
 			'tscroll',
 			[
-				'label' => __( 'Slides to Scroll', 'engitech' ),
+				'label' => __( 'Slides to Scroll', 'valkiriapps' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => '',
 				'options' => [
-					'' => __( 'Default', 'engitech' ),
+					'' => __( 'Default', 'valkiriapps' ),
 				] + $slides_show,
 			]
 		);
@@ -148,12 +148,12 @@ class Engitech_Image_Carousel3 extends Widget_Base{
 		$this->add_control(
 			'dots',
 			[
-				'label'   => __( 'Dots', 'engitech' ),
+				'label'   => __( 'Dots', 'valkiriapps' ),
 				'type' 	  => Controls_Manager::SELECT,
 				'default' => 'false',
 				'options' => [
-					'true'  => __( 'Yes', 'engitech' ),
-					'false' => __( 'No', 'engitech' ),
+					'true'  => __( 'Yes', 'valkiriapps' ),
+					'false' => __( 'No', 'valkiriapps' ),
 				],
 			]
 		);
@@ -165,7 +165,7 @@ class Engitech_Image_Carousel3 extends Widget_Base{
 		$this->start_controls_section(
 			'image_style_section',
 			[
-				'label' => __( 'Image', 'engitech' ),
+				'label' => __( 'Image', 'valkiriapps' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -173,7 +173,7 @@ class Engitech_Image_Carousel3 extends Widget_Base{
 		$this->add_responsive_control(
 			'img_spacing',
 			[
-				'label' => __( 'Image Spacing', 'engitech' ),
+				'label' => __( 'Image Spacing', 'valkiriapps' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -190,7 +190,7 @@ class Engitech_Image_Carousel3 extends Widget_Base{
 		$this->add_control(
 			'image_border_radius',
 			[
-				'label' => __( 'Border Radius', 'engitech' ),
+				'label' => __( 'Border Radius', 'valkiriapps' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%' ],
 				'selectors' => [
@@ -203,14 +203,14 @@ class Engitech_Image_Carousel3 extends Widget_Base{
 
 		$this->start_controls_tab( 'normal',
 			[
-				'label' => __( 'Normal', 'engitech' ),
+				'label' => __( 'Normal', 'valkiriapps' ),
 			]
 		);
 
 		$this->add_control(
 			'opacity',
 			[
-				'label' => __( 'Opacity', 'engitech' ),
+				'label' => __( 'Opacity', 'valkiriapps' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -237,14 +237,14 @@ class Engitech_Image_Carousel3 extends Widget_Base{
 
 		$this->start_controls_tab( 'img_hover_effects',
 			[
-				'label' => __( 'Hover', 'engitech' ),
+				'label' => __( 'Hover', 'valkiriapps' ),
 			]
 		);
 
 		$this->add_control(
 			'opacity_hover',
 			[
-				'label' => __( 'Opacity', 'engitech' ),
+				'label' => __( 'Opacity', 'valkiriapps' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -277,7 +277,7 @@ class Engitech_Image_Carousel3 extends Widget_Base{
 		$this->start_controls_section(
 			'style_overlay_section',
 			[
-				'label' => __( 'Overlay', 'engitech' ),
+				'label' => __( 'Overlay', 'valkiriapps' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -285,7 +285,7 @@ class Engitech_Image_Carousel3 extends Widget_Base{
 		$this->add_control(
 			'overlay_bg',
 			[
-				'label' => __( 'Background', 'engitech' ),
+				'label' => __( 'Background', 'valkiriapps' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .img-item .overlay' => 'background: {{VALUE}};',
@@ -297,7 +297,7 @@ class Engitech_Image_Carousel3 extends Widget_Base{
 		$this->add_control(
 			'heading_btn',
 			[
-				'label' => __( 'Button', 'engitech' ),
+				'label' => __( 'Button', 'valkiriapps' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -305,7 +305,7 @@ class Engitech_Image_Carousel3 extends Widget_Base{
 		$this->add_control(
 			'btn_color',
 			[
-				'label' => __( 'Color', 'engitech' ),
+				'label' => __( 'Color', 'valkiriapps' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -317,7 +317,7 @@ class Engitech_Image_Carousel3 extends Widget_Base{
 			Group_Control_Background::get_type(),
 			[
 				'name' => 'btn_bgcolor',
-				'label' => esc_html__( 'Background', 'engitech' ),
+				'label' => esc_html__( 'Background', 'valkiriapps' ),
 				'types' => [ 'classic', 'gradient' ],
 				'selector' => '{{WRAPPER}} .img-item .overlay .octf-btn',
 			]
@@ -336,7 +336,7 @@ class Engitech_Image_Carousel3 extends Widget_Base{
 		$this->start_controls_section(
 			'dots_section',
 			[
-				'label' => __( 'Dots', 'engitech' ),
+				'label' => __( 'Dots', 'valkiriapps' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 				'condition' => [
 					'dots' => 'true',
@@ -347,7 +347,7 @@ class Engitech_Image_Carousel3 extends Widget_Base{
 		$this->add_responsive_control(
 			'dots_spacing',
 			[
-				'label' => __( 'Spacing', 'engitech' ),
+				'label' => __( 'Spacing', 'valkiriapps' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -363,7 +363,7 @@ class Engitech_Image_Carousel3 extends Widget_Base{
 		$this->add_responsive_control(
 			'dots_size',
 			[
-				'label' => __( 'Size', 'engitech' ),
+				'label' => __( 'Size', 'valkiriapps' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -380,7 +380,7 @@ class Engitech_Image_Carousel3 extends Widget_Base{
 		$this->add_control(
             'dots_bgcolor',
             [
-                'label' => __( 'Color', 'engitech' ),
+                'label' => __( 'Color', 'valkiriapps' ),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
 					'{{WRAPPER}} .slick-dots li button:before' => 'color: {{VALUE}};',
@@ -391,7 +391,7 @@ class Engitech_Image_Carousel3 extends Widget_Base{
         $this->add_control(
             'dots_active_bgcolor',
             [
-                'label' => __( 'Color Active', 'engitech' ),
+                'label' => __( 'Color Active', 'valkiriapps' ),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
 					'{{WRAPPER}} .slick-dots li.slick-active button:before' => 'color: {{VALUE}};',
@@ -456,5 +456,5 @@ class Engitech_Image_Carousel3 extends Widget_Base{
 	}
 
 }
-// After the Engitech_Image_Carousel3 class is defined, I must register the new widget class with Elementor:
-Plugin::instance()->widgets_manager->register( new Engitech_Image_Carousel3() );
+// After the Valkiriapps_Image_Carousel3 class is defined, I must register the new widget class with Elementor:
+Plugin::instance()->widgets_manager->register( new Valkiriapps_Image_Carousel3() );

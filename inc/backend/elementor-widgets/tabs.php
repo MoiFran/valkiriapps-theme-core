@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly (security measu
 /**
  * Widget Name: Tabs
  */
-class Engitech_Tabs extends Widget_Base{
+class Valkiriapps_Tabs extends Widget_Base{
 
  	// The get_name() method is a simple one, you just need to return a widget name that will be used in the code.
 	public function get_name() {
@@ -14,7 +14,7 @@ class Engitech_Tabs extends Widget_Base{
 
 	// The get_title() method, which again, is a very simple one, you need to return the widget title that will be displayed as the widget label.
 	public function get_title() {
-		return __( 'Engitech Tabs', 'engitech' );
+		return __( 'Valkiriapps Tabs', 'valkiriapps' );
 	}
 
 	// The get_icon() method, is an optional but recommended method, it lets you set the widget icon. you can use any of the eicon or font-awesome icons, simply return the class name as a string.
@@ -24,7 +24,7 @@ class Engitech_Tabs extends Widget_Base{
 
 	// The get_categories method, lets you set the category of the widget, return the category name as a string.
 	public function get_categories() {
-		return [ 'category_engitech' ];
+		return [ 'category_valkiriapps' ];
 	}
 
 	protected function register_controls() {
@@ -33,7 +33,7 @@ class Engitech_Tabs extends Widget_Base{
 		$this->start_controls_section(
 			'content_section',
 			[
-				'label' => __( 'Tabs', 'engitech' ),
+				'label' => __( 'Tabs', 'valkiriapps' ),
 			]
 		);
 
@@ -42,10 +42,10 @@ class Engitech_Tabs extends Widget_Base{
 		$repeater->add_control(
 			'tab_title',
 			[
-				'label' => __( 'Title & Description', 'engitech' ),
+				'label' => __( 'Title & Description', 'valkiriapps' ),
 				'type' => Controls_Manager::TEXT,
-				'default' => __( 'Tab Title', 'engitech' ),
-				'placeholder' => __( 'Tab Title', 'engitech' ),
+				'default' => __( 'Tab Title', 'valkiriapps' ),
+				'placeholder' => __( 'Tab Title', 'valkiriapps' ),
 				'label_block' => true,
 			]
 		);
@@ -53,9 +53,9 @@ class Engitech_Tabs extends Widget_Base{
 		$repeater->add_control(
 			'tab_content',
 			[
-				'label' => __( 'Content', 'engitech' ),
-				'default' => __( 'Tab Content', 'engitech' ),
-				'placeholder' => __( 'Tab Content', 'engitech' ),
+				'label' => __( 'Content', 'valkiriapps' ),
+				'default' => __( 'Tab Content', 'valkiriapps' ),
+				'placeholder' => __( 'Tab Content', 'valkiriapps' ),
 				'type' => Controls_Manager::WYSIWYG,
 				'show_label' => false,
 			]
@@ -64,17 +64,17 @@ class Engitech_Tabs extends Widget_Base{
 		$this->add_control(
 			'ot_tabs',
 			[
-				'label' => __( 'Tabs Items', 'engitech' ),
+				'label' => __( 'Tabs Items', 'valkiriapps' ),
 				'type' => Controls_Manager::REPEATER,
 				'fields' => $repeater->get_controls(),
 				'default' => [
 					[
-						'tab_title' => __( 'Tab #1', 'engitech' ),
-						'tab_content' => __( 'We help ambitious businesses like yours generate more profits by building awareness, driving web traffic, connecting with customers, and growing overall sales. Give us a call.', 'engitech' ),
+						'tab_title' => __( 'Tab #1', 'valkiriapps' ),
+						'tab_content' => __( 'We help ambitious businesses like yours generate more profits by building awareness, driving web traffic, connecting with customers, and growing overall sales. Give us a call.', 'valkiriapps' ),
 					],
 					[
-						'tab_title' => __( 'Tab #2', 'engitech' ),
-						'tab_content' => __( 'We help ambitious businesses like yours generate more profits by building awareness, driving web traffic, connecting with customers, and growing overall sales. Give us a call.', 'engitech' ),
+						'tab_title' => __( 'Tab #2', 'valkiriapps' ),
+						'tab_content' => __( 'We help ambitious businesses like yours generate more profits by building awareness, driving web traffic, connecting with customers, and growing overall sales. Give us a call.', 'valkiriapps' ),
 					],
 				],
 				'title_field' => '{{{ tab_title }}}',
@@ -87,7 +87,7 @@ class Engitech_Tabs extends Widget_Base{
 		$this->start_controls_section(
 			'style_section',
 			[
-				'label' => __( 'Tabs', 'engitech' ),
+				'label' => __( 'Tabs', 'valkiriapps' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -96,7 +96,7 @@ class Engitech_Tabs extends Widget_Base{
 		$this->add_control(
 			'style_title',
 			[
-				'label' => __( 'Title', 'engitech' ),
+				'label' => __( 'Title', 'valkiriapps' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -104,7 +104,7 @@ class Engitech_Tabs extends Widget_Base{
 		$this->add_responsive_control(
 			'title_space',
 			[
-				'label' => __( 'Spacing', 'engitech' ),
+				'label' => __( 'Spacing', 'valkiriapps' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -132,14 +132,14 @@ class Engitech_Tabs extends Widget_Base{
 		$this->start_controls_tab(
 			'tab_title_normal',
 			[
-				'label' => __( 'Normal', 'engitech' ),
+				'label' => __( 'Normal', 'valkiriapps' ),
 			]
 		);
 
 		$this->add_control(
 			'title_bgcolor',
 			[
-				'label' => __( 'Background', 'engitech' ),
+				'label' => __( 'Background', 'valkiriapps' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -150,7 +150,7 @@ class Engitech_Tabs extends Widget_Base{
 		$this->add_control(
 			'title_color',
 			[
-				'label' => __( 'Color', 'engitech' ),
+				'label' => __( 'Color', 'valkiriapps' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -164,14 +164,14 @@ class Engitech_Tabs extends Widget_Base{
 		$this->start_controls_tab(
 			'tab_title_active',
 			[
-				'label' => __( 'Active/Hover', 'engitech' ),
+				'label' => __( 'Active/Hover', 'valkiriapps' ),
 			]
 		);
 
 		$this->add_control(
 			'title_bg_active',
 			[
-				'label' => __( 'Background', 'engitech' ),
+				'label' => __( 'Background', 'valkiriapps' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -183,7 +183,7 @@ class Engitech_Tabs extends Widget_Base{
 		$this->add_control(
 			'title_color_active',
 			[
-				'label' => __( 'Color', 'engitech' ),
+				'label' => __( 'Color', 'valkiriapps' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -200,7 +200,7 @@ class Engitech_Tabs extends Widget_Base{
 		$this->add_control(
 			'style_content',
 			[
-				'label' => __( 'Content', 'engitech' ),
+				'label' => __( 'Content', 'valkiriapps' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -208,7 +208,7 @@ class Engitech_Tabs extends Widget_Base{
 		$this->add_control(
 			'content_color',
 			[
-				'label' => __( 'Color', 'engitech' ),
+				'label' => __( 'Color', 'valkiriapps' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -233,7 +233,7 @@ class Engitech_Tabs extends Widget_Base{
 		$this->add_responsive_control(
 			'content_padding',
 			[
-				'label' => __( 'Padding', 'engitech' ),
+				'label' => __( 'Padding', 'valkiriapps' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', 'em', '%' ],
 				'selectors' => [
@@ -270,4 +270,4 @@ class Engitech_Tabs extends Widget_Base{
 	protected function content_template() {}
 }
 // After the Schedule class is defined, I must register the new widget class with Elementor:
-Plugin::instance()->widgets_manager->register( new Engitech_Tabs() );
+Plugin::instance()->widgets_manager->register( new Valkiriapps_Tabs() );

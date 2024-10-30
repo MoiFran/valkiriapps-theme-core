@@ -22,7 +22,7 @@
 	    <?php if( $format == 'gallery' ) { ?>
 
 			<div class="entry-media">
-				<?php engitech_posted_in(); ?>
+				<?php valkiriapps_posted_in(); ?>
 				<div class="gallery-post img-slider">
 				<?php if( function_exists( 'rwmb_meta' ) ) { ?>
 		            <?php $images = rwmb_meta( 'post_gallery', array( 'size' => 'full' ) ); ?>
@@ -42,7 +42,7 @@
 	    <?php }elseif( $format == 'image' ) { ?>
 
 	    	<div class="entry-media">
-				<?php engitech_posted_in(); ?>
+				<?php valkiriapps_posted_in(); ?>
 				<?php if( function_exists( 'rwmb_meta' ) ) { ?>
 				    <?php $images = rwmb_meta( 'post_image', array( 'size' => 'full' ) ); ?>
 				    <?php if($images){ ?>              
@@ -57,7 +57,7 @@
 			
 	    <?php }elseif( $format == 'audio' ){ ?>
 			<div class="entry-media">
-	        	<?php engitech_posted_in(); ?>
+	        	<?php valkiriapps_posted_in(); ?>
 	        </div>
 			<div class="audio-box padding-box">
 				<iframe scrolling="no" frameborder="no" src="<?php echo esc_url( $link_audio ); ?>"></iframe>
@@ -66,7 +66,7 @@
 	    <?php }elseif( $format == 'video' ){ ?>
 
 			<div class="entry-media">
-				<?php engitech_posted_in(); ?>
+				<?php valkiriapps_posted_in(); ?>
 				<?php if( function_exists( 'rwmb_meta' ) ) { ?>
 				    <?php $images = rwmb_meta( 'bg_video', array( 'size' => 'full' ) ); ?>
 				    <?php if($images){ ?>             
@@ -82,7 +82,7 @@
 
 	    <?php }elseif( $format == 'link' ){ ?>
 			<div class="entry-media">
-	        	<?php engitech_posted_in(); ?>
+	        	<?php valkiriapps_posted_in(); ?>
 	        </div>
 			<div class="link-box padding-box">
 				<i class="flaticon-chain"></i>
@@ -91,7 +91,7 @@
 
 	    <?php }elseif( $format == 'quote' ){ ?>
 			<div class="entry-media">
-	        	<?php engitech_posted_in(); ?>
+	        	<?php valkiriapps_posted_in(); ?>
 	        </div>
 			<div class="quote-box padding-box font-second">
 				<i class="flaticon-edit-tools-1"></i>
@@ -104,7 +104,7 @@
 	    <?php }elseif ( has_post_thumbnail() ) { ?>
 
 	        <div class="entry-media">
-	        	<?php engitech_posted_in(); ?>
+	        	<?php valkiriapps_posted_in(); ?>
 	            <a href="<?php the_permalink(); ?>">
 	                <?php the_post_thumbnail(); ?>
 	            </a>
@@ -113,7 +113,7 @@
 	    <?php }else{ ?>
 			
 			<div class="entry-media">
-	        	<?php engitech_posted_in(); ?>
+	        	<?php valkiriapps_posted_in(); ?>
 	        </div>
 
 	    <?php } ?>
@@ -121,9 +121,9 @@
 	    <div class="inner-post">
 	        <div class="entry-header">
 
-	            <?php if ( 'post' === get_post_type() ) : if( engitech_get_option( 'post_entry_meta' ) ) { ?>
+	            <?php if ( 'post' === get_post_type() ) : if( valkiriapps_get_option( 'post_entry_meta' ) ) { ?>
 	            <div class="entry-meta">
-	                <?php engitech_post_meta(); ?>
+	                <?php valkiriapps_post_meta(); ?>
 	            </div><!-- .entry-meta -->
 	            <?php } endif; ?>
 
@@ -137,9 +137,9 @@
 
 	        </div><!-- .entry-content -->
 	        <div class="btn-readmore">
-	        	<?php if(engitech_get_option('blog_read_more')){ ?><a href="<?php the_permalink(); ?>"><i class="flaticon-right-arrow-1"></i> <?php echo esc_html(engitech_get_option('blog_read_more')); ?></a><?php } ?>
+	        	<?php if(valkiriapps_get_option('blog_read_more')){ ?><a href="<?php the_permalink(); ?>"><i class="flaticon-right-arrow-1"></i> <?php echo esc_html(valkiriapps_get_option('blog_read_more')); ?></a><?php } ?>
 	        	<?php 
-	        		if( engitech_get_option( 'like_post' ) ){
+	        		if( valkiriapps_get_option( 'like_post' ) ){
 	                	echo do_shortcode( '[otfliker]' );
 	            	} 
 	            ?>

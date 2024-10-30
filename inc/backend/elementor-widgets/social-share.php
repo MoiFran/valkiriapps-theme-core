@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly (security measu
 /**
  * Widget Name: Portfolio Filter
  */
-class Engitech_SocialShare extends Widget_Base{
+class Valkiriapps_SocialShare extends Widget_Base{
 
  	// The get_name() method is a simple one, you just need to return a widget name that will be used in the code.
 	public function get_name() {
@@ -14,7 +14,7 @@ class Engitech_SocialShare extends Widget_Base{
 
 	// The get_title() method, which again, is a very simple one, you need to return the widget title that will be displayed as the widget label.
 	public function get_title() {
-		return __( 'Engitech Social Share', 'engitech' );
+		return __( 'Valkiriapps Social Share', 'valkiriapps' );
 	}
 
 	// The get_icon() method, is an optional but recommended method, it lets you set the widget icon. you can use any of the eicon or font-awesome icons, simply return the class name as a string.
@@ -24,14 +24,14 @@ class Engitech_SocialShare extends Widget_Base{
 
 	// The get_categories method, lets you set the category of the widget, return the category name as a string.
 	public function get_categories() {
-		return [ 'category_engitech' ];
+		return [ 'category_valkiriapps' ];
 	}
 
 	protected function register_controls() {
 		$this->start_controls_section(
 			'content_section',
 			[
-				'label' => __( 'Content', 'engitech' ),
+				'label' => __( 'Content', 'valkiriapps' ),
 				'tab' => Controls_Manager::TAB_CONTENT,
 			]
 		);
@@ -39,23 +39,23 @@ class Engitech_SocialShare extends Widget_Base{
 		$this->add_control(
 			'social_share',
 			[
-				'label' => __( 'Social Share Buttons', 'engitech' ),
+				'label' => __( 'Social Share Buttons', 'valkiriapps' ),
 				'type' => Controls_Manager::SELECT2,
 				'multiple' => true,
 				'options' => [
-					'facebook'  => __( 'Facebook', 'engitech' ),					
-					'twitter' => __( 'Twitter', 'engitech' ),
-					'google'  => __( 'Google Plus', 'engitech' ),					
-					'pinterest' => __( 'Pinterest', 'engitech' ),
-					'linkedin'  => __( 'Linkedin', 'engitech' ),					
-					'buffer' => __( 'Buffer', 'engitech' ),
-					'digg'  => __( 'Digg', 'engitech' ),					
-					'reddit' => __( 'Reddit', 'engitech' ),
-					'tumbleupon'  => __( 'Tumbleupon', 'engitech' ),					
-					'tumblr' => __( 'Tumblr', 'engitech' ),
-					'vk' => __( 'Vk', 'engitech' ),
-					'email' => __( 'Email', 'engitech' ),
-					'print' => __( 'Print', 'engitech' ),
+					'facebook'  => __( 'Facebook', 'valkiriapps' ),					
+					'twitter' => __( 'Twitter', 'valkiriapps' ),
+					'google'  => __( 'Google Plus', 'valkiriapps' ),					
+					'pinterest' => __( 'Pinterest', 'valkiriapps' ),
+					'linkedin'  => __( 'Linkedin', 'valkiriapps' ),					
+					'buffer' => __( 'Buffer', 'valkiriapps' ),
+					'digg'  => __( 'Digg', 'valkiriapps' ),					
+					'reddit' => __( 'Reddit', 'valkiriapps' ),
+					'tumbleupon'  => __( 'Tumbleupon', 'valkiriapps' ),					
+					'tumblr' => __( 'Tumblr', 'valkiriapps' ),
+					'vk' => __( 'Vk', 'valkiriapps' ),
+					'email' => __( 'Email', 'valkiriapps' ),
+					'print' => __( 'Print', 'valkiriapps' ),
 				],
 				'default' => [ 'facebook', 'twitter', 'pinterest', 'linkedin' ],
 			]
@@ -64,13 +64,13 @@ class Engitech_SocialShare extends Widget_Base{
 		$this->add_control(
 			'social_shape',
 			[
-				'label' => __( 'Shape', 'engitech' ),
+				'label' => __( 'Shape', 'valkiriapps' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'solid',
 				'options' => [
-					'rounded'  => __( 'Rounded', 'engitech' ),
-					'square' => __( 'Square', 'engitech' ),
-					'circle' => __( 'Circle', 'engitech' ),
+					'rounded'  => __( 'Rounded', 'valkiriapps' ),
+					'square' => __( 'Square', 'valkiriapps' ),
+					'circle' => __( 'Circle', 'valkiriapps' ),
 				],
 			]
 		);
@@ -78,19 +78,19 @@ class Engitech_SocialShare extends Widget_Base{
 		$this->add_responsive_control(
 			'text_align',
 			[
-				'label' => __( 'Alignment', 'engitech' ),
+				'label' => __( 'Alignment', 'valkiriapps' ),
 				'type' => Controls_Manager::CHOOSE,
 				'options' => [
 					'left' => [
-						'title' => __( 'Left', 'engitech' ),
+						'title' => __( 'Left', 'valkiriapps' ),
 						'icon' => 'eicon-text-align-left',
 					],
 					'center' => [
-						'title' => __( 'Center', 'engitech' ),
+						'title' => __( 'Center', 'valkiriapps' ),
 						'icon' => 'eicon-text-align-center',
 					],
 					'right' => [
-						'title' => __( 'Right', 'engitech' ),
+						'title' => __( 'Right', 'valkiriapps' ),
 						'icon' => 'eicon-text-align-right',
 					],
 				],
@@ -108,26 +108,26 @@ class Engitech_SocialShare extends Widget_Base{
 		$this->start_controls_section(
 			'icon_section',
 			[
-				'label' => __( 'Icon', 'engitech' ),
+				'label' => __( 'Icon', 'valkiriapps' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
 		$this->add_control(
 			'select_color',
 			[
-				'label' => __( 'Color', 'engitech' ),
+				'label' => __( 'Color', 'valkiriapps' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'default_color',
 				'options' => [
-					'default_color'  => __( 'Official Color', 'engitech' ),
-					'custom_color' => __( 'Custom', 'engitech' ),
+					'default_color'  => __( 'Official Color', 'valkiriapps' ),
+					'custom_color' => __( 'Custom', 'valkiriapps' ),
 				],
 			]
 		);
 		$this->add_control(
 			'social_bgcolor',
 			[
-				'label' => __( 'Primary Color', 'engitech' ),
+				'label' => __( 'Primary Color', 'valkiriapps' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -141,7 +141,7 @@ class Engitech_SocialShare extends Widget_Base{
 		$this->add_control(
 			'social_color',
 			[
-				'label' => __( 'Secondary Color', 'engitech' ),
+				'label' => __( 'Secondary Color', 'valkiriapps' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -155,7 +155,7 @@ class Engitech_SocialShare extends Widget_Base{
 		$this->add_responsive_control(
 			'social_size',
 			[
-				'label' => __( 'Size', 'engitech' ),
+				'label' => __( 'Size', 'valkiriapps' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -171,7 +171,7 @@ class Engitech_SocialShare extends Widget_Base{
 		$this->add_responsive_control(
 			'social_padding',
 			[
-				'label' => __( 'Padding', 'engitech' ),
+				'label' => __( 'Padding', 'valkiriapps' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -187,7 +187,7 @@ class Engitech_SocialShare extends Widget_Base{
 		$this->add_responsive_control(
 			'social_space',
 			[
-				'label' => __( 'Spacing', 'engitech' ),
+				'label' => __( 'Spacing', 'valkiriapps' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -209,7 +209,7 @@ class Engitech_SocialShare extends Widget_Base{
 		$this->add_control(
 			'social_border_radius',
 			[
-				'label' => __( 'Border Radius', 'engitech' ),
+				'label' => __( 'Border Radius', 'valkiriapps' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%' ],
 				'selectors' => [
@@ -312,4 +312,4 @@ class Engitech_SocialShare extends Widget_Base{
 
 }
 // After the Schedule class is defined, I must register the new widget class with Elementor:
-Plugin::instance()->widgets_manager->register( new Engitech_SocialShare() );
+Plugin::instance()->widgets_manager->register( new Valkiriapps_SocialShare() );

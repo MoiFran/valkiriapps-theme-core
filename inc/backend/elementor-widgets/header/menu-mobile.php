@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly (security measu
 /**
  * Widget Name: Menu_Mobile
  */
-class Engitech_Menu_Mobile extends Widget_Base{
+class Valkiriapps_Menu_Mobile extends Widget_Base{
 
  	// The get_name() method is a simple one, you just need to return a widget name that will be used in the code.
 	public function get_name() {
@@ -14,7 +14,7 @@ class Engitech_Menu_Mobile extends Widget_Base{
 
 	// The get_title() method, which again, is a very simple one, you need to return the widget title that will be displayed as the widget label.
 	public function get_title() {
-		return __( 'OT Menu Mobile', 'engitech' );
+		return __( 'OT Menu Mobile', 'valkiriapps' );
 	}
 
 	// The get_icon() method, is an optional but recommended method, it lets you set the widget icon. you can use any of the eicon or font-awesome icons, simply return the class name as a string.
@@ -24,7 +24,7 @@ class Engitech_Menu_Mobile extends Widget_Base{
 
 	// The get_categories method, lets you set the category of the widget, return the category name as a string.
 	public function get_categories() {
-		return [ 'category_engitech_header' ];
+		return [ 'category_valkiriapps_header' ];
 	}
 
 	protected function register_controls() {
@@ -32,7 +32,7 @@ class Engitech_Menu_Mobile extends Widget_Base{
 		$this->start_controls_section(
 			'content_section',
 			[
-				'label' => __( 'Menu', 'engitech' ),
+				'label' => __( 'Menu', 'valkiriapps' ),
 			]
 		);
 
@@ -40,7 +40,7 @@ class Engitech_Menu_Mobile extends Widget_Base{
 		$this->add_control(
 			'nav_menu',
 			[
-				'label' => esc_html__( 'Select Menu', 'engitech' ),
+				'label' => esc_html__( 'Select Menu', 'valkiriapps' ),
 				'type' => Controls_Manager::SELECT,
 				'multiple' => false,
 				'options' => $menus,
@@ -53,12 +53,12 @@ class Engitech_Menu_Mobile extends Widget_Base{
 		$this->add_control(
 			'pos_menu',
 			[
-				'label' => __( 'Position', 'engitech' ),
+				'label' => __( 'Position', 'valkiriapps' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'on-right',
 				'options' => [
-					'on-left' 	=> __( 'On Left', 'engitech' ),
-					'on-right'  => __( 'On Right', 'engitech' ),
+					'on-left' 	=> __( 'On Left', 'valkiriapps' ),
+					'on-right'  => __( 'On Right', 'valkiriapps' ),
 				]
 			]
 		);
@@ -69,14 +69,14 @@ class Engitech_Menu_Mobile extends Widget_Base{
 		$this->start_controls_section(
 			'style_icon_section',
 			[
-				'label' => __( 'Icon', 'engitech' ),
+				'label' => __( 'Icon', 'valkiriapps' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
 		$this->add_control(
 			'icon_color',
 			[
-				'label' => __( 'Icon Color', 'engitech' ),
+				'label' => __( 'Icon Color', 'valkiriapps' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -90,14 +90,14 @@ class Engitech_Menu_Mobile extends Widget_Base{
 		$this->start_controls_section(
 			'style_mmenu_section',
 			[
-				'label' => __( 'Menu', 'engitech' ),
+				'label' => __( 'Menu', 'valkiriapps' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
 		$this->add_control(
 			'bg_mmenu',
 			[
-				'label' => __( 'Background', 'engitech' ),
+				'label' => __( 'Background', 'valkiriapps' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -108,7 +108,7 @@ class Engitech_Menu_Mobile extends Widget_Base{
 		$this->add_control(
 			'color_mmenu',
 			[
-				'label' => __( 'Text Color', 'engitech' ),
+				'label' => __( 'Text Color', 'valkiriapps' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -119,7 +119,7 @@ class Engitech_Menu_Mobile extends Widget_Base{
 		$this->add_control(
 			'bcolor_mmenu',
 			[
-				'label' => __( 'Border Color', 'engitech' ),
+				'label' => __( 'Border Color', 'valkiriapps' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -130,7 +130,7 @@ class Engitech_Menu_Mobile extends Widget_Base{
 		$this->add_control(
 			'color_arrow',
 			[
-				'label' => __( 'Arrow Color', 'engitech' ),
+				'label' => __( 'Arrow Color', 'valkiriapps' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -148,7 +148,7 @@ class Engitech_Menu_Mobile extends Widget_Base{
 		$this->add_control(
 			'color_back',
 			[
-				'label' => __( 'Back Button Color', 'engitech' ),
+				'label' => __( 'Back Button Color', 'valkiriapps' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -200,5 +200,5 @@ class Engitech_Menu_Mobile extends Widget_Base{
 	}
 
 }
-// After the Engitech_Menu_Mobile class is defined, I must register the new widget class with Elementor:
-Plugin::instance()->widgets_manager->register( new Engitech_Menu_Mobile() );
+// After the Valkiriapps_Menu_Mobile class is defined, I must register the new widget class with Elementor:
+Plugin::instance()->widgets_manager->register( new Valkiriapps_Menu_Mobile() );

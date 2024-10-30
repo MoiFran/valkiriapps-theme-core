@@ -13,14 +13,14 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly (security measu
  * Widget Name: Contact Form 7 
  */
 
-class Engitech_Contact_Form_7 extends Widget_Base {   //this name is added to plugin.php of the root folder
+class Valkiriapps_Contact_Form_7 extends Widget_Base {   //this name is added to plugin.php of the root folder
 
 	public function get_name() {
 		return 'ictf7';
 	}
 
 	public function get_title() {
-		return 'Engitech Contact Form';   // title to show on elementor
+		return 'Valkiriapps Contact Form';   // title to show on elementor
 	}
 
 	public function get_icon() {
@@ -28,7 +28,7 @@ class Engitech_Contact_Form_7 extends Widget_Base {   //this name is added to pl
 	}
 
 	public function get_categories() {
-		return [ 'category_engitech' ];    // category of the widget
+		return [ 'category_valkiriapps' ];    // category of the widget
 	}
 
 	/**
@@ -41,15 +41,15 @@ class Engitech_Contact_Form_7 extends Widget_Base {   //this name is added to pl
 		$this->start_controls_section(
 			'section_content',
 			[
-				'label' => esc_html__( 'Contact Form 7', 'engitech' ),   //section name for controler view
+				'label' => esc_html__( 'Contact Form 7', 'valkiriapps' ),   //section name for controler view
 			]
 		);
 
 		$this->add_control(
 			'cf7',
 			[
-				'label' => esc_html__( 'Select Contact Form', 'engitech' ),
-                'description' => esc_html__('Contact form 7 - plugin must be installed and there must be some contact forms made with the contact form 7','engitech'),
+				'label' => esc_html__( 'Select Contact Form', 'valkiriapps' ),
+                'description' => esc_html__('Contact form 7 - plugin must be installed and there must be some contact forms made with the contact form 7','valkiriapps'),
 				'type' => Controls_Manager::SELECT2,
 				'multiple' => false,
 				'label_block' => true,
@@ -62,18 +62,18 @@ class Engitech_Contact_Form_7 extends Widget_Base {   //this name is added to pl
 		$this->start_controls_section(
 			'section_redirect',
 			[
-				'label' => esc_html__( 'After Submit Redirect Setting', 'engitech' ),   //section name for controler view
+				'label' => esc_html__( 'After Submit Redirect Setting', 'valkiriapps' ),   //section name for controler view
 			]
 		);
 
 		$this->add_control(
 			'cf7_redirect_page',
 			[
-				'label' => esc_html__( 'On Success Redirect To', 'engitech' ),
-                'description' => esc_html__('Select a page which you want users to redirect to when the contact fom is submitted and is successful. Leave Blank to Disable','engitech'),
+				'label' => esc_html__( 'On Success Redirect To', 'valkiriapps' ),
+                'description' => esc_html__('Select a page which you want users to redirect to when the contact fom is submitted and is successful. Leave Blank to Disable','valkiriapps'),
 				'type' => Controls_Manager::SELECT2,
 				'multiple' => false,
-				'options' => $this->engitech_get_all_pages(),
+				'options' => $this->valkiriapps_get_all_pages(),
 			]
 		);
 
@@ -82,7 +82,7 @@ class Engitech_Contact_Form_7 extends Widget_Base {   //this name is added to pl
 		$this->start_controls_section(
 			'section_style',
 			[
-				'label' => esc_html__( 'Style Contact Form', 'engitech' ),   //section name for controler view
+				'label' => esc_html__( 'Style Contact Form', 'valkiriapps' ),   //section name for controler view
 				'tab' => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -90,8 +90,8 @@ class Engitech_Contact_Form_7 extends Widget_Base {   //this name is added to pl
 		$this->add_control(
 			'css_all_fields',
 			[
-				'label' => __( 'Global CSS For all fields', 'engitech' ),
-				'description' => __( 'This is the global css for all fields of cf7. It will not effect the other fileds but if you want to define things such as color, background color use this.', 'engitech' ),
+				'label' => __( 'Global CSS For all fields', 'valkiriapps' ),
+				'description' => __( 'This is the global css for all fields of cf7. It will not effect the other fileds but if you want to define things such as color, background color use this.', 'valkiriapps' ),
 				'type' => Controls_Manager::TEXTAREA,
 				'placeholder' => 'color:#000;',
 				'selectors' => [
@@ -103,8 +103,8 @@ class Engitech_Contact_Form_7 extends Widget_Base {   //this name is added to pl
 		$this->add_control(
 			'css_all_label',
 			[
-				'label' => __( 'All Label CSS', 'engitech' ),
-				'description' => __( 'Changes might not sometimes show in the live preview but check in the front end to see the changes.', 'engitech' ),
+				'label' => __( 'All Label CSS', 'valkiriapps' ),
+				'description' => __( 'Changes might not sometimes show in the live preview but check in the front end to see the changes.', 'valkiriapps' ),
 				'type' => Controls_Manager::TEXTAREA,
 				'placeholder' => 'color:#fff;',
 				'selectors' => [
@@ -115,8 +115,8 @@ class Engitech_Contact_Form_7 extends Widget_Base {   //this name is added to pl
 		$this->add_control(
 			'css_all_input',
 			[
-				'label' => __( 'All Input CSS', 'engitech' ),
-				'description' => __( 'Changes might not sometimes show in the live preview but check in the front end to see the changes.', 'engitech' ),
+				'label' => __( 'All Input CSS', 'valkiriapps' ),
+				'description' => __( 'Changes might not sometimes show in the live preview but check in the front end to see the changes.', 'valkiriapps' ),
 				'type' => Controls_Manager::TEXTAREA,
 				'placeholder' => 'width:100%;
 							      background:red;',
@@ -131,8 +131,8 @@ class Engitech_Contact_Form_7 extends Widget_Base {   //this name is added to pl
 		$this->add_control(
 			'css_text_area',
 			[
-				'label' => __( 'Textarea CSS', 'engitech' ),
-				'description' => __( 'Changes might not sometimes show in the live preview but check in the front end to see the changes.', 'engitech' ),
+				'label' => __( 'Textarea CSS', 'valkiriapps' ),
+				'description' => __( 'Changes might not sometimes show in the live preview but check in the front end to see the changes.', 'valkiriapps' ),
 				'type' => Controls_Manager::TEXTAREA,
 				'placeholder' => 'height:100px; 
 								  width:100%;',
@@ -146,7 +146,7 @@ class Engitech_Contact_Form_7 extends Widget_Base {   //this name is added to pl
 		$this->add_control(
 			'css_checkbox',
 			[
-				'label' => __( 'Checkbox/ Radio CSS', 'engitech' ),
+				'label' => __( 'Checkbox/ Radio CSS', 'valkiriapps' ),
 				'type' => Controls_Manager::TEXTAREA,
 				'placeholder' => 'display: block;',
 				'selectors' => [
@@ -158,7 +158,7 @@ class Engitech_Contact_Form_7 extends Widget_Base {   //this name is added to pl
 		$this->add_control(
 			'css_select',
 			[
-				'label' => __( 'Dropdown/ Select Box css', 'engitech' ),
+				'label' => __( 'Dropdown/ Select Box css', 'valkiriapps' ),
 				'type' => Controls_Manager::TEXTAREA,
 				'placeholder' => 'width: 100;',
 				'selectors' => [
@@ -169,7 +169,7 @@ class Engitech_Contact_Form_7 extends Widget_Base {   //this name is added to pl
 		$this->add_control(
 			'css_selectoptions',
 			[
-				'label' => __( 'Select Options Css', 'engitech' ),
+				'label' => __( 'Select Options Css', 'valkiriapps' ),
 				'type' => Controls_Manager::TEXTAREA,
 				'placeholder' => 'color: red;',
 				'selectors' => [
@@ -181,7 +181,7 @@ class Engitech_Contact_Form_7 extends Widget_Base {   //this name is added to pl
 		$this->add_control(
 			'css_file',
 			[
-				'label' => __( 'File CSS', 'engitech' ),
+				'label' => __( 'File CSS', 'valkiriapps' ),
 				'type' => Controls_Manager::TEXTAREA,
 				'placeholder' => 'display: block;',
 				'selectors' => [
@@ -192,7 +192,7 @@ class Engitech_Contact_Form_7 extends Widget_Base {   //this name is added to pl
 		$this->add_control(
 			'css_date',
 			[
-				'label' => __( 'Date CSS', 'engitech' ),
+				'label' => __( 'Date CSS', 'valkiriapps' ),
 				'type' => Controls_Manager::TEXTAREA,
 				'placeholder' => 'display: block;',
 				'selectors' => [
@@ -203,8 +203,8 @@ class Engitech_Contact_Form_7 extends Widget_Base {   //this name is added to pl
 		$this->add_control(
 			'css_input_submit',
 			[
-				'label' => __( 'Submit Button CSS', 'engitech' ),
-				'description' => __( 'Changes might not sometimes show in the live preview but check in the front end to see the changes.', 'engitech' ),
+				'label' => __( 'Submit Button CSS', 'valkiriapps' ),
+				'description' => __( 'Changes might not sometimes show in the live preview but check in the front end to see the changes.', 'valkiriapps' ),
 				'type' => Controls_Manager::TEXTAREA,
 				'placeholder' => 'width:100%;
 							      background:red;',
@@ -216,7 +216,7 @@ class Engitech_Contact_Form_7 extends Widget_Base {   //this name is added to pl
 		$this->add_control(
 			'css_input_submit_hover',
 			[
-				'label' => __( 'Submit Button Hover CSS', 'engitech' ),
+				'label' => __( 'Submit Button Hover CSS', 'valkiriapps' ),
 				'type' => Controls_Manager::TEXTAREA,
 				'placeholder' => 'background:#fff;',
 				'selectors' => [
@@ -228,7 +228,7 @@ class Engitech_Contact_Form_7 extends Widget_Base {   //this name is added to pl
 		$this->add_control(
 			'css_responce',
 			[
-				'label' => __( 'Responce CSS', 'engitech' ),
+				'label' => __( 'Responce CSS', 'valkiriapps' ),
 				'type' => Controls_Manager::TEXTAREA,
 				'placeholder' => 'color:red;',
 				'selectors' => [
@@ -248,14 +248,14 @@ class Engitech_Contact_Form_7 extends Widget_Base {   //this name is added to pl
 
 		$settings = $this->get_settings();
         if(!empty($settings['cf7'])){
-    	   echo'<div class="elementor-shortcode engitech-cf7-'.$v_veriable.'">';
+    	   echo'<div class="elementor-shortcode valkiriapps-cf7-'.$v_veriable.'">';
                 echo do_shortcode('[contact-form-7 id="'.$settings['cf7'].'"]');    
            echo '</div>';  
     	}
 
  		if(!empty($settings['cf7_redirect_page'])) {  ?>
  			<script>
- 			        var theform = document.querySelector('.engitech-cf7-<?php echo $v_veriable; ?>');
+ 			        var theform = document.querySelector('.valkiriapps-cf7-<?php echo $v_veriable; ?>');
 						theform.addEventListener( 'wpcf7mailsent', function( event ) {
 					    location = '<?php echo get_permalink( $settings['cf7_redirect_page'] ); ?>';
 					}, false );
@@ -277,12 +277,12 @@ class Engitech_Contact_Form_7 extends Widget_Base {   //this name is added to pl
 	    	}
 	    }
 	    else{
-	        (int)$catlist['0'] = esc_html__('No contect From 7 form found', 'engitech');
+	        (int)$catlist['0'] = esc_html__('No contect From 7 form found', 'valkiriapps');
 	    }
 	  	return $catlist;
 	}
 
-	protected function engitech_get_all_pages(){
+	protected function valkiriapps_get_all_pages(){
 
 	  	$args = array('post_type' => 'page', 'posts_per_page' => -1);
 
@@ -294,11 +294,11 @@ class Engitech_Contact_Form_7 extends Widget_Base {   //this name is added to pl
 	      }
 	    }
 	    else{
-	        (int)$catlist['0'] = esc_html__('No Pages Found!', 'engitech');
+	        (int)$catlist['0'] = esc_html__('No Pages Found!', 'valkiriapps');
 	    }
 	  	return $catlist;
 	}
 	
 }
-// After the Engitech_Contact_Form_7 class is defined, I must register the new widget class with Elementor:
-Plugin::instance()->widgets_manager->register( new Engitech_Contact_Form_7() );
+// After the Valkiriapps_Contact_Form_7 class is defined, I must register the new widget class with Elementor:
+Plugin::instance()->widgets_manager->register( new Valkiriapps_Contact_Form_7() );

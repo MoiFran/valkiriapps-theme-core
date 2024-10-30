@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly (security measu
 /**
  * Widget Name: Image Box
  */
-class Engitech_ImageBoxBasic extends Widget_Base{
+class Valkiriapps_ImageBoxBasic extends Widget_Base{
 
  	// The get_name() method is a simple one, you just need to return a widget name that will be used in the code.
 	public function get_name() {
@@ -14,7 +14,7 @@ class Engitech_ImageBoxBasic extends Widget_Base{
 
 	// The get_title() method, which again, is a very simple one, you need to return the widget title that will be displayed as the widget label.
 	public function get_title() {
-		return __( 'OT Image Box Basic', 'engitech' );
+		return __( 'OT Image Box Basic', 'valkiriapps' );
 	}
 
 	// The get_icon() method, is an optional but recommended method, it lets you set the widget icon. you can use any of the eicon or font-awesome icons, simply return the class name as a string.
@@ -24,7 +24,7 @@ class Engitech_ImageBoxBasic extends Widget_Base{
 
 	// The get_categories method, lets you set the category of the widget, return the category name as a string.
 	public function get_categories() {
-		return [ 'category_engitech' ];
+		return [ 'category_valkiriapps' ];
 	}
 
 	protected function register_controls() {
@@ -33,13 +33,13 @@ class Engitech_ImageBoxBasic extends Widget_Base{
 		$this->start_controls_section(
 			'content_section',
 			[
-				'label' => __( 'Image Box', 'engitech' ),
+				'label' => __( 'Image Box', 'valkiriapps' ),
 			]
 		);
 		$this->add_control(
 	        'image',
 	        [
-	            'label' => esc_html__( 'Image', 'engitech' ),
+	            'label' => esc_html__( 'Image', 'valkiriapps' ),
 	            'type'  => Controls_Manager::MEDIA,
 	            'default' => [
 					'url' => Utils::get_placeholder_image_src(),
@@ -58,9 +58,9 @@ class Engitech_ImageBoxBasic extends Widget_Base{
 		$this->add_control(
 			'title',
 			[
-				'label' => __( 'Title', 'engitech' ),
+				'label' => __( 'Title', 'valkiriapps' ),
 				'type' => Controls_Manager::TEXT,
-				'default' => __( 'Total Control', 'engitech' ),
+				'default' => __( 'Total Control', 'valkiriapps' ),
 				'label_block' => true,
 			]
 		);
@@ -68,18 +68,18 @@ class Engitech_ImageBoxBasic extends Widget_Base{
 		$this->add_control(
 			'content',
 			[
-				'label' => __( 'Description', 'engitech' ),
+				'label' => __( 'Description', 'valkiriapps' ),
 				'type' => Controls_Manager::TEXTAREA,
-				'default' => __( 'Real-time notifications and detailed transaction data helps you understand your money better.', 'engitech' ),
+				'default' => __( 'Real-time notifications and detailed transaction data helps you understand your money better.', 'valkiriapps' ),
 			]
 		);
 
 		$this->add_control(
 			'link',
 			[
-				'label' => __( 'Link', 'engitech' ),
+				'label' => __( 'Link', 'valkiriapps' ),
 				'type' => Controls_Manager::URL,
-				'placeholder' => __( 'https://your-link.com', 'engitech' ),
+				'placeholder' => __( 'https://your-link.com', 'valkiriapps' ),
 				'default'	=> [],
 				'separator' => 'before',
 			]
@@ -88,9 +88,9 @@ class Engitech_ImageBoxBasic extends Widget_Base{
 		$this->add_control(
 			'btn_text',
 			[
-				'label' => __( 'Button Text', 'engitech' ),
+				'label' => __( 'Button Text', 'valkiriapps' ),
 				'type' => Controls_Manager::TEXT,
-				'default' => __( '<i class="flaticon-right-arrow-1"></i> View More', 'engitech' ),
+				'default' => __( '<i class="flaticon-right-arrow-1"></i> View More', 'valkiriapps' ),
 				'label_block' => 'true',
 				'condition' => [
 					'link[url]!' => '',
@@ -101,7 +101,7 @@ class Engitech_ImageBoxBasic extends Widget_Base{
 		$this->add_control(
 			'header_size',
 			[
-				'label' => __( 'Title HTML Tag', 'engitech' ),
+				'label' => __( 'Title HTML Tag', 'valkiriapps' ),
 				'type' => Controls_Manager::SELECT,
 				'options' => [
 					'h1' => 'H1',
@@ -125,7 +125,7 @@ class Engitech_ImageBoxBasic extends Widget_Base{
 		$this->start_controls_section(
 			'style_icon_section',
 			[
-				'label' => __( 'Image', 'engitech' ),
+				'label' => __( 'Image', 'valkiriapps' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -133,7 +133,7 @@ class Engitech_ImageBoxBasic extends Widget_Base{
 		$this->add_responsive_control(
 			'icon_space',
 			[
-				'label' => __( 'Spacing', 'engitech' ),
+				'label' => __( 'Spacing', 'valkiriapps' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -150,7 +150,7 @@ class Engitech_ImageBoxBasic extends Widget_Base{
 		$this->add_control(
 			'image_border_radius',
 			[
-				'label' => __( 'Border Radius', 'engitech' ),
+				'label' => __( 'Border Radius', 'valkiriapps' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%' ],
 				'selectors' => [
@@ -164,14 +164,14 @@ class Engitech_ImageBoxBasic extends Widget_Base{
 		$this->start_controls_section(
 			'style_content_section',
 			[
-				'label' => __( 'Content', 'engitech' ),
+				'label' => __( 'Content', 'valkiriapps' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
 		$this->add_responsive_control(
 			'box_padding',
 			[
-				'label' => __( 'Padding Box', 'engitech' ),
+				'label' => __( 'Padding Box', 'valkiriapps' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', 'em', '%' ],
 				'selectors' => [
@@ -182,19 +182,19 @@ class Engitech_ImageBoxBasic extends Widget_Base{
 		$this->add_responsive_control(
 			'align',
 			[
-				'label' => __( 'Alignment', 'engitech' ),
+				'label' => __( 'Alignment', 'valkiriapps' ),
 				'type' => Controls_Manager::CHOOSE,
 				'options' => [
 					'left'    => [
-						'title' => __( 'Left', 'engitech' ),
+						'title' => __( 'Left', 'valkiriapps' ),
 						'icon' => 'eicon-text-align-left',
 					],
 					'center' => [
-						'title' => __( 'Center', 'engitech' ),
+						'title' => __( 'Center', 'valkiriapps' ),
 						'icon' => 'eicon-text-align-center',
 					],
 					'right' => [
-						'title' => __( 'Right', 'engitech' ),
+						'title' => __( 'Right', 'valkiriapps' ),
 						'icon' => 'eicon-text-align-right',
 					]
 				],
@@ -208,7 +208,7 @@ class Engitech_ImageBoxBasic extends Widget_Base{
 		$this->add_control(
 			'heading_title',
 			[
-				'label' => __( 'Title', 'engitech' ),
+				'label' => __( 'Title', 'valkiriapps' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -217,7 +217,7 @@ class Engitech_ImageBoxBasic extends Widget_Base{
 		$this->add_responsive_control(
 			'title_space',
 			[
-				'label' => __( 'Spacing Bottom', 'engitech' ),
+				'label' => __( 'Spacing Bottom', 'valkiriapps' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -233,10 +233,10 @@ class Engitech_ImageBoxBasic extends Widget_Base{
 		$this->add_control(
 			'link_title',
 			[
-				'label'   => esc_html__( 'Link Title?', 'engitech' ),
+				'label'   => esc_html__( 'Link Title?', 'valkiriapps' ),
 				'type' => Controls_Manager::SWITCHER,
-				'label_on' => esc_html__( 'Yes', 'engitech' ),
-				'label_off' => esc_html__( 'No', 'engitech' ),
+				'label_on' => esc_html__( 'Yes', 'valkiriapps' ),
+				'label_off' => esc_html__( 'No', 'valkiriapps' ),
 				'return_value' => 'yes',
 				'default' => '',
 				'condition' => [
@@ -247,7 +247,7 @@ class Engitech_ImageBoxBasic extends Widget_Base{
 		$this->add_control(
 			'title_color',
 			[
-				'label' => __( 'Color', 'engitech' ),
+				'label' => __( 'Color', 'valkiriapps' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -260,7 +260,7 @@ class Engitech_ImageBoxBasic extends Widget_Base{
 		$this->add_control(
 			'title_color_hover',
 			[
-				'label' => __( 'Hover', 'engitech' ),
+				'label' => __( 'Hover', 'valkiriapps' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -284,7 +284,7 @@ class Engitech_ImageBoxBasic extends Widget_Base{
 		$this->add_control(
 			'heading_content',
 			[
-				'label' => __( 'Description', 'engitech' ),
+				'label' => __( 'Description', 'valkiriapps' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -292,7 +292,7 @@ class Engitech_ImageBoxBasic extends Widget_Base{
 		$this->add_responsive_control(
 			'des_space',
 			[
-				'label' => __( 'Spacing', 'engitech' ),
+				'label' => __( 'Spacing', 'valkiriapps' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -311,7 +311,7 @@ class Engitech_ImageBoxBasic extends Widget_Base{
 		$this->add_control(
 			'content_color',
 			[
-				'label' => __( 'Color', 'engitech' ),
+				'label' => __( 'Color', 'valkiriapps' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -331,7 +331,7 @@ class Engitech_ImageBoxBasic extends Widget_Base{
 		$this->add_control(
 			'heading_btn',
 			[
-				'label' => __( 'Button', 'engitech' ),
+				'label' => __( 'Button', 'valkiriapps' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 				'condition' => [
@@ -342,7 +342,7 @@ class Engitech_ImageBoxBasic extends Widget_Base{
 		$this->add_control(
 			'btn_color',
 			[
-				'label' => __( 'Color', 'engitech' ),
+				'label' => __( 'Color', 'valkiriapps' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -356,7 +356,7 @@ class Engitech_ImageBoxBasic extends Widget_Base{
 		$this->add_control(
 			'btn_hcolor',
 			[
-				'label' => __( 'Hover', 'engitech' ),
+				'label' => __( 'Hover', 'valkiriapps' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -422,5 +422,5 @@ class Engitech_ImageBoxBasic extends Widget_Base{
 	}
 
 }
-// After the Engitech_ImageBoxBasic class is defined, I must register the new widget class with Elementor:
-Plugin::instance()->widgets_manager->register( new Engitech_ImageBoxBasic() );
+// After the Valkiriapps_ImageBoxBasic class is defined, I must register the new widget class with Elementor:
+Plugin::instance()->widgets_manager->register( new Valkiriapps_ImageBoxBasic() );

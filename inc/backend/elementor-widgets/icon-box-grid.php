@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly (security measu
 /**
  * Widget Name: Icon Box Grid
  */
-class Engitech_IconBox_Grid extends Widget_Base{
+class Valkiriapps_IconBox_Grid extends Widget_Base{
 
  	// The get_name() method is a simple one, you just need to return a widget name that will be used in the code.
 	public function get_name() {
@@ -14,7 +14,7 @@ class Engitech_IconBox_Grid extends Widget_Base{
 
 	// The get_title() method, which again, is a very simple one, you need to return the widget title that will be displayed as the widget label.
 	public function get_title() {
-		return __( 'Engitech Icon Box Grid', 'engitech' );
+		return __( 'Valkiriapps Icon Box Grid', 'valkiriapps' );
 	}
 
 	// The get_icon() method, is an optional but recommended method, it lets you set the widget icon. you can use any of the eicon or font-awesome icons, simply return the class name as a string.
@@ -24,7 +24,7 @@ class Engitech_IconBox_Grid extends Widget_Base{
 
 	// The get_categories method, lets you set the category of the widget, return the category name as a string.
 	public function get_categories() {
-		return [ 'category_engitech' ];
+		return [ 'category_valkiriapps' ];
 	}
 
 	protected function register_controls() {
@@ -33,26 +33,26 @@ class Engitech_IconBox_Grid extends Widget_Base{
 		$this->start_controls_section(
 			'content_section',
 			[
-				'label' => __( 'Icon Boxes', 'engitech' ),
+				'label' => __( 'Icon Boxes', 'valkiriapps' ),
 			]
 		);
 
 		$this->add_responsive_control(
 			'align',
 			[
-				'label' => __( 'Alignment', 'engitech' ),
+				'label' => __( 'Alignment', 'valkiriapps' ),
 				'type' => Controls_Manager::CHOOSE,
 				'options' => [
 					'left'    => [
-						'title' => __( 'Left', 'engitech' ),
+						'title' => __( 'Left', 'valkiriapps' ),
 						'icon' => 'eicon-text-align-left',
 					],
 					'center' => [
-						'title' => __( 'Center', 'engitech' ),
+						'title' => __( 'Center', 'valkiriapps' ),
 						'icon' => 'eicon-text-align-center',
 					],
 					'right' => [
-						'title' => __( 'Right', 'engitech' ),
+						'title' => __( 'Right', 'valkiriapps' ),
 						'icon' => 'eicon-text-align-right',
 					],
 				],
@@ -64,14 +64,14 @@ class Engitech_IconBox_Grid extends Widget_Base{
 		$this->add_control(
 			'column_grid',
 			[
-				'label' => __( 'Columns', 'engitech' ),
+				'label' => __( 'Columns', 'valkiriapps' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'col-md-4',
 				'options' => [
-					'col-md-12 col-sm-12 col-xs-12' => __( '1', 'engitech' ),
-					'col-md-6 col-sm-6 col-xs-12'  => __( '2', 'engitech' ),
-					'col-md-4 col-sm-6 col-xs-12'  => __( '3', 'engitech' ),
-					'col-md-3 col-sm-6 col-xs-12'  => __( '4', 'engitech' ),
+					'col-md-12 col-sm-12 col-xs-12' => __( '1', 'valkiriapps' ),
+					'col-md-6 col-sm-6 col-xs-12'  => __( '2', 'valkiriapps' ),
+					'col-md-4 col-sm-6 col-xs-12'  => __( '3', 'valkiriapps' ),
+					'col-md-3 col-sm-6 col-xs-12'  => __( '4', 'valkiriapps' ),
 				]
 			]
 		);
@@ -82,7 +82,7 @@ class Engitech_IconBox_Grid extends Widget_Base{
 		$repeater->add_control(
 			'icon_font',
 			[
-				'label' => __( 'Icon', 'engitech' ),
+				'label' => __( 'Icon', 'valkiriapps' ),
 				'type' => Controls_Manager::ICONS,
 				'fa4compatibility' => 'icon',
 				'default' => [
@@ -95,28 +95,28 @@ class Engitech_IconBox_Grid extends Widget_Base{
 		$repeater->add_control(
 			'title',
 			[
-				'label' => __( 'Title', 'engitech' ),
+				'label' => __( 'Title', 'valkiriapps' ),
 				'type' => Controls_Manager::TEXT,
 				'label_block' => true,
-				'default' => esc_html__( 'Content Marketing', 'engitech' ),
+				'default' => esc_html__( 'Content Marketing', 'valkiriapps' ),
 			]
 		);
 
 		$repeater->add_control(
 			'des',
 			[
-				'label' => __( 'Description', 'engitech' ),
+				'label' => __( 'Description', 'valkiriapps' ),
 				'type' => Controls_Manager::TEXTAREA,
-				'default' => esc_html__( 'You can provide the answers that your potential customers are trying to find, so you can become the industry.', 'engitech' ),
+				'default' => esc_html__( 'You can provide the answers that your potential customers are trying to find, so you can become the industry.', 'valkiriapps' ),
 			]
 		);
 
 		$repeater->add_control(
 			'link',
 			[
-				'label' => __( 'Link', 'engitech' ),
+				'label' => __( 'Link', 'valkiriapps' ),
 				'type' => Controls_Manager::URL,
-				'placeholder' => __( 'https://your-link.com', 'engitech' ),
+				'placeholder' => __( 'https://your-link.com', 'valkiriapps' ),
 			]
 		);
 
@@ -128,21 +128,21 @@ class Engitech_IconBox_Grid extends Widget_Base{
 		        'show_label'  => false,
 		        'default'     => [
 		            [
-		            	'title' => esc_html__( 'Content Marketing', 'engitech' ),
+		            	'title' => esc_html__( 'Content Marketing', 'valkiriapps' ),
 		            	'icon_font'	=> [
 							'value' => 'fas fa-star',
 							'library' => 'fa-solid',
 						],
 		            ],
 		            [
-		            	'title' => esc_html__( 'Content Marketing', 'engitech' ),
+		            	'title' => esc_html__( 'Content Marketing', 'valkiriapps' ),
 		            	'icon_font'	=> [
 							'value' => 'fas fa-star',
 							'library' => 'fa-solid',
 						],
 		            ],
 		            [
-		            	'title' => esc_html__( 'Content Marketing', 'engitech' ),
+		            	'title' => esc_html__( 'Content Marketing', 'valkiriapps' ),
 		            	'icon_font'	=> [
 							'value' => 'fas fa-star',
 							'library' => 'fa-solid',
@@ -156,7 +156,7 @@ class Engitech_IconBox_Grid extends Widget_Base{
 		$this->add_control(
 			'header_size',
 			[
-				'label' => __( 'Title HTML Tag', 'engitech' ),
+				'label' => __( 'Title HTML Tag', 'valkiriapps' ),
 				'type' => Controls_Manager::SELECT,
 				'options' => [
 					'h1' => 'H1',
@@ -179,14 +179,14 @@ class Engitech_IconBox_Grid extends Widget_Base{
 		$this->start_controls_section(
 			'style_box_section',
 			[
-				'label' => __( 'Boxes', 'engitech' ),
+				'label' => __( 'Boxes', 'valkiriapps' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
 		$this->add_control(
 			'bg_hover_box',
 			[
-				'label' => __( 'Border Color', 'engitech' ),
+				'label' => __( 'Border Color', 'valkiriapps' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .icon-box' => 'border-color: {{VALUE}};',
@@ -196,7 +196,7 @@ class Engitech_IconBox_Grid extends Widget_Base{
 		$this->add_responsive_control(
 			'box_padding',
 			[
-				'label' => __( 'Padding Box', 'engitech' ),
+				'label' => __( 'Padding Box', 'valkiriapps' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', 'em', '%' ],
 				'selectors' => [
@@ -210,14 +210,14 @@ class Engitech_IconBox_Grid extends Widget_Base{
 		$this->start_controls_tab(
 			'tab_button_normal',
 			[
-				'label' => __( 'Normal', 'engitech' ),
+				'label' => __( 'Normal', 'valkiriapps' ),
 			]
 		);
 		$this->add_group_control(
 			Group_Control_Background::get_type(),
 			[
 				'name' => 'bg_box',
-				'label' => esc_html__( 'Background', 'engitech' ),
+				'label' => esc_html__( 'Background', 'valkiriapps' ),
 				'types' => [ 'classic', 'gradient' ],
 				'selector' => '{{WRAPPER}} .icon-box',
 			]
@@ -234,14 +234,14 @@ class Engitech_IconBox_Grid extends Widget_Base{
 		$this->start_controls_tab(
 			'tab_button_hover',
 			[
-				'label' => __( 'Hover', 'engitech' ),
+				'label' => __( 'Hover', 'valkiriapps' ),
 			]
 		);
 		$this->add_group_control(
 			Group_Control_Background::get_type(),
 			[
 				'name' => 'bg_box_hover',
-				'label' => esc_html__( 'Background', 'engitech' ),
+				'label' => esc_html__( 'Background', 'valkiriapps' ),
 				'types' => [ 'classic', 'gradient' ],
 				'selector' => '{{WRAPPER}} .icon-box:hover',
 			]
@@ -262,7 +262,7 @@ class Engitech_IconBox_Grid extends Widget_Base{
 		$this->start_controls_section(
 			'style_icon_section',
 			[
-				'label' => __( 'Icon', 'engitech' ),
+				'label' => __( 'Icon', 'valkiriapps' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -270,7 +270,7 @@ class Engitech_IconBox_Grid extends Widget_Base{
 		$this->add_control(
 			'icon_color',
 			[
-				'label' => __( 'Color', 'engitech' ),
+				'label' => __( 'Color', 'valkiriapps' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -282,7 +282,7 @@ class Engitech_IconBox_Grid extends Widget_Base{
 		$this->add_responsive_control(
 			'icon_size',
 			[
-				'label' => __( 'Size', 'engitech' ),
+				'label' => __( 'Size', 'valkiriapps' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -299,7 +299,7 @@ class Engitech_IconBox_Grid extends Widget_Base{
 		$this->add_responsive_control(
 			'icon_space',
 			[
-				'label' => __( 'Spacing', 'engitech' ),
+				'label' => __( 'Spacing', 'valkiriapps' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -318,7 +318,7 @@ class Engitech_IconBox_Grid extends Widget_Base{
 		$this->start_controls_section(
 			'style_content_section',
 			[
-				'label' => __( 'Content', 'engitech' ),
+				'label' => __( 'Content', 'valkiriapps' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -327,7 +327,7 @@ class Engitech_IconBox_Grid extends Widget_Base{
 		$this->add_control(
 			'heading_title',
 			[
-				'label' => __( 'Title', 'engitech' ),
+				'label' => __( 'Title', 'valkiriapps' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -335,7 +335,7 @@ class Engitech_IconBox_Grid extends Widget_Base{
 		$this->add_responsive_control(
 			'title_space',
 			[
-				'label' => __( 'Spacing', 'engitech' ),
+				'label' => __( 'Spacing', 'valkiriapps' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -351,7 +351,7 @@ class Engitech_IconBox_Grid extends Widget_Base{
 		$this->add_control(
 			'title_color',
 			[
-				'label' => __( 'Color', 'engitech' ),
+				'label' => __( 'Color', 'valkiriapps' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -372,7 +372,7 @@ class Engitech_IconBox_Grid extends Widget_Base{
 		$this->add_control(
 			'heading_des',
 			[
-				'label' => __( 'Description', 'engitech' ),
+				'label' => __( 'Description', 'valkiriapps' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -380,7 +380,7 @@ class Engitech_IconBox_Grid extends Widget_Base{
 		$this->add_control(
 			'des_color',
 			[
-				'label' => __( 'Color', 'engitech' ),
+				'label' => __( 'Color', 'valkiriapps' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -435,5 +435,5 @@ class Engitech_IconBox_Grid extends Widget_Base{
 		return [ 'service', 'grid' ];
 	}
 }
-// After the Engitech_IconBox_Grid class is defined, I must register the new widget class with Elementor:
-Plugin::instance()->widgets_manager->register( new Engitech_IconBox_Grid() );
+// After the Valkiriapps_IconBox_Grid class is defined, I must register the new widget class with Elementor:
+Plugin::instance()->widgets_manager->register( new Valkiriapps_IconBox_Grid() );

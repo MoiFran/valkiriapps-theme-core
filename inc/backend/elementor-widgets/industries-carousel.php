@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly (security measu
 /**
  * Widget Name: Industries Slider
  */
-class Engitech_Industries extends Widget_Base{
+class Valkiriapps_Industries extends Widget_Base{
 
  	// The get_name() method is a simple one, you just need to return a widget name that will be used in the code.
 	public function get_name() {
@@ -14,7 +14,7 @@ class Engitech_Industries extends Widget_Base{
 
 	// The get_title() method, which again, is a very simple one, you need to return the widget title that will be displayed as the widget label.
 	public function get_title() {
-		return __( 'Engitech Industries Carousel', 'engitech' );
+		return __( 'Valkiriapps Industries Carousel', 'valkiriapps' );
 	}
 
 	// The get_icon() method, is an optional but recommended method, it lets you set the widget icon. you can use any of the eicon or font-awesome icons, simply return the class name as a string.
@@ -24,7 +24,7 @@ class Engitech_Industries extends Widget_Base{
 
 	// The get_categories method, lets you set the category of the widget, return the category name as a string.
 	public function get_categories() {
-		return [ 'category_engitech' ];
+		return [ 'category_valkiriapps' ];
 	}
 
 	protected function register_controls() {
@@ -32,14 +32,14 @@ class Engitech_Industries extends Widget_Base{
 		$this->start_controls_section(
 			'section_industries',
 			[
-				'label' => __( 'Industries', 'engitech' ),
+				'label' => __( 'Industries', 'valkiriapps' ),
 			]
 		);
 		$repeater = new Repeater();
 		$repeater->add_control(
 			'iimage',
 			[
-				'label' => __( 'Text Image', 'engitech' ),
+				'label' => __( 'Text Image', 'valkiriapps' ),
 				'type' => Controls_Manager::MEDIA,
 				'default' => [
 					'url' => get_template_directory_uri().'/images/b-image.png',
@@ -50,7 +50,7 @@ class Engitech_Industries extends Widget_Base{
 		$repeater->add_control(
 			'ititle',
 			[
-				'label' => __( 'Title', 'engitech' ),
+				'label' => __( 'Title', 'valkiriapps' ),
 				'type' => Controls_Manager::TEXT,
 				'default' => 'Business & Finance',
 			]
@@ -59,7 +59,7 @@ class Engitech_Industries extends Widget_Base{
         $repeater->add_control(
 			'icontent',
 			[
-				'label' => __( 'Content', 'engitech' ),
+				'label' => __( 'Content', 'valkiriapps' ),
 				'type' => Controls_Manager::TEXTAREA,
 				'rows' => '10',
 				'default' => 'The global economy is moving towards a new identity. In order to remain competitive and profitable, the banking and finance.',
@@ -74,7 +74,7 @@ class Engitech_Industries extends Widget_Base{
 		        'show_label'  => false,
 		        'default'     => [
 		            [
-		             	'icontent' => __( 'The global economy is moving towards a new identity. In order to remain competitive and profitable, the banking and finance.', 'engitech' ),
+		             	'icontent' => __( 'The global economy is moving towards a new identity. In order to remain competitive and profitable, the banking and finance.', 'valkiriapps' ),
 		                'iimage'  => [
 							'url' => get_template_directory_uri().'/images/b-image.png',
 						],
@@ -82,7 +82,7 @@ class Engitech_Industries extends Widget_Base{
 		 
 		            ],
 		            [
-                        'icontent' => __( 'The global economy is moving towards a new identity. In order to remain competitive and profitable, the banking and finance.', 'engitech' ),
+                        'icontent' => __( 'The global economy is moving towards a new identity. In order to remain competitive and profitable, the banking and finance.', 'valkiriapps' ),
                        'iimage'  => [
                            'url' => get_template_directory_uri().'/images/b-image.png',
                        ],
@@ -90,7 +90,7 @@ class Engitech_Industries extends Widget_Base{
         
                    ],
                    [
-                    'icontent' => __( 'The global economy is moving towards a new identity. In order to remain competitive and profitable, the banking and finance.', 'engitech' ),
+                    'icontent' => __( 'The global economy is moving towards a new identity. In order to remain competitive and profitable, the banking and finance.', 'valkiriapps' ),
                    'iimage'  => [
                        'url' => get_template_directory_uri().'/images/b-image.png',
                    ],
@@ -109,58 +109,58 @@ class Engitech_Industries extends Widget_Base{
 				'type' => Controls_Manager::SELECT,
 				'default' => 'true',
 				'options' => [
-					'true' => __( 'Yes', 'engitech' ),
-					'false' => __( 'No', 'engitech' ),
+					'true' => __( 'Yes', 'valkiriapps' ),
+					'false' => __( 'No', 'valkiriapps' ),
 				]
 			]
 		);
 		$this->add_control(
 			'tshow',
 			[
-				'label' => __( 'Slides to Show', 'engitech' ),
+				'label' => __( 'Slides to Show', 'valkiriapps' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => '2',
 				'options' => [
-					'1' => __( '1', 'engitech' ),
-					'2' => __( '2', 'engitech' ),
-					'3' => __( '3', 'engitech' ),
+					'1' => __( '1', 'valkiriapps' ),
+					'2' => __( '2', 'valkiriapps' ),
+					'3' => __( '3', 'valkiriapps' ),
 				]
 			]
 		);
 		$this->add_control(
 			'tscroll',
 			[
-				'label' => __( 'Slides to Scroll', 'engitech' ),
+				'label' => __( 'Slides to Scroll', 'valkiriapps' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => '1',
 				'options' => [
-					'1' => __( '1', 'engitech' ),
-					'2' => __( '2', 'engitech' ),
-					'3' => __( '3', 'engitech' ),
+					'1' => __( '1', 'valkiriapps' ),
+					'2' => __( '2', 'valkiriapps' ),
+					'3' => __( '3', 'valkiriapps' ),
 				]
 			]
 		);
 		$this->add_control(
 			'tarrow',
 			[
-				'label' => __( 'Nav Slider', 'engitech' ),
+				'label' => __( 'Nav Slider', 'valkiriapps' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'false',
 				'options' => [
-					'true' => __( 'Yes', 'engitech' ),
-					'false' => __( 'No', 'engitech' ),
+					'true' => __( 'Yes', 'valkiriapps' ),
+					'false' => __( 'No', 'valkiriapps' ),
 				]
 			]
 		);
 		$this->add_control(
 			'tdots',
 			[
-				'label' => __( 'Dots Slider', 'engitech' ),
+				'label' => __( 'Dots Slider', 'valkiriapps' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'false',
 				'options' => [
-					'true' => __( 'Yes', 'engitech' ),
-					'false' => __( 'No', 'engitech' ),
+					'true' => __( 'Yes', 'valkiriapps' ),
+					'false' => __( 'No', 'valkiriapps' ),
 				]
 			]
 		);
@@ -171,7 +171,7 @@ class Engitech_Industries extends Widget_Base{
 		$this->start_controls_section(
 			'style_tcontent',
 			[
-				'label' => __( 'General', 'engitech' ),
+				'label' => __( 'General', 'valkiriapps' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -179,7 +179,7 @@ class Engitech_Industries extends Widget_Base{
 		$this->add_control(
 			'heading_cbox',
 			[
-				'label' => __( 'Content Box', 'engitech' ),
+				'label' => __( 'Content Box', 'valkiriapps' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -187,7 +187,7 @@ class Engitech_Industries extends Widget_Base{
 		$this->add_control(
 			'tcontent_bg',
 			[
-				'label' => __( 'Background Color', 'engitech' ),
+				'label' => __( 'Background Color', 'valkiriapps' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -199,7 +199,7 @@ class Engitech_Industries extends Widget_Base{
 		$this->add_control(
 			'tcontent_color',
 			[
-				'label' => __( 'Text Color', 'engitech' ),
+				'label' => __( 'Text Color', 'valkiriapps' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -219,7 +219,7 @@ class Engitech_Industries extends Widget_Base{
 		$this->add_control(
 			'tcontent_padding',
 			[
-				'label' => __( 'Padding', 'engitech' ),
+				'label' => __( 'Padding', 'valkiriapps' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%' ],
 				'selectors' => [
@@ -241,7 +241,7 @@ class Engitech_Industries extends Widget_Base{
 		$this->start_controls_section(
 			'style_timage',
 			[
-				'label' => __( 'Text Image', 'engitech' ),
+				'label' => __( 'Text Image', 'valkiriapps' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -249,7 +249,7 @@ class Engitech_Industries extends Widget_Base{
 		$this->add_control(
 			'spacing_img',
 			[
-				'label' => __( 'Spacing', 'engitech' ),
+				'label' => __( 'Spacing', 'valkiriapps' ),
 				'type' => Controls_Manager::SLIDER,
 				'size_units' => [ 'px' ],
 				'range' => [
@@ -267,7 +267,7 @@ class Engitech_Industries extends Widget_Base{
 		$this->add_control(
 			'image_size',
 			[
-				'label' => __( 'Size', 'engitech' ),
+				'label' => __( 'Size', 'valkiriapps' ),
 				'type' => Controls_Manager::SLIDER,
 				'size_units' => [ 'px' ],
 				'range' => [
@@ -285,7 +285,7 @@ class Engitech_Industries extends Widget_Base{
 		$this->add_control(
 			'image_border_radius',
 			[
-				'label' => __( 'Border Radius', 'engitech' ),
+				'label' => __( 'Border Radius', 'valkiriapps' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%' ],
 				'selectors' => [
@@ -300,7 +300,7 @@ class Engitech_Industries extends Widget_Base{
 		$this->start_controls_section(
 			'style_tname',
 			[
-				'label' => __( 'Title', 'engitech' ),
+				'label' => __( 'Title', 'valkiriapps' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -308,7 +308,7 @@ class Engitech_Industries extends Widget_Base{
 		$this->add_control(
 			'name_color',
 			[
-				'label' => __( 'Text Color', 'engitech' ),
+				'label' => __( 'Text Color', 'valkiriapps' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -328,7 +328,7 @@ class Engitech_Industries extends Widget_Base{
 		$this->add_control(
 			'spacing_name',
 			[
-				'label' => __( 'Spacing', 'engitech' ),
+				'label' => __( 'Spacing', 'valkiriapps' ),
 				'type' => Controls_Manager::SLIDER,
 				'size_units' => [ 'px' ],
 				'range' => [
@@ -349,14 +349,14 @@ class Engitech_Industries extends Widget_Base{
 		$this->start_controls_section(
 			'style_dots',
 			[
-				'label' => __( 'Dots', 'engitech' ),
+				'label' => __( 'Dots', 'valkiriapps' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 			]
 		);
 		$this->add_responsive_control(
 			'spacing_dots',
 			[
-				'label' => __( 'Spacing', 'engitech' ),
+				'label' => __( 'Spacing', 'valkiriapps' ),
 				'type' => Controls_Manager::SLIDER,
 				'size_units' => [ 'px', '%' ],
 				'range' => [
@@ -381,7 +381,7 @@ class Engitech_Industries extends Widget_Base{
 		$this->start_controls_section(
 			'style_nav',
 			[
-				'label' => __( 'Arrow', 'engitech' ),
+				'label' => __( 'Arrow', 'valkiriapps' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 				'condition' => [
 					'tarrow' => 'true',
@@ -391,7 +391,7 @@ class Engitech_Industries extends Widget_Base{
 		$this->add_control(
 			'spacing_nav',
 			[
-				'label' => __( 'Spacing', 'engitech' ),
+				'label' => __( 'Spacing', 'valkiriapps' ),
 				'type' => Controls_Manager::SLIDER,
 				'size_units' => [ 'px', '%' ],
 				'range' => [
@@ -413,7 +413,7 @@ class Engitech_Industries extends Widget_Base{
 		$this->add_control(
 			'arrow_color',
 			[
-				'label' => __( 'Color', 'engitech' ),
+				'label' => __( 'Color', 'valkiriapps' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -424,7 +424,7 @@ class Engitech_Industries extends Widget_Base{
 		$this->add_control(
 			'arrow_hcolor',
 			[
-				'label' => __( 'Hover Color', 'engitech' ),
+				'label' => __( 'Hover Color', 'valkiriapps' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -471,4 +471,4 @@ class Engitech_Industries extends Widget_Base{
 	protected function content_template() {}
 }
 // After the Schedule class is defined, I must register the new widget class with Elementor:
-Plugin::instance()->widgets_manager->register( new Engitech_Industries() );
+Plugin::instance()->widgets_manager->register( new Valkiriapps_Industries() );

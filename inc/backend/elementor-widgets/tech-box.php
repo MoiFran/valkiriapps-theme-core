@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly (security measu
 /**
  * Widget Name: Tech Box
  */
-class Engitech_TechBox extends Widget_Base{
+class Valkiriapps_TechBox extends Widget_Base{
 
  	// The get_name() method is a simple one, you just need to return a widget name that will be used in the code.
 	public function get_name() {
@@ -14,7 +14,7 @@ class Engitech_TechBox extends Widget_Base{
 
 	// The get_title() method, which again, is a very simple one, you need to return the widget title that will be displayed as the widget label.
 	public function get_title() {
-		return __( 'Engitech Technology Box', 'engitech' );
+		return __( 'Valkiriapps Technology Box', 'valkiriapps' );
 	}
 
 	// The get_icon() method, is an optional but recommended method, it lets you set the widget icon. you can use any of the eicon or font-awesome icons, simply return the class name as a string.
@@ -24,7 +24,7 @@ class Engitech_TechBox extends Widget_Base{
 
 	// The get_categories method, lets you set the category of the widget, return the category name as a string.
 	public function get_categories() {
-		return [ 'category_engitech' ];
+		return [ 'category_valkiriapps' ];
 	}
 
 	protected function register_controls() {
@@ -33,30 +33,30 @@ class Engitech_TechBox extends Widget_Base{
 		$this->start_controls_section(
 			'content_section',
 			[
-				'label' => __( 'Tech Box', 'engitech' ),
+				'label' => __( 'Tech Box', 'valkiriapps' ),
 			]
 		);
 
 		$this->add_responsive_control(
 			'align',
 			[
-				'label' => __( 'Alignment', 'engitech' ),
+				'label' => __( 'Alignment', 'valkiriapps' ),
 				'type' => Controls_Manager::CHOOSE,
 				'options' => [
 					'left'    => [
-						'title' => __( 'Left', 'engitech' ),
+						'title' => __( 'Left', 'valkiriapps' ),
 						'icon' => 'eicon-text-align-left',
 					],
 					'center' => [
-						'title' => __( 'Center', 'engitech' ),
+						'title' => __( 'Center', 'valkiriapps' ),
 						'icon' => 'eicon-text-align-center',
 					],
 					'right' => [
-						'title' => __( 'Right', 'engitech' ),
+						'title' => __( 'Right', 'valkiriapps' ),
 						'icon' => 'eicon-text-align-right',
 					]
 				],
-				// 'prefix_class' => 'engitech%s-align-',
+				// 'prefix_class' => 'valkiriapps%s-align-',
 				'selectors' => [
 					'{{WRAPPER}}' => 'text-align: {{VALUE}};',
 				],
@@ -67,20 +67,20 @@ class Engitech_TechBox extends Widget_Base{
 		$this->add_control(
 			'icon_type',
 			[
-				'label' => __( 'Icon Type', 'engitech' ),
+				'label' => __( 'Icon Type', 'valkiriapps' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'font',
 				'options' => [
-					'font' 	=> __( 'Font Icon', 'engitech' ),
-					'image' => __( 'Image Icon', 'engitech' ),
-					'class' => __( 'Custom Icon', 'engitech' ),
+					'font' 	=> __( 'Font Icon', 'valkiriapps' ),
+					'image' => __( 'Image Icon', 'valkiriapps' ),
+					'class' => __( 'Custom Icon', 'valkiriapps' ),
 				]
 			]
 		);
 		$this->add_control(
 			'icon_font',
 			[
-				'label' => __( 'Icon', 'engitech' ),
+				'label' => __( 'Icon', 'valkiriapps' ),
 				'type' => Controls_Manager::ICONS,
 				'label_block' => true,
 				'fa4compatibility' => 'icon',
@@ -96,7 +96,7 @@ class Engitech_TechBox extends Widget_Base{
 		$this->add_control(
 	       'icon_image',
 	        [
-	           'label' => esc_html__( 'Photo', 'engitech' ),
+	           'label' => esc_html__( 'Photo', 'valkiriapps' ),
 	           'type'  => Controls_Manager::MEDIA,
 				'default' => [
 					'url' => get_template_directory_uri().'/images/analysis.png',
@@ -109,9 +109,9 @@ class Engitech_TechBox extends Widget_Base{
 	    $this->add_control(
 			'icon_class',
 			[
-				'label' => __( 'Custom Class', 'engitech' ),
+				'label' => __( 'Custom Class', 'valkiriapps' ),
 				'type' => Controls_Manager::TEXT,
-				'default' => __( 'flaticon-apple', 'engitech' ),
+				'default' => __( 'flaticon-apple', 'valkiriapps' ),
 				'condition' => [
 					'icon_type' => 'class',
 				]
@@ -121,9 +121,9 @@ class Engitech_TechBox extends Widget_Base{
 		$this->add_control(
 			'title',
 			[
-				'label' => __( 'Title', 'engitech' ),
+				'label' => __( 'Title', 'valkiriapps' ),
 				'type' => Controls_Manager::TEXT,
-				'default' => __( 'IOS', 'engitech' ),
+				'default' => __( 'IOS', 'valkiriapps' ),
 				'label_block' => true,
 			]
 		);
@@ -131,9 +131,9 @@ class Engitech_TechBox extends Widget_Base{
 		$this->add_control(
 			'link',
 			[
-				'label' => __( 'Link', 'engitech' ),
+				'label' => __( 'Link', 'valkiriapps' ),
 				'type' => Controls_Manager::URL,
-				'placeholder' => __( 'https://your-link.com', 'engitech' ),
+				'placeholder' => __( 'https://your-link.com', 'valkiriapps' ),
 			]
 		);
 
@@ -143,7 +143,7 @@ class Engitech_TechBox extends Widget_Base{
 		$this->start_controls_section(
 			'style_box_section',
 			[
-				'label' => __( 'Box', 'engitech' ),
+				'label' => __( 'Box', 'valkiriapps' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -151,7 +151,7 @@ class Engitech_TechBox extends Widget_Base{
 		$this->add_responsive_control(
 			'box_padding',
 			[
-				'label' => __( 'Padding Box', 'engitech' ),
+				'label' => __( 'Padding Box', 'valkiriapps' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', 'em', '%' ],
 				'selectors' => [
@@ -166,7 +166,7 @@ class Engitech_TechBox extends Widget_Base{
 		$this->start_controls_tab(
 			'tab_box_normal',
 			[
-				'label' => __( 'Normal', 'engitech' ),
+				'label' => __( 'Normal', 'valkiriapps' ),
 			]
 		);
 
@@ -181,7 +181,7 @@ class Engitech_TechBox extends Widget_Base{
 			Group_Control_Background::get_type(),
 			[
 				'name' => 'ibox_bg',
-				'label' => __( 'Background', 'engitech' ),
+				'label' => __( 'Background', 'valkiriapps' ),
 				'types' => [ 'classic', 'gradient' ],
 				'selector' => '{{WRAPPER}} .tech-box',
 				'separator' => 'before',
@@ -193,7 +193,7 @@ class Engitech_TechBox extends Widget_Base{
 		$this->start_controls_tab(
 			'tab_box_hover',
 			[
-				'label' => __( 'Hover', 'engitech' ),
+				'label' => __( 'Hover', 'valkiriapps' ),
 			]
 		);
 
@@ -208,7 +208,7 @@ class Engitech_TechBox extends Widget_Base{
 			Group_Control_Background::get_type(),
 			[
 				'name' => 'ibox_hover_bg',
-				'label' => __( 'Background', 'engitech' ),
+				'label' => __( 'Background', 'valkiriapps' ),
 				'types' => [ 'classic', 'gradient' ],
 				'selector' => '{{WRAPPER}} .tech-box:hover',
 			]
@@ -224,7 +224,7 @@ class Engitech_TechBox extends Widget_Base{
 		$this->start_controls_section(
 			'style_icon_section',
 			[
-				'label' => __( 'Content', 'engitech' ),
+				'label' => __( 'Content', 'valkiriapps' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -233,7 +233,7 @@ class Engitech_TechBox extends Widget_Base{
 		 $this->add_control(
 			'heading_icon',
 			[
-				'label' => __( 'Icon', 'engitech' ),
+				'label' => __( 'Icon', 'valkiriapps' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -241,7 +241,7 @@ class Engitech_TechBox extends Widget_Base{
 		$this->add_responsive_control(
 			'icon_size',
 			[
-				'label' => __( 'Size', 'engitech' ),
+				'label' => __( 'Size', 'valkiriapps' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -265,7 +265,7 @@ class Engitech_TechBox extends Widget_Base{
 		$this->add_responsive_control(
 			'icon_space',
 			[
-				'label' => __( 'Spacing', 'engitech' ),
+				'label' => __( 'Spacing', 'valkiriapps' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -281,7 +281,7 @@ class Engitech_TechBox extends Widget_Base{
 		$this->add_control(
 			'icon_color',
 			[
-				'label' => __( 'Color', 'engitech' ),
+				'label' => __( 'Color', 'valkiriapps' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -296,7 +296,7 @@ class Engitech_TechBox extends Widget_Base{
         $this->add_control(
 			'icon_hover_color',
 			[
-				'label' => __( 'Hover Box Color', 'engitech' ),
+				'label' => __( 'Hover Box Color', 'valkiriapps' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -313,7 +313,7 @@ class Engitech_TechBox extends Widget_Base{
 		$this->add_control(
 			'heading_title',
 			[
-				'label' => __( 'Title', 'engitech' ),
+				'label' => __( 'Title', 'valkiriapps' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -321,7 +321,7 @@ class Engitech_TechBox extends Widget_Base{
 		$this->add_control(
 			'title_color',
 			[
-				'label' => __( 'Color', 'engitech' ),
+				'label' => __( 'Color', 'valkiriapps' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -332,7 +332,7 @@ class Engitech_TechBox extends Widget_Base{
         $this->add_control(
 			'title_hover_color',
 			[
-				'label' => __( 'Hover Box Color', 'engitech' ),
+				'label' => __( 'Hover Box Color', 'valkiriapps' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -382,4 +382,4 @@ class Engitech_TechBox extends Widget_Base{
 	protected function content_template() {}
 }
 // After the Schedule class is defined, I must register the new widget class with Elementor:
-Plugin::instance()->widgets_manager->register( new Engitech_TechBox() );
+Plugin::instance()->widgets_manager->register( new Valkiriapps_TechBox() );

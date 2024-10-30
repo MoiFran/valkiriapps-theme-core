@@ -1,8 +1,8 @@
 <?php
 
 // Load the theme's custom Widgets so that they appear in the Elementor element panel.
-add_action( 'elementor/widgets/register', 'engitech_register_elementor_widgets' );
-function engitech_register_elementor_widgets() {
+add_action( 'elementor/widgets/register', 'valkiriapps_register_elementor_widgets' );
+function valkiriapps_register_elementor_widgets() {
     // We check if the Elementor plugin has been installed / activated.
     if ( defined( 'ELEMENTOR_PATH' ) && class_exists('Elementor\Widget_Base') ) {
         // Include Elementor Widget files here.
@@ -13,27 +13,27 @@ function engitech_register_elementor_widgets() {
     }
 }
 
-// Add a custom 'category_engitech' category for to the Elementor element panel so that our theme's widgets have their own category.
+// Add a custom 'category_valkiriapps' category for to the Elementor element panel so that our theme's widgets have their own category.
 add_action( 'elementor/init', function() {
     \Elementor\Plugin::$instance->elements_manager->add_category( 
-        'category_engitech',
+        'category_valkiriapps',
         [
-            'title' => __( 'Engitech', 'engitech' ),
+            'title' => __( 'Valkiriapps', 'valkiriapps' ),
             'icon' => 'fa fa-plug', //default icon
         ],
         1 // position
     );
     \Elementor\Plugin::$instance->elements_manager->add_category( 
-        'category_engitech_header',
+        'category_valkiriapps_header',
         [
-            'title' => __( 'OT Header', 'engitech' ),
+            'title' => __( 'OT Header', 'valkiriapps' ),
             'icon' => 'fa fa-plug', //default icon
         ],
         2 // position
     );
 });
 
-function engitech_add_cpt_support() {
+function valkiriapps_add_cpt_support() {
     
     //if exists, assign to $cpt_support var
     $cpt_support = get_option( 'elementor_cpt_support' );
@@ -63,10 +63,10 @@ function engitech_add_cpt_support() {
     
     //otherwise do nothing, portfolio already exists in elementor_cpt_support option
 }
-add_action( 'elementor/init', 'engitech_add_cpt_support' );
+add_action( 'elementor/init', 'valkiriapps_add_cpt_support' );
 
 // Upload SVG for Elementor
-function engitech_unfiltered_files_upload() {
+function valkiriapps_unfiltered_files_upload() {
     
     //if exists, assign to $cpt_support var
     $cpt_support = get_option( 'elementor_unfiltered_files_upload' );
@@ -77,11 +77,11 @@ function engitech_unfiltered_files_upload() {
         update_option( 'elementor_unfiltered_files_upload', $cpt_support ); //write it to the database
     }
 }
-add_action( 'elementor/init', 'engitech_unfiltered_files_upload' );
+add_action( 'elementor/init', 'valkiriapps_unfiltered_files_upload' );
 
 // header post type
-add_action( 'init', 'engitech_create_header_builder' ); 
-function engitech_create_header_builder() {
+add_action( 'init', 'valkiriapps_create_header_builder' ); 
+function valkiriapps_create_header_builder() {
     register_post_type( 'ot_header_builders',
         array(
             'labels' => array(
@@ -116,8 +116,8 @@ function engitech_create_header_builder() {
 }
 
 // footer post type
-add_action( 'init', 'engitech_create_footer_builder' ); 
-function engitech_create_footer_builder() {
+add_action( 'init', 'valkiriapps_create_footer_builder' ); 
+function valkiriapps_create_footer_builder() {
     register_post_type( 'ot_footer_builders',
         array(
             'labels' => array(
@@ -152,12 +152,12 @@ function engitech_create_footer_builder() {
 }
 
 /*Fix Elementor Pro*/
-function engitech_register_elementor_locations( $elementor_theme_manager ) {
+function valkiriapps_register_elementor_locations( $elementor_theme_manager ) {
 
     $elementor_theme_manager->register_all_core_location();
 
 }
-add_action( 'elementor/theme/register_locations', 'engitech_register_elementor_locations' );
+add_action( 'elementor/theme/register_locations', 'valkiriapps_register_elementor_locations' );
 
 /*** add options to sections ***/
 add_action('elementor/element/section/section_structure/after_section_end', function( $section, $args ) {
@@ -166,14 +166,14 @@ add_action('elementor/element/section/section_structure/after_section_end', func
     $section->start_controls_section(
         'header_custom_class',
         [
-            'label' => __( 'For Header', 'engitech' ),
+            'label' => __( 'For Header', 'valkiriapps' ),
             'tab' => \Elementor\Controls_Manager::TAB_LAYOUT,
         ]
     );
     $section->add_control(
         'sticky_class',
         [
-            'label'        => __( 'Sticky On/Off', 'engitech' ),
+            'label'        => __( 'Sticky On/Off', 'valkiriapps' ),
             'type'         => Elementor\Controls_Manager::SWITCHER,
             'return_value' => 'is-fixed',
             'prefix_class' => '',
@@ -182,7 +182,7 @@ add_action('elementor/element/section/section_structure/after_section_end', func
     $section->add_control(
         'sticky_background',
         [
-            'label'     => __( 'Background Scroll', 'engitech' ),
+            'label'     => __( 'Background Scroll', 'valkiriapps' ),
             'type'      => Elementor\Controls_Manager::COLOR,
             'selectors' => [
                 '{{WRAPPER}}.elementor-section.is-stuck' => 'background: {{VALUE}};',
@@ -195,7 +195,7 @@ add_action('elementor/element/section/section_structure/after_section_end', func
     $section->add_responsive_control(
         'offset_space',
         [
-            'label' => __( 'Offset', 'engitech' ),
+            'label' => __( 'Offset', 'valkiriapps' ),
             'type' => Elementor\Controls_Manager::SLIDER,
             'range' => [
                 'px' => [
@@ -223,16 +223,16 @@ add_action('elementor/element/section/section_layout/after_section_start', funct
     $section->add_control(
         'layout_section',
         [
-            'label' => __( 'Display Section', 'engitech' ),
+            'label' => __( 'Display Section', 'valkiriapps' ),
             'type' => Elementor\Controls_Manager::CHOOSE,
             'default' => 'traditional',
             'options' => [
                 'layout_block' => [
-                    'title' => __( 'Default', 'engitech' ),
+                    'title' => __( 'Default', 'valkiriapps' ),
                     'icon' => 'eicon-editor-list-ul',
                 ],
                 'layout_inline' => [
-                    'title' => __( 'Inline', 'engitech' ),
+                    'title' => __( 'Inline', 'valkiriapps' ),
                     'icon' => 'eicon-ellipsis-h',
                 ],
             ],
@@ -243,23 +243,23 @@ add_action('elementor/element/section/section_layout/after_section_start', funct
     $section->add_responsive_control(
         'content_align',
         [
-            'label' => __( 'Alignment', 'engitech' ),
+            'label' => __( 'Alignment', 'valkiriapps' ),
             'type' => Elementor\Controls_Manager::CHOOSE,
             'options' => [
                 'left'    => [
-                    'title' => __( 'Left', 'engitech' ),
+                    'title' => __( 'Left', 'valkiriapps' ),
                     'icon' => 'eicon-text-align-left',
                 ],
                 'center' => [
-                    'title' => __( 'Center', 'engitech' ),
+                    'title' => __( 'Center', 'valkiriapps' ),
                     'icon' => 'eicon-text-align-center',
                 ],
                 'right' => [
-                    'title' => __( 'Right', 'engitech' ),
+                    'title' => __( 'Right', 'valkiriapps' ),
                     'icon' => 'eicon-text-align-right',
                 ],
                 'justify' => [
-                    'title' => __( 'Justified', 'engitech' ),
+                    'title' => __( 'Justified', 'valkiriapps' ),
                     'icon' => 'eicon-text-align-justify',
                 ],
             ],
@@ -280,7 +280,7 @@ add_action('elementor/element/section/section_typo/after_section_end', function(
     $section->start_controls_section(
         'section_custom_lines',
         [
-            'label' => __( 'Grid Lines', 'engitech' ),
+            'label' => __( 'Grid Lines', 'valkiriapps' ),
             'tab' => \Elementor\Controls_Manager::TAB_STYLE,
         ]
     );
@@ -288,7 +288,7 @@ add_action('elementor/element/section/section_typo/after_section_end', function(
     $section->add_control(
         'lines_class',
         [
-            'label'        => __( 'Grid Lines On/Off', 'engitech' ),
+            'label'        => __( 'Grid Lines On/Off', 'valkiriapps' ),
             'type'         => Elementor\Controls_Manager::SWITCHER,
             'return_value' => 'has-lines',
             'prefix_class' => '',
@@ -297,7 +297,7 @@ add_action('elementor/element/section/section_typo/after_section_end', function(
     $section->add_control(
         'heading_line1',
         [
-            'label' => __( 'Line Left', 'engitech' ),
+            'label' => __( 'Line Left', 'valkiriapps' ),
             'type' => Elementor\Controls_Manager::HEADING,
             'separator' => 'before',
             'condition' => [
@@ -308,7 +308,7 @@ add_action('elementor/element/section/section_typo/after_section_end', function(
     $section->add_responsive_control(
         'line1_space',
         [
-            'label' => __( 'Position Line', 'engitech' ),
+            'label' => __( 'Position Line', 'valkiriapps' ),
             'type' => Elementor\Controls_Manager::SLIDER,
             'range' => [
                 'px' => [
@@ -327,7 +327,7 @@ add_action('elementor/element/section/section_typo/after_section_end', function(
     $section->add_control(
         'line1_color',
         [
-            'label'        => __( 'Line Color', 'engitech' ),
+            'label'        => __( 'Line Color', 'valkiriapps' ),
             'type'         => Elementor\Controls_Manager::COLOR,
             'default'      => '',
             'selectors'    => [
@@ -341,7 +341,7 @@ add_action('elementor/element/section/section_typo/after_section_end', function(
     $section->add_responsive_control(
         'dot1_space',
         [
-            'label' => __( 'Position Dot', 'engitech' ),
+            'label' => __( 'Position Dot', 'valkiriapps' ),
             'type' => Elementor\Controls_Manager::SLIDER,
             'size_units' => [ 'px', '%' ],
             'range' => [
@@ -365,7 +365,7 @@ add_action('elementor/element/section/section_typo/after_section_end', function(
     $section->add_control(
         'dot1_color',
         [
-            'label'        => __( 'Dot Color', 'engitech' ),
+            'label'        => __( 'Dot Color', 'valkiriapps' ),
             'type'         => Elementor\Controls_Manager::COLOR,
             'default'      => '',
             'selectors'    => [
@@ -380,7 +380,7 @@ add_action('elementor/element/section/section_typo/after_section_end', function(
     $section->add_control(
         'heading_line2',
         [
-            'label' => __( 'Line Center Left', 'engitech' ),
+            'label' => __( 'Line Center Left', 'valkiriapps' ),
             'type' => Elementor\Controls_Manager::HEADING,
             'separator' => 'before',
             'condition' => [
@@ -391,7 +391,7 @@ add_action('elementor/element/section/section_typo/after_section_end', function(
     $section->add_responsive_control(
         'line2_space',
         [
-            'label' => __( 'Position Line', 'engitech' ),
+            'label' => __( 'Position Line', 'valkiriapps' ),
             'type' => Elementor\Controls_Manager::SLIDER,
             'range' => [
                 'px' => [
@@ -410,7 +410,7 @@ add_action('elementor/element/section/section_typo/after_section_end', function(
     $section->add_control(
         'line2_color',
         [
-            'label'        => __( 'Line Color', 'engitech' ),
+            'label'        => __( 'Line Color', 'valkiriapps' ),
             'type'         => Elementor\Controls_Manager::COLOR,
             'default'      => '',
             'selectors'    => [
@@ -424,7 +424,7 @@ add_action('elementor/element/section/section_typo/after_section_end', function(
     $section->add_responsive_control(
         'dot2_space',
         [
-            'label' => __( 'Position Dot', 'engitech' ),
+            'label' => __( 'Position Dot', 'valkiriapps' ),
             'type' => Elementor\Controls_Manager::SLIDER,
             'size_units' => [ 'px', '%' ],
             'range' => [
@@ -448,7 +448,7 @@ add_action('elementor/element/section/section_typo/after_section_end', function(
     $section->add_control(
         'dot2_color',
         [
-            'label'        => __( 'Dot Color', 'engitech' ),
+            'label'        => __( 'Dot Color', 'valkiriapps' ),
             'type'         => Elementor\Controls_Manager::COLOR,
             'default'      => '',
             'selectors'    => [
@@ -463,7 +463,7 @@ add_action('elementor/element/section/section_typo/after_section_end', function(
     $section->add_control(
         'heading_line5',
         [
-            'label' => __( 'Line Center', 'engitech' ),
+            'label' => __( 'Line Center', 'valkiriapps' ),
             'type' => Elementor\Controls_Manager::HEADING,
             'separator' => 'before',
             'condition' => [
@@ -474,7 +474,7 @@ add_action('elementor/element/section/section_typo/after_section_end', function(
     $section->add_responsive_control(
         'line5_space',
         [
-            'label' => __( 'Position Line', 'engitech' ),
+            'label' => __( 'Position Line', 'valkiriapps' ),
             'type' => Elementor\Controls_Manager::SLIDER,
             'range' => [
                 'px' => [
@@ -493,7 +493,7 @@ add_action('elementor/element/section/section_typo/after_section_end', function(
     $section->add_control(
         'line5_color',
         [
-            'label'        => __( 'Line Color', 'engitech' ),
+            'label'        => __( 'Line Color', 'valkiriapps' ),
             'type'         => Elementor\Controls_Manager::COLOR,
             'default'      => '',
             'selectors'    => [
@@ -507,7 +507,7 @@ add_action('elementor/element/section/section_typo/after_section_end', function(
     $section->add_responsive_control(
         'dot5_space',
         [
-            'label' => __( 'Position Dot', 'engitech' ),
+            'label' => __( 'Position Dot', 'valkiriapps' ),
             'type' => Elementor\Controls_Manager::SLIDER,
             'size_units' => [ 'px', '%' ],
             'range' => [
@@ -531,7 +531,7 @@ add_action('elementor/element/section/section_typo/after_section_end', function(
     $section->add_control(
         'dot5_color',
         [
-            'label'        => __( 'Dot Color', 'engitech' ),
+            'label'        => __( 'Dot Color', 'valkiriapps' ),
             'type'         => Elementor\Controls_Manager::COLOR,
             'default'      => '',
             'selectors'    => [
@@ -546,7 +546,7 @@ add_action('elementor/element/section/section_typo/after_section_end', function(
     $section->add_control(
         'heading_line3',
         [
-            'label' => __( 'Line Center Right', 'engitech' ),
+            'label' => __( 'Line Center Right', 'valkiriapps' ),
             'type' => Elementor\Controls_Manager::HEADING,
             'separator' => 'before',
             'condition' => [
@@ -557,7 +557,7 @@ add_action('elementor/element/section/section_typo/after_section_end', function(
     $section->add_responsive_control(
         'line3_space',
         [
-            'label' => __( 'Position Line', 'engitech' ),
+            'label' => __( 'Position Line', 'valkiriapps' ),
             'type' => Elementor\Controls_Manager::SLIDER,
             'range' => [
                 'px' => [
@@ -576,7 +576,7 @@ add_action('elementor/element/section/section_typo/after_section_end', function(
     $section->add_control(
         'line3_color',
         [
-            'label'        => __( 'Line Color', 'engitech' ),
+            'label'        => __( 'Line Color', 'valkiriapps' ),
             'type'         => Elementor\Controls_Manager::COLOR,
             'default'      => '',
             'selectors'    => [
@@ -590,7 +590,7 @@ add_action('elementor/element/section/section_typo/after_section_end', function(
     $section->add_responsive_control(
         'dot3_space',
         [
-            'label' => __( 'Position Dot', 'engitech' ),
+            'label' => __( 'Position Dot', 'valkiriapps' ),
             'type' => Elementor\Controls_Manager::SLIDER,
             'size_units' => [ 'px', '%' ],
             'range' => [
@@ -614,7 +614,7 @@ add_action('elementor/element/section/section_typo/after_section_end', function(
     $section->add_control(
         'dot3_color',
         [
-            'label'        => __( 'Dot Color', 'engitech' ),
+            'label'        => __( 'Dot Color', 'valkiriapps' ),
             'type'         => Elementor\Controls_Manager::COLOR,
             'default'      => '',
             'selectors'    => [
@@ -629,7 +629,7 @@ add_action('elementor/element/section/section_typo/after_section_end', function(
     $section->add_control(
         'heading_line4',
         [
-            'label' => __( 'Line Right', 'engitech' ),
+            'label' => __( 'Line Right', 'valkiriapps' ),
             'type' => Elementor\Controls_Manager::HEADING,
             'separator' => 'before',
             'condition' => [
@@ -640,7 +640,7 @@ add_action('elementor/element/section/section_typo/after_section_end', function(
     $section->add_responsive_control(
         'line4_space',
         [
-            'label' => __( 'Position Line', 'engitech' ),
+            'label' => __( 'Position Line', 'valkiriapps' ),
             'type' => Elementor\Controls_Manager::SLIDER,
             'range' => [
                 'px' => [
@@ -659,7 +659,7 @@ add_action('elementor/element/section/section_typo/after_section_end', function(
     $section->add_control(
         'line4_color',
         [
-            'label'        => __( 'Line Color', 'engitech' ),
+            'label'        => __( 'Line Color', 'valkiriapps' ),
             'type'         => Elementor\Controls_Manager::COLOR,
             'default'      => '',
             'selectors'    => [
@@ -673,7 +673,7 @@ add_action('elementor/element/section/section_typo/after_section_end', function(
     $section->add_responsive_control(
         'dot4_space',
         [
-            'label' => __( 'Position Dot', 'engitech' ),
+            'label' => __( 'Position Dot', 'valkiriapps' ),
             'type' => Elementor\Controls_Manager::SLIDER,
             'size_units' => [ 'px', '%' ],
             'range' => [
@@ -697,7 +697,7 @@ add_action('elementor/element/section/section_typo/after_section_end', function(
     $section->add_control(
         'dot4_color',
         [
-            'label'        => __( 'Dot Color', 'engitech' ),
+            'label'        => __( 'Dot Color', 'valkiriapps' ),
             'type'         => Elementor\Controls_Manager::COLOR,
             'default'      => '',
             'selectors'    => [

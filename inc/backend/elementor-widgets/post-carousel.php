@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly (security measu
 /**
  * Widget Name: News Slider
  */
-class Engitech_Post_Carousel extends Widget_Base{
+class Valkiriapps_Post_Carousel extends Widget_Base{
 
  	// The get_name() method is a simple one, you just need to return a widget name that will be used in the code.
 	public function get_name() {
@@ -14,7 +14,7 @@ class Engitech_Post_Carousel extends Widget_Base{
 
 	// The get_title() method, which again, is a very simple one, you need to return the widget title that will be displayed as the widget label.
 	public function get_title() {
-		return __( 'Engitech Post Carousel', 'engitech' );
+		return __( 'Valkiriapps Post Carousel', 'valkiriapps' );
 	}
 
 	// The get_icon() method, is an optional but recommended method, it lets you set the widget icon. you can use any of the eicon or font-awesome icons, simply return the class name as a string.
@@ -24,7 +24,7 @@ class Engitech_Post_Carousel extends Widget_Base{
 
 	// The get_categories method, lets you set the category of the widget, return the category name as a string.
 	public function get_categories() {
-		return [ 'category_engitech' ];
+		return [ 'category_valkiriapps' ];
 	}
 
 	protected function register_controls() {
@@ -33,26 +33,26 @@ class Engitech_Post_Carousel extends Widget_Base{
 		$this->start_controls_section(
 			'content_section',
 			[
-				'label' => __( 'Post Carousel', 'engitech' ),
+				'label' => __( 'Post Carousel', 'valkiriapps' ),
 			]
 		);
 
 		$this->add_control(
 			'post_cat',
 			[
-				'label' => __( 'Select Categories', 'engitech' ),
+				'label' => __( 'Select Categories', 'valkiriapps' ),
 				'type' => Controls_Manager::SELECT2,
 				'options' => $this->select_param_cate_post(),
 				'multiple' => true,
 				'label_block' => true,
-				'placeholder' => __( 'All Categories', 'engitech' ),
+				'placeholder' => __( 'All Categories', 'valkiriapps' ),
 			]
 		);
 
 		$this->add_control(
 			'number_show',
 			[
-				'label' => __( 'Show Number Posts', 'engitech' ),
+				'label' => __( 'Show Number Posts', 'valkiriapps' ),
 				'type' => Controls_Manager::NUMBER,
 				'default' => '9',
 			]
@@ -62,13 +62,13 @@ class Engitech_Post_Carousel extends Widget_Base{
 			[
 				'label' => 'Button',
 				'type' => Controls_Manager::TEXTAREA,
-				'default' => __( '<i class="flaticon-right-arrow-1"></i>LEARN MORE', 'engitech' ),
+				'default' => __( '<i class="flaticon-right-arrow-1"></i>LEARN MORE', 'valkiriapps' ),
 			]
 		);
 		$this->add_control(
 			'heading_slider',
 			[
-				'label' => __( 'Slider', 'engitech' ),
+				'label' => __( 'Slider', 'valkiriapps' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -76,51 +76,51 @@ class Engitech_Post_Carousel extends Widget_Base{
 		$this->add_control(
 			'tshow',
 			[
-				'label' => __( 'Slides to Show', 'engitech' ),
+				'label' => __( 'Slides to Show', 'valkiriapps' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => '3',
 				'options' => [
-					'2' => __( '2', 'engitech' ),
-					'3' => __( '3', 'engitech' ),
-					'4' => __( '4', 'engitech' ),
+					'2' => __( '2', 'valkiriapps' ),
+					'3' => __( '3', 'valkiriapps' ),
+					'4' => __( '4', 'valkiriapps' ),
 				]
 			]
 		);
 		$this->add_control(
 			'scroll',
 			[
-				'label' => __( 'Slides to Scroll', 'engitech' ),
+				'label' => __( 'Slides to Scroll', 'valkiriapps' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => '1',
 				'options' => [
-					'1' => __( '1', 'engitech' ),
-					'2' => __( '2', 'engitech' ),
-					'3' => __( '3', 'engitech' ),
-					'4' => __( '4', 'engitech' ),
+					'1' => __( '1', 'valkiriapps' ),
+					'2' => __( '2', 'valkiriapps' ),
+					'3' => __( '3', 'valkiriapps' ),
+					'4' => __( '4', 'valkiriapps' ),
 				]
 			]
 		);
 		$this->add_control(
 			'tarrow',
 			[
-				'label' => __( 'Nav Slider', 'engitech' ),
+				'label' => __( 'Nav Slider', 'valkiriapps' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'false',
 				'options' => [
-					'true' => __( 'Yes', 'engitech' ),
-					'false' => __( 'No', 'engitech' ),
+					'true' => __( 'Yes', 'valkiriapps' ),
+					'false' => __( 'No', 'valkiriapps' ),
 				]
 			]
 		);
 		$this->add_control(
 			'tdots',
 			[
-				'label' => __( 'Dots Slider', 'engitech' ),
+				'label' => __( 'Dots Slider', 'valkiriapps' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'false',
 				'options' => [
-					'true' => __( 'Yes', 'engitech' ),
-					'false' => __( 'No', 'engitech' ),
+					'true' => __( 'Yes', 'valkiriapps' ),
+					'false' => __( 'No', 'valkiriapps' ),
 				]
 			]
 		);
@@ -131,14 +131,14 @@ class Engitech_Post_Carousel extends Widget_Base{
 		$this->start_controls_section(
 			'style_section',
 			[
-				'label' => __( 'General', 'engitech' ),
+				'label' => __( 'General', 'valkiriapps' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
 		$this->add_responsive_control(
 			'info_padd',
 			[
-				'label' => __( 'Padding', 'engitech' ),
+				'label' => __( 'Padding', 'valkiriapps' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px' ],
 				'selectors' => [
@@ -149,7 +149,7 @@ class Engitech_Post_Carousel extends Widget_Base{
 		$this->add_control(
 			'info_border',
 			[
-				'label' => __( 'Border Color', 'engitech' ),
+				'label' => __( 'Border Color', 'valkiriapps' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -164,14 +164,14 @@ class Engitech_Post_Carousel extends Widget_Base{
 		$this->start_controls_section(
 			'content_style',
 			[
-				'label' => __( 'Content', 'engitech' ),
+				'label' => __( 'Content', 'valkiriapps' ),
 				'tab'   => Controls_Manager::TAB_STYLE
 			]
 		);
 		$this->add_control(
 			'heading_meta',
 			[
-				'label' => __( 'Entry Meta', 'engitech' ),
+				'label' => __( 'Entry Meta', 'valkiriapps' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -179,7 +179,7 @@ class Engitech_Post_Carousel extends Widget_Base{
 		$this->add_responsive_control(
 			'meta_spacing',
 			[
-				'label' => __( 'Spacing', 'engitech' ),
+				'label' => __( 'Spacing', 'valkiriapps' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -203,7 +203,7 @@ class Engitech_Post_Carousel extends Widget_Base{
 		$this->add_control(
 			'heading_title',
 			[
-				'label' => __( 'Title', 'engitech' ),
+				'label' => __( 'Title', 'valkiriapps' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -211,7 +211,7 @@ class Engitech_Post_Carousel extends Widget_Base{
 		$this->add_responsive_control(
 			'title_spacing',
 			[
-				'label' => __( 'Spacing', 'engitech' ),
+				'label' => __( 'Spacing', 'valkiriapps' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -238,7 +238,7 @@ class Engitech_Post_Carousel extends Widget_Base{
 		$this->start_controls_section(
 			'btn_section',
 			[
-				'label' => __( 'Button', 'engitech' ),
+				'label' => __( 'Button', 'valkiriapps' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 				'condition' => [
 					'detail_btn[value]!' => '',
@@ -248,7 +248,7 @@ class Engitech_Post_Carousel extends Widget_Base{
 		$this->add_control(
 			'btn_readmore_color',
 			[
-				'label' => __( 'Color', 'engitech' ),
+				'label' => __( 'Color', 'valkiriapps' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -259,7 +259,7 @@ class Engitech_Post_Carousel extends Widget_Base{
 		$this->add_control(
 			'btn_readmore_color_hover',
 			[
-				'label' => __( 'Color Hover', 'engitech' ),
+				'label' => __( 'Color Hover', 'valkiriapps' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -281,14 +281,14 @@ class Engitech_Post_Carousel extends Widget_Base{
 		$this->start_controls_section(
 			'style_dots',
 			[
-				'label' => __( 'Dots', 'engitech' ),
+				'label' => __( 'Dots', 'valkiriapps' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 			]
 		);
 		$this->add_responsive_control(
 			'spacing_dots',
 			[
-				'label' => __( 'Spacing', 'engitech' ),
+				'label' => __( 'Spacing', 'valkiriapps' ),
 				'type' => Controls_Manager::SLIDER,
 				'size_units' => [ 'px', '%' ],
 				'range' => [
@@ -313,7 +313,7 @@ class Engitech_Post_Carousel extends Widget_Base{
 		$this->start_controls_section(
 			'style_nav',
 			[
-				'label' => __( 'Arrow', 'engitech' ),
+				'label' => __( 'Arrow', 'valkiriapps' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 				'condition' => [
 					'tarrow' => 'true',
@@ -323,7 +323,7 @@ class Engitech_Post_Carousel extends Widget_Base{
 		$this->add_control(
 			'spacing_nav',
 			[
-				'label' => __( 'Spacing', 'engitech' ),
+				'label' => __( 'Spacing', 'valkiriapps' ),
 				'type' => Controls_Manager::SLIDER,
 				'size_units' => [ 'px', '%' ],
 				'range' => [
@@ -345,7 +345,7 @@ class Engitech_Post_Carousel extends Widget_Base{
 		$this->add_control(
 			'arrow_color',
 			[
-				'label' => __( 'Color', 'engitech' ),
+				'label' => __( 'Color', 'valkiriapps' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -356,7 +356,7 @@ class Engitech_Post_Carousel extends Widget_Base{
 		$this->add_control(
 			'arrow_hcolor',
 			[
-				'label' => __( 'Hover Color', 'engitech' ),
+				'label' => __( 'Hover Color', 'valkiriapps' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -405,18 +405,18 @@ class Engitech_Post_Carousel extends Widget_Base{
 					<div class="post-inner">
 					    <?php if ( has_post_thumbnail() ) { ?>
 					        <div class="entry-media">
-								<?php engitech_posted_in(); ?>
+								<?php valkiriapps_posted_in(); ?>
 								<a href="<?php the_permalink(); ?>">
-									<?php the_post_thumbnail('engitech-slider-post-thumbnail'); ?>
+									<?php the_post_thumbnail('valkiriapps-slider-post-thumbnail'); ?>
 								</a>
 							</div>					       
 					    <?php } ?>
 					    <div class="inner-post">
 							<div class="entry-header">
 
-								<?php if ( 'post' === get_post_type() ) : if( engitech_get_option( 'post_entry_meta' ) ) { ?>
+								<?php if ( 'post' === get_post_type() ) : if( valkiriapps_get_option( 'post_entry_meta' ) ) { ?>
 								<div class="entry-meta">
-									<?php engitech_post_meta(); ?>
+									<?php valkiriapps_post_meta(); ?>
 								</div><!-- .entry-meta -->
 								<?php } endif; ?>
 
@@ -450,5 +450,5 @@ class Engitech_Post_Carousel extends Widget_Base{
 	  	return $cat;
 	}
 }
-// After the Engitech_Post_Carousel class is defined, I must register the new widget class with Elementor:
-Plugin::instance()->widgets_manager->register( new Engitech_Post_Carousel() );
+// After the Valkiriapps_Post_Carousel class is defined, I must register the new widget class with Elementor:
+Plugin::instance()->widgets_manager->register( new Valkiriapps_Post_Carousel() );

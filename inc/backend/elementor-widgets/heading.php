@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly (security measu
 /**
  * Widget Name: Section Heading 
  */
-class Engitech_Heading extends Widget_Base{
+class Valkiriapps_Heading extends Widget_Base{
 
  	// The get_name() method is a simple one, you just need to return a widget name that will be used in the code.
 	public function get_name() {
@@ -14,7 +14,7 @@ class Engitech_Heading extends Widget_Base{
 
 	// The get_title() method, which again, is a very simple one, you need to return the widget title that will be displayed as the widget label.
 	public function get_title() {
-		return __( 'Engitech Heading', 'engitech' );
+		return __( 'Valkiriapps Heading', 'valkiriapps' );
 	}
 
 	// The get_icon() method, is an optional but recommended method, it lets you set the widget icon. you can use any of the eicon or font-awesome icons, simply return the class name as a string.
@@ -24,7 +24,7 @@ class Engitech_Heading extends Widget_Base{
 
 	// The get_categories method, lets you set the category of the widget, return the category name as a string.
 	public function get_categories() {
-		return [ 'category_engitech' ];
+		return [ 'category_valkiriapps' ];
 	}
 
 	protected function register_controls() {
@@ -33,14 +33,14 @@ class Engitech_Heading extends Widget_Base{
 		$this->start_controls_section(
 			'content_section',
 			[
-				'label' => __( 'Content', 'engitech' ),
+				'label' => __( 'Content', 'valkiriapps' ),
 			]
 		);
 
 		$this->add_control(
 			'iheading_title',
 			[
-				'label' => __( 'Subtitle & Title', 'engitech' ),
+				'label' => __( 'Subtitle & Title', 'valkiriapps' ),
 				'type' => Controls_Manager::HEADING,
 			]
 		);
@@ -49,8 +49,8 @@ class Engitech_Heading extends Widget_Base{
 			[
 				'label' => '',
 				'type' => Controls_Manager::TEXT,
-				'default' => __( '// our service', 'engitech' ),
-				'placeholder' => __( 'Enter your subtitle', 'engitech' ),
+				'default' => __( '// our service', 'valkiriapps' ),
+				'placeholder' => __( 'Enter your subtitle', 'valkiriapps' ),
 				'label_block' => true,
 				'show_label' => false,
 			]
@@ -61,8 +61,8 @@ class Engitech_Heading extends Widget_Base{
 			[
 				'label' => '',
 				'type' => Controls_Manager::TEXTAREA,
-				'default' => __( 'What we do', 'engitech' ),
-				'placeholder' => __( 'Enter your title', 'engitech' ),
+				'default' => __( 'What we do', 'valkiriapps' ),
+				'placeholder' => __( 'Enter your title', 'valkiriapps' ),
 				'show_label' => false,
 				'label_block' => true,
 			]
@@ -71,19 +71,19 @@ class Engitech_Heading extends Widget_Base{
 		$this->add_responsive_control(
 			'text_align',
 			[
-				'label' => __( 'Alignment', 'engitech' ),
+				'label' => __( 'Alignment', 'valkiriapps' ),
 				'type' => Controls_Manager::CHOOSE,
 				'options' => [
 					'left'    => [
-						'title' => __( 'Left', 'engitech' ),
+						'title' => __( 'Left', 'valkiriapps' ),
 						'icon' => 'eicon-text-align-left',
 					],
 					'center' => [
-						'title' => __( 'Center', 'engitech' ),
+						'title' => __( 'Center', 'valkiriapps' ),
 						'icon' => 'eicon-text-align-center',
 					],
 					'right' => [
-						'title' => __( 'Right', 'engitech' ),
+						'title' => __( 'Right', 'valkiriapps' ),
 						'icon' => 'eicon-text-align-right',
 					],
 				],
@@ -95,7 +95,7 @@ class Engitech_Heading extends Widget_Base{
 		$this->add_control(
 			'tag',
 			[
-				'label' => __( 'HTML Tag', 'engitech' ),
+				'label' => __( 'HTML Tag', 'valkiriapps' ),
 				'type' => Controls_Manager::SELECT,
 				'options' => [
 					'h1'  => 'H1',
@@ -117,7 +117,7 @@ class Engitech_Heading extends Widget_Base{
 		$this->start_controls_section(
 			'style_section',
 			[
-				'label' => __( 'Heading', 'engitech' ),
+				'label' => __( 'Heading', 'valkiriapps' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -126,7 +126,7 @@ class Engitech_Heading extends Widget_Base{
 		$this->add_control(
 			'heading_stitle',
 			[
-				'label' => __( 'Subtitle', 'engitech' ),
+				'label' => __( 'Subtitle', 'valkiriapps' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -135,7 +135,7 @@ class Engitech_Heading extends Widget_Base{
 		$this->add_control(
 			'stitle_color',
 			[
-				'label' => __( 'Color', 'engitech' ),
+				'label' => __( 'Color', 'valkiriapps' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -147,7 +147,7 @@ class Engitech_Heading extends Widget_Base{
 		$this->add_control(
 			'stitle_bg',
 			[
-				'label' => __( 'Background', 'engitech' ),
+				'label' => __( 'Background', 'valkiriapps' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -158,7 +158,7 @@ class Engitech_Heading extends Widget_Base{
 		$this->add_control(
 			'stitle_padd',
 			[
-				'label' => __( 'Padding', 'engitech' ),
+				'label' => __( 'Padding', 'valkiriapps' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px' ],
 				'selectors' => [
@@ -172,7 +172,7 @@ class Engitech_Heading extends Widget_Base{
 		$this->add_control(
 			'stitle_radius',
 			[
-				'label' => __( 'Border Radius', 'engitech' ),
+				'label' => __( 'Border Radius', 'valkiriapps' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px' ],
 				'selectors' => [
@@ -193,7 +193,7 @@ class Engitech_Heading extends Widget_Base{
 		$this->add_responsive_control(
 			'stitle_bottom_space',
 			[
-				'label' => __( 'Spacing', 'engitech' ),
+				'label' => __( 'Spacing', 'valkiriapps' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -211,7 +211,7 @@ class Engitech_Heading extends Widget_Base{
 		$this->add_control(
 			'heading_title',
 			[
-				'label' => __( 'Title', 'engitech' ),
+				'label' => __( 'Title', 'valkiriapps' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -219,7 +219,7 @@ class Engitech_Heading extends Widget_Base{
 		$this->add_control(
 			'title_color',
 			[
-				'label' => __( 'Color', 'engitech' ),
+				'label' => __( 'Color', 'valkiriapps' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -253,4 +253,4 @@ class Engitech_Heading extends Widget_Base{
 	protected function content_template() {}
 }
 // After the Schedule class is defined, I must register the new widget class with Elementor:
-Plugin::instance()->widgets_manager->register( new Engitech_Heading() );
+Plugin::instance()->widgets_manager->register( new Valkiriapps_Heading() );

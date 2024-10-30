@@ -23,7 +23,7 @@
     <?php if( $format == 'gallery' ) { ?>
 
             <div class="entry-media">
-                <?php engitech_posted_in(); ?>
+                <?php valkiriapps_posted_in(); ?>
                 <div class="gallery-post img-slider">
                 <?php if( function_exists( 'rwmb_meta' ) ) { ?>
                     <?php $images = rwmb_meta( 'post_gallery', array( 'size' => 'full' ) ); ?>
@@ -43,7 +43,7 @@
         <?php }elseif( $format == 'image' ) { ?>
 
             <div class="entry-media">
-                <?php engitech_posted_in(); ?>
+                <?php valkiriapps_posted_in(); ?>
                 <?php if( function_exists( 'rwmb_meta' ) ) { ?>
                     <?php $images = rwmb_meta( 'post_image', array( 'size' => 'full' ) ); ?>
                     <?php if($images){ ?>              
@@ -56,7 +56,7 @@
             
         <?php }elseif( $format == 'audio' ){ ?>
             <div class="entry-media">
-                <?php engitech_posted_in(); ?>
+                <?php valkiriapps_posted_in(); ?>
             </div>
             <div class="audio-box padding-box">
                 <iframe scrolling="no" frameborder="no" src="<?php echo esc_url( $link_audio ); ?>"></iframe>
@@ -65,7 +65,7 @@
         <?php }elseif( $format == 'video' ){ ?>
 
             <div class="entry-media">
-                <?php engitech_posted_in(); ?>
+                <?php valkiriapps_posted_in(); ?>
                 <?php if( function_exists( 'rwmb_meta' ) ) { ?>
                     <?php $images = rwmb_meta( 'bg_video', array( 'size' => 'full' ) ); ?>
                     <?php if($images){ ?>             
@@ -81,7 +81,7 @@
 
         <?php }elseif( $format == 'link' ){ ?>
             <div class="entry-media">
-                <?php engitech_posted_in(); ?>
+                <?php valkiriapps_posted_in(); ?>
             </div>
             <div class="link-box padding-box">
                 <i class="flaticon-chain"></i>
@@ -90,7 +90,7 @@
 
         <?php }elseif( $format == 'quote' ){ ?>
             <div class="entry-media">
-                <?php engitech_posted_in(); ?>
+                <?php valkiriapps_posted_in(); ?>
             </div>
             <div class="quote-box padding-box font-second">
                 <i class="flaticon-edit-tools-1"></i>
@@ -103,14 +103,14 @@
         <?php }elseif ( has_post_thumbnail() ) { ?>
 
             <div class="entry-media">
-                <?php engitech_posted_in(); ?>
+                <?php valkiriapps_posted_in(); ?>
                 <?php the_post_thumbnail(); ?>
             </div>
             
         <?php }else{ ?>
             
             <div class="entry-media">
-                <?php engitech_posted_in(); ?>
+                <?php valkiriapps_posted_in(); ?>
             </div>
 
         <?php } ?>
@@ -119,11 +119,11 @@
 
             <?php if ( 'post' === get_post_type() ) : ?>
             <div class="entry-meta">
-                <?php engitech_post_meta(); ?>
+                <?php valkiriapps_post_meta(); ?>
             </div><!-- .entry-meta -->
             <?php endif; ?>
 
-            <?php if( engitech_get_option( 'ptitle_post' ) ) the_title( '<h3 class="entry-title">', '</h3>' ); ?>
+            <?php if( valkiriapps_get_option( 'ptitle_post' ) ) the_title( '<h3 class="entry-title">', '</h3>' ); ?>
 
         </header><!-- .entry-header -->
 
@@ -134,7 +134,7 @@
                 the_content(sprintf(
                     wp_kses(
                     /* translators: %s: Name of current post. Only visible to screen readers */
-                        __('Continue reading<span class="screen-reader-text"> "%s"</span>', 'engitech'),
+                        __('Continue reading<span class="screen-reader-text"> "%s"</span>', 'valkiriapps'),
                         array(
                             'span' => array(
                                 'class' => array(),
@@ -145,17 +145,17 @@
                 ));
 
                 wp_link_pages(array(
-                    'before' => '<div class="page-links">' . esc_html__('Pages:', 'engitech'),
+                    'before' => '<div class="page-links">' . esc_html__('Pages:', 'valkiriapps'),
                     'after' => '</div>',
                 ));
             ?>
 
         </div><!-- .entry-content -->
         <div class="entry-footer clearfix">
-            <?php engitech_entry_footer(); ?>
+            <?php valkiriapps_entry_footer(); ?>
         </div>
-        <?php if( engitech_get_option('post_socials') ) engitech_socials_share(); ?>
-        <?php if( engitech_get_option('author_box') ) engitech_author_info_box(); ?>
-        <?php if( engitech_get_option('post_nav') ) engitech_single_post_nav(); ?>
+        <?php if( valkiriapps_get_option('post_socials') ) valkiriapps_socials_share(); ?>
+        <?php if( valkiriapps_get_option('author_box') ) valkiriapps_author_info_box(); ?>
+        <?php if( valkiriapps_get_option('post_nav') ) valkiriapps_single_post_nav(); ?>
     </div>
 </article>

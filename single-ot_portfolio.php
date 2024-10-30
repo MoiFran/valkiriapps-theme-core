@@ -21,24 +21,24 @@ get_header();
     endwhile; // End of the loop.
 ?>
 
-<?php if( engitech_get_option('pf_nav') || engitech_get_option('pf_related_switch') ) { ?>
+<?php if( valkiriapps_get_option('pf_nav') || valkiriapps_get_option('pf_related_switch') ) { ?>
 <div class="entry-content project-bottom">
     <div class="container">
         <div id="primary" class="content-area">
             <main id="main" class="site-main">
                 
-                <?php if( engitech_get_option('pf_nav') ) { ?>
+                <?php if( valkiriapps_get_option('pf_nav') ) { ?>
                 <div class="single-portfolio-navigation">
-                    <?php engitech_single_post_nav(); ?>
+                    <?php valkiriapps_single_post_nav(); ?>
                 </div>
                 <?php } ?>
 
-                <?php if( engitech_get_option('pf_related_switch') ) { ?>
+                <?php if( valkiriapps_get_option('pf_related_switch') ) { ?>
                 <div class="portfolio-related-posts-wrap">
                     <div class="portfolio-related-title-wrap">
-                        <h2 class="portfolio-related-title"><?php esc_html_e('Related Projects', 'engitech'); ?></h2>
+                        <h2 class="portfolio-related-title"><?php esc_html_e('Related Projects', 'valkiriapps'); ?></h2>
                     </div>
-                    <div class="portfolio-related-posts projects-grid <?php engitech_portfolio_option_class(); ?>">                    
+                    <div class="portfolio-related-posts projects-grid <?php valkiriapps_portfolio_option_class(); ?>">                    
                         <?php 
                         // get the custom post type's taxonomy terms                    
                         $custom_taxterms = wp_get_object_terms( $post->ID, 'portfolio_cat', array('fields' => 'ids') );

@@ -1,7 +1,7 @@
 <?php
 // Breadcrumbs
-if ( ! function_exists( 'engitech_get_breadcrumbs' ) ) {
-    function engitech_get_breadcrumbs ( 
+if ( ! function_exists( 'valkiriapps_get_breadcrumbs' ) ) {
+    function valkiriapps_get_breadcrumbs ( 
         $list_style = 'ul', 
         $list_id = 'breadcrumbs', 
         $list_class = 'breadcrumbs none-style',
@@ -11,9 +11,9 @@ if ( ! function_exists( 'engitech_get_breadcrumbs' ) ) {
         $breadcrumb = '<' . $list_style . ' id="' . $list_id . '" class="' . $list_class . '">';
         // Front page
         if ( is_front_page() ) {
-            $breadcrumb .= '<li class="' . $active_class . '">' . esc_html__('Home', 'engitech') . '</li>'; //get_bloginfo( 'name' )
+            $breadcrumb .= '<li class="' . $active_class . '">' . esc_html__('Home', 'valkiriapps') . '</li>'; //get_bloginfo( 'name' )
         } else {
-            $breadcrumb .= '<li><a href="' . home_url() . '">' . esc_html__('Home', 'engitech') . '</a></li>'; //get_bloginfo( 'name' )
+            $breadcrumb .= '<li><a href="' . home_url() . '">' . esc_html__('Home', 'valkiriapps') . '</a></li>'; //get_bloginfo( 'name' )
         }
         // Blog archive
         if ( 'page' == get_option( 'show_on_front' ) && get_option( 'page_for_posts' ) ) {
@@ -86,11 +86,11 @@ if ( ! function_exists( 'engitech_get_breadcrumbs' ) ) {
         }
         // Search
         if ( is_search() ) {
-            $breadcrumb .= '<li class="' . $active_class . '">' . esc_html__( 'Search', 'engitech' ) . '</li>';
+            $breadcrumb .= '<li class="' . $active_class . '">' . esc_html__( 'Search', 'valkiriapps' ) . '</li>';
         }
         // 404
         if ( is_404() ) {
-            $breadcrumb .= '<li class="' . $active_class . '">' . esc_html__( '404', 'engitech' ) . '</li>';
+            $breadcrumb .= '<li class="' . $active_class . '">' . esc_html__( '404', 'valkiriapps' ) . '</li>';
         }
         // Custom Post Type Archive
         if ( is_post_type_archive() ) {
@@ -114,8 +114,8 @@ if ( ! function_exists( 'engitech_get_breadcrumbs' ) ) {
                 $cpt_obj = get_post_type_object( $post_type );
                 if ( ! $output && get_post_type_archive_link( $cpt_obj->name ) ) {
                     $archive_link = '';
-                    if ( 'ot_portfolio' == get_post_type() && engitech_get_option('portfolio_archive') == 'archive_custom' ) {
-                        $archive_link = get_page_link( engitech_get_option('archive_page_custom') );                                
+                    if ( 'ot_portfolio' == get_post_type() && valkiriapps_get_option('portfolio_archive') == 'archive_custom' ) {
+                        $archive_link = get_page_link( valkiriapps_get_option('archive_page_custom') );                                
                     } else {
                         $archive_link = get_post_type_archive_link( $cpt_obj->name );
                     }
@@ -135,8 +135,8 @@ if ( ! function_exists( 'engitech_get_breadcrumbs' ) ) {
             if ( get_post_type_archive_link( $cpt_obj->name ) ) {
                 // Custom portfolio archive page link
                 $archive_link = '';
-                if ( 'ot_portfolio' == get_post_type() && engitech_get_option('portfolio_archive') == 'archive_custom' ) {
-                    $archive_link = get_page_link( engitech_get_option('archive_page_custom') );                                
+                if ( 'ot_portfolio' == get_post_type() && valkiriapps_get_option('portfolio_archive') == 'archive_custom' ) {
+                    $archive_link = get_page_link( valkiriapps_get_option('archive_page_custom') );                                
                 } else {
                     $archive_link = get_post_type_archive_link( $cpt_obj->name );
                 }
@@ -194,10 +194,10 @@ if ( ! function_exists( 'engitech_get_breadcrumbs' ) ) {
     }
 }
 
-if ( ! function_exists( 'engitech_breadcrumbs' ) ) {
-    function engitech_breadcrumbs (){
+if ( ! function_exists( 'valkiriapps_breadcrumbs' ) ) {
+    function valkiriapps_breadcrumbs (){
 
-        if( engitech_get_option('breadcrumbs') && !is_front_page() ){ echo engitech_get_breadcrumbs(); } ?>
+        if( valkiriapps_get_option('breadcrumbs') && !is_front_page() ){ echo valkiriapps_get_breadcrumbs(); } ?>
     
         <?php
     }

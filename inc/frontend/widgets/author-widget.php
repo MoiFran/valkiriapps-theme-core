@@ -1,5 +1,5 @@
 <?php 
-class Engitech_Author_Widget extends WP_Widget {
+class Valkiriapps_Author_Widget extends WP_Widget {
  	
  	/**
      * Register widget with WordPress.
@@ -11,14 +11,14 @@ class Engitech_Author_Widget extends WP_Widget {
         parent::__construct(
             'author_widget', // Base ID
             'OT Author', // Name
-            array( 'description' => esc_html__( 'A Author Widget', 'engitech' ), 'classname' => 'engitech_author-widget' ) // Args
+            array( 'description' => esc_html__( 'A Author Widget', 'valkiriapps' ), 'classname' => 'valkiriapps_author-widget' ) // Args
         );
     }
  	
  	public function author_scripts() {
 	   wp_enqueue_script( 'media-upload' );
 	   wp_enqueue_media();
-	   wp_enqueue_script('engitech_upload_media_admin', get_template_directory_uri() . '/inc/backend/js/upload_media_widget.js', array('jquery'));
+	   wp_enqueue_script('valkiriapps_upload_media_admin', get_template_directory_uri() . '/inc/backend/js/upload_media_widget.js', array('jquery'));
 	}
 
  	/**
@@ -101,11 +101,11 @@ class Engitech_Author_Widget extends WP_Widget {
             <button class="upload_image_button button button-primary"><?php echo esc_html__( 'Upload Image' ); ?></button>
        </p>
         <p>
-            <label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"><?php echo esc_html__( 'Name:', 'engitech' ); ?></label>
+            <label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"><?php echo esc_html__( 'Name:', 'valkiriapps' ); ?></label>
             <input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'title' ) ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>">
         </p>
         <p>
-            <label for="<?php echo esc_attr( $this->get_field_id( 'text' ) ); ?>"><?php echo esc_html__( 'Description:', 'engitech' ); ?></label>
+            <label for="<?php echo esc_attr( $this->get_field_id( 'text' ) ); ?>"><?php echo esc_html__( 'Description:', 'valkiriapps' ); ?></label>
             <textarea class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'text' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'text' ) ); ?>" type="text" cols="30" rows="10"><?php echo esc_attr( $text ); ?></textarea>
         </p>
         <p>
@@ -173,7 +173,7 @@ class Engitech_Author_Widget extends WP_Widget {
     }  
  
 }
-add_action( 'widgets_init', 'engitech_author_register_widgets' );
-function engitech_author_register_widgets() {
-    register_widget( 'Engitech_Author_Widget' );
+add_action( 'widgets_init', 'valkiriapps_author_register_widgets' );
+function valkiriapps_author_register_widgets() {
+    register_widget( 'Valkiriapps_Author_Widget' );
 }

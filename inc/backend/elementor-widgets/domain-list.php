@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly (security measu
 /**
  * Widget Name: Image Slider
  */
-class Engitech_Domain_Carousel extends Widget_Base{
+class Valkiriapps_Domain_Carousel extends Widget_Base{
 
  	// The get_name() method is a simple one, you just need to return a widget name that will be used in the code.
 	public function get_name() {
@@ -14,7 +14,7 @@ class Engitech_Domain_Carousel extends Widget_Base{
 
 	// The get_title() method, which again, is a very simple one, you need to return the widget title that will be displayed as the widget label.
 	public function get_title() {
-		return __( 'Engitech Domain List', 'engitech' );
+		return __( 'Valkiriapps Domain List', 'valkiriapps' );
 	}
 
 	// The get_icon() method, is an optional but recommended method, it lets you set the widget icon. you can use any of the eicon or font-awesome icons, simply return the class name as a string.
@@ -24,7 +24,7 @@ class Engitech_Domain_Carousel extends Widget_Base{
 
 	// The get_categories method, lets you set the category of the widget, return the category name as a string.
 	public function get_categories() {
-		return [ 'category_engitech' ];
+		return [ 'category_valkiriapps' ];
 	}
 
 	protected function register_controls() {
@@ -32,7 +32,7 @@ class Engitech_Domain_Carousel extends Widget_Base{
 		$this->start_controls_section(
 			'content_section',
 			[
-				'label' => __( 'Domains', 'engitech' ),
+				'label' => __( 'Domains', 'valkiriapps' ),
 			]
 		);
 
@@ -40,23 +40,23 @@ class Engitech_Domain_Carousel extends Widget_Base{
 		$repeater->add_control(
 			'title',
 			[
-				'label' => __( 'Name', 'engitech' ),
+				'label' => __( 'Name', 'valkiriapps' ),
 				'type' => Controls_Manager::TEXT,
-				'default' => __( '.com', 'engitech' ),
+				'default' => __( '.com', 'valkiriapps' ),
 			]
 		);
 		$repeater->add_control(
 			'price',
 			[
-				'label' => __( 'Price', 'engitech' ),
+				'label' => __( 'Price', 'valkiriapps' ),
 				'type' => Controls_Manager::TEXT,
-				'default' => __( '$10.99/m', 'engitech' ),
+				'default' => __( '$10.99/m', 'valkiriapps' ),
 			]
 		);
 		$repeater->add_control(
 			'dlink',
 			[
-				'label' => __( 'Link', 'engitech' ),
+				'label' => __( 'Link', 'valkiriapps' ),
 				'type' => Controls_Manager::URL,
 				'default' => [],
 			]
@@ -80,10 +80,10 @@ class Engitech_Domain_Carousel extends Widget_Base{
 		$this->add_responsive_control(
 			'slides_show',
 			[
-				'label' => __( 'Slides To Show', 'engitech' ),
+				'label' => __( 'Slides To Show', 'valkiriapps' ),
 				'type' => Controls_Manager::SELECT,
 				'options' => [
-					'' => __( 'Default', 'engitech' ),
+					'' => __( 'Default', 'valkiriapps' ),
 				] + $slides_show,
 				'default' => ''
 			]
@@ -92,23 +92,23 @@ class Engitech_Domain_Carousel extends Widget_Base{
 		$this->add_responsive_control(
 			'tscroll',
 			[
-				'label' => __( 'Slides to Scroll', 'engitech' ),
+				'label' => __( 'Slides to Scroll', 'valkiriapps' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => '',
 				'options' => [
-					'' => __( 'Default', 'engitech' ),
+					'' => __( 'Default', 'valkiriapps' ),
 				] + $slides_show,
 			]
 		);
 		$this->add_control(
 			'dots',
 			[
-				'label'   => __( 'Dots', 'engitech' ),
+				'label'   => __( 'Dots', 'valkiriapps' ),
 				'type' 	  => Controls_Manager::SELECT,
 				'default' => 'false',
 				'options' => [
-					'true'  => __( 'Yes', 'engitech' ),
-					'false' => __( 'No', 'engitech' ),
+					'true'  => __( 'Yes', 'valkiriapps' ),
+					'false' => __( 'No', 'valkiriapps' ),
 				],
 			]
 		);
@@ -120,21 +120,21 @@ class Engitech_Domain_Carousel extends Widget_Base{
 		$this->start_controls_section(
 			'style_section',
 			[
-				'label' => __( 'Style', 'engitech' ),
+				'label' => __( 'Style', 'valkiriapps' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 			]
 		);
 		$this->add_control(
 			'heading_general',
 			[
-				'label' => __( 'General', 'engitech' ),
+				'label' => __( 'General', 'valkiriapps' ),
 				'type' => Controls_Manager::HEADING,
 			]
 		);
 		$this->add_control(
 			'bg_color',
 			[
-				'label' => __( 'Background', 'engitech' ),
+				'label' => __( 'Background', 'valkiriapps' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .domain-item' => 'background: {{VALUE}};',
@@ -144,7 +144,7 @@ class Engitech_Domain_Carousel extends Widget_Base{
 		$this->add_control(
 			'bg_hcolor',
 			[
-				'label' => __( 'Background Hover', 'engitech' ),
+				'label' => __( 'Background Hover', 'valkiriapps' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .domain-item:hover' => 'background: {{VALUE}};',
@@ -154,7 +154,7 @@ class Engitech_Domain_Carousel extends Widget_Base{
 		$this->add_responsive_control(
 			'box_padding',
 			[
-				'label' => __( 'Padding', 'engitech' ),
+				'label' => __( 'Padding', 'valkiriapps' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', 'em', '%' ],
 				'selectors' => [
@@ -174,14 +174,14 @@ class Engitech_Domain_Carousel extends Widget_Base{
 		$this->add_control(
 			'heading_name',
 			[
-				'label' => __( 'Name', 'engitech' ),
+				'label' => __( 'Name', 'valkiriapps' ),
 				'type' => Controls_Manager::HEADING,
 			]
 		);
 		$this->add_control(
 			'name_color',
 			[
-				'label' => __( 'Color', 'engitech' ),
+				'label' => __( 'Color', 'valkiriapps' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .domain-item h4' => 'color: {{VALUE}};',
@@ -191,7 +191,7 @@ class Engitech_Domain_Carousel extends Widget_Base{
 		$this->add_control(
 			'name_hcolor',
 			[
-				'label' => __( 'Color Hover', 'engitech' ),
+				'label' => __( 'Color Hover', 'valkiriapps' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .domain-item:hover h4' => 'color: {{VALUE}};',
@@ -208,7 +208,7 @@ class Engitech_Domain_Carousel extends Widget_Base{
 		$this->add_responsive_control(
 			'name_space',
 			[
-				'label' => __( 'Spacing', 'engitech' ),
+				'label' => __( 'Spacing', 'valkiriapps' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -225,14 +225,14 @@ class Engitech_Domain_Carousel extends Widget_Base{
 		$this->add_control(
 			'heading_price',
 			[
-				'label' => __( 'Name', 'engitech' ),
+				'label' => __( 'Name', 'valkiriapps' ),
 				'type' => Controls_Manager::HEADING,
 			]
 		);
 		$this->add_control(
 			'price_color',
 			[
-				'label' => __( 'Color', 'engitech' ),
+				'label' => __( 'Color', 'valkiriapps' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .domain-item span' => 'color: {{VALUE}};',
@@ -242,7 +242,7 @@ class Engitech_Domain_Carousel extends Widget_Base{
 		$this->add_control(
 			'price_hcolor',
 			[
-				'label' => __( 'Color Hover', 'engitech' ),
+				'label' => __( 'Color Hover', 'valkiriapps' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .domain-item:hover span' => 'color: {{VALUE}};',
@@ -263,7 +263,7 @@ class Engitech_Domain_Carousel extends Widget_Base{
 		$this->start_controls_section(
 			'dots_section',
 			[
-				'label' => __( 'Dots', 'engitech' ),
+				'label' => __( 'Dots', 'valkiriapps' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -271,7 +271,7 @@ class Engitech_Domain_Carousel extends Widget_Base{
 		$this->add_responsive_control(
 			'dots_spacing',
 			[
-				'label' => __( 'Spacing', 'engitech' ),
+				'label' => __( 'Spacing', 'valkiriapps' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -287,7 +287,7 @@ class Engitech_Domain_Carousel extends Widget_Base{
 		$this->add_responsive_control(
 			'dots_size',
 			[
-				'label' => __( 'Size', 'engitech' ),
+				'label' => __( 'Size', 'valkiriapps' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -304,7 +304,7 @@ class Engitech_Domain_Carousel extends Widget_Base{
         $this->add_control(
 			'dot_style',
 			[
-				'label' => __( 'Dot', 'engitech' ),
+				'label' => __( 'Dot', 'valkiriapps' ),
 				'type' => Controls_Manager::HEADING,
 			]
 		);
@@ -312,7 +312,7 @@ class Engitech_Domain_Carousel extends Widget_Base{
 		$this->add_control(
             'dots_bgcolor',
             [
-                'label' => __( 'Color', 'engitech' ),
+                'label' => __( 'Color', 'valkiriapps' ),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
 					'{{WRAPPER}} .slick-dots li button:before' => 'color: {{VALUE}};',
@@ -323,7 +323,7 @@ class Engitech_Domain_Carousel extends Widget_Base{
         $this->add_control(
             'dots_active_bgcolor',
             [
-                'label' => __( 'Color Active', 'engitech' ),
+                'label' => __( 'Color Active', 'valkiriapps' ),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
 					'{{WRAPPER}} .slick-dots li.slick-active button:before' => 'color: {{VALUE}};',
@@ -380,5 +380,5 @@ class Engitech_Domain_Carousel extends Widget_Base{
 	protected function content_template() {}
 
 }
-// After the Engitech_Image_Carousel class is defined, I must register the new widget class with Elementor:
-Plugin::instance()->widgets_manager->register( new Engitech_Domain_Carousel() );
+// After the Valkiriapps_Image_Carousel class is defined, I must register the new widget class with Elementor:
+Plugin::instance()->widgets_manager->register( new Valkiriapps_Domain_Carousel() );

@@ -11,10 +11,10 @@
 			<a href="<?php the_permalink(); ?>">
 				<?php
 					if ( has_post_thumbnail() ) {
-						if( engitech_get_option('portfolio_style') == 'style2' ){
-							the_post_thumbnail( 'engitech-portfolio-thumbnail-masonry');
+						if( valkiriapps_get_option('portfolio_style') == 'style2' ){
+							the_post_thumbnail( 'valkiriapps-portfolio-thumbnail-masonry');
 						}else {
-							the_post_thumbnail( 'engitech-portfolio-thumbnail-grid');
+							the_post_thumbnail( 'valkiriapps-portfolio-thumbnail-grid');
 						}
 					}
 				?>

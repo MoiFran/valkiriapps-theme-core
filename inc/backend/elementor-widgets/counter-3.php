@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly (security measu
 /**
  * Widget Name: Contact Info
  */
-class Engitech_Counter3 extends Widget_Base{
+class Valkiriapps_Counter3 extends Widget_Base{
 
  	// The get_name() method is a simple one, you just need to return a widget name that will be used in the code.
 	public function get_name() {
@@ -14,7 +14,7 @@ class Engitech_Counter3 extends Widget_Base{
 
 	// The get_title() method, which again, is a very simple one, you need to return the widget title that will be displayed as the widget label.
 	public function get_title() {
-		return __( 'Engitech Counter 3', 'engitech' );
+		return __( 'Valkiriapps Counter 3', 'valkiriapps' );
 	}
 
 	// The get_icon() method, is an optional but recommended method, it lets you set the widget icon. you can use any of the eicon or font-awesome icons, simply return the class name as a string.
@@ -24,7 +24,7 @@ class Engitech_Counter3 extends Widget_Base{
 
 	// The get_categories method, lets you set the category of the widget, return the category name as a string.
 	public function get_categories() {
-		return [ 'category_engitech' ];
+		return [ 'category_valkiriapps' ];
 	}
 
 	protected function register_controls() {
@@ -32,13 +32,13 @@ class Engitech_Counter3 extends Widget_Base{
 		$this->start_controls_section(
 			'content_section',
 			[
-				'label' => __( 'Counter', 'engitech' ),
+				'label' => __( 'Counter', 'valkiriapps' ),
 			]
 		);
 		$this->add_control(
 			'icon_font',
 			[
-				'label' => __( 'Icon', 'engitech' ),
+				'label' => __( 'Icon', 'valkiriapps' ),
 				'type' => Controls_Manager::ICONS,
 				'fa4compatibility' => 'icon',
 				'default' => [
@@ -50,9 +50,9 @@ class Engitech_Counter3 extends Widget_Base{
 		$this->add_control(
 			'title',
 			[
-				'label' => __( 'Title:', 'engitech' ),
+				'label' => __( 'Title:', 'valkiriapps' ),
 				'type' => Controls_Manager::TEXT,
-				'default' => __( 'Projects Done', 'engitech' ),
+				'default' => __( 'Projects Done', 'valkiriapps' ),
 			]
 		);
 
@@ -61,14 +61,14 @@ class Engitech_Counter3 extends Widget_Base{
 			[
 				'label' => 'Number:',
 				'type' => Controls_Manager::TEXT,
-				'default' => __( '1990', 'engitech' ),
+				'default' => __( '1990', 'valkiriapps' ),
 			]
 		);
 
 		$this->add_control(
 			'extra',
 			[
-				'label' => __( 'After Number:', 'engitech' ),
+				'label' => __( 'After Number:', 'valkiriapps' ),
 				'type' => Controls_Manager::TEXT,
 			]
 		);		
@@ -76,7 +76,7 @@ class Engitech_Counter3 extends Widget_Base{
 		$this->add_control(
 			'time',
 			[
-				'label' => __( 'Duration', 'engitech' ),
+				'label' => __( 'Duration', 'valkiriapps' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -97,14 +97,14 @@ class Engitech_Counter3 extends Widget_Base{
 		$this->start_controls_section(
 			'style_box_section',
 			[
-				'label' => __( 'General', 'engitech' ),
+				'label' => __( 'General', 'valkiriapps' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
 		$this->add_control(
 			'bg_box',
 			[
-				'label' => __( 'Background Box', 'engitech' ),
+				'label' => __( 'Background Box', 'valkiriapps' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -126,7 +126,7 @@ class Engitech_Counter3 extends Widget_Base{
 		$this->add_control(
 			'box_radius',
 			[
-				'label' => __( 'Border Radius', 'engitech' ),
+				'label' => __( 'Border Radius', 'valkiriapps' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%' ],
 				'selectors' => [
@@ -147,7 +147,7 @@ class Engitech_Counter3 extends Widget_Base{
 		$this->start_controls_section(
 			'style_icon_section',
 			[
-				'label' => __( 'Content', 'engitech' ),
+				'label' => __( 'Content', 'valkiriapps' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -155,14 +155,14 @@ class Engitech_Counter3 extends Widget_Base{
 		$this->add_control(
 			'heading_icon',
 			[
-				'label' => __( 'Icon', 'engitech' ),
+				'label' => __( 'Icon', 'valkiriapps' ),
 				'type' => Controls_Manager::HEADING,
 			]
 		);
 		$this->add_control(
 			'icon_color',
 			[
-				'label' => __( 'Color', 'engitech' ),
+				'label' => __( 'Color', 'valkiriapps' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -174,7 +174,7 @@ class Engitech_Counter3 extends Widget_Base{
 		$this->add_responsive_control(
 			'icon_space',
 			[
-				'label' => __( 'Spacing', 'engitech' ),
+				'label' => __( 'Spacing', 'valkiriapps' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -190,7 +190,7 @@ class Engitech_Counter3 extends Widget_Base{
 		$this->add_responsive_control(
 			'icon_size',
 			[
-				'label' => __( 'Size', 'engitech' ),
+				'label' => __( 'Size', 'valkiriapps' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -209,7 +209,7 @@ class Engitech_Counter3 extends Widget_Base{
 		$this->add_control(
 			'heading_number',
 			[
-				'label' => __( 'Number', 'engitech' ),
+				'label' => __( 'Number', 'valkiriapps' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -217,7 +217,7 @@ class Engitech_Counter3 extends Widget_Base{
 		$this->add_control(
 			'number_color',
 			[
-				'label' => __( 'Color', 'engitech' ),
+				'label' => __( 'Color', 'valkiriapps' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -237,7 +237,7 @@ class Engitech_Counter3 extends Widget_Base{
 		$this->add_control(
 			'heading_title',
 			[
-				'label' => __( 'Title', 'engitech' ),
+				'label' => __( 'Title', 'valkiriapps' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -245,7 +245,7 @@ class Engitech_Counter3 extends Widget_Base{
 		$this->add_responsive_control(
 			'title_space',
 			[
-				'label' => __( 'Spacing', 'engitech' ),
+				'label' => __( 'Spacing', 'valkiriapps' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -261,7 +261,7 @@ class Engitech_Counter3 extends Widget_Base{
 		$this->add_control(
 			'title_color',
 			[
-				'label' => __( 'Color', 'engitech' ),
+				'label' => __( 'Color', 'valkiriapps' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -301,4 +301,4 @@ class Engitech_Counter3 extends Widget_Base{
 	protected function content_template() {}
 }
 // After the Schedule class is defined, I must register the new widget class with Elementor:
-Plugin::instance()->widgets_manager->register( new Engitech_Counter3() );
+Plugin::instance()->widgets_manager->register( new Valkiriapps_Counter3() );

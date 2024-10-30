@@ -19,7 +19,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
 }
 
-if ( engitech_get_shop_layout() === 'full-content' ) {
+if ( valkiriapps_get_shop_layout() === 'full-content' ) {
 	return;
 }
 

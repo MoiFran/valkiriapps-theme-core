@@ -15,7 +15,7 @@
 get_header();
 ?>
 
-    <?php if( engitech_get_layout() == 'full-content' ) :
+    <?php if( valkiriapps_get_layout() == 'full-content' ) :
 
         while ( have_posts() ) : the_post();
 
@@ -26,7 +26,7 @@ get_header();
 <div class="entry-content">
     <div class="container">
         <div class="row">
-        <div id="primary" class="content-area <?php engitech_content_columns(); ?>">
+        <div id="primary" class="content-area <?php valkiriapps_content_columns(); ?>">
             <main id="main" class="site-main">
 
             <?php

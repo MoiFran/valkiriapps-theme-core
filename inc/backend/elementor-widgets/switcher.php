@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly (security measu
 /**
  * Widget Name: Switcher
  */
-class Engitech_Switcher extends Widget_Base{
+class Valkiriapps_Switcher extends Widget_Base{
 
  	// The get_name() method is a simple one, you just need to return a widget name that will be used in the code.
 	public function get_name() {
@@ -14,7 +14,7 @@ class Engitech_Switcher extends Widget_Base{
 
 	// The get_title() method, which again, is a very simple one, you need to return the widget title that will be displayed as the widget label.
 	public function get_title() {
-		return __( 'OT Switcher(Pricing Table)', 'engitech' );
+		return __( 'OT Switcher(Pricing Table)', 'valkiriapps' );
 	}
 
 	// The get_icon() method, is an optional but recommended method, it lets you set the widget icon. you can use any of the eicon or font-awesome icons, simply return the class name as a string.
@@ -24,7 +24,7 @@ class Engitech_Switcher extends Widget_Base{
 
 	// The get_categories method, lets you set the category of the widget, return the category name as a string.
 	public function get_categories() {
-		return [ 'category_engitech' ];
+		return [ 'category_valkiriapps' ];
 	}
 
 	protected function register_controls() {
@@ -32,29 +32,29 @@ class Engitech_Switcher extends Widget_Base{
 		$this->start_controls_section(
 			'content_section',
 			[
-				'label' => __( 'Switcher', 'engitech' ),
+				'label' => __( 'Switcher', 'valkiriapps' ),
 			]
 		);
 		$this->add_responsive_control(
 			'align',
 			[
-				'label' => __( 'Alignment', 'engitech' ),
+				'label' => __( 'Alignment', 'valkiriapps' ),
 				'type' => Controls_Manager::CHOOSE,
 				'options' => [
 					'left'    => [
-						'title' => __( 'Left', 'engitech' ),
+						'title' => __( 'Left', 'valkiriapps' ),
 						'icon' => 'eicon-text-align-left',
 					],
 					'center' => [
-						'title' => __( 'Center', 'engitech' ),
+						'title' => __( 'Center', 'valkiriapps' ),
 						'icon' => 'eicon-text-align-center',
 					],
 					'right' => [
-						'title' => __( 'Right', 'engitech' ),
+						'title' => __( 'Right', 'valkiriapps' ),
 						'icon' => 'eicon-text-align-right',
 					],
 				],
-				// 'prefix_class' => 'engitech%s-align-',
+				// 'prefix_class' => 'valkiriapps%s-align-',
 				'selectors' => [
 					'{{WRAPPER}} .ot-switcher' => 'text-align: {{VALUE}};',
 				],
@@ -63,18 +63,18 @@ class Engitech_Switcher extends Widget_Base{
         $this->add_control(
 			'title_left',
 			[
-				'label' => __( 'Title Left', 'engitech' ),
+				'label' => __( 'Title Left', 'valkiriapps' ),
 				'type' => Controls_Manager::TEXT,
-                'default' => __( 'Monthly', 'engitech' ),
+                'default' => __( 'Monthly', 'valkiriapps' ),
                 'label_block' => true,
 			]
         );
         $this->add_control(
 			'title_right',
 			[
-				'label' => __( 'Title Right', 'engitech' ),
+				'label' => __( 'Title Right', 'valkiriapps' ),
 				'type' => Controls_Manager::TEXT,
-                'default' => __( 'Yearly', 'engitech' ),
+                'default' => __( 'Yearly', 'valkiriapps' ),
                 'label_block' => true,
 			]
 		);
@@ -86,7 +86,7 @@ class Engitech_Switcher extends Widget_Base{
 		$this->start_controls_section(
 			'style_icon_section',
 			[
-				'label' => __( 'Switcher', 'engitech' ),
+				'label' => __( 'Switcher', 'valkiriapps' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -95,14 +95,14 @@ class Engitech_Switcher extends Widget_Base{
 		$this->add_control(
 			'heading_title',
 			[
-				'label' => __( 'Title', 'engitech' ),
+				'label' => __( 'Title', 'valkiriapps' ),
 				'type' => Controls_Manager::HEADING,
 			]
         );
         $this->add_responsive_control(
 			'title_space',
 			[
-				'label' => __( 'Spacing', 'engitech' ),
+				'label' => __( 'Spacing', 'valkiriapps' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -118,7 +118,7 @@ class Engitech_Switcher extends Widget_Base{
         $this->add_control(
 			'title_color',
 			[
-				'label' => __( 'Color', 'engitech' ),
+				'label' => __( 'Color', 'valkiriapps' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -140,7 +140,7 @@ class Engitech_Switcher extends Widget_Base{
 		$this->add_control(
 			'heading_toggle',
 			[
-				'label' => __( 'Toggle', 'engitech' ),
+				'label' => __( 'Toggle', 'valkiriapps' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -148,7 +148,7 @@ class Engitech_Switcher extends Widget_Base{
 		$this->add_control(
 			'toggle_bg',
 			[
-				'label' => __( 'Background', 'engitech' ),
+				'label' => __( 'Background', 'valkiriapps' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -159,7 +159,7 @@ class Engitech_Switcher extends Widget_Base{
 		$this->add_control(
 			'toggle_color',
 			[
-				'label' => __( 'Color', 'engitech' ),
+				'label' => __( 'Color', 'valkiriapps' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -190,4 +190,4 @@ class Engitech_Switcher extends Widget_Base{
 	protected function content_template() {}
 }
 // After the Schedule class is defined, I must register the new widget class with Elementor:
-Plugin::instance()->widgets_manager->register( new Engitech_Switcher() );
+Plugin::instance()->widgets_manager->register( new Valkiriapps_Switcher() );

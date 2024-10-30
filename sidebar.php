@@ -7,7 +7,7 @@
  * @package Engitech
  */
 
-if ( engitech_get_layout() === 'full-content' ) {
+if ( valkiriapps_get_layout() === 'full-content' ) {
 	return;
 }
 

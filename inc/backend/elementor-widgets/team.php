@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly (security measu
 /**
  * Widget Name: Team
  */
-class Engitech_Team extends Widget_Base{
+class Valkiriapps_Team extends Widget_Base{
 
  	// The get_name() method is a simple one, you just need to return a widget name that will be used in the code.
 	public function get_name() {
@@ -14,7 +14,7 @@ class Engitech_Team extends Widget_Base{
 
 	// The get_title() method, which again, is a very simple one, you need to return the widget title that will be displayed as the widget label.
 	public function get_title() {
-		return __( 'Engitech Team', 'engitech' );
+		return __( 'Valkiriapps Team', 'valkiriapps' );
 	}
 
 	// The get_icon() method, is an optional but recommended method, it lets you set the widget icon. you can use any of the eicon or font-awesome icons, simply return the class name as a string.
@@ -24,7 +24,7 @@ class Engitech_Team extends Widget_Base{
 
 	// The get_categories method, lets you set the category of the widget, return the category name as a string.
 	public function get_categories() {
-		return [ 'category_engitech' ];
+		return [ 'category_valkiriapps' ];
 	}
 
 	protected function register_controls() {
@@ -33,14 +33,14 @@ class Engitech_Team extends Widget_Base{
 		$this->start_controls_section(
 			'content_section',
 			[
-				'label' => esc_html__( 'Member Team', 'engitech' ),
+				'label' => esc_html__( 'Member Team', 'valkiriapps' ),
 			]
 		);
 
 		$this->add_control(
 	       'member_image',
 	        [
-	           'label' => esc_html__( 'Photo', 'engitech' ),
+	           'label' => esc_html__( 'Photo', 'valkiriapps' ),
 	           'type'  => Controls_Manager::MEDIA,
 				'default' => [
 					'url' => Utils::get_placeholder_image_src(),
@@ -60,18 +60,18 @@ class Engitech_Team extends Widget_Base{
 	    $this->add_control(
 		    'member_name',
 	      	[
-	          'label' => esc_html__( 'Name', 'engitech' ),
+	          'label' => esc_html__( 'Name', 'valkiriapps' ),
 	          'type'  => Controls_Manager::TEXT,
-	          'default' => esc_html__( 'Jonathan Morgan', 'engitech' ),
+	          'default' => esc_html__( 'Jonathan Morgan', 'valkiriapps' ),
 	    	]
 	    );
 
 	    $this->add_control(
 		    'member_extra',
 	      	[
-	          'label' => esc_html__( 'Extra/Job', 'engitech' ),
+	          'label' => esc_html__( 'Extra/Job', 'valkiriapps' ),
 	          'type'  => Controls_Manager::TEXTAREA,
-	          'default' => esc_html__( 'WEB Designer', 'engitech' ),
+	          'default' => esc_html__( 'WEB Designer', 'valkiriapps' ),
 	    	]
 	    );
 
@@ -79,16 +79,16 @@ class Engitech_Team extends Widget_Base{
 		$repeater->add_control(
 	      	'title',
 		    [
-		        'label'   => esc_html__( 'Name', 'engitech' ),
+		        'label'   => esc_html__( 'Name', 'valkiriapps' ),
 		        'type'    => Controls_Manager::TEXT,
-		        'default' => esc_html__( 'Social', 'engitech' ),
+		        'default' => esc_html__( 'Social', 'valkiriapps' ),
 		    ]
 	    );
 
         $repeater->add_control(
             'social_icon',
             [
-                'label' => esc_html__( 'Icon', 'engitech' ),
+                'label' => esc_html__( 'Icon', 'valkiriapps' ),
                 'type'  => Controls_Manager::ICONS,
                 'fa4compatibility' => 'icon',
 				'default' => [
@@ -101,12 +101,12 @@ class Engitech_Team extends Widget_Base{
         $repeater->add_control(
             'social_link',
             [
-                'label' => esc_html__( 'Link', 'engitech' ),
+                'label' => esc_html__( 'Link', 'valkiriapps' ),
                 'type'  => Controls_Manager::URL,
                 'dynamic' => [
 					'active' => true,
 				],
-				'placeholder' => __( 'https://', 'engitech' ),
+				'placeholder' => __( 'https://', 'valkiriapps' ),
 				'default' => [
 					'url' => 'https://', 
 				],
@@ -116,7 +116,7 @@ class Engitech_Team extends Widget_Base{
         $repeater->add_control(
 			'social_bg',
 			[
-				'label'     => esc_html__( 'Background', 'engitech' ),
+				'label'     => esc_html__( 'Background', 'valkiriapps' ),
 				'type'      => Controls_Manager::COLOR,
 				'default'   => '',
 				'selectors' => [
@@ -128,13 +128,13 @@ class Engitech_Team extends Widget_Base{
 		$this->add_control(
 		    'social_share',
 		    [
-		        'label'       => esc_html__( 'Socials', 'engitech' ),
+		        'label'       => esc_html__( 'Socials', 'valkiriapps' ),
 		        'type'        => Controls_Manager::REPEATER,
 		        'show_label'  => true,
 		        'default'     => [
 		            [
-		             	'title'       => esc_html__( 'Twitter', 'engitech' ),
-		                'social_link' => esc_html__( 'https://www.twitter.com/', 'engitech' ),
+		             	'title'       => esc_html__( 'Twitter', 'valkiriapps' ),
+		                'social_link' => esc_html__( 'https://www.twitter.com/', 'valkiriapps' ),
 		                'social_icon' => [
 							'value' => 'fab fa-twitter',
 							'library' => 'fa-brand',
@@ -142,8 +142,8 @@ class Engitech_Team extends Widget_Base{
 		 
 		            ],
 		            [
-		             	'title'       => esc_html__( 'Facebook', 'engitech' ),
-		                'social_link' => esc_html__( 'https://www.facebook.com/', 'engitech' ),
+		             	'title'       => esc_html__( 'Facebook', 'valkiriapps' ),
+		                'social_link' => esc_html__( 'https://www.facebook.com/', 'valkiriapps' ),
 		                'social_icon' => [
 							'value' => 'fab fa-facebook-f',
 							'library' => 'fa-brand',
@@ -151,8 +151,8 @@ class Engitech_Team extends Widget_Base{
 		 
 		            ],
 		            [
-		             	'title'       => esc_html__( 'Pinterest', 'engitech' ),
-		                'social_link' => esc_html__( 'https://www.pinterest.com/', 'engitech' ),
+		             	'title'       => esc_html__( 'Pinterest', 'valkiriapps' ),
+		                'social_link' => esc_html__( 'https://www.pinterest.com/', 'valkiriapps' ),
 		                'social_icon' => [
 							'value' => 'fab fa-pinterest-p',
 							'library' => 'fa-brand',
@@ -167,9 +167,9 @@ class Engitech_Team extends Widget_Base{
 		$this->add_control(
 			'link',
 			[
-				'label' => __( 'Link To Details', 'engitech' ),
+				'label' => __( 'Link To Details', 'valkiriapps' ),
 				'type' => Controls_Manager::URL,
-				'placeholder' => __( 'https://', 'engitech' ),
+				'placeholder' => __( 'https://', 'valkiriapps' ),
 			]
 		);
 
@@ -179,14 +179,14 @@ class Engitech_Team extends Widget_Base{
 		$this->start_controls_section(
 			'content_style',
 			[
-				'label' => esc_html__( 'Infomation', 'engitech' ),
+				'label' => esc_html__( 'Infomation', 'valkiriapps' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
 		$this->add_control(
 			'info_bg',
 			[
-				'label'     => esc_html__( 'Background', 'engitech' ),
+				'label'     => esc_html__( 'Background', 'valkiriapps' ),
 				'type'      => Controls_Manager::COLOR,
 				'default'   => '',
 				'selectors' => [
@@ -197,7 +197,7 @@ class Engitech_Team extends Widget_Base{
 		$this->add_control(
 			'info_hover_bg',
 			[
-				'label'     => esc_html__( 'Background Hover', 'engitech' ),
+				'label'     => esc_html__( 'Background Hover', 'valkiriapps' ),
 				'type'      => Controls_Manager::COLOR,
 				'default'   => '',
 				'selectors' => [
@@ -208,7 +208,7 @@ class Engitech_Team extends Widget_Base{
 		$this->add_responsive_control(
 			'info_padding',
 			[
-				'label' => esc_html__( 'Padding', 'engitech' ),
+				'label' => esc_html__( 'Padding', 'valkiriapps' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', 'em', '%' ],
 				'selectors' => [
@@ -221,7 +221,7 @@ class Engitech_Team extends Widget_Base{
 		$this->add_control(
 			'heading_title',
 			[
-				'label' => __( 'Title', 'engitech' ),
+				'label' => __( 'Title', 'valkiriapps' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -230,7 +230,7 @@ class Engitech_Team extends Widget_Base{
 		$this->add_responsive_control(
 			'title_space',
 			[
-				'label' => esc_html__( 'Spacing', 'engitech' ),
+				'label' => esc_html__( 'Spacing', 'valkiriapps' ),
 				'type'  => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -247,7 +247,7 @@ class Engitech_Team extends Widget_Base{
 		$this->add_control(
 			'title_color',
 			[
-				'label'     => esc_html__( 'Color', 'engitech' ),
+				'label'     => esc_html__( 'Color', 'valkiriapps' ),
 				'type'      => Controls_Manager::COLOR,
 				'default'   => '',
 				'selectors' => [
@@ -259,7 +259,7 @@ class Engitech_Team extends Widget_Base{
 			Group_Control_Typography::get_type(),
 				[
 					'name'     => 'title_typography',
-					'label'    => esc_html__( 'Typography', 'engitech' ),
+					'label'    => esc_html__( 'Typography', 'valkiriapps' ),
 					'selector' => '{{WRAPPER}} .team-wrap .team-info h4',
 				]
 		);
@@ -268,7 +268,7 @@ class Engitech_Team extends Widget_Base{
 		$this->add_control(
 			'heading_job',
 			[
-				'label' => __( 'Extra/Job', 'engitech' ),
+				'label' => __( 'Extra/Job', 'valkiriapps' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -277,7 +277,7 @@ class Engitech_Team extends Widget_Base{
 		$this->add_control(
 			'job_color',
 			[
-				'label'     => esc_html__( 'Color', 'engitech' ),
+				'label'     => esc_html__( 'Color', 'valkiriapps' ),
 				'type'      => Controls_Manager::COLOR,
 				'default'   => '',
 				'selectors' => [
@@ -289,7 +289,7 @@ class Engitech_Team extends Widget_Base{
 			Group_Control_Typography::get_type(),
 				[
 					'name'     => 'job_typography',
-					'label'    => esc_html__( 'Typography', 'engitech' ),
+					'label'    => esc_html__( 'Typography', 'valkiriapps' ),
 					'selector' => '{{WRAPPER}} .team-wrap .team-info > span',
 				]
 		);
@@ -300,7 +300,7 @@ class Engitech_Team extends Widget_Base{
 		$this->start_controls_section(
 			'icon_style',
 			[
-				'label' => esc_html__( 'Socials', 'engitech' ),
+				'label' => esc_html__( 'Socials', 'valkiriapps' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -308,7 +308,7 @@ class Engitech_Team extends Widget_Base{
 		$this->add_control(
 			'bg_share',
 			[
-				'label'     => esc_html__( 'Background', 'engitech' ),
+				'label'     => esc_html__( 'Background', 'valkiriapps' ),
 				'type'      => Controls_Manager::COLOR,
 				'default'   => '',
 				'selectors' => [
@@ -320,7 +320,7 @@ class Engitech_Team extends Widget_Base{
 		$this->add_control(
 			'icon_size',
 			[
-				'label' => esc_html__( 'Font Size', 'engitech' ),
+				'label' => esc_html__( 'Font Size', 'valkiriapps' ),
 				'type'  => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -337,7 +337,7 @@ class Engitech_Team extends Widget_Base{
 		$this->add_responsive_control(
 			'icon_space',
 			[
-				'label' => esc_html__( 'Spacing', 'engitech' ),
+				'label' => esc_html__( 'Spacing', 'valkiriapps' ),
 				'type'  => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -354,7 +354,7 @@ class Engitech_Team extends Widget_Base{
 		$this->add_control(
 			'icon_color',
 			[
-				'label'     => esc_html__( 'Color', 'engitech' ),
+				'label'     => esc_html__( 'Color', 'valkiriapps' ),
 				'type'      => Controls_Manager::COLOR,
 				'default'   => '',
 				'selectors' => [
@@ -365,7 +365,7 @@ class Engitech_Team extends Widget_Base{
 		$this->add_control(
 			'icon_hover_color',
 			[
-				'label'     => esc_html__( 'Hover Color', 'engitech' ),
+				'label'     => esc_html__( 'Hover Color', 'valkiriapps' ),
 				'type'      => Controls_Manager::COLOR,
 				'default'   => '',
 				'selectors' => [
@@ -428,4 +428,4 @@ class Engitech_Team extends Widget_Base{
 	protected function content_template() {}
 }
 // After the Schedule class is defined, I must register the new widget class with Elementor:
-Plugin::instance()->widgets_manager->register( new Engitech_Team() );
+Plugin::instance()->widgets_manager->register( new Valkiriapps_Team() );

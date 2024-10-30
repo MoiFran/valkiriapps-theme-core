@@ -16,7 +16,7 @@
 	    the_content();
 
 	    wp_link_pages( array(
-	        'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'engitech' ),
+	        'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'valkiriapps' ),
 	        'after'  => '</div>',
 	    ) );
 	    ?>

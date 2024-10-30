@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly (security measu
 /**
  * Widget Name: Contact Info
  */
-class Engitech_Contact_Info extends Widget_Base{
+class Valkiriapps_Contact_Info extends Widget_Base{
 
  	// The get_name() method is a simple one, you just need to return a widget name that will be used in the code.
 	public function get_name() {
@@ -14,7 +14,7 @@ class Engitech_Contact_Info extends Widget_Base{
 
 	// The get_title() method, which again, is a very simple one, you need to return the widget title that will be displayed as the widget label.
 	public function get_title() {
-		return __( 'Engitech Contact Info', 'engitech' );
+		return __( 'Valkiriapps Contact Info', 'valkiriapps' );
 	}
 
 	// The get_icon() method, is an optional but recommended method, it lets you set the widget icon. you can use any of the eicon or font-awesome icons, simply return the class name as a string.
@@ -24,7 +24,7 @@ class Engitech_Contact_Info extends Widget_Base{
 
 	// The get_categories method, lets you set the category of the widget, return the category name as a string.
 	public function get_categories() {
-		return [ 'category_engitech' ];
+		return [ 'category_valkiriapps' ];
 	}
 
 	protected function register_controls() {
@@ -33,27 +33,27 @@ class Engitech_Contact_Info extends Widget_Base{
 		$this->start_controls_section(
 			'content_section',
 			[
-				'label' => __( 'Content', 'engitech' ),
+				'label' => __( 'Content', 'valkiriapps' ),
 			]
 		);
 
 		$this->add_control(
 			'icon_type',
 			[
-				'label' => __( 'Icon Type', 'engitech' ),
+				'label' => __( 'Icon Type', 'valkiriapps' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'font',
 				'options' => [
-					'font' 	=> __( 'Font Icon', 'engitech' ),
-					'image' => __( 'Image Icon', 'engitech' ),
-					'class' => __( 'Custom Icon', 'engitech' ),
+					'font' 	=> __( 'Font Icon', 'valkiriapps' ),
+					'image' => __( 'Image Icon', 'valkiriapps' ),
+					'class' => __( 'Custom Icon', 'valkiriapps' ),
 				]
 			]
 		);
 		$this->add_control(
 			'icon_font',
 			[
-				'label' => __( 'Icon', 'engitech' ),
+				'label' => __( 'Icon', 'valkiriapps' ),
 				'type' => Controls_Manager::ICONS,
 				'label_block' => true,
 				'fa4compatibility' => 'icon',
@@ -69,7 +69,7 @@ class Engitech_Contact_Info extends Widget_Base{
 		$this->add_control(
 	       'icon_image',
 	        [
-	           'label' => esc_html__( 'Photo', 'engitech' ),
+	           'label' => esc_html__( 'Photo', 'valkiriapps' ),
 	           'type'  => Controls_Manager::MEDIA,
 				'default' => [
 					'url' => get_template_directory_uri().'/images/analysis.png',
@@ -82,9 +82,9 @@ class Engitech_Contact_Info extends Widget_Base{
 	    $this->add_control(
 			'icon_class',
 			[
-				'label' => __( 'Custom Class', 'engitech' ),
+				'label' => __( 'Custom Class', 'valkiriapps' ),
 				'type' => Controls_Manager::TEXT,
-				'default' => __( 'flaticon-world-globe', 'engitech' ),
+				'default' => __( 'flaticon-world-globe', 'valkiriapps' ),
 				'condition' => [
 					'icon_type' => 'class',
 				]
@@ -93,9 +93,9 @@ class Engitech_Contact_Info extends Widget_Base{
 		$this->add_control(
 			'title',
 			[
-				'label' => __( 'Title', 'engitech' ),
+				'label' => __( 'Title', 'valkiriapps' ),
 				'type' => Controls_Manager::TEXT,
-				'default' => __( 'Our Address:', 'engitech' ),
+				'default' => __( 'Our Address:', 'valkiriapps' ),
 			]
 		);
 
@@ -104,19 +104,19 @@ class Engitech_Contact_Info extends Widget_Base{
 			[
 				'label' => 'Infomation',
 				'type' => Controls_Manager::TEXTAREA,
-				'default' => __( '411 University St, Seattle, USA', 'engitech' ),
+				'default' => __( '411 University St, Seattle, USA', 'valkiriapps' ),
 			]
 		);	
 
 		$this->add_control(
 			'box_style',
 			[
-				'label' 	=> __( 'Box Style', 'engitech' ),
+				'label' 	=> __( 'Box Style', 'valkiriapps' ),
 				'type'  	=> Controls_Manager::SELECT,
 				'default' 	=> 's1',
 				'options' 	=> [
-					's1'  => __( 'Icon Left', 'engitech' ),
-					's2'  => __( 'Icon Center', 'engitech' ),
+					's1'  => __( 'Icon Left', 'valkiriapps' ),
+					's2'  => __( 'Icon Center', 'valkiriapps' ),
 				]
 			]
 		);
@@ -126,7 +126,7 @@ class Engitech_Contact_Info extends Widget_Base{
 		$this->start_controls_section(
 			'style_content_section',
 			[
-				'label' => __( 'Style', 'engitech' ),
+				'label' => __( 'Style', 'valkiriapps' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -135,7 +135,7 @@ class Engitech_Contact_Info extends Widget_Base{
 		$this->add_control(
 			'heading_general',
 			[
-				'label' => __( 'General', 'engitech' ),
+				'label' => __( 'General', 'valkiriapps' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 				'condition' => [
@@ -147,7 +147,7 @@ class Engitech_Contact_Info extends Widget_Base{
 		$this->add_responsive_control(
 			'box_padding',
 			[
-				'label' => __( 'Padding Box', 'engitech' ),
+				'label' => __( 'Padding Box', 'valkiriapps' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', 'em', '%' ],
 				'selectors' => [
@@ -163,14 +163,14 @@ class Engitech_Contact_Info extends Widget_Base{
 		$this->add_control(
 			'heading_icon',
 			[
-				'label' => __( 'Icon', 'engitech' ),
+				'label' => __( 'Icon', 'valkiriapps' ),
 				'type' => Controls_Manager::HEADING,
 			]
 		);
 		$this->add_control(
 			'icon_color',
 			[
-				'label' => __( 'Color', 'engitech' ),
+				'label' => __( 'Color', 'valkiriapps' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -185,7 +185,7 @@ class Engitech_Contact_Info extends Widget_Base{
 		$this->add_responsive_control(
 			'icon_size',
 			[
-				'label' => __( 'Size', 'engitech' ),
+				'label' => __( 'Size', 'valkiriapps' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -202,7 +202,7 @@ class Engitech_Contact_Info extends Widget_Base{
 		$this->add_responsive_control(
 			'icon_space',
 			[
-				'label' => __( 'Spacing', 'engitech' ),
+				'label' => __( 'Spacing', 'valkiriapps' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -221,7 +221,7 @@ class Engitech_Contact_Info extends Widget_Base{
 		$this->add_control(
 			'heading_title',
 			[
-				'label' => __( 'Title', 'engitech' ),
+				'label' => __( 'Title', 'valkiriapps' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -229,7 +229,7 @@ class Engitech_Contact_Info extends Widget_Base{
 		$this->add_responsive_control(
 			'title_space',
 			[
-				'label' => __( 'Spacing', 'engitech' ),
+				'label' => __( 'Spacing', 'valkiriapps' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -246,7 +246,7 @@ class Engitech_Contact_Info extends Widget_Base{
 		$this->add_control(
 			'title_color',
 			[
-				'label' => __( 'Color', 'engitech' ),
+				'label' => __( 'Color', 'valkiriapps' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -266,7 +266,7 @@ class Engitech_Contact_Info extends Widget_Base{
 		$this->add_control(
 			'heading_des',
 			[
-				'label' => __( 'Details', 'engitech' ),
+				'label' => __( 'Details', 'valkiriapps' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -274,7 +274,7 @@ class Engitech_Contact_Info extends Widget_Base{
 		$this->add_control(
 			'des_color',
 			[
-				'label' => __( 'Color', 'engitech' ),
+				'label' => __( 'Color', 'valkiriapps' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -324,4 +324,4 @@ class Engitech_Contact_Info extends Widget_Base{
 	protected function content_template() {}
 }
 // After the Schedule class is defined, I must register the new widget class with Elementor:
-Plugin::instance()->widgets_manager->register( new Engitech_Contact_Info() );
+Plugin::instance()->widgets_manager->register( new Valkiriapps_Contact_Info() );

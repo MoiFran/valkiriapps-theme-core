@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly (security measu
 /**
  * Widget Name: Cart
  */
-class Engitech_Cart extends Widget_Base{
+class Valkiriapps_Cart extends Widget_Base{
 
  	// The get_name() method is a simple one, you just need to return a widget name that will be used in the code.
 	public function get_name() {
@@ -14,7 +14,7 @@ class Engitech_Cart extends Widget_Base{
 
 	// The get_title() method, which again, is a very simple one, you need to return the widget title that will be displayed as the widget label.
 	public function get_title() {
-		return __( 'OT Cart Header', 'engitech' );
+		return __( 'OT Cart Header', 'valkiriapps' );
 	}
 
 	// The get_icon() method, is an optional but recommended method, it lets you set the widget icon. you can use any of the eicon or font-awesome icons, simply return the class name as a string.
@@ -24,7 +24,7 @@ class Engitech_Cart extends Widget_Base{
 
 	// The get_categories method, lets you set the category of the widget, return the category name as a string.
 	public function get_categories() {
-		return [ 'category_engitech_header' ];
+		return [ 'category_valkiriapps_header' ];
 	}
 
 	protected function register_controls() {
@@ -32,14 +32,14 @@ class Engitech_Cart extends Widget_Base{
 		$this->start_controls_section(
 			'style_icon_section',
 			[
-				'label' => __( 'Icon', 'engitech' ),
+				'label' => __( 'Icon', 'valkiriapps' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
 		$this->add_responsive_control(
 			'icon_size',
 			[
-				'label' => __( 'Icon Size', 'engitech' ),
+				'label' => __( 'Icon Size', 'valkiriapps' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -55,7 +55,7 @@ class Engitech_Cart extends Widget_Base{
 		$this->add_control(
 			'icon_color',
 			[
-				'label' => __( 'Icon Color', 'engitech' ),
+				'label' => __( 'Icon Color', 'valkiriapps' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -67,7 +67,7 @@ class Engitech_Cart extends Widget_Base{
 		$this->add_control(
 			'bg_count',
 			[
-				'label' => __( 'Background Count', 'engitech' ),
+				'label' => __( 'Background Count', 'valkiriapps' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -79,7 +79,7 @@ class Engitech_Cart extends Widget_Base{
 		$this->add_control(
 			'count_color',
 			[
-				'label' => __( 'Count Color', 'engitech' ),
+				'label' => __( 'Count Color', 'valkiriapps' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -92,7 +92,7 @@ class Engitech_Cart extends Widget_Base{
 		
 	}
 
-	public static function engitech_render_menu_cart() {
+	public static function valkiriapps_render_menu_cart() {
 		if ( null === WC()->cart ) {
 			return;
 		}
@@ -103,7 +103,7 @@ class Engitech_Cart extends Widget_Base{
 		?>
 		<?php if ( ! $widget_cart_is_hidden ) : ?>
 			<div class="octf-cart octf-cta-header">
-				<a class="cart-contents ot-minicart" href="<?php echo $cart_url; ?>" title="<?php esc_attr_e( 'View your shopping cart', 'engitech' ); ?>"><i class="flaticon-shopper"></i> <span class="cart-count count"><?php echo $product_count; ?></span>
+				<a class="cart-contents ot-minicart" href="<?php echo $cart_url; ?>" title="<?php esc_attr_e( 'View your shopping cart', 'valkiriapps' ); ?>"><i class="flaticon-shopper"></i> <span class="cart-count count"><?php echo $product_count; ?></span>
 				</a>
 				<?php if( !is_cart() && !is_checkout() ) { ?>
 				<div class="site-header-cart">
@@ -117,9 +117,9 @@ class Engitech_Cart extends Widget_Base{
 
 	protected function render() {
 		$settings = $this->get_settings_for_display();
-		self::engitech_render_menu_cart();
+		self::valkiriapps_render_menu_cart();
 	}
 
 }
-// After the Engitech_Cart class is defined, I must register the new widget class with Elementor:
-Plugin::instance()->widgets_manager->register( new Engitech_Cart() );
+// After the Valkiriapps_Cart class is defined, I must register the new widget class with Elementor:
+Plugin::instance()->widgets_manager->register( new Valkiriapps_Cart() );

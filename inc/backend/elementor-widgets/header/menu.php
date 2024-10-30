@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly (security measu
 /**
  * Widget Name: Menu
  */
-class Engitech_Menu extends Widget_Base{
+class Valkiriapps_Menu extends Widget_Base{
 
  	// The get_name() method is a simple one, you just need to return a widget name that will be used in the code.
 	public function get_name() {
@@ -14,7 +14,7 @@ class Engitech_Menu extends Widget_Base{
 
 	// The get_title() method, which again, is a very simple one, you need to return the widget title that will be displayed as the widget label.
 	public function get_title() {
-		return __( 'OT Nav Menu', 'engitech' );
+		return __( 'OT Nav Menu', 'valkiriapps' );
 	}
 
 	// The get_icon() method, is an optional but recommended method, it lets you set the widget icon. you can use any of the eicon or font-awesome icons, simply return the class name as a string.
@@ -24,7 +24,7 @@ class Engitech_Menu extends Widget_Base{
 
 	// The get_categories method, lets you set the category of the widget, return the category name as a string.
 	public function get_categories() {
-		return [ 'category_engitech_header' ];
+		return [ 'category_valkiriapps_header' ];
 	}
 
 	protected function register_controls() {
@@ -32,7 +32,7 @@ class Engitech_Menu extends Widget_Base{
 		$this->start_controls_section(
 			'content_section',
 			[
-				'label' => __( 'Menu', 'engitech' ),
+				'label' => __( 'Menu', 'valkiriapps' ),
 			]
 		);
 
@@ -40,7 +40,7 @@ class Engitech_Menu extends Widget_Base{
 		$this->add_control(
 			'nav_menu',
 			[
-				'label' => esc_html__( 'Select Menu', 'engitech' ),
+				'label' => esc_html__( 'Select Menu', 'valkiriapps' ),
 				'type' => Controls_Manager::SELECT,
 				'multiple' => false,
 				'options' => $menus,
@@ -52,19 +52,19 @@ class Engitech_Menu extends Widget_Base{
 		$this->add_responsive_control(
 			'align',
 			[
-				'label' => __( 'Alignment', 'engitech' ),
+				'label' => __( 'Alignment', 'valkiriapps' ),
 				'type' => Controls_Manager::CHOOSE,
 				'options' => [
 					'left'    => [
-						'title' => __( 'Left', 'engitech' ),
+						'title' => __( 'Left', 'valkiriapps' ),
 						'icon' => 'eicon-text-align-left',
 					],
 					'center' => [
-						'title' => __( 'Center', 'engitech' ),
+						'title' => __( 'Center', 'valkiriapps' ),
 						'icon' => 'eicon-text-align-center',
 					],
 					'right' => [
-						'title' => __( 'Right', 'engitech' ),
+						'title' => __( 'Right', 'valkiriapps' ),
 						'icon' => 'eicon-text-align-right',
 					],
 				],
@@ -81,14 +81,14 @@ class Engitech_Menu extends Widget_Base{
 		$this->start_controls_section(
 			'style_menu_section',
 			[
-				'label' => __( 'Menu Parents', 'engitech' ),
+				'label' => __( 'Menu Parents', 'valkiriapps' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
 		$this->add_responsive_control(
 			'space_item',
 			[
-				'label' => __( 'Spacing Items', 'engitech' ),
+				'label' => __( 'Spacing Items', 'valkiriapps' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -106,7 +106,7 @@ class Engitech_Menu extends Widget_Base{
 		$this->add_responsive_control(
 			'padding_item',
 			[
-				'label' => __( 'Padding Top/Bottom', 'engitech' ),
+				'label' => __( 'Padding Top/Bottom', 'valkiriapps' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -122,7 +122,7 @@ class Engitech_Menu extends Widget_Base{
 		$this->add_control(
 			'text_color',
 			[
-				'label' => __( 'Text Color', 'engitech' ),
+				'label' => __( 'Text Color', 'valkiriapps' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -133,7 +133,7 @@ class Engitech_Menu extends Widget_Base{
 		$this->add_control(
 			'text_hover_color',
 			[
-				'label' => __( 'Text Hover Color', 'engitech' ),
+				'label' => __( 'Text Hover Color', 'valkiriapps' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -152,10 +152,10 @@ class Engitech_Menu extends Widget_Base{
 		$this->add_control(
 			'under_line',
 			[
-				'label' => __( 'Under Line', 'engitech' ),
+				'label' => __( 'Under Line', 'valkiriapps' ),
 				'type' => Controls_Manager::SWITCHER,
-				'label_on' => __( 'Show', 'engitech' ),
-				'label_off' => __( 'Hide', 'engitech' ),
+				'label_on' => __( 'Show', 'valkiriapps' ),
+				'label_off' => __( 'Hide', 'valkiriapps' ),
 				'return_value' => 'yes',
 				'default' => 'yes',
 			]
@@ -167,14 +167,14 @@ class Engitech_Menu extends Widget_Base{
 		$this->start_controls_section(
 			'style_smenu_section',
 			[
-				'label' => __( 'Dropdown Menus', 'engitech' ),
+				'label' => __( 'Dropdown Menus', 'valkiriapps' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
 		$this->add_responsive_control(
 			'smenu_width',
 			[
-				'label' => __( 'Width', 'engitech' ),
+				'label' => __( 'Width', 'valkiriapps' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -190,7 +190,7 @@ class Engitech_Menu extends Widget_Base{
 		$this->add_control(
 			'smenu_radius',
 			[
-				'label' => __( 'Border Radius', 'engitech' ),
+				'label' => __( 'Border Radius', 'valkiriapps' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%' ],
 				'selectors' => [
@@ -210,7 +210,7 @@ class Engitech_Menu extends Widget_Base{
 		$this->add_control(
 			'bg_s_color',
 			[
-				'label' => __( 'Background Color', 'engitech' ),
+				'label' => __( 'Background Color', 'valkiriapps' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -221,7 +221,7 @@ class Engitech_Menu extends Widget_Base{
 		$this->add_control(
 			'item_title',
 			[
-				'label' => __( 'Menu Items', 'engitech' ),
+				'label' => __( 'Menu Items', 'valkiriapps' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -229,7 +229,7 @@ class Engitech_Menu extends Widget_Base{
 		$this->add_control(
 			'text_s_color',
 			[
-				'label' => __( 'Text Color', 'engitech' ),
+				'label' => __( 'Text Color', 'valkiriapps' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -240,7 +240,7 @@ class Engitech_Menu extends Widget_Base{
 		$this->add_control(
 			'text_s_hover_color',
 			[
-				'label' => __( 'Text Hover Color', 'engitech' ),
+				'label' => __( 'Text Hover Color', 'valkiriapps' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -259,10 +259,10 @@ class Engitech_Menu extends Widget_Base{
 		$this->add_control(
 			'is_line',
 			[
-				'label' => __( 'Hover With Line', 'engitech' ),
+				'label' => __( 'Hover With Line', 'valkiriapps' ),
 				'type' => Controls_Manager::SWITCHER,
-				'label_on' => __( 'Show', 'engitech' ),
-				'label_off' => __( 'Hide', 'engitech' ),
+				'label_on' => __( 'Show', 'valkiriapps' ),
+				'label_off' => __( 'Hide', 'valkiriapps' ),
 				'return_value' => 'yes',
 				'default' => 'yes',
 			]
@@ -304,5 +304,5 @@ class Engitech_Menu extends Widget_Base{
 	}
 
 }
-// After the Engitech_Menu class is defined, I must register the new widget class with Elementor:
-Plugin::instance()->widgets_manager->register( new Engitech_Menu() );
+// After the Valkiriapps_Menu class is defined, I must register the new widget class with Elementor:
+Plugin::instance()->widgets_manager->register( new Valkiriapps_Menu() );

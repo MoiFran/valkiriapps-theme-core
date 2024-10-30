@@ -28,4 +28,4 @@
 	} ?>
 
 	<div id="content" class="site-content">
-	<?php engitech_page_header(); ?>
+	<?php valkiriapps_page_header(); ?>

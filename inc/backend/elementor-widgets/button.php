@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly (security measu
 /**
  * Widget Name: Button
  */
-class Engitech_Button extends Widget_Base{
+class Valkiriapps_Button extends Widget_Base{
 
  	// The get_name() method is a simple one, you just need to return a widget name that will be used in the code.
 	public function get_name() {
@@ -14,7 +14,7 @@ class Engitech_Button extends Widget_Base{
 
 	// The get_title() method, which again, is a very simple one, you need to return the widget title that will be displayed as the widget label.
 	public function get_title() {
-		return __( 'Engitech Button', 'engitech' );
+		return __( 'Valkiriapps Button', 'valkiriapps' );
 	}
 
 	// The get_icon() method, is an optional but recommended method, it lets you set the widget icon. you can use any of the eicon or font-awesome icons, simply return the class name as a string.
@@ -24,7 +24,7 @@ class Engitech_Button extends Widget_Base{
 
 	// The get_categories method, lets you set the category of the widget, return the category name as a string.
 	public function get_categories() {
-		return [ 'category_engitech' ];
+		return [ 'category_valkiriapps' ];
 	}
 
 	/**
@@ -40,16 +40,16 @@ class Engitech_Button extends Widget_Base{
 	 */
 	public static function get_button_style() {
 		return [
-			'btn-main' 	=> __( 'Normal Button', 'engitech' ),
-			'btn-icon'  => __( 'Button With Icon', 'engitech' ),
+			'btn-main' 	=> __( 'Normal Button', 'valkiriapps' ),
+			'btn-icon'  => __( 'Button With Icon', 'valkiriapps' ),
 		];
 	}
 
 	public static function get_button_color() {
 		return [
-			'primary' 	=> __( 'Primary Color', 'engitech' ),
-			'second' 	=> __( 'Second Color', 'engitech' ),
-			'arrow'   	=> __( 'With Arrow', 'engitech' ),
+			'primary' 	=> __( 'Primary Color', 'valkiriapps' ),
+			'second' 	=> __( 'Second Color', 'valkiriapps' ),
+			'arrow'   	=> __( 'With Arrow', 'valkiriapps' ),
 		];
 	}
 
@@ -59,14 +59,14 @@ class Engitech_Button extends Widget_Base{
 		$this->start_controls_section(
 			'button_section',
 			[
-				'label' => __( 'Button', 'engitech' ),
+				'label' => __( 'Button', 'valkiriapps' ),
 			]
 		);
 
 		$this->add_control(
 			'btn_style',
 			[
-				'label' => __( 'Style', 'engitech' ),
+				'label' => __( 'Style', 'valkiriapps' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'primary',
 				'options' => self::get_button_color(),
@@ -77,19 +77,19 @@ class Engitech_Button extends Widget_Base{
 		$this->add_responsive_control(
 			'align',
 			[
-				'label' => __( 'Alignment', 'engitech' ),
+				'label' => __( 'Alignment', 'valkiriapps' ),
 				'type' => Controls_Manager::CHOOSE,
 				'options' => [
 					'left'    => [
-						'title' => __( 'Left', 'engitech' ),
+						'title' => __( 'Left', 'valkiriapps' ),
 						'icon' => 'eicon-text-align-left',
 					],
 					'center' => [
-						'title' => __( 'Center', 'engitech' ),
+						'title' => __( 'Center', 'valkiriapps' ),
 						'icon' => 'eicon-text-align-center',
 					],
 					'right' => [
-						'title' => __( 'Right', 'engitech' ),
+						'title' => __( 'Right', 'valkiriapps' ),
 						'icon' => 'eicon-text-align-right',
 					],
 				],
@@ -101,18 +101,18 @@ class Engitech_Button extends Widget_Base{
 		$this->add_control(
 			'text',
 			[
-				'label' => __( 'Text', 'engitech' ),
+				'label' => __( 'Text', 'valkiriapps' ),
 				'type' => Controls_Manager::TEXTAREA,
-				'default' => __( 'Click here', 'engitech' ),
+				'default' => __( 'Click here', 'valkiriapps' ),
 			]
 		);
 
 		$this->add_control(
 			'link',
 			[
-				'label' => __( 'Link', 'engitech' ),
+				'label' => __( 'Link', 'valkiriapps' ),
 				'type' => Controls_Manager::URL,
-				'placeholder' => __( 'https://your-link.com', 'engitech' ),
+				'placeholder' => __( 'https://your-link.com', 'valkiriapps' ),
 				'default' => [
 					'url' => '#',
 				],
@@ -125,7 +125,7 @@ class Engitech_Button extends Widget_Base{
 		$this->start_controls_section(
 			'style_section',
 			[
-				'label' => __( 'General', 'engitech' ),
+				'label' => __( 'General', 'valkiriapps' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -133,7 +133,7 @@ class Engitech_Button extends Widget_Base{
 		$this->add_responsive_control(
 			'button_padding',
 			[
-				'label' => __( 'Padding', 'engitech' ),
+				'label' => __( 'Padding', 'valkiriapps' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px' ],
 				'selectors' => [
@@ -155,14 +155,14 @@ class Engitech_Button extends Widget_Base{
 		$this->start_controls_tab(
 			'tab_button_normal',
 			[
-				'label' => __( 'Normal', 'engitech' ),
+				'label' => __( 'Normal', 'valkiriapps' ),
 			]
 		);
 
 		$this->add_control(
 			'button_text_color',
 			[
-				'label' => __( 'Text Color', 'engitech' ),
+				'label' => __( 'Text Color', 'valkiriapps' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -174,7 +174,7 @@ class Engitech_Button extends Widget_Base{
 		$this->add_control(
 			'background_color',
 			[
-				'label' => __( 'Background Color', 'engitech' ),
+				'label' => __( 'Background Color', 'valkiriapps' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .octf-btn' => 'background-color: {{VALUE}};',
@@ -199,7 +199,7 @@ class Engitech_Button extends Widget_Base{
 		$this->add_responsive_control(
 			'button_radius',
 			[
-				'label' => __( 'Border Radius', 'engitech' ),
+				'label' => __( 'Border Radius', 'valkiriapps' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%' ],
 				'selectors' => [
@@ -216,14 +216,14 @@ class Engitech_Button extends Widget_Base{
 		$this->start_controls_tab(
 			'tab_button_hover',
 			[
-				'label' => __( 'Hover', 'engitech' ),
+				'label' => __( 'Hover', 'valkiriapps' ),
 			]
 		);
 
 		$this->add_control(
 			'hover_color',
 			[
-				'label' => __( 'Text Color', 'engitech' ),
+				'label' => __( 'Text Color', 'valkiriapps' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .btn-details:hover, {{WRAPPER}} .octf-btn:hover, {{WRAPPER}} .octf-btn:focus' => 'color: {{VALUE}};',
@@ -234,7 +234,7 @@ class Engitech_Button extends Widget_Base{
 		$this->add_control(
 			'button_background_hover_color',
 			[
-				'label' => __( 'Background Color', 'engitech' ),
+				'label' => __( 'Background Color', 'valkiriapps' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .octf-btn:hover, {{WRAPPER}} .octf-btn:focus' => 'background-color: {{VALUE}};',
@@ -259,7 +259,7 @@ class Engitech_Button extends Widget_Base{
 		$this->add_responsive_control(
 			'button_hover_radius',
 			[
-				'label' => __( 'Border Radius', 'engitech' ),
+				'label' => __( 'Border Radius', 'valkiriapps' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%' ],
 				'selectors' => [
@@ -274,7 +274,7 @@ class Engitech_Button extends Widget_Base{
 		$this->add_control(
 			'hover_animation',
 			[
-				'label' => __( 'Hover Animation', 'engitech' ),
+				'label' => __( 'Hover Animation', 'valkiriapps' ),
 				'type' => Controls_Manager::HOVER_ANIMATION,
 				'condition' => [
 					'btn_style!' => 'arrow',
@@ -328,4 +328,4 @@ class Engitech_Button extends Widget_Base{
 	protected function content_template() {}
 }
 // After the Schedule class is defined, I must register the new widget class with Elementor:
-Plugin::instance()->widgets_manager->register( new Engitech_Button() );
+Plugin::instance()->widgets_manager->register( new Valkiriapps_Button() );

@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package Engitech
+ * @package Valkiriapps
  */
 
 get_header();

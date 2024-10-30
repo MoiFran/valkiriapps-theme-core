@@ -37,7 +37,7 @@ class OT_Element_Column extends Module {
 		$element->add_responsive_control(
 			'_ot_column_min_width',
 			[
-				'label'        => esc_html__( 'Min Width (px)', 'engitech' ),
+				'label'        => esc_html__( 'Min Width (px)', 'valkiriapps' ),
 				'type'      => Controls_Manager::SLIDER,
 				'default'   => [
 					'unit' => 'px',
@@ -72,15 +72,15 @@ class OT_Element_Column extends Module {
 		$element->add_control(
 			'_ot_content_align',
 			[
-				'label'        => esc_html__( 'Content Align', 'engitech' ),
+				'label'        => esc_html__( 'Content Align', 'valkiriapps' ),
 				'type'         => Controls_Manager::CHOOSE,
 				'options'      => [
 					'vertical'   => [
-						'title' => esc_html__( 'Vertical', 'engitech' ),
+						'title' => esc_html__( 'Vertical', 'valkiriapps' ),
 						'icon'  => 'eicon-ellipsis-v',
 					],
 					'horizontal' => [
-						'title' => esc_html__( 'Horizontal', 'engitech' ),
+						'title' => esc_html__( 'Horizontal', 'valkiriapps' ),
 						'icon'  => 'eicon-ellipsis-h',
 					],
 				],

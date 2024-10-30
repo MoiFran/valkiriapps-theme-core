@@ -4,14 +4,14 @@
  *
  * Eventually, some of the functionality here could be replaced by core features.
  *
- * @package Engitech
+ * @package Valkiriapps
  */
 
-if ( ! function_exists( 'engitech_posted_on' ) ) :
+if ( ! function_exists( 'valkiriapps_posted_on' ) ) :
 	/**
 	 * Prints HTML with meta information for the current post-date/time.
 	 */
-	function engitech_posted_on() {
+	function valkiriapps_posted_on() {
 
         $time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
         if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
@@ -25,7 +25,7 @@ if ( ! function_exists( 'engitech_posted_on' ) ) :
 
         $posted_on = sprintf(
         /* translators: %s: post date. */
-            esc_html_x( '%s', 'post date', 'engitech' ),
+            esc_html_x( '%s', 'post date', 'valkiriapps' ),
             '<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
         );
 
@@ -34,16 +34,16 @@ if ( ! function_exists( 'engitech_posted_on' ) ) :
     };
 endif;
 
-if ( ! function_exists( 'engitech_posted_in' ) ) :
+if ( ! function_exists( 'valkiriapps_posted_in' ) ) :
     /**
      * Prints HTML with meta information for the current author.
      */
-    function engitech_posted_in() {
-        $categories_list = get_the_category_list( esc_html__( ' ', 'engitech' ) );
+    function valkiriapps_posted_in() {
+        $categories_list = get_the_category_list( esc_html__( ' ', 'valkiriapps' ) );
         $posted_in = '';
         if ( !empty($categories_list) ) {
             /* translators: 1: list of categories. */
-            $posted_in = sprintf( esc_html__( '%1$s', 'engitech' ), $categories_list ); // WPCS: XSS OK.
+            $posted_in = sprintf( esc_html__( '%1$s', 'valkiriapps' ), $categories_list ); // WPCS: XSS OK.
         }
 
         echo '<div class="post-cat"><span class="posted-in">' . $posted_in . '</span></div>'; // WPCS: XSS OK.
@@ -51,14 +51,14 @@ if ( ! function_exists( 'engitech_posted_in' ) ) :
     };
 endif;
 
-if ( ! function_exists( 'engitech_posted_by' ) ) :
+if ( ! function_exists( 'valkiriapps_posted_by' ) ) :
 	/**
 	 * Prints HTML with meta information for the current author.
 	 */
-	function engitech_posted_by() {
+	function valkiriapps_posted_by() {
 		$byline = sprintf(
 			/* translators: %s: post author. */
-			esc_html_x( '%s', 'post author', 'engitech' ),
+			esc_html_x( '%s', 'post author', 'valkiriapps' ),
 			'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 		);
 
@@ -67,11 +67,11 @@ if ( ! function_exists( 'engitech_posted_by' ) ) :
 	}
 endif;
 
-if ( ! function_exists( 'engitech_post_meta' ) ) :
+if ( ! function_exists( 'valkiriapps_post_meta' ) ) :
     /**
      * Prints HTML with meta information for the current author.
      */
-    function engitech_post_meta() {
+    function valkiriapps_post_meta() {
         $time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
         if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
             $time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time>';
@@ -84,34 +84,34 @@ if ( ! function_exists( 'engitech_post_meta' ) ) :
 
         $posted_on = sprintf(
         /* translators: %s: post date. */
-            esc_html_x( '%s', 'post date', 'engitech' ),
+            esc_html_x( '%s', 'post date', 'valkiriapps' ),
             '<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
         );
 
         $byline = sprintf(
         /* translators: %s: post author. */
-            esc_html_x( '%s', 'post author', 'engitech' ),
+            esc_html_x( '%s', 'post author', 'valkiriapps' ),
             '<a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a>'
         );
 
-        $categories_list = get_the_category_list( esc_html__( ', ', 'engitech' ) );
+        $categories_list = get_the_category_list( esc_html__( ', ', 'valkiriapps' ) );
         if ( $categories_list ) {
             /* translators: 1: list of categories. */
-            $posted_in = sprintf( esc_html__( '%1$s', 'engitech' ), $categories_list ); // WPCS: XSS OK.
+            $posted_in = sprintf( esc_html__( '%1$s', 'valkiriapps' ), $categories_list ); // WPCS: XSS OK.
         }
 
         $comment_num = sprintf(
             /* translators: %s: post author. */
-            esc_html_x( '%s', 'post comment', 'engitech' ),
-            '<a href="' .get_comments_link(). '">'. get_comments_number_text( esc_html__('0 Comments', 'engitech'), esc_html__('1 Comment', 'engitech'), esc_html__(  '% Comments', 'engitech') ). '</a>' );
+            esc_html_x( '%s', 'post comment', 'valkiriapps' ),
+            '<a href="' .get_comments_link(). '">'. get_comments_number_text( esc_html__('0 Comments', 'valkiriapps'), esc_html__('1 Comment', 'valkiriapps'), esc_html__(  '% Comments', 'valkiriapps') ). '</a>' );
 
         /* translators: used between list items, there is a space after the comma */
-        $tags_list = get_the_tag_list( '', esc_html_x( ', ', 'list item separator', 'engitech' ) );
+        $tags_list = get_the_tag_list( '', esc_html_x( ', ', 'list item separator', 'valkiriapps' ) );
         if ( $tags_list ) {
             /* translators: 1: list of tags. */
-            $tag_with = sprintf( '<span class="tags-links">' . esc_html__( '%1$s', 'engitech' ) . '</span>', $tags_list ); // WPCS: XSS OK.
+            $tag_with = sprintf( '<span class="tags-links">' . esc_html__( '%1$s', 'valkiriapps' ) . '</span>', $tags_list ); // WPCS: XSS OK.
         }
-        $metas = engitech_get_option( 'post_entry_meta' );
+        $metas = valkiriapps_get_option( 'post_entry_meta' );
         if ( ! empty( $metas ) ) :
             if( in_array('date', $metas) ) echo '<span class="posted-on">_ ' . $posted_on . '</span>';
             if( in_array('author', $metas) ) echo '<span class="byline">_ ' . $byline . '</span>';
@@ -121,11 +121,11 @@ if ( ! function_exists( 'engitech_post_meta' ) ) :
     }
 endif;
 
-if ( ! function_exists( 'engitech_post_meta2' ) ) :
+if ( ! function_exists( 'valkiriapps_post_meta2' ) ) :
     /**
      * Prints HTML with meta information for the current author.
      */
-    function engitech_post_meta2() {
+    function valkiriapps_post_meta2() {
         $time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
         if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
             $time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time>';
@@ -138,34 +138,34 @@ if ( ! function_exists( 'engitech_post_meta2' ) ) :
 
         $posted_on = sprintf(
         /* translators: %s: post date. */
-            esc_html_x( '%s', 'post date', 'engitech' ),
+            esc_html_x( '%s', 'post date', 'valkiriapps' ),
             '<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
         );
 
         $byline = sprintf(
         /* translators: %s: post author. */
-            esc_html_x( '%s', 'post author', 'engitech' ),
+            esc_html_x( '%s', 'post author', 'valkiriapps' ),
             '<a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a>'
         );
 
-        $categories_list = get_the_category_list( esc_html__( ', ', 'engitech' ) );
+        $categories_list = get_the_category_list( esc_html__( ', ', 'valkiriapps' ) );
         if ( $categories_list ) {
             /* translators: 1: list of categories. */
-            $posted_in = sprintf( esc_html__( '%1$s', 'engitech' ), $categories_list ); // WPCS: XSS OK.
+            $posted_in = sprintf( esc_html__( '%1$s', 'valkiriapps' ), $categories_list ); // WPCS: XSS OK.
         }
 
         $comment_num = sprintf(
             /* translators: %s: post author. */
-            esc_html_x( '%s', 'post comment', 'engitech' ),
-            '<a href="' .get_comments_link(). '">'. get_comments_number_text( esc_html__('0 Comments', 'engitech'), esc_html__('1 Comment', 'engitech'), esc_html__(  '% Comments', 'engitech') ). '</a>' );
+            esc_html_x( '%s', 'post comment', 'valkiriapps' ),
+            '<a href="' .get_comments_link(). '">'. get_comments_number_text( esc_html__('0 Comments', 'valkiriapps'), esc_html__('1 Comment', 'valkiriapps'), esc_html__(  '% Comments', 'valkiriapps') ). '</a>' );
 
         /* translators: used between list items, there is a space after the comma */
-        $tags_list = get_the_tag_list( '', esc_html_x( ', ', 'list item separator', 'engitech' ) );
+        $tags_list = get_the_tag_list( '', esc_html_x( ', ', 'list item separator', 'valkiriapps' ) );
         if ( $tags_list ) {
             /* translators: 1: list of tags. */
-            $tag_with = sprintf( '<span class="tags-links">' . esc_html__( '%1$s', 'engitech' ) . '</span>', $tags_list ); // WPCS: XSS OK.
+            $tag_with = sprintf( '<span class="tags-links">' . esc_html__( '%1$s', 'valkiriapps' ) . '</span>', $tags_list ); // WPCS: XSS OK.
         }
-        $metas = engitech_get_option( 'post_entry_meta' );
+        $metas = valkiriapps_get_option( 'post_entry_meta' );
         if ( ! empty( $metas ) ) :
             if( in_array('date', $metas) ) echo '<span class="posted-on">' . $posted_on . '</span>';
             if( in_array('author', $metas) ) echo '<span class="byline">' . $byline . '</span>';
@@ -175,20 +175,20 @@ if ( ! function_exists( 'engitech_post_meta2' ) ) :
     }
 endif;
 
-if ( ! function_exists( 'engitech_entry_footer' ) ) :
+if ( ! function_exists( 'valkiriapps_entry_footer' ) ) :
 	/**
 	 * Prints HTML with meta information for the categories, tags and comments.
 	 */
-	function engitech_entry_footer() {
+	function valkiriapps_entry_footer() {
 		// Hide category and tag text for pages.
 		if ( 'post' === get_post_type() ) {
 			/* translators: used between list items, there is a space after the comma */
-			$tags_list = get_the_tag_list( '', esc_html_x( ' ', 'list item separator', 'engitech' ) );
+			$tags_list = get_the_tag_list( '', esc_html_x( ' ', 'list item separator', 'valkiriapps' ) );
 			if ( $tags_list ) {
 				/* translators: 1: list of tags. */
-				printf( '<div class="tagcloud">' . esc_html__( '%1$s', 'engitech' ) . '</div>', $tags_list ); // WPCS: XSS OK.
+				printf( '<div class="tagcloud">' . esc_html__( '%1$s', 'valkiriapps' ) . '</div>', $tags_list ); // WPCS: XSS OK.
 			}
-            if( engitech_get_option( 'like_post' ) ){
+            if( valkiriapps_get_option( 'like_post' ) ){
                 echo do_shortcode( '[otfliker]' );
             }
 		}
@@ -197,10 +197,10 @@ if ( ! function_exists( 'engitech_entry_footer' ) ) :
 endif;
 
 /** Socials Share Post**/
-if ( ! function_exists( 'engitech_socials_share' ) ) :
+if ( ! function_exists( 'valkiriapps_socials_share' ) ) :
 
-    function engitech_socials_share(){
-        $share = engitech_get_option( 'post_socials' );
+    function valkiriapps_socials_share(){
+        $share = valkiriapps_get_option( 'post_socials' );
         echo '<div class="share-post">';
 
         if( in_array('twit', $share) ) echo '<a class="twit" target="_blank" href="https://twitter.com/intent/tweet?text=' .get_the_title(). '&url=' .get_the_permalink(). '" title="Twitter"><i class="fab fa-twitter"></i></a>';
@@ -217,9 +217,9 @@ if ( ! function_exists( 'engitech_socials_share' ) ) :
 endif;
 
 /** Single Post Navigation**/
-if ( ! function_exists( 'engitech_single_post_nav' ) ) :
+if ( ! function_exists( 'valkiriapps_single_post_nav' ) ) :
 
-    function engitech_single_post_nav(){
+    function valkiriapps_single_post_nav(){
         echo '<div class="post-nav clearfix">';
         if ( get_previous_post() ) {
             $ppost  = get_previous_post();
@@ -242,8 +242,8 @@ if ( ! function_exists( 'engitech_single_post_nav' ) ) :
 endif;
 
 /** Posts Navigation **/
-if ( ! function_exists( 'engitech_posts_navigation' ) ) :
-    function engitech_posts_navigation($prev = '<i class="flaticon-back"></i>', $next = '<i class="flaticon-right-arrow-1"></i>', $pages='') {
+if ( ! function_exists( 'valkiriapps_posts_navigation' ) ) :
+    function valkiriapps_posts_navigation($prev = '<i class="flaticon-back"></i>', $next = '<i class="flaticon-right-arrow-1"></i>', $pages='') {
         global $wp_query, $wp_rewrite;
         $wp_query->query_vars['paged'] > 1 ? $current = $wp_query->query_vars['paged'] : $current = 1;
         if($pages==''){
@@ -271,8 +271,8 @@ if ( ! function_exists( 'engitech_posts_navigation' ) ) :
 endif;
 
 /** Excerpt Section Blog Post **/
-if ( ! function_exists( 'engitech_excerpt' ) ) :
-function engitech_excerpt($limit) {
+if ( ! function_exists( 'valkiriapps_excerpt' ) ) :
+function valkiriapps_excerpt($limit) {
 
     $excerpt = explode(' ', get_the_excerpt(), $limit);
     
@@ -289,11 +289,11 @@ function engitech_excerpt($limit) {
 endif;
 
 /**** Change length of the excerpt ****/
-if ( ! function_exists( 'engitech_excerpt_length' ) ) :
-    function engitech_excerpt_length() {
+if ( ! function_exists( 'valkiriapps_excerpt_length' ) ) :
+    function valkiriapps_excerpt_length() {
 
-        if(engitech_get_option('excerpt_length')){
-            $limit = engitech_get_option('excerpt_length');
+        if(valkiriapps_get_option('excerpt_length')){
+            $limit = valkiriapps_get_option('excerpt_length');
         }else{
             $limit = 30;
         }
@@ -312,8 +312,8 @@ if ( ! function_exists( 'engitech_excerpt_length' ) ) :
 endif;
 
 //Custom comment list
-if ( ! function_exists( 'engitech_comment_list' ) ) :
-    function engitech_comment_list($comment, $args, $depth) {
+if ( ! function_exists( 'valkiriapps_comment_list' ) ) :
+    function valkiriapps_comment_list($comment, $args, $depth) {
 
         $GLOBALS['comment'] = $comment; ?>
 
@@ -326,13 +326,13 @@ if ( ! function_exists( 'engitech_comment_list' ) ) :
 
                 <div class="comment-content">
                     <div class="comment-meta">
-                        <h6 class="comment-author"><?php printf(__('%s','engitech'), get_comment_author()) ?></h6>
+                        <h6 class="comment-author"><?php printf(__('%s','valkiriapps'), get_comment_author()) ?></h6>
                         <span class="comment-time"><?php comment_time( get_option( 'date_format' ) ); ?></span>
                         <div class="comment-reply"><?php comment_reply_link(array_merge( $args, array('depth' => $depth, 'max_depth' => $args['max_depth']))) ?></div>
                     </div>
                     <div class="comment-text">
                         <?php if ($comment->comment_approved == '0'){ ?>
-                            <em><?php esc_html_e('Your comment is awaiting moderation.','engitech') ?></em>
+                            <em><?php esc_html_e('Your comment is awaiting moderation.','valkiriapps') ?></em>
                         <?php }else{ ?>
                             <?php comment_text() ?>
                         <?php } ?>
@@ -347,49 +347,49 @@ if ( ! function_exists( 'engitech_comment_list' ) ) :
 endif;
 
 //Generate custom search form
-function engitech_search_form( $form ) {
+function valkiriapps_search_form( $form ) {
     $form = '<form role="search" method="get" class="search-form" action="' . esc_url( home_url( '/' ) ) . '" >
     <label><span class="screen-reader-text">Search for:</span>
-    <input type="search" class="search-field" placeholder="' . esc_attr__( 'Search &hellip;', 'engitech' ) . '" value="' . get_search_query() . '" name="s" /></label>
+    <input type="search" class="search-field" placeholder="' . esc_attr__( 'Search &hellip;', 'valkiriapps' ) . '" value="' . get_search_query() . '" name="s" /></label>
 	<button type="submit" class="search-submit"><i class="flaticon-search"></i></button>
     </form>';
 
     return $form;
 }
-add_filter( 'get_search_form', 'engitech_search_form' );
+add_filter( 'get_search_form', 'valkiriapps_search_form' );
 
 //Add span to category post count
-function engitech_cat_count_span($links) {
+function valkiriapps_cat_count_span($links) {
     $links = str_replace('</a> (', '</a> <span class="posts-count">(', $links);
     $links = str_replace(')', ')</span>', $links);
     return $links;
 }
-add_filter('wp_list_categories', 'engitech_cat_count_span');
+add_filter('wp_list_categories', 'valkiriapps_cat_count_span');
 
 //Add span to archive post count
-function engitech_archive_count_span($links) {
+function valkiriapps_archive_count_span($links) {
     $links = str_replace('</a>&nbsp;(', '</a> <span class="posts-count">(', $links);
     $links = str_replace(')', ')</span>', $links);
     return $links;
 }
-add_filter('get_archives_link', 'engitech_archive_count_span');
+add_filter('get_archives_link', 'valkiriapps_archive_count_span');
 
 /** Add Contact Methods in the User Profile **/
-function engitech_user_contact_methods( $user_contact ) {
-    $user_contact['facebook']   = esc_html__( 'Facebook URL', 'engitech' );
-    $user_contact['skype']      = esc_html__( 'Skype Username', 'engitech' );
-    $user_contact['twitter']    = esc_html__( 'Twitter Handle', 'engitech' );
-    $user_contact['youtube']    = esc_html__( 'Youtube Channel', 'engitech' );
-    $user_contact['linkedin']   = esc_html__( 'LinkedIn', 'engitech' );
-    $user_contact['googleplus'] = esc_html__( 'Google +', 'engitech' );
-    $user_contact['pinterest']  = esc_html__( 'Pinterest', 'engitech' );
-    $user_contact['instagram']  = esc_html__( 'Instagram', 'engitech' );
-    $user_contact['github']     = esc_html__( 'Github Profile', 'engitech' ); 
+function valkiriapps_user_contact_methods( $user_contact ) {
+    $user_contact['facebook']   = esc_html__( 'Facebook URL', 'valkiriapps' );
+    $user_contact['skype']      = esc_html__( 'Skype Username', 'valkiriapps' );
+    $user_contact['twitter']    = esc_html__( 'Twitter Handle', 'valkiriapps' );
+    $user_contact['youtube']    = esc_html__( 'Youtube Channel', 'valkiriapps' );
+    $user_contact['linkedin']   = esc_html__( 'LinkedIn', 'valkiriapps' );
+    $user_contact['googleplus'] = esc_html__( 'Google +', 'valkiriapps' );
+    $user_contact['pinterest']  = esc_html__( 'Pinterest', 'valkiriapps' );
+    $user_contact['instagram']  = esc_html__( 'Instagram', 'valkiriapps' );
+    $user_contact['github']     = esc_html__( 'Github Profile', 'valkiriapps' ); 
     return $user_contact; 
 };
-add_filter( 'user_contactmethods', 'engitech_user_contact_methods' );
+add_filter( 'user_contactmethods', 'valkiriapps_user_contact_methods' );
 
-function engitech_author_info_box() {
+function valkiriapps_author_info_box() {
 
     global $post;
 
@@ -419,7 +419,7 @@ function engitech_author_info_box() {
     // Author avatar - - the number 90 is the px size of the image.
     $author_details .= '<div class="author-image">' . get_avatar( get_the_author_meta('ID') , 250 ) . '</div>';
     $author_details .= '<div class="author-info">';
-    $author_details .= '<p class="title text-primary font-second">' . esc_html__('Author', 'engitech'). '</p>';
+    $author_details .= '<p class="title text-primary font-second">' . esc_html__('Author', 'valkiriapps'). '</p>';
     $author_details .= '<h6>' . $display_name . '</h6>';
     $author_details .= '<p class="des">' . get_the_author_meta( 'description' ). '</p>';
     $author_details .= '<div class="author-socials">';

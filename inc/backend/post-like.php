@@ -29,8 +29,8 @@ function sl_enqueue_scripts() {
 	wp_enqueue_script( 'simple-likes-public-js', get_template_directory_uri() . '/inc/backend/js/simple-likes-public.js', array( 'jquery' ), '0.5', false );
 	wp_localize_script( 'simple-likes-public-js', 'simpleLikes', array(
 		'ajaxurl' => admin_url( 'admin-ajax.php' ),
-		'like' => __( 'Like', 'engitech' ),
-		'unlike' => __( 'Unlike', 'engitech' )
+		'like' => __( 'Like', 'valkiriapps' ),
+		'unlike' => __( 'Unlike', 'valkiriapps' )
 	) ); 
 }
 
@@ -44,7 +44,7 @@ function process_simple_like() {
 	// Security
 	$nonce = isset( $_REQUEST['nonce'] ) ? sanitize_text_field( $_REQUEST['nonce'] ) : 0;
 	if ( !wp_verify_nonce( $nonce, 'simple-likes-nonce' ) ) {
-		exit( __( 'Not permitted', 'engitech' ) );
+		exit( __( 'Not permitted', 'valkiriapps' ) );
 	}
 	// Test if javascript is disabled
 	$disabled = ( isset( $_REQUEST['disabled'] ) && $_REQUEST['disabled'] == true ) ? true : false;
@@ -218,11 +218,11 @@ function get_simple_likes_button( $post_id, $is_comment = NULL ) {
 	// Liked/Unliked Variables
 	if ( already_liked( $post_id, $is_comment ) ) {
 		$class = esc_attr( ' liked' );
-		$title = __( 'Unlike', 'engitech' );
+		$title = __( 'Unlike', 'valkiriapps' );
 		$icon = $icon_full;
 	} else {
 		$class = '';
-		$title = __( 'Like', 'engitech' );
+		$title = __( 'Like', 'valkiriapps' );
 		$icon = $icon_empty;
 	}
 	$output = '<span class="sl-wrapper"><a href="' . admin_url( 'admin-ajax.php?action=process_simple_like' . '&post_id=' . $post_id . '&nonce=' . $nonce . '&is_comment=' . $is_comment . '&disabled=true' ) . '" class="sl-button' . $post_id_class . $class . $comment_class . '" data-nonce="' . $nonce . '" data-post-id="' . $post_id . '" data-iscomment="' . $is_comment . '" title="' . $title . '">' . $icon . $count . '</a>' . $loader . '</span>';
@@ -345,8 +345,8 @@ function sl_format_count( $number ) {
  * @since    0.5
  */
 function get_like_count( $like_count ) {
-	$like_text = __( 'Like', 'engitech' );
-	$likes_text = __( 'Likes', 'engitech' );
+	$like_text = __( 'Like', 'valkiriapps' );
+	$likes_text = __( 'Likes', 'valkiriapps' );
 	if ( is_numeric( $like_count ) && $like_count > 0 ) { 
 		$number = '<span class="sl-count">' . sl_format_count( $like_count );
 	} else {
@@ -362,7 +362,7 @@ add_action( 'edit_user_profile', 'show_user_likes' );
 function show_user_likes( $user ) { ?>        
 	<table class="form-table">
 		<tr>
-			<th><label for="user_likes"><?php _e( 'You Like:', 'engitech' ); ?></label></th>
+			<th><label for="user_likes"><?php _e( 'You Like:', 'valkiriapps' ); ?></label></th>
 			<td>
 			<?php
 			$types = get_post_types( array( 'public' => true ) );
@@ -388,7 +388,7 @@ function show_user_likes( $user ) { ?>
 			?>
 			</p>
 			<?php else : ?>
-			<p><?php _e( 'You do not like anything yet.', 'engitech' ); ?></p>
+			<p><?php _e( 'You do not like anything yet.', 'valkiriapps' ); ?></p>
 			<?php 
 			endif; 
 			wp_reset_postdata(); 

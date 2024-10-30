@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly (security measu
 /**
  * Widget Name: Flip Box
  */
-class Engitech_Support_Box extends Widget_Base{
+class Valkiriapps_Support_Box extends Widget_Base{
 
  	// The get_name() method is a simple one, you just need to return a widget name that will be used in the code.
 	public function get_name() {
@@ -14,7 +14,7 @@ class Engitech_Support_Box extends Widget_Base{
 
 	// The get_title() method, which again, is a very simple one, you need to return the widget title that will be displayed as the widget label.
 	public function get_title() {
-		return __( 'Engitech Flip Box', 'engitech' );
+		return __( 'Valkiriapps Flip Box', 'valkiriapps' );
 	}
 
 	// The get_icon() method, is an optional but recommended method, it lets you set the widget icon. you can use any of the eicon or font-awesome icons, simply return the class name as a string.
@@ -24,7 +24,7 @@ class Engitech_Support_Box extends Widget_Base{
 
 	// The get_categories method, lets you set the category of the widget, return the category name as a string.
 	public function get_categories() {
-		return [ 'category_engitech' ];
+		return [ 'category_valkiriapps' ];
 	}
 
 	protected function register_controls() {
@@ -33,14 +33,14 @@ class Engitech_Support_Box extends Widget_Base{
 		$this->start_controls_section(
 			'content_section',
 			[
-				'label' => __( 'Flip Box', 'engitech' ),
+				'label' => __( 'Flip Box', 'valkiriapps' ),
 			]
 		);
 
 		$this->add_control(
 	       'image_box',
 	        [
-	           'label' => esc_html__( 'Image', 'engitech' ),
+	           'label' => esc_html__( 'Image', 'valkiriapps' ),
 	           'type'  => Controls_Manager::MEDIA,
 				'default' => [
 					'url' => Utils::get_placeholder_image_src(),
@@ -51,9 +51,9 @@ class Engitech_Support_Box extends Widget_Base{
 	    $this->add_control(
 			'number_box',
 			[
-				'label' => __( 'Number', 'engitech' ),
+				'label' => __( 'Number', 'valkiriapps' ),
 				'type' => Controls_Manager::TEXT,
-				'default' => __( '01', 'engitech' ),
+				'default' => __( '01', 'valkiriapps' ),
 				'label_block' => true,
 			]
 		);
@@ -61,9 +61,9 @@ class Engitech_Support_Box extends Widget_Base{
 		$this->add_control(
 			'title',
 			[
-				'label' => __( 'Title', 'engitech' ),
+				'label' => __( 'Title', 'valkiriapps' ),
 				'type' => Controls_Manager::TEXT,
-				'default' => __( 'For Partners', 'engitech' ),
+				'default' => __( 'For Partners', 'valkiriapps' ),
 				'label_block' => true,
 			]
 		);
@@ -73,16 +73,16 @@ class Engitech_Support_Box extends Widget_Base{
 			[
 				'label' => 'Description',
 				'type' => Controls_Manager::TEXTAREA,
-				'default' => __( 'Entrust full-cycle implementation of your software product to our experienced BAs, UI/UX designers, developers.', 'engitech' ),
+				'default' => __( 'Entrust full-cycle implementation of your software product to our experienced BAs, UI/UX designers, developers.', 'valkiriapps' ),
 			]
 		);
 
 		$this->add_control(
 			'btn_box',
 			[
-				'label' => __( 'Button', 'engitech' ),
+				'label' => __( 'Button', 'valkiriapps' ),
 				'type' => Controls_Manager::TEXT,
-				'default' => __( '<i class="flaticon-right-arrow-1"></i> LEARN MORE', 'engitech' ),
+				'default' => __( '<i class="flaticon-right-arrow-1"></i> LEARN MORE', 'valkiriapps' ),
 				'label_block' => true,
 			]
 		);
@@ -90,9 +90,9 @@ class Engitech_Support_Box extends Widget_Base{
 		$this->add_control(
 			'link',
 			[
-				'label' => __( 'Link', 'engitech' ),
+				'label' => __( 'Link', 'valkiriapps' ),
 				'type' => Controls_Manager::URL,
-				'placeholder' => __( 'https://your-link.com', 'engitech' ),
+				'placeholder' => __( 'https://your-link.com', 'valkiriapps' ),
 				'default' => [
 					'url' => '#',
 				],
@@ -106,7 +106,7 @@ class Engitech_Support_Box extends Widget_Base{
 		$this->start_controls_section(
 			'style_content_section',
 			[
-				'label' => __( 'Content', 'engitech' ),
+				'label' => __( 'Content', 'valkiriapps' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -124,7 +124,7 @@ class Engitech_Support_Box extends Widget_Base{
 		$this->add_control(
 			'heading_title',
 			[
-				'label' => __( 'Title', 'engitech' ),
+				'label' => __( 'Title', 'valkiriapps' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -132,7 +132,7 @@ class Engitech_Support_Box extends Widget_Base{
 		$this->add_control(
 			'title_color',
 			[
-				'label' => __( 'Color', 'engitech' ),
+				'label' => __( 'Color', 'valkiriapps' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -152,7 +152,7 @@ class Engitech_Support_Box extends Widget_Base{
 		$this->add_control(
 			'heading_number_main',
 			[
-				'label' => __( 'Number', 'engitech' ),
+				'label' => __( 'Number', 'valkiriapps' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -172,14 +172,14 @@ class Engitech_Support_Box extends Widget_Base{
 		$this->start_controls_tab(
 			'tab_number_normal',
 			[
-				'label' => __( 'Normal', 'engitech' ),
+				'label' => __( 'Normal', 'valkiriapps' ),
 			]
 		);
 
 		$this->add_control(
 			'number_color',
 			[
-				'label' => __( 'Color', 'engitech' ),
+				'label' => __( 'Color', 'valkiriapps' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -193,14 +193,14 @@ class Engitech_Support_Box extends Widget_Base{
 		$this->start_controls_tab(
 			'tab_number_hover',
 			[
-				'label' => __( 'Hover', 'engitech' ),
+				'label' => __( 'Hover', 'valkiriapps' ),
 			]
 		);
 
 		$this->add_control(
 			'hover_number_color',
 			[
-				'label' => __( 'Number Color', 'engitech' ),
+				'label' => __( 'Number Color', 'valkiriapps' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .overlay .number-box' => 'fill: {{VALUE}}; color: {{VALUE}};',
@@ -218,14 +218,14 @@ class Engitech_Support_Box extends Widget_Base{
 		$this->start_controls_section(
 			'style_overlay_section',
 			[
-				'label' => __( 'Overlay', 'engitech' ),
+				'label' => __( 'Overlay', 'valkiriapps' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
 		$this->add_responsive_control(
 			'overlay_padding',
 			[
-				'label' => __( 'Padding Box', 'engitech' ),
+				'label' => __( 'Padding Box', 'valkiriapps' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', 'em', '%' ],
 				'selectors' => [
@@ -238,7 +238,7 @@ class Engitech_Support_Box extends Widget_Base{
 		$this->add_control(
 			'overlay_bg',
 			[
-				'label' => __( 'Background', 'engitech' ),
+				'label' => __( 'Background', 'valkiriapps' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .support-box .overlay' => 'background: {{VALUE}};',
@@ -250,7 +250,7 @@ class Engitech_Support_Box extends Widget_Base{
 		$this->add_control(
 			'heading_des',
 			[
-				'label' => __( 'Description', 'engitech' ),
+				'label' => __( 'Description', 'valkiriapps' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -258,7 +258,7 @@ class Engitech_Support_Box extends Widget_Base{
 		$this->add_control(
 			'des_color',
 			[
-				'label' => __( 'Color', 'engitech' ),
+				'label' => __( 'Color', 'valkiriapps' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -278,7 +278,7 @@ class Engitech_Support_Box extends Widget_Base{
 		$this->add_control(
 			'heading_btn',
 			[
-				'label' => __( 'Button', 'engitech' ),
+				'label' => __( 'Button', 'valkiriapps' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -286,7 +286,7 @@ class Engitech_Support_Box extends Widget_Base{
 		$this->add_control(
 			'btn_color',
 			[
-				'label' => __( 'Color', 'engitech' ),
+				'label' => __( 'Color', 'valkiriapps' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -348,4 +348,4 @@ class Engitech_Support_Box extends Widget_Base{
 	protected function content_template() {}
 }
 // After the Schedule class is defined, I must register the new widget class with Elementor:
-Plugin::instance()->widgets_manager->register( new Engitech_Support_Box() );
+Plugin::instance()->widgets_manager->register( new Valkiriapps_Support_Box() );

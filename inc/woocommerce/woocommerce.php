@@ -15,26 +15,26 @@
  *
  * @return void
  */
-function engitech_woocommerce_setup() {
+function valkiriapps_woocommerce_setup() {
 	add_theme_support( 'woocommerce' );
 	add_theme_support( 'wc-product-gallery-zoom' );
 	add_theme_support( 'wc-product-gallery-lightbox' );
 	add_theme_support( 'wc-product-gallery-slider' );
 }
-add_action( 'after_setup_theme', 'engitech_woocommerce_setup' );
+add_action( 'after_setup_theme', 'valkiriapps_woocommerce_setup' );
 
 /**
  * WooCommerce specific scripts & stylesheets.
  *
  * @return void
  */
-function engitech_woocommerce_scripts() {
-	wp_enqueue_style( 'engitech-woocommerce-style', get_template_directory_uri() . '/css/woocommerce.css' );
+function valkiriapps_woocommerce_scripts() {
+	wp_enqueue_style( 'valkiriapps-woocommerce-style', get_template_directory_uri() . '/css/woocommerce.css' );
 	if ( class_exists( 'woocommerce' ) ) {
-		wp_enqueue_style( 'engitech-woocommerce-style' );
+		wp_enqueue_style( 'valkiriapps-woocommerce-style' );
 	}
 }
-add_action( 'wp_enqueue_scripts', 'engitech_woocommerce_scripts' );
+add_action( 'wp_enqueue_scripts', 'valkiriapps_woocommerce_scripts' );
 
 /**
  * Add 'woocommerce-active' class to the body tag.
@@ -42,22 +42,22 @@ add_action( 'wp_enqueue_scripts', 'engitech_woocommerce_scripts' );
  * @param  array $classes CSS classes applied to the body tag.
  * @return array $classes modified to include 'woocommerce-active' class.
  */
-function engitech_woocommerce_active_body_class( $classes ) {
+function valkiriapps_woocommerce_active_body_class( $classes ) {
 	$classes[] = 'woocommerce-active';
 
 	return $classes;
 }
-add_filter( 'body_class', 'engitech_woocommerce_active_body_class' );
+add_filter( 'body_class', 'valkiriapps_woocommerce_active_body_class' );
 
 /**
  * Product gallery thumnbail columns.
  *
  * @return integer number of columns.
  */
-function engitech_woocommerce_thumbnail_columns() {
+function valkiriapps_woocommerce_thumbnail_columns() {
 	return 4;
 }
-add_filter( 'woocommerce_product_thumbnails_columns', 'engitech_woocommerce_thumbnail_columns' );
+add_filter( 'woocommerce_product_thumbnails_columns', 'valkiriapps_woocommerce_thumbnail_columns' );
 
 /**
  * Related Products Args.
@@ -65,7 +65,7 @@ add_filter( 'woocommerce_product_thumbnails_columns', 'engitech_woocommerce_thum
  * @param array $args related products args.
  * @return array $args related products args.
  */
-function engitech_woocommerce_related_products_args( $args ) {
+function valkiriapps_woocommerce_related_products_args( $args ) {
 	$defaults = array(
 		'posts_per_page' => 4,
 		'columns'        => 4,
@@ -75,29 +75,29 @@ function engitech_woocommerce_related_products_args( $args ) {
 
 	return $args;
 }
-add_filter( 'woocommerce_output_related_products_args', 'engitech_woocommerce_related_products_args' );
+add_filter( 'woocommerce_output_related_products_args', 'valkiriapps_woocommerce_related_products_args' );
 
 /**
  * Remove the breadcrumbs 
  */
-add_action( 'init', 'engitech_wc_breadcrumbs' );
-function engitech_wc_breadcrumbs() {
+add_action( 'init', 'valkiriapps_wc_breadcrumbs' );
+function valkiriapps_wc_breadcrumbs() {
     remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20, 0 );
-	add_action( 'engitech_woocommerce_breadcrumb', 'woocommerce_breadcrumb' );
+	add_action( 'valkiriapps_woocommerce_breadcrumb', 'woocommerce_breadcrumb' );
 }
 
 /**
  * Change several of the breadcrumb defaults
  */
-add_filter( 'woocommerce_breadcrumb_defaults', 'engitech_woocommerce_breadcrumbs' );
-function engitech_woocommerce_breadcrumbs() {
+add_filter( 'woocommerce_breadcrumb_defaults', 'valkiriapps_woocommerce_breadcrumbs' );
+function valkiriapps_woocommerce_breadcrumbs() {
     return array(
             'delimiter'   => '',
             'wrap_before' => '<ul id="breadcrumbs" class="breadcrumbs" itemprop="breadcrumb">',
             'wrap_after'  => '</ul>',
             'before'      => '<li>',
             'after'       => '</li>',
-            'home'        => _x( 'Home', 'breadcrumb', 'engitech' ),
+            'home'        => _x( 'Home', 'breadcrumb', 'valkiriapps' ),
         );
 }
 
@@ -108,8 +108,8 @@ remove_action( 'woocommerce_before_shop_loop_item', 'woocommerce_template_loop_p
 remove_action( 'woocommerce_after_shop_loop_item', 'woocommerce_template_loop_product_link_close', 5 );
 
 remove_action( 'woocommerce_shop_loop_item_title','woocommerce_template_loop_product_title', 10 );
-add_action('woocommerce_shop_loop_item_title', 'engitech_change_products_title', 10 );
-function engitech_change_products_title() {
+add_action('woocommerce_shop_loop_item_title', 'valkiriapps_change_products_title', 10 );
+function valkiriapps_change_products_title() {
     echo '<h2 class="woocommerce-loop-product__title"><a href="'.get_the_permalink().'">' . get_the_title() . '</a></h2>';
 }
 
@@ -119,7 +119,7 @@ function engitech_change_products_title() {
 remove_action( 'woocommerce_before_main_content', 'woocommerce_output_content_wrapper', 10 );
 remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end', 10 );
 
-if ( ! function_exists( 'engitech_woocommerce_wrapper_before' ) ) {
+if ( ! function_exists( 'valkiriapps_woocommerce_wrapper_before' ) ) {
 	/**
 	 * Before Content.
 	 *
@@ -127,16 +127,16 @@ if ( ! function_exists( 'engitech_woocommerce_wrapper_before' ) ) {
 	 *
 	 * @return void
 	 */
-	function engitech_woocommerce_wrapper_before() {
+	function valkiriapps_woocommerce_wrapper_before() {
 		?>
-		<div id="primary" class="content-area <?php engitech_shop_content_columns(); ?>">
+		<div id="primary" class="content-area <?php valkiriapps_shop_content_columns(); ?>">
 			<main id="main" class="site-main" role="main">
 			<?php
 	}
 }
-add_action( 'woocommerce_before_main_content', 'engitech_woocommerce_wrapper_before' );
+add_action( 'woocommerce_before_main_content', 'valkiriapps_woocommerce_wrapper_before' );
 
-if ( ! function_exists( 'engitech_woocommerce_wrapper_after' ) ) {
+if ( ! function_exists( 'valkiriapps_woocommerce_wrapper_after' ) ) {
 	/**
 	 * After Content.
 	 *
@@ -144,14 +144,14 @@ if ( ! function_exists( 'engitech_woocommerce_wrapper_after' ) ) {
 	 *
 	 * @return void
 	 */
-	function engitech_woocommerce_wrapper_after() {
+	function valkiriapps_woocommerce_wrapper_after() {
 			?>
 			</main><!-- #main -->
 		</div><!-- #primary -->
 		<?php
 	}
 }
-add_action( 'woocommerce_after_main_content', 'engitech_woocommerce_wrapper_after' );
+add_action( 'woocommerce_after_main_content', 'valkiriapps_woocommerce_wrapper_after' );
 
 /**
  * Sample implementation of the WooCommerce Mini Cart.
@@ -160,7 +160,7 @@ add_action( 'woocommerce_after_main_content', 'engitech_woocommerce_wrapper_afte
  *
  */
 
-if ( ! function_exists( 'engitech_woocommerce_cart_link_fragment' ) ) {
+if ( ! function_exists( 'valkiriapps_woocommerce_cart_link_fragment' ) ) {
 	/**
 	 * Cart Fragments.
 	 *
@@ -170,7 +170,7 @@ if ( ! function_exists( 'engitech_woocommerce_cart_link_fragment' ) ) {
 	 * @return array Fragments to refresh via AJAX.
 	 * @link https://docs.woocommerce.com/document/show-cart-contents-total/
 	 */
-	function engitech_woocommerce_cart_link_fragment( $fragments ) {
+	function valkiriapps_woocommerce_cart_link_fragment( $fragments ) {
 		$item_count_text = sprintf( WC()->cart->get_cart_contents_count() );
 
 		$fragments['span.cart-count'] = '<span class="cart-count count">'.$item_count_text.'</span>';
@@ -178,16 +178,16 @@ if ( ! function_exists( 'engitech_woocommerce_cart_link_fragment' ) ) {
 		return $fragments;
 	}
 }
-add_filter( 'woocommerce_add_to_cart_fragments', 'engitech_woocommerce_cart_link_fragment' );
+add_filter( 'woocommerce_add_to_cart_fragments', 'valkiriapps_woocommerce_cart_link_fragment' );
 
 
-if ( ! function_exists( 'engitech_woocommerce_header_cart' ) ) {
+if ( ! function_exists( 'valkiriapps_woocommerce_header_cart' ) ) {
 	/**
 	 * Display Header Cart.
 	 *
 	 * @return void
 	 */
-	function engitech_woocommerce_header_cart() {
+	function valkiriapps_woocommerce_header_cart() {
 		if ( is_cart() ) {
 			$class = 'current-menu-item';
 		} else {
@@ -196,7 +196,7 @@ if ( ! function_exists( 'engitech_woocommerce_header_cart' ) ) {
 		?>
 			<ul id="site-header-cart" class="site-header-cart">
 				<li class="<?php echo esc_attr( $class ); ?>">
-					<?php engitech_woocommerce_cart_link(); ?>
+					<?php valkiriapps_woocommerce_cart_link(); ?>
 				</li>
 				<li>
 					<?php
@@ -212,13 +212,13 @@ if ( ! function_exists( 'engitech_woocommerce_header_cart' ) ) {
 }
 
 //Get layout shop page.
-if ( ! function_exists( 'engitech_get_shop_layout' ) ) :
-	function engitech_get_shop_layout() {
+if ( ! function_exists( 'valkiriapps_get_shop_layout' ) ) :
+	function valkiriapps_get_shop_layout() {
 		// Get layout.
 		if( is_product() ){
-			$page_layout = engitech_get_option( 'single_shop_layout' );
+			$page_layout = valkiriapps_get_option( 'single_shop_layout' );
 		}else{
-			$page_layout = engitech_get_option( 'shop_layout' );
+			$page_layout = valkiriapps_get_option( 'shop_layout' );
 		}
 
 		return $page_layout;
@@ -232,15 +232,15 @@ endif;
  *
  * @global int $content_width
  */
-if ( ! function_exists( 'engitech_shop_content_columns' ) ) :
-	function engitech_shop_content_columns() {
+if ( ! function_exists( 'valkiriapps_shop_content_columns' ) ) :
+	function valkiriapps_shop_content_columns() {
 
 		$shop_content_width = array();
 
 		// Check if layout is one column.
-		if ( 'content-sidebar' === engitech_get_shop_layout() && is_active_sidebar( 'shop-sidebar' ) ) {
+		if ( 'content-sidebar' === valkiriapps_get_shop_layout() && is_active_sidebar( 'shop-sidebar' ) ) {
 			$shop_content_width[] = 'col-lg-9 col-md-9 col-sm-12 col-xs-12';
-		}elseif ('sidebar-content' === engitech_get_shop_layout() && is_active_sidebar( 'shop-sidebar' ) ) {
+		}elseif ('sidebar-content' === valkiriapps_get_shop_layout() && is_active_sidebar( 'shop-sidebar' ) ) {
 			$shop_content_width[] = 'col-lg-9 col-md-9 col-sm-12 col-xs-12 pull-right';
 		}else{
 			$shop_content_width[] = 'col-lg-12 col-md-12 col-sm-12 col-xs-12';
@@ -256,9 +256,9 @@ endif;
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
-function engitech_woocommerce_widgets_init() {
+function valkiriapps_woocommerce_widgets_init() {
     register_sidebar( array(
-        'name'          => __( 'Shop Sidebar', 'engitech' ),
+        'name'          => __( 'Shop Sidebar', 'valkiriapps' ),
         'id'            => 'shop-sidebar',
         'before_widget' => '<section id="%1$s" class="widget %2$s">',
         'after_widget'  => '</section>',
@@ -266,24 +266,24 @@ function engitech_woocommerce_widgets_init() {
         'after_title'   => '</h5>',
     ) );
 }
-add_action( 'widgets_init', 'engitech_woocommerce_widgets_init' );
+add_action( 'widgets_init', 'valkiriapps_woocommerce_widgets_init' );
 
 
 /* Customizer Shop */
-function engitech_shop_customize_settings() {
+function valkiriapps_shop_customize_settings() {
 	/**
 	 * Customizer configuration
 	 */
 
 	$settings = array(
-		'theme' => 'engitech',
+		'theme' => 'valkiriapps',
 	);
 
 	$panels = array();
 
 	$sections = array(		
         'single_product'           => array(
-			'title'       => esc_html__( 'Single Product', 'engitech' ),
+			'title'       => esc_html__( 'Single Product', 'valkiriapps' ),
 			'description' => '',
 			'priority'    => 16,
 			'capability'  => 'edit_theme_options',
@@ -295,11 +295,11 @@ function engitech_shop_customize_settings() {
 		// Shop Page
 		'shop_layout'           => array(
 			'type'        => 'radio-image',
-			'label'       => esc_html__( 'Shop Layout', 'engitech' ),
+			'label'       => esc_html__( 'Shop Layout', 'valkiriapps' ),
 			'section'     => 'woocommerce_product_catalog',
 			'default'     => 'content-sidebar',
 			'priority'    => 7,
-			'description' => esc_html__( 'Select default sidebar for the shop page.', 'engitech' ),
+			'description' => esc_html__( 'Select default sidebar for the shop page.', 'valkiriapps' ),
 			'choices'     => array(
 				'content-sidebar' 	=> get_template_directory_uri() . '/inc/backend/images/right.png',
 				'sidebar-content' 	=> get_template_directory_uri() . '/inc/backend/images/left.png',
@@ -310,7 +310,7 @@ function engitech_shop_customize_settings() {
         // Single Product Page
         'single_shop_layout'           => array(
             'type'        => 'radio-image',
-            'label'       => esc_html__( 'Single Product Layout', 'engitech' ),
+            'label'       => esc_html__( 'Single Product Layout', 'valkiriapps' ),
             'section'     => 'single_product',
             'default'     => 'content-sidebar',
             'priority'    => 1,
@@ -322,36 +322,36 @@ function engitech_shop_customize_settings() {
         ),
         'page_title_product'    => array(
             'type'     => 'text',
-            'label'    => esc_html__( 'Title Page Header', 'engitech' ),
+            'label'    => esc_html__( 'Title Page Header', 'valkiriapps' ),
             'section'  => 'single_product',
             'default'  => 'Product Details',
             'priority' => 1,
         ),
         'related_product_switch'     => array(
             'type'        => 'toggle',
-            'label'       => esc_attr__( 'Related Product On/Off?', 'engitech' ),
+            'label'       => esc_attr__( 'Related Product On/Off?', 'valkiriapps' ),
             'section'     => 'single_product',
             'default'     => 0,
             'priority'    => 2,
         ), 
 	);
 
-	$settings['panels']   = apply_filters( 'engitech_customize_panels', $panels );
-	$settings['sections'] = apply_filters( 'engitech_customize_sections', $sections );
-	$settings['fields']   = apply_filters( 'engitech_customize_fields', $fields );
+	$settings['panels']   = apply_filters( 'valkiriapps_customize_panels', $panels );
+	$settings['sections'] = apply_filters( 'valkiriapps_customize_sections', $sections );
+	$settings['fields']   = apply_filters( 'valkiriapps_customize_fields', $fields );
 
 	return $settings;
 }
 
-$engitech_customize = new Engitech_Customize( engitech_shop_customize_settings() );
+$valkiriapps_customize = new Valkiriapps_Customize( valkiriapps_shop_customize_settings() );
 
 //Custom Style Frontend
-if(!function_exists('engitech_woo_color_scheme')){
-    function engitech_woo_color_scheme(){
+if(!function_exists('valkiriapps_woo_color_scheme')){
+    function valkiriapps_woo_color_scheme(){
         $color_scheme = array();
 
         /* WooCommerce Customize colors */
-        if( engitech_get_option('main_color') != '#43baff' || engitech_get_option('second_color') != '#7141b1' ){
+        if( valkiriapps_get_option('main_color') != '#43baff' || valkiriapps_get_option('second_color') != '#7141b1' ){
             $color_scheme[] = 
             '	
             /**Main**/
@@ -359,7 +359,7 @@ if(!function_exists('engitech_woo_color_scheme')){
                 .woocommerce .woocommerce-Price-amount,
 				.woocommerce div.product p.price,
 				.woocommerce div.product span.price{
-				  color: '.engitech_get_option('main_color').';
+				  color: '.valkiriapps_get_option('main_color').';
 				}
 
 				.woocommerce ul.products li.product .added_to_cart, .woocommerce-page ul.products li.product .added_to_cart,
@@ -369,7 +369,7 @@ if(!function_exists('engitech_woo_color_scheme')){
 				.woocommerce button.button,
 				.woocommerce div.product .woocommerce-tabs ul.tabs li a:hover,
 				.woocommerce div.product .woocommerce-tabs ul.tabs li.active a{
-					background-color: '.engitech_get_option('main_color').';
+					background-color: '.valkiriapps_get_option('main_color').';
 				}
 
 			/**Second**/
@@ -379,14 +379,14 @@ if(!function_exists('engitech_woo_color_scheme')){
 				.woocommerce-info:before,
 				.woocommerce ul.product_list_widget li a:not(.remove):hover,
 				.woocommerce .woocommerce-widget-layered-nav-list li a:hover{
-					color: '.engitech_get_option('second_color').';
+					color: '.valkiriapps_get_option('second_color').';
 				}
 				.woocommerce-mini-cart__buttons a.button.checkout{
-					border-color: '.engitech_get_option('second_color').';
+					border-color: '.valkiriapps_get_option('second_color').';
 				}
 				.woocommerce-message,
 				.woocommerce-info{
-				  	border-top-color: '.engitech_get_option('second_color').';
+				  	border-top-color: '.valkiriapps_get_option('second_color').';
 				}
 				.woocommerce ul.products li.product .added_to_cart:hover, .woocommerce-page ul.products li.product .added_to_cart:hover,
 				.woocommerce-mini-cart__buttons a.button.wc-forward:hover,
@@ -394,7 +394,7 @@ if(!function_exists('engitech_woo_color_scheme')){
 				.woocommerce .widget_price_filter .ui-slider .ui-slider-range, .woocommerce .widget_price_filter .ui-slider .ui-slider-handle,
 				.woocommerce #respond input#submit.alt, .woocommerce a.button.alt,.woocommerce button.button.alt, .woocommerce input.button.alt,.woocommerce #respond input#submit, .woocommerce a.button,.woocommerce input.button, .woocommerce button.button.alt.disabled,
 				.woocommerce button.button:hover {
-					background-color: '.engitech_get_option('second_color').';
+					background-color: '.valkiriapps_get_option('second_color').';
 				}
 
 			';
@@ -405,4 +405,4 @@ if(!function_exists('engitech_woo_color_scheme')){
 		}
     }
 }
-add_action('wp_head', 'engitech_woo_color_scheme');
+add_action('wp_head', 'valkiriapps_woo_color_scheme');

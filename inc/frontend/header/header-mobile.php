@@ -3,16 +3,16 @@
 		<div class="mlogo_wrapper clearfix">
 	        <div class="mobile_logo">
 				<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
-					<img src="<?php echo engitech_get_option('logo_mobile') ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
+					<img src="<?php echo valkiriapps_get_option('logo_mobile') ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
 				</a>
 	    	</div>
 	        <div id="mmenu_toggle">
 		        <button></button>
 		    </div>
-		    <?php if ( engitech_get_option('header_cta_switch') && engitech_get_option('cta_mobile') ){ ?>
+		    <?php if ( valkiriapps_get_option('header_cta_switch') && valkiriapps_get_option('cta_mobile') ){ ?>
 			<div class="octf-header-module">
 				<div class="btn-cta-group btn-cta-header">
-					<a class="octf-btn octf-btn-third" href="<?php echo esc_url_raw( engitech_get_option('cta_link_header') ); ?>"><?php echo engitech_get_option('cta_text_header'); ?></a>
+					<a class="octf-btn octf-btn-third" href="<?php echo esc_url_raw( valkiriapps_get_option('cta_link_header') ); ?>"><?php echo valkiriapps_get_option('cta_text_header'); ?></a>
 				</div>
 			</div>
 			<?php } ?>

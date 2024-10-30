@@ -15,7 +15,7 @@ get_header(); ?>
 			<div id="primary" class="content-area col-md-12">
 				<main id="main" class="site-main">
 					<?php if ( have_posts() ) : ?>
-						<div id="projects_grid" class="projects-grid <?php engitech_portfolio_option_class(); ?>">
+						<div id="projects_grid" class="projects-grid <?php valkiriapps_portfolio_option_class(); ?>">
 							<?php
 								/* Start the Loop */
 								while ( have_posts() ) : the_post();
@@ -31,7 +31,7 @@ get_header(); ?>
 							?>
 						</div>
 						<div class="pagination-wrapper">
-							<?php engitech_posts_navigation(); ?>
+							<?php valkiriapps_posts_navigation(); ?>
 						</div>
 					<?php 	
 					else :

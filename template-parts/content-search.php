@@ -14,9 +14,9 @@
         <div class="inner-post">
             <div class="entry-header">
 
-                <?php if ( 'post' === get_post_type() ) : if( engitech_get_option( 'post_entry_meta' ) ) { ?>
+                <?php if ( 'post' === get_post_type() ) : if( valkiriapps_get_option( 'post_entry_meta' ) ) { ?>
                 <div class="entry-meta">
-                    <?php engitech_post_meta(); ?>
+                    <?php valkiriapps_post_meta(); ?>
                 </div><!-- .entry-meta -->
                 <?php } endif; ?>
 
@@ -30,7 +30,7 @@
 
             </div><!-- .entry-content -->
             <div class="btn-readmore">
-                <?php if(engitech_get_option('blog_read_more')){ ?><a href="<?php the_permalink(); ?>"><i class="flaticon-right-arrow-1"></i> <?php echo esc_html(engitech_get_option('blog_read_more')); ?></a><?php } ?>
+                <?php if(valkiriapps_get_option('blog_read_more')){ ?><a href="<?php the_permalink(); ?>"><i class="flaticon-right-arrow-1"></i> <?php echo esc_html(valkiriapps_get_option('blog_read_more')); ?></a><?php } ?>
             </div>
         </div>
     </div>

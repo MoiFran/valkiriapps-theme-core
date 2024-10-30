@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly (security measu
 /**
  * Widget Name: Service Slider
  */
-class Engitech_Testimonials5 extends Widget_Base{
+class Valkiriapps_Testimonials5 extends Widget_Base{
 
  	// The get_name() method is a simple one, you just need to return a widget name that will be used in the code.
 	public function get_name() {
@@ -14,7 +14,7 @@ class Engitech_Testimonials5 extends Widget_Base{
 
 	// The get_title() method, which again, is a very simple one, you need to return the widget title that will be displayed as the widget label.
 	public function get_title() {
-		return __( 'Engitech Testimonial Slider 5', 'engitech' );
+		return __( 'Valkiriapps Testimonial Slider 5', 'valkiriapps' );
 	}
 
 	// The get_icon() method, is an optional but recommended method, it lets you set the widget icon. you can use any of the eicon or font-awesome icons, simply return the class name as a string.
@@ -24,7 +24,7 @@ class Engitech_Testimonials5 extends Widget_Base{
 
 	// The get_categories method, lets you set the category of the widget, return the category name as a string.
 	public function get_categories() {
-		return [ 'category_engitech' ];
+		return [ 'category_valkiriapps' ];
 	}
 
 	protected function register_controls() {
@@ -32,16 +32,16 @@ class Engitech_Testimonials5 extends Widget_Base{
 		$this->start_controls_section(
 			'section_services',
 			[
-				'label' => __( 'Services', 'engitech' ),
+				'label' => __( 'Services', 'valkiriapps' ),
 			]
 		);
 		$this->add_control(
 			'show_title',
 			[
-				'label' => __( 'Show Title', 'engitech' ),
+				'label' => __( 'Show Title', 'valkiriapps' ),
 				'type' => Controls_Manager::SWITCHER,
-				'label_on' => __( 'Show', 'engitech' ),
-				'label_off' => __( 'Hide', 'engitech' ),
+				'label_on' => __( 'Show', 'valkiriapps' ),
+				'label_off' => __( 'Hide', 'valkiriapps' ),
 				'return_value' => 'yes',
 				'default' => 'no',
 			]
@@ -52,7 +52,7 @@ class Engitech_Testimonials5 extends Widget_Base{
 				'label' => 'Sub Title',
 				'type' => Controls_Manager::TEXT,
 				'default' => '',
-				'placeholder' => __( 'Enter your subtitle', 'engitech' ),
+				'placeholder' => __( 'Enter your subtitle', 'valkiriapps' ),
 				'label_block' => true,
 				'show_label' => false,
 				'condition' => [
@@ -66,7 +66,7 @@ class Engitech_Testimonials5 extends Widget_Base{
 				'label' => 'Title',
 				'type' => Controls_Manager::TEXTAREA,
 				'default' => '',
-				'placeholder' => __( 'Enter your title', 'engitech' ),
+				'placeholder' => __( 'Enter your title', 'valkiriapps' ),
 				'show_label' => false,
 				'label_block' => true,
 				'condition' => [
@@ -78,9 +78,9 @@ class Engitech_Testimonials5 extends Widget_Base{
 		$this->add_control(
 			'description',
 			[
-				'label' => __( 'Description', 'engitech' ),
+				'label' => __( 'Description', 'valkiriapps' ),
 				'type' => Controls_Manager::TEXTAREA,
-				'default' => __( 'Work with you to understand your business specifics and your target audience to our marketing fully strategy.', 'engitech' ),
+				'default' => __( 'Work with you to understand your business specifics and your target audience to our marketing fully strategy.', 'valkiriapps' ),
 				'condition' => [
 					'show_title' => 'yes',
 				]
@@ -89,18 +89,18 @@ class Engitech_Testimonials5 extends Widget_Base{
 		$this->add_control(
 			'heading_size',
 			[
-				'label' => __( 'Title HTML Tag', 'engitech' ),
+				'label' => __( 'Title HTML Tag', 'valkiriapps' ),
 				'type' => Controls_Manager::SELECT,
 				'options' => [
-					'h1'  => __( 'H1', 'engitech' ),
-					'h2'  => __( 'H2', 'engitech' ),
-					'h3'  => __( 'H3', 'engitech' ),
-					'h4'  => __( 'H4', 'engitech' ),
-					'h5'  => __( 'H5', 'engitech' ),
-					'h6'  => __( 'H6', 'engitech' ),
-					'div'  => __( 'div', 'engitech' ),
-					'span'  => __( 'span', 'engitech' ),
-					'p'  => __( 'p', 'engitech' ),
+					'h1'  => __( 'H1', 'valkiriapps' ),
+					'h2'  => __( 'H2', 'valkiriapps' ),
+					'h3'  => __( 'H3', 'valkiriapps' ),
+					'h4'  => __( 'H4', 'valkiriapps' ),
+					'h5'  => __( 'H5', 'valkiriapps' ),
+					'h6'  => __( 'H6', 'valkiriapps' ),
+					'div'  => __( 'div', 'valkiriapps' ),
+					'span'  => __( 'span', 'valkiriapps' ),
+					'p'  => __( 'p', 'valkiriapps' ),
 				],
 				'default' => 'h2',
 				'condition' => [
@@ -113,7 +113,7 @@ class Engitech_Testimonials5 extends Widget_Base{
 		$repeater->add_control(
 			'image',
 			[
-				'label' => __( 'Icon', 'engitech' ),
+				'label' => __( 'Icon', 'valkiriapps' ),
 				'type' => Controls_Manager::MEDIA,
 				'default' => [
 					'url' => Utils::get_placeholder_image_src(),
@@ -123,7 +123,7 @@ class Engitech_Testimonials5 extends Widget_Base{
 		$repeater->add_control(
 			'title',
 			[
-				'label' => __( 'Title', 'engitech' ),
+				'label' => __( 'Title', 'valkiriapps' ),
 				'type' => Controls_Manager::TEXT,
 				'default' => 'Awesome Results',
 			]
@@ -131,7 +131,7 @@ class Engitech_Testimonials5 extends Widget_Base{
 		$repeater->add_control(
 			'content',
 			[
-				'label' => __( 'Content', 'engitech' ),
+				'label' => __( 'Content', 'valkiriapps' ),
 				'type' => Controls_Manager::TEXTAREA,
 				'rows' => '10',
 				'default' => 'Create and manage top-performing social campaigns and start.',
@@ -140,15 +140,15 @@ class Engitech_Testimonials5 extends Widget_Base{
 		$repeater->add_control(
 			'tjob',
 			[
-				'label' => __( 'Job', 'engitech' ),
+				'label' => __( 'Job', 'valkiriapps' ),
 				'type' => Controls_Manager::TEXT,
-				'default' => __( 'P. Desiger of (Meta)', 'engitech' ),
+				'default' => __( 'P. Desiger of (Meta)', 'valkiriapps' ),
 			]
 		);
 		$repeater->add_control(
 			'rating',
 			[
-				'label' => __( 'Rating <span class="elementor-control-field-description">( 0-5 )</span>', 'engitech' ),
+				'label' => __( 'Rating <span class="elementor-control-field-description">( 0-5 )</span>', 'valkiriapps' ),
 				'type' => Controls_Manager::NUMBER,
 				'min' => 0,
 				'max' => 5,
@@ -168,21 +168,21 @@ class Engitech_Testimonials5 extends Widget_Base{
 		                'image'  => [
 							'url' => Utils::get_placeholder_image_src(),
 						],
-						'content' => __( 'Create and manage top-performing social campaigns and start.', 'engitech' ),
+						'content' => __( 'Create and manage top-performing social campaigns and start.', 'valkiriapps' ),
 		 
 		            ],
 		            [
 		                'image'  => [
 							'url' => Utils::get_placeholder_image_src(),
 						],
-						'content' => __( 'Create and manage top-performing social campaigns and start.', 'engitech' ),
+						'content' => __( 'Create and manage top-performing social campaigns and start.', 'valkiriapps' ),
 		 
 		            ],
 		            [
 		                'image'  => [
 							'url' => Utils::get_placeholder_image_src(),
 						],
-						'content' => __( 'Create and manage top-performing social campaigns and start.', 'engitech' ),
+						'content' => __( 'Create and manage top-performing social campaigns and start.', 'valkiriapps' ),
 		 
 		            ]
 		            
@@ -194,73 +194,73 @@ class Engitech_Testimonials5 extends Widget_Base{
 		$this->add_control(
 			'tshow',
 			[
-				'label' => __( 'Slides to Show', 'engitech' ),
+				'label' => __( 'Slides to Show', 'valkiriapps' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => '4',
 				'options' => [
-					'1' => __( '1', 'engitech' ),
-					'2' => __( '2', 'engitech' ),
-					'3' => __( '3', 'engitech' ),
-					'4' => __( '4', 'engitech' ),
-					'5' => __( '5', 'engitech' ),
+					'1' => __( '1', 'valkiriapps' ),
+					'2' => __( '2', 'valkiriapps' ),
+					'3' => __( '3', 'valkiriapps' ),
+					'4' => __( '4', 'valkiriapps' ),
+					'5' => __( '5', 'valkiriapps' ),
 				]
 			]
 		);
 		$this->add_control(
 			'scroll',
 			[
-				'label' => __( 'Slides to Scroll', 'engitech' ),
+				'label' => __( 'Slides to Scroll', 'valkiriapps' ),
 				'type' => Controls_Manager::SELECT,
-				'default' => __( '3', 'engitech' ),
+				'default' => __( '3', 'valkiriapps' ),
 				'options' => [
-					'1' => __( '1', 'engitech' ),
-					'2' => __( '2', 'engitech' ),
-					'3' => __( '3', 'engitech' ),
-					'4' => __( '4', 'engitech' ),
-					'5' => __( '5', 'engitech' ),
+					'1' => __( '1', 'valkiriapps' ),
+					'2' => __( '2', 'valkiriapps' ),
+					'3' => __( '3', 'valkiriapps' ),
+					'4' => __( '4', 'valkiriapps' ),
+					'5' => __( '5', 'valkiriapps' ),
 				]
 			]
 		);
 		$this->add_control(
 			'tarrow',
 			[
-				'label' => __( 'Nav Slider', 'engitech' ),
+				'label' => __( 'Nav Slider', 'valkiriapps' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'true',
 				'options' => [
-					'true' => __( 'Yes', 'engitech' ),
-					'false' => __( 'No', 'engitech' ),
+					'true' => __( 'Yes', 'valkiriapps' ),
+					'false' => __( 'No', 'valkiriapps' ),
 				]
 			]
 		);
 		$this->add_control(
 			'tdots',
 			[
-				'label' => __( 'Dots Slider', 'engitech' ),
+				'label' => __( 'Dots Slider', 'valkiriapps' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'false',
 				'options' => [
-					'true' => __( 'Yes', 'engitech' ),
-					'false' => __( 'No', 'engitech' ),
+					'true' => __( 'Yes', 'valkiriapps' ),
+					'false' => __( 'No', 'valkiriapps' ),
 				]
 			]
 		);
 		$this->add_control(
 			'autoplay',
 			[
-				'label' 	=> __( 'Autoplay', 'engitech' ),
+				'label' 	=> __( 'Autoplay', 'valkiriapps' ),
 				'type' 		=> Controls_Manager::SELECT,
 				'default' 	=> 'false',
 				'options' 	=> [
-					'true' 	=> __( 'Yes', 'engitech' ),
-					'false' => __( 'No', 'engitech' ),
+					'true' 	=> __( 'Yes', 'valkiriapps' ),
+					'false' => __( 'No', 'valkiriapps' ),
 				]
 			]
 		);
 		$this->add_control(
 			'autoplaySpeed',
 			[
-				'label' 	=> __( 'Autoplay Speed', 'engitech' ),
+				'label' 	=> __( 'Autoplay Speed', 'valkiriapps' ),
 				'type' 		=> Controls_Manager::NUMBER,
 				'min' 		=> 1000,
 				'max' 		=> 10000,
@@ -278,30 +278,30 @@ class Engitech_Testimonials5 extends Widget_Base{
 		$this->start_controls_section(
 			'style_tcontent',
 			[
-				'label' => __( 'Genaral', 'engitech' ),
+				'label' => __( 'Genaral', 'valkiriapps' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 			]
 		);
 		$this->add_responsive_control(
 			'align_tcontent',
 			[
-				'label' => __( 'Alignment', 'engitech' ),
+				'label' => __( 'Alignment', 'valkiriapps' ),
 				'type' => Controls_Manager::CHOOSE,
 				'options' => [
 					'left'    => [
-						'title' => __( 'Left', 'engitech' ),
+						'title' => __( 'Left', 'valkiriapps' ),
 						'icon' => 'eicon-text-align-left',
 					],
 					'center' => [
-						'title' => __( 'Center', 'engitech' ),
+						'title' => __( 'Center', 'valkiriapps' ),
 						'icon' => 'eicon-text-align-center',
 					],
 					'right' => [
-						'title' => __( 'Right', 'engitech' ),
+						'title' => __( 'Right', 'valkiriapps' ),
 						'icon' => 'eicon-text-align-right',
 					],
 					'justify' => [
-						'title' => __( 'Justified', 'engitech' ),
+						'title' => __( 'Justified', 'valkiriapps' ),
 						'icon' => 'eicon-text-align-justify',
 					],
 				],
@@ -314,7 +314,7 @@ class Engitech_Testimonials5 extends Widget_Base{
 		$this->add_control(
 			'content_bg',
 			[
-				'label' => __( 'Background Color', 'engitech' ),
+				'label' => __( 'Background Color', 'valkiriapps' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -326,7 +326,7 @@ class Engitech_Testimonials5 extends Widget_Base{
 		$this->add_responsive_control(
 			'content_padding',
 			[
-				'label' => __( 'Padding', 'engitech' ),
+				'label' => __( 'Padding', 'valkiriapps' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%' ],
 				'selectors' => [
@@ -337,7 +337,7 @@ class Engitech_Testimonials5 extends Widget_Base{
 		$this->add_control(
 			'content_radius',
 			[
-				'label' => __( 'Border Radius', 'engitech' ),
+				'label' => __( 'Border Radius', 'valkiriapps' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%' ],
 				'selectors' => [
@@ -358,7 +358,7 @@ class Engitech_Testimonials5 extends Widget_Base{
 		$this->start_controls_section(
 			'service_style_section',
 			[
-				'label' => __( 'Heading', 'engitech' ),
+				'label' => __( 'Heading', 'valkiriapps' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 				'condition' => [
 					'show_title' => 'yes',
@@ -370,7 +370,7 @@ class Engitech_Testimonials5 extends Widget_Base{
 		$this->add_control(
 			'heading_stitle',
 			[
-				'label' => __( 'Subtitle', 'engitech' ),
+				'label' => __( 'Subtitle', 'valkiriapps' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -378,7 +378,7 @@ class Engitech_Testimonials5 extends Widget_Base{
 		$this->add_responsive_control(
 			'stitle_bottom_space',
 			[
-				'label' => __( 'Spacing', 'engitech' ),
+				'label' => __( 'Spacing', 'valkiriapps' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -394,7 +394,7 @@ class Engitech_Testimonials5 extends Widget_Base{
 		$this->add_control(
 			'stitle_color',
 			[
-				'label' => __( 'Color', 'engitech' ),
+				'label' => __( 'Color', 'valkiriapps' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -405,7 +405,7 @@ class Engitech_Testimonials5 extends Widget_Base{
 		$this->add_control(
 			'stitle_dots',
 			[
-				'label'   => esc_html__( 'Is Dots', 'engitech' ),
+				'label'   => esc_html__( 'Is Dots', 'valkiriapps' ),
 				'type'    => Controls_Manager::SWITCHER,
 				'default' => '',
 			]
@@ -413,7 +413,7 @@ class Engitech_Testimonials5 extends Widget_Base{
 		$this->add_responsive_control(
 			'dots_space',
 			[
-				'label' => __( 'Spacing', 'engitech' ),
+				'label' => __( 'Spacing', 'valkiriapps' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -434,7 +434,7 @@ class Engitech_Testimonials5 extends Widget_Base{
 			Group_Control_Background::get_type(),
 			[
 				'name' => 'stitle_dots_bg',
-				'label' => esc_html__( 'Color', 'engitech' ),
+				'label' => esc_html__( 'Color', 'valkiriapps' ),
 				'types' => [ 'classic', 'gradient' ],
 				'selector' => '{{WRAPPER}} .ot-heading .stitle-dots:before, {{WRAPPER}} .ot-heading .stitle-dots:after',
 				'condition' => [
@@ -445,7 +445,7 @@ class Engitech_Testimonials5 extends Widget_Base{
 		$this->add_control(
 			'stitle_padd',
 			[
-				'label' => __( 'Padding', 'engitech' ),
+				'label' => __( 'Padding', 'valkiriapps' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px' ],
 				'selectors' => [
@@ -456,7 +456,7 @@ class Engitech_Testimonials5 extends Widget_Base{
 		$this->add_control(
 			'stitle_radius',
 			[
-				'label' => __( 'Border Radius', 'engitech' ),
+				'label' => __( 'Border Radius', 'valkiriapps' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px' ],
 				'selectors' => [
@@ -468,7 +468,7 @@ class Engitech_Testimonials5 extends Widget_Base{
 			Group_Control_Background::get_type(),
 			[
 				'name' => 'stitle_bg',
-				'label' => esc_html__( 'Background', 'engitech' ),
+				'label' => esc_html__( 'Background', 'valkiriapps' ),
 				'types' => [ 'classic', 'gradient' ],
 				'selector' => '{{WRAPPER}} .ot-heading > span',
 			]
@@ -484,7 +484,7 @@ class Engitech_Testimonials5 extends Widget_Base{
 			Group_Control_Box_Shadow::get_type(),
 			[
 				'name' => 'stitle_box_shadow',
-				'label' => esc_html__( 'Box Shadow', 'engitech' ),
+				'label' => esc_html__( 'Box Shadow', 'valkiriapps' ),
 				'selector' => '{{WRAPPER}} .ot-heading > span',
 			]
 		);
@@ -500,7 +500,7 @@ class Engitech_Testimonials5 extends Widget_Base{
 		$this->add_control(
 			'heading_title',
 			[
-				'label' => __( 'Title', 'engitech' ),
+				'label' => __( 'Title', 'valkiriapps' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -508,7 +508,7 @@ class Engitech_Testimonials5 extends Widget_Base{
 		$this->add_control(
 			'title_color',
 			[
-				'label' => __( 'Color', 'engitech' ),
+				'label' => __( 'Color', 'valkiriapps' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -528,7 +528,7 @@ class Engitech_Testimonials5 extends Widget_Base{
 		$this->add_control(
 			'heading_desc',
 			[
-				'label' => __( 'Description', 'engitech' ),
+				'label' => __( 'Description', 'valkiriapps' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -536,7 +536,7 @@ class Engitech_Testimonials5 extends Widget_Base{
 		$this->add_control(
 			'desc_color',
 			[
-				'label' => __( 'Color', 'engitech' ),
+				'label' => __( 'Color', 'valkiriapps' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -557,21 +557,21 @@ class Engitech_Testimonials5 extends Widget_Base{
 		$this->start_controls_section(
 			'content_box_style',
 			[
-				'label' => __( 'Content Box', 'engitech' ),
+				'label' => __( 'Content Box', 'valkiriapps' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 			]
 		);
 		$this->add_control(
 			'heading_content',
 			[
-				'label' => __( 'Content', 'engitech' ),
+				'label' => __( 'Content', 'valkiriapps' ),
 				'type' => Controls_Manager::HEADING,
 			]
 		);
 		$this->add_control(
 			'content_color',
 			[
-				'label' => __( 'Text Color', 'engitech' ),
+				'label' => __( 'Text Color', 'valkiriapps' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -591,7 +591,7 @@ class Engitech_Testimonials5 extends Widget_Base{
 		$this->add_control(
 			'info_style',
 			[
-				'label' => __( 'Info', 'engitech' ),
+				'label' => __( 'Info', 'valkiriapps' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -599,7 +599,7 @@ class Engitech_Testimonials5 extends Widget_Base{
 		$this->add_control(
 			'info_color',
 			[
-				'label' => __( 'Info Color', 'engitech' ),
+				'label' => __( 'Info Color', 'valkiriapps' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -622,7 +622,7 @@ class Engitech_Testimonials5 extends Widget_Base{
 		$this->start_controls_section(
 			'style_dots',
 			[
-				'label' => __( 'Dots', 'engitech' ),
+				'label' => __( 'Dots', 'valkiriapps' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 				'condition' => [
 					'tdots' => 'true'
@@ -633,7 +633,7 @@ class Engitech_Testimonials5 extends Widget_Base{
 		$this->add_responsive_control(
 			'spacing_dots',
 			[
-				'label' => __( 'Spacing', 'engitech' ),
+				'label' => __( 'Spacing', 'valkiriapps' ),
 				'type' => Controls_Manager::SLIDER,
 				'size_units' => [ 'px' ],
 				'range' => [
@@ -654,7 +654,7 @@ class Engitech_Testimonials5 extends Widget_Base{
 		$this->add_control(
 			'dots_bgcolor',
 			[
-				'label' => __( 'Background', 'engitech' ),
+				'label' => __( 'Background', 'valkiriapps' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -665,7 +665,7 @@ class Engitech_Testimonials5 extends Widget_Base{
 		$this->add_control(
 			'dots_active_bgcolor',
 			[
-				'label' => __( 'Background Active', 'engitech' ),
+				'label' => __( 'Background Active', 'valkiriapps' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -680,7 +680,7 @@ class Engitech_Testimonials5 extends Widget_Base{
 		$this->start_controls_section(
 			'style_nav',
 			[
-				'label' => __( 'Arrow', 'engitech' ),
+				'label' => __( 'Arrow', 'valkiriapps' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 				'condition' => [
 					'tarrow' => 'true',
@@ -690,7 +690,7 @@ class Engitech_Testimonials5 extends Widget_Base{
 		$this->add_control(
 			'size_nav',
 			[
-				'label' => __( 'Size', 'engitech' ),
+				'label' => __( 'Size', 'valkiriapps' ),
 				'type' => Controls_Manager::SLIDER,
 				'size_units' => [ 'px' ],
 				'range' => [
@@ -709,13 +709,13 @@ class Engitech_Testimonials5 extends Widget_Base{
 		$this->start_controls_tab(
 			'tab_arrow_normal',
 			[
-				'label' => __( 'Normal', 'engitech' ),
+				'label' => __( 'Normal', 'valkiriapps' ),
 			]
 		);
 		$this->add_control(
 			'arrow_color',
 			[
-				'label' => __( 'Color', 'engitech' ),
+				'label' => __( 'Color', 'valkiriapps' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -727,7 +727,7 @@ class Engitech_Testimonials5 extends Widget_Base{
 		$this->add_control(
 			'arrow_bgcolor',
 			[
-				'label' => __( 'Background', 'engitech' ),
+				'label' => __( 'Background', 'valkiriapps' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -741,13 +741,13 @@ class Engitech_Testimonials5 extends Widget_Base{
 		$this->start_controls_tab(
 			'tab_arrow_hover',
 			[
-				'label' => __( 'Hover', 'engitech' ),
+				'label' => __( 'Hover', 'valkiriapps' ),
 			]
 		);
 		$this->add_control(
 			'arrow_hcolor',
 			[
-				'label' => __( 'Color Hover', 'engitech' ),
+				'label' => __( 'Color Hover', 'valkiriapps' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .slick-arrow:hover svg path' => 'fill: {{VALUE}};',
@@ -757,7 +757,7 @@ class Engitech_Testimonials5 extends Widget_Base{
 		$this->add_control(
 			'arrow_hbgcolor',
 			[
-				'label' => __( 'Background Hover', 'engitech' ),
+				'label' => __( 'Background Hover', 'valkiriapps' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -841,5 +841,5 @@ class Engitech_Testimonials5 extends Widget_Base{
 	}
 	
 }
-// After the Engitech_Testimonials5 class is defined, I must register the new widget class with Elementor:
-Plugin::instance()->widgets_manager->register( new Engitech_Testimonials5() );
+// After the Valkiriapps_Testimonials5 class is defined, I must register the new widget class with Elementor:
+Plugin::instance()->widgets_manager->register( new Valkiriapps_Testimonials5() );

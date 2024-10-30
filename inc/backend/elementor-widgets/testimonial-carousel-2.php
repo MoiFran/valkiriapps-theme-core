@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly (security measu
 /**
  * Widget Name: Testimonial Slider
  */
-class Engitech_Testimonials2 extends Widget_Base{
+class Valkiriapps_Testimonials2 extends Widget_Base{
 
  	// The get_name() method is a simple one, you just need to return a widget name that will be used in the code.
 	public function get_name() {
@@ -14,7 +14,7 @@ class Engitech_Testimonials2 extends Widget_Base{
 
 	// The get_title() method, which again, is a very simple one, you need to return the widget title that will be displayed as the widget label.
 	public function get_title() {
-		return __( 'Engitech Testimonial Slider 2', 'engitech' );
+		return __( 'Valkiriapps Testimonial Slider 2', 'valkiriapps' );
 	}
 
 	// The get_icon() method, is an optional but recommended method, it lets you set the widget icon. you can use any of the eicon or font-awesome icons, simply return the class name as a string.
@@ -24,7 +24,7 @@ class Engitech_Testimonials2 extends Widget_Base{
 
 	// The get_categories method, lets you set the category of the widget, return the category name as a string.
 	public function get_categories() {
-		return [ 'category_engitech' ];
+		return [ 'category_valkiriapps' ];
 	}
 
 	protected function register_controls() {
@@ -32,14 +32,14 @@ class Engitech_Testimonials2 extends Widget_Base{
 		$this->start_controls_section(
 			'section_testimonials',
 			[
-				'label' => __( 'Testimonials', 'engitech' ),
+				'label' => __( 'Testimonials', 'valkiriapps' ),
 			]
 		);
 		$repeater = new Repeater();
 		$repeater->add_control(
 			'tstar',
 			[
-				'label' => __( 'Rating', 'engitech' ),
+				'label' => __( 'Rating', 'valkiriapps' ),
 				'type' => Controls_Manager::MEDIA,
 				'default' => [
 					'url' => get_template_directory_uri().'/images/5star.png',
@@ -50,7 +50,7 @@ class Engitech_Testimonials2 extends Widget_Base{
 		$repeater->add_control(
 			'tcontent',
 			[
-				'label' => __( 'Content', 'engitech' ),
+				'label' => __( 'Content', 'valkiriapps' ),
 				'type' => Controls_Manager::TEXTAREA,
 				'rows' => '10',
 				'default' => '"I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents. I should be incapable of drawing a single stroke at the present moment."',
@@ -60,7 +60,7 @@ class Engitech_Testimonials2 extends Widget_Base{
 		$repeater->add_control(
 			'timage',
 			[
-				'label' => __( 'Avatar', 'engitech' ),
+				'label' => __( 'Avatar', 'valkiriapps' ),
 				'type' => Controls_Manager::MEDIA,
 				'default' => [
 					'url' => Utils::get_placeholder_image_src(),
@@ -71,7 +71,7 @@ class Engitech_Testimonials2 extends Widget_Base{
 		$repeater->add_control(
 			'title',
 			[
-				'label' => __( 'Name', 'engitech' ),
+				'label' => __( 'Name', 'valkiriapps' ),
 				'type' => Controls_Manager::TEXT,
 				'default' => 'Emilia Clarke',
 			]
@@ -80,7 +80,7 @@ class Engitech_Testimonials2 extends Widget_Base{
 		$repeater->add_control(
 			'tjob',
 			[
-				'label' => __( 'Job/Address', 'engitech' ),
+				'label' => __( 'Job/Address', 'valkiriapps' ),
 				'type' => Controls_Manager::TEXT,
 				'default' => 'Developer',
 			]
@@ -97,7 +97,7 @@ class Engitech_Testimonials2 extends Widget_Base{
 		            	'tstar'  => [
 							'url' => get_template_directory_uri().'/images/5star.png',
 						],
-		             	'tcontent' => __( '"I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents. I should be incapable of drawing a single stroke at the present moment."', 'engitech' ),
+		             	'tcontent' => __( '"I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents. I should be incapable of drawing a single stroke at the present moment."', 'valkiriapps' ),
 		                'timage'  => [
 							'url' => '',
 						],
@@ -109,7 +109,7 @@ class Engitech_Testimonials2 extends Widget_Base{
 		            	'tstar'  => [
 							'url' => get_template_directory_uri().'/images/5star.png',
 						],
-		             	'tcontent' => __( '"I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents. I should be incapable of drawing a single stroke at the present moment."', 'engitech' ),
+		             	'tcontent' => __( '"I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents. I should be incapable of drawing a single stroke at the present moment."', 'valkiriapps' ),
 		                'timage'  => [
 							'url' => '',
 						],
@@ -121,7 +121,7 @@ class Engitech_Testimonials2 extends Widget_Base{
 		            	'tstar'  => [
 							'url' => get_template_directory_uri().'/images/5star.png',
 						],
-		             	'tcontent' => __( '"I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents. I should be incapable of drawing a single stroke at the present moment."', 'engitech' ),
+		             	'tcontent' => __( '"I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents. I should be incapable of drawing a single stroke at the present moment."', 'valkiriapps' ),
 		                'timage'  => [
 							'url' => '',
 						],
@@ -138,66 +138,66 @@ class Engitech_Testimonials2 extends Widget_Base{
 		$this->add_control(
 			'tshow',
 			[
-				'label' => __( 'Slides to Show', 'engitech' ),
+				'label' => __( 'Slides to Show', 'valkiriapps' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => '2',
 				'options' => [
-					'1' => __( '1', 'engitech' ),
-					'2' => __( '2', 'engitech' ),
-					'3' => __( '3', 'engitech' ),
-					'4' => __( '4', 'engitech' ),
-					'5' => __( '5', 'engitech' ),
+					'1' => __( '1', 'valkiriapps' ),
+					'2' => __( '2', 'valkiriapps' ),
+					'3' => __( '3', 'valkiriapps' ),
+					'4' => __( '4', 'valkiriapps' ),
+					'5' => __( '5', 'valkiriapps' ),
 				]
 			]
 		);
 		$this->add_control(
 			'tscroll',
 			[
-				'label' => __( 'Slides to Scroll', 'engitech' ),
+				'label' => __( 'Slides to Scroll', 'valkiriapps' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => '1',
 				'options' => [
-					'1' => __( '1', 'engitech' ),
-					'2' => __( '2', 'engitech' ),
-					'3' => __( '3', 'engitech' ),
-					'4' => __( '4', 'engitech' ),
-					'5' => __( '5', 'engitech' ),
+					'1' => __( '1', 'valkiriapps' ),
+					'2' => __( '2', 'valkiriapps' ),
+					'3' => __( '3', 'valkiriapps' ),
+					'4' => __( '4', 'valkiriapps' ),
+					'5' => __( '5', 'valkiriapps' ),
 				]
 			]
 		);
 		$this->add_control(
 			'is_fade',
 			[
-				'label' => __( 'Fade', 'engitech' ),
+				'label' => __( 'Fade', 'valkiriapps' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'false',
 				'options' => [
-					'true' => __( 'Yes', 'engitech' ),
-					'false' => __( 'No', 'engitech' ),
+					'true' => __( 'Yes', 'valkiriapps' ),
+					'false' => __( 'No', 'valkiriapps' ),
 				]
 			]
 		);
 		$this->add_control(
 			'tarrow',
 			[
-				'label' => __( 'Nav Slider', 'engitech' ),
+				'label' => __( 'Nav Slider', 'valkiriapps' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'true',
 				'options' => [
-					'true' => __( 'Yes', 'engitech' ),
-					'false' => __( 'No', 'engitech' ),
+					'true' => __( 'Yes', 'valkiriapps' ),
+					'false' => __( 'No', 'valkiriapps' ),
 				]
 			]
 		);
 		$this->add_control(
 			'tdots',
 			[
-				'label' => __( 'Dots Slider', 'engitech' ),
+				'label' => __( 'Dots Slider', 'valkiriapps' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'false',
 				'options' => [
-					'true' => __( 'Yes', 'engitech' ),
-					'false' => __( 'No', 'engitech' ),
+					'true' => __( 'Yes', 'valkiriapps' ),
+					'false' => __( 'No', 'valkiriapps' ),
 				]
 			]
 		);
@@ -208,7 +208,7 @@ class Engitech_Testimonials2 extends Widget_Base{
 		$this->start_controls_section(
 			'style_tcontent',
 			[
-				'label' => __( 'General', 'engitech' ),
+				'label' => __( 'General', 'valkiriapps' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -216,7 +216,7 @@ class Engitech_Testimonials2 extends Widget_Base{
 		$this->add_control(
 			'heading_cbox',
 			[
-				'label' => __( 'Content Box', 'engitech' ),
+				'label' => __( 'Content Box', 'valkiriapps' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -224,7 +224,7 @@ class Engitech_Testimonials2 extends Widget_Base{
 		$this->add_control(
 			'tcontent_bg',
 			[
-				'label' => __( 'Background Color', 'engitech' ),
+				'label' => __( 'Background Color', 'valkiriapps' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -236,7 +236,7 @@ class Engitech_Testimonials2 extends Widget_Base{
 		$this->add_control(
 			'tcontent_color',
 			[
-				'label' => __( 'Text Color', 'engitech' ),
+				'label' => __( 'Text Color', 'valkiriapps' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -256,7 +256,7 @@ class Engitech_Testimonials2 extends Widget_Base{
 		$this->add_control(
 			'tcontent_padding',
 			[
-				'label' => __( 'Padding', 'engitech' ),
+				'label' => __( 'Padding', 'valkiriapps' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%' ],
 				'selectors' => [
@@ -267,7 +267,7 @@ class Engitech_Testimonials2 extends Widget_Base{
 		$this->add_control(
 			'tcontent_radius',
 			[
-				'label' => __( 'Border Radius', 'engitech' ),
+				'label' => __( 'Border Radius', 'valkiriapps' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%' ],
 				'selectors' => [
@@ -282,7 +282,7 @@ class Engitech_Testimonials2 extends Widget_Base{
 		$this->start_controls_section(
 			'style_tstar',
 			[
-				'label' => __( 'Stars', 'engitech' ),
+				'label' => __( 'Stars', 'valkiriapps' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -290,7 +290,7 @@ class Engitech_Testimonials2 extends Widget_Base{
 		$this->add_control(
 			'spacing_tstar',
 			[
-				'label' => __( 'Spacing', 'engitech' ),
+				'label' => __( 'Spacing', 'valkiriapps' ),
 				'type' => Controls_Manager::SLIDER,
 				'size_units' => [ 'px' ],
 				'range' => [
@@ -308,7 +308,7 @@ class Engitech_Testimonials2 extends Widget_Base{
 		$this->add_control(
 			'tstar_size',
 			[
-				'label' => __( 'Size', 'engitech' ),
+				'label' => __( 'Size', 'valkiriapps' ),
 				'type' => Controls_Manager::SLIDER,
 				'size_units' => [ 'px' ],
 				'range' => [
@@ -329,7 +329,7 @@ class Engitech_Testimonials2 extends Widget_Base{
 		$this->start_controls_section(
 			'style_timage',
 			[
-				'label' => __( 'Avatars', 'engitech' ),
+				'label' => __( 'Avatars', 'valkiriapps' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -337,7 +337,7 @@ class Engitech_Testimonials2 extends Widget_Base{
 		$this->add_control(
 			'spacing_img',
 			[
-				'label' => __( 'Spacing', 'engitech' ),
+				'label' => __( 'Spacing', 'valkiriapps' ),
 				'type' => Controls_Manager::SLIDER,
 				'size_units' => [ 'px' ],
 				'range' => [
@@ -355,7 +355,7 @@ class Engitech_Testimonials2 extends Widget_Base{
 		$this->add_control(
 			'image_size',
 			[
-				'label' => __( 'Size', 'engitech' ),
+				'label' => __( 'Size', 'valkiriapps' ),
 				'type' => Controls_Manager::SLIDER,
 				'size_units' => [ 'px' ],
 				'range' => [
@@ -373,7 +373,7 @@ class Engitech_Testimonials2 extends Widget_Base{
 		$this->add_control(
 			'image_border_radius',
 			[
-				'label' => __( 'Border Radius', 'engitech' ),
+				'label' => __( 'Border Radius', 'valkiriapps' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%' ],
 				'selectors' => [
@@ -388,7 +388,7 @@ class Engitech_Testimonials2 extends Widget_Base{
 		$this->start_controls_section(
 			'style_tname',
 			[
-				'label' => __( 'Name', 'engitech' ),
+				'label' => __( 'Name', 'valkiriapps' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -396,7 +396,7 @@ class Engitech_Testimonials2 extends Widget_Base{
 		$this->add_control(
 			'name_color',
 			[
-				'label' => __( 'Text Color', 'engitech' ),
+				'label' => __( 'Text Color', 'valkiriapps' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -416,7 +416,7 @@ class Engitech_Testimonials2 extends Widget_Base{
 		$this->add_control(
 			'spacing_name',
 			[
-				'label' => __( 'Spacing', 'engitech' ),
+				'label' => __( 'Spacing', 'valkiriapps' ),
 				'type' => Controls_Manager::SLIDER,
 				'size_units' => [ 'px' ],
 				'range' => [
@@ -437,7 +437,7 @@ class Engitech_Testimonials2 extends Widget_Base{
 		$this->start_controls_section(
 			'style_tjob',
 			[
-				'label' => __( 'Job/Address', 'engitech' ),
+				'label' => __( 'Job/Address', 'valkiriapps' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -445,7 +445,7 @@ class Engitech_Testimonials2 extends Widget_Base{
 		$this->add_control(
 			'job_color',
 			[
-				'label' => __( 'Text Color', 'engitech' ),
+				'label' => __( 'Text Color', 'valkiriapps' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -468,7 +468,7 @@ class Engitech_Testimonials2 extends Widget_Base{
 		$this->start_controls_section(
 			'style_dots',
 			[
-				'label' => __( 'Dots', 'engitech' ),
+				'label' => __( 'Dots', 'valkiriapps' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -476,7 +476,7 @@ class Engitech_Testimonials2 extends Widget_Base{
 		$this->add_responsive_control(
 			'spacing_dots',
 			[
-				'label' => __( 'Spacing', 'engitech' ),
+				'label' => __( 'Spacing', 'valkiriapps' ),
 				'type' => Controls_Manager::SLIDER,
 				'size_units' => [ 'px', '%' ],
 				'range' => [
@@ -497,7 +497,7 @@ class Engitech_Testimonials2 extends Widget_Base{
 		$this->add_control(
 			'dots_bgcolor',
 			[
-				'label' => __( 'Background', 'engitech' ),
+				'label' => __( 'Background', 'valkiriapps' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -508,7 +508,7 @@ class Engitech_Testimonials2 extends Widget_Base{
 		$this->add_control(
 			'dots_active_bgcolor',
 			[
-				'label' => __( 'Background Active', 'engitech' ),
+				'label' => __( 'Background Active', 'valkiriapps' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -523,7 +523,7 @@ class Engitech_Testimonials2 extends Widget_Base{
 		$this->start_controls_section(
 			'style_nav',
 			[
-				'label' => __( 'Arrow', 'engitech' ),
+				'label' => __( 'Arrow', 'valkiriapps' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 				'condition' => [
 					'tarrow' => 'true',
@@ -533,7 +533,7 @@ class Engitech_Testimonials2 extends Widget_Base{
 		$this->add_control(
 			'spacing_nav',
 			[
-				'label' => __( 'Spacing', 'engitech' ),
+				'label' => __( 'Spacing', 'valkiriapps' ),
 				'type' => Controls_Manager::SLIDER,
 				'size_units' => [ 'px', '%' ],
 				'range' => [
@@ -555,7 +555,7 @@ class Engitech_Testimonials2 extends Widget_Base{
 		$this->add_control(
 			'arrow_color',
 			[
-				'label' => __( 'Color', 'engitech' ),
+				'label' => __( 'Color', 'valkiriapps' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -566,7 +566,7 @@ class Engitech_Testimonials2 extends Widget_Base{
 		$this->add_control(
 			'arrow_hcolor',
 			[
-				'label' => __( 'Hover Color', 'engitech' ),
+				'label' => __( 'Hover Color', 'valkiriapps' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -615,4 +615,4 @@ class Engitech_Testimonials2 extends Widget_Base{
 	protected function content_template() {}
 }
 // After the Schedule class is defined, I must register the new widget class with Elementor:
-Plugin::instance()->widgets_manager->register( new Engitech_Testimonials2() );
+Plugin::instance()->widgets_manager->register( new Valkiriapps_Testimonials2() );

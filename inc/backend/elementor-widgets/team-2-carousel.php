@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly (security measu
 /**
  * Widget Name: Team Carousel 
  */
-class Engitech_Team_Carousel extends Widget_Base{
+class Valkiriapps_Team_Carousel extends Widget_Base{
 
  	// The get_name() method is a simple one, you just need to return a widget name that will be used in the code.
 	public function get_name() {
@@ -14,7 +14,7 @@ class Engitech_Team_Carousel extends Widget_Base{
 
 	// The get_title() method, which again, is a very simple one, you need to return the widget title that will be displayed as the widget label.
 	public function get_title() {
-		return __( 'Engitech Team Carousel', 'engitech' );
+		return __( 'Valkiriapps Team Carousel', 'valkiriapps' );
 	}
 
 	// The get_icon() method, is an optional but recommended method, it lets you set the widget icon. you can use any of the eicon or font-awesome icons, simply return the class name as a string.
@@ -24,7 +24,7 @@ class Engitech_Team_Carousel extends Widget_Base{
 
 	// The get_categories method, lets you set the category of the widget, return the category name as a string.
 	public function get_categories() {
-		return [ 'category_engitech' ];
+		return [ 'category_valkiriapps' ];
 	}
 
 	protected function register_controls() {
@@ -33,7 +33,7 @@ class Engitech_Team_Carousel extends Widget_Base{
 		$this->start_controls_section(
 			'content_section',
 			[
-				'label' => esc_html__( 'Member Team', 'engitech' ),
+				'label' => esc_html__( 'Member Team', 'valkiriapps' ),
 			]
 		);
 
@@ -43,7 +43,7 @@ class Engitech_Team_Carousel extends Widget_Base{
 		$repeater->add_control(
 	       'member_image',
 	        [
-	            'label' => esc_html__( 'Photo', 'engitech' ),
+	            'label' => esc_html__( 'Photo', 'valkiriapps' ),
 	            'type'  => Controls_Manager::MEDIA,
 				'default' => [
 					'url' => Utils::get_placeholder_image_src(),
@@ -54,24 +54,24 @@ class Engitech_Team_Carousel extends Widget_Base{
 	    $repeater->add_control(
 		    'member_name',
 	      	[
-	          	'label' => esc_html__( 'Name', 'engitech' ),
+	          	'label' => esc_html__( 'Name', 'valkiriapps' ),
 	          	'type'  => Controls_Manager::TEXT,
-				'default' => esc_html__( 'Peter Perish', 'engitech' ),
+				'default' => esc_html__( 'Peter Perish', 'valkiriapps' ),
 	    	]
 	    );
 
 	    $repeater->add_control(
 		    'member_extra',
 	      	[
-	          	'label' => esc_html__( 'Extra/Job', 'engitech' ),
+	          	'label' => esc_html__( 'Extra/Job', 'valkiriapps' ),
 	          	'type'  => Controls_Manager::TEXTAREA,
-	          	'default' => esc_html__( 'Chiff Executive Officer', 'engitech' ),
+	          	'default' => esc_html__( 'Chiff Executive Officer', 'valkiriapps' ),
 	    	]
 	    );
 	    $repeater->add_control(
 		    'member_desc',
 	      	[
-	          	'label' => esc_html__( 'Description', 'engitech' ),
+	          	'label' => esc_html__( 'Description', 'valkiriapps' ),
 	          	'type'  => Controls_Manager::TEXTAREA,
 	          	'default' => '',
 	    	]
@@ -79,19 +79,19 @@ class Engitech_Team_Carousel extends Widget_Base{
 	    $repeater->add_control(
 			'link',
 			[
-				'label' => __( 'Link To Details', 'engitech' ),
+				'label' => __( 'Link To Details', 'valkiriapps' ),
 				'type' => Controls_Manager::URL,
-				'placeholder' => __( 'https://', 'engitech' ),
+				'placeholder' => __( 'https://', 'valkiriapps' ),
 			]
 		);
 
 		$repeater->add_control(
 			'socials',
 			[
-				'label' => __( 'Socials', 'engitech' ),
+				'label' => __( 'Socials', 'valkiriapps' ),
 				'type' => Controls_Manager::SWITCHER,
-				'label_on' => __( 'Show', 'engitech' ),
-				'label_off' => __( 'Hide', 'engitech' ),
+				'label_on' => __( 'Show', 'valkiriapps' ),
+				'label_off' => __( 'Hide', 'valkiriapps' ),
 				'return_value' => 'yes',
 				'default' => 'yes',
 				'separator' => 'before',
@@ -101,7 +101,7 @@ class Engitech_Team_Carousel extends Widget_Base{
         $repeater->add_control(
 		    'social1',
 	      	[
-	          	'label' => esc_html__( 'Icon Social 1', 'engitech' ),
+	          	'label' => esc_html__( 'Icon Social 1', 'valkiriapps' ),
                 'type'  => Controls_Manager::ICONS,
                 'fa4compatibility' => 'icon',
 				'default' => [
@@ -116,9 +116,9 @@ class Engitech_Team_Carousel extends Widget_Base{
 	    $repeater->add_control(
 			'social1_link',
 			[
-				'label' => __( 'Link Social 1', 'engitech' ),
+				'label' => __( 'Link Social 1', 'valkiriapps' ),
 				'type' => Controls_Manager::URL,
-				'placeholder' => __( 'https://twitter.com/', 'engitech' ),
+				'placeholder' => __( 'https://twitter.com/', 'valkiriapps' ),
 				'condition' => [
 					'socials' => 'yes',
 				],
@@ -127,7 +127,7 @@ class Engitech_Team_Carousel extends Widget_Base{
 		$repeater->add_control(
 		    'social2',
 	      	[
-	          	'label' => esc_html__( 'Icon Social 2', 'engitech' ),
+	          	'label' => esc_html__( 'Icon Social 2', 'valkiriapps' ),
                 'type'  => Controls_Manager::ICONS,
                 'fa4compatibility' => 'icon',
 				'default' => [
@@ -143,9 +143,9 @@ class Engitech_Team_Carousel extends Widget_Base{
 	    $repeater->add_control(
 			'social2_link',
 			[
-				'label' => __( 'Link Social 2', 'engitech' ),
+				'label' => __( 'Link Social 2', 'valkiriapps' ),
 				'type' => Controls_Manager::URL,
-				'placeholder' => __( 'https://facebook.com/', 'engitech' ),
+				'placeholder' => __( 'https://facebook.com/', 'valkiriapps' ),
 				'condition' => [
 					'socials' => 'yes',
 				],
@@ -155,7 +155,7 @@ class Engitech_Team_Carousel extends Widget_Base{
 		$repeater->add_control(
 		    'social3',
 	      	[
-	          	'label' => esc_html__( 'Icon Social 3', 'engitech' ),
+	          	'label' => esc_html__( 'Icon Social 3', 'valkiriapps' ),
                 'type'  => Controls_Manager::ICONS,
                 'fa4compatibility' => 'icon',
 				'default' => [
@@ -171,9 +171,9 @@ class Engitech_Team_Carousel extends Widget_Base{
 	    $repeater->add_control(
 			'social3_link',
 			[
-				'label' => __( 'Link Social 3', 'engitech' ),
+				'label' => __( 'Link Social 3', 'valkiriapps' ),
 				'type' => Controls_Manager::URL,
-				'placeholder' => __( 'https://pinterest.com/', 'engitech' ),
+				'placeholder' => __( 'https://pinterest.com/', 'valkiriapps' ),
 				'condition' => [
 					'socials' => 'yes',
 				],
@@ -183,7 +183,7 @@ class Engitech_Team_Carousel extends Widget_Base{
 		$this->add_control(
 		    'members',
 		    [
-		        'label'       => esc_html__( 'Teams', 'engitech' ),
+		        'label'       => esc_html__( 'Teams', 'valkiriapps' ),
 		        'type'        => Controls_Manager::REPEATER,
 		        'show_label'  => true,
 		        'default'     => [],
@@ -204,7 +204,7 @@ class Engitech_Team_Carousel extends Widget_Base{
 		$this->add_control(
 			'heading_slider',
 			[
-				'label' => __( 'Slider', 'engitech' ),
+				'label' => __( 'Slider', 'valkiriapps' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -213,54 +213,54 @@ class Engitech_Team_Carousel extends Widget_Base{
 		$this->add_control(
 			'tshow',
 			[
-				'label' => __( 'Slides to Show', 'engitech' ),
+				'label' => __( 'Slides to Show', 'valkiriapps' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => '2',
 				'options' => [
-					'1' => __( '1', 'engitech' ),
-					'2' => __( '2', 'engitech' ),
-					'3' => __( '3', 'engitech' ),
-					'4' => __( '4', 'engitech' ),
-					'5' => __( '5', 'engitech' ),
+					'1' => __( '1', 'valkiriapps' ),
+					'2' => __( '2', 'valkiriapps' ),
+					'3' => __( '3', 'valkiriapps' ),
+					'4' => __( '4', 'valkiriapps' ),
+					'5' => __( '5', 'valkiriapps' ),
 				]
 			]
 		);
 		$this->add_control(
 			'tscroll',
 			[
-				'label' => __( 'Slides to Scroll', 'engitech' ),
+				'label' => __( 'Slides to Scroll', 'valkiriapps' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => '1',
 				'options' => [
-					'1' => __( '1', 'engitech' ),
-					'2' => __( '2', 'engitech' ),
-					'3' => __( '3', 'engitech' ),
-					'4' => __( '4', 'engitech' ),
-					'5' => __( '5', 'engitech' ),
+					'1' => __( '1', 'valkiriapps' ),
+					'2' => __( '2', 'valkiriapps' ),
+					'3' => __( '3', 'valkiriapps' ),
+					'4' => __( '4', 'valkiriapps' ),
+					'5' => __( '5', 'valkiriapps' ),
 				]
 			]
 		);
 		$this->add_control(
 			'tarrow',
 			[
-				'label' => __( 'Nav Slider', 'engitech' ),
+				'label' => __( 'Nav Slider', 'valkiriapps' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'false',
 				'options' => [
-					'true' => __( 'Yes', 'engitech' ),
-					'false' => __( 'No', 'engitech' ),
+					'true' => __( 'Yes', 'valkiriapps' ),
+					'false' => __( 'No', 'valkiriapps' ),
 				]
 			]
 		);
 		$this->add_control(
 			'tarrow_position',
 			[
-				'label' => __( 'Nav Position', 'engitech' ),
+				'label' => __( 'Nav Position', 'valkiriapps' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'mid',
 				'options' => [
-					'mid' => __( 'Middle', 'engitech' ),
-					'top' => __( 'Top', 'engitech' ),
+					'mid' => __( 'Middle', 'valkiriapps' ),
+					'top' => __( 'Top', 'valkiriapps' ),
 				],
 				'condition' => [
 					'tarrow' => 'true',
@@ -270,12 +270,12 @@ class Engitech_Team_Carousel extends Widget_Base{
 		$this->add_control(
 			'tdots',
 			[
-				'label' => __( 'Dots Slider', 'engitech' ),
+				'label' => __( 'Dots Slider', 'valkiriapps' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'false',
 				'options' => [
-					'true' => __( 'Yes', 'engitech' ),
-					'false' => __( 'No', 'engitech' ),
+					'true' => __( 'Yes', 'valkiriapps' ),
+					'false' => __( 'No', 'valkiriapps' ),
 				]
 			]
 		);
@@ -287,7 +287,7 @@ class Engitech_Team_Carousel extends Widget_Base{
 		$this->start_controls_section(
 			'photo_style',
 			[
-				'label' => esc_html__( 'Photo', 'engitech' ),
+				'label' => esc_html__( 'Photo', 'valkiriapps' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -295,7 +295,7 @@ class Engitech_Team_Carousel extends Widget_Base{
 		$this->add_responsive_control(
 			'photo_size',
 			[
-				'label' => __( 'Width', 'engitech' ),
+				'label' => __( 'Width', 'valkiriapps' ),
 				'type' => Controls_Manager::SLIDER,
 				'size_units' => [ 'px' ],
 				'range' => [
@@ -313,7 +313,7 @@ class Engitech_Team_Carousel extends Widget_Base{
 		$this->add_responsive_control(
 			'photo_space',
 			[
-				'label' => esc_html__( 'Spacing', 'engitech' ),
+				'label' => esc_html__( 'Spacing', 'valkiriapps' ),
 				'type'  => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -329,7 +329,7 @@ class Engitech_Team_Carousel extends Widget_Base{
 		$this->add_control(
 			'radius_photo',
 			[
-				'label' => __( 'Border Radius', 'engitech' ),
+				'label' => __( 'Border Radius', 'valkiriapps' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%' ],
 				'selectors' => [
@@ -341,7 +341,7 @@ class Engitech_Team_Carousel extends Widget_Base{
 			Group_Control_Box_Shadow::get_type(),
 			[
 				'name' => 'team_box_shadow',
-				'label' => __( 'Box Shadow', 'engitech' ),
+				'label' => __( 'Box Shadow', 'valkiriapps' ),
 				'selector' => '{{WRAPPER}} .ot-team:hover .ot-team__thumb',
 			]
 		);
@@ -351,7 +351,7 @@ class Engitech_Team_Carousel extends Widget_Base{
 		$this->start_controls_section(
 			'info_style',
 			[
-				'label' => esc_html__( 'Info Box', 'engitech' ),
+				'label' => esc_html__( 'Info Box', 'valkiriapps' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -359,19 +359,19 @@ class Engitech_Team_Carousel extends Widget_Base{
 		$this->add_responsive_control(
 			'align',
 			[
-				'label' => __( 'Alignment', 'engitech' ),
+				'label' => __( 'Alignment', 'valkiriapps' ),
 				'type' => Controls_Manager::CHOOSE,
 				'options' => [
 					'left'    => [
-						'title' => __( 'Left', 'engitech' ),
+						'title' => __( 'Left', 'valkiriapps' ),
 						'icon' => 'eicon-text-align-left',
 					],
 					'center' => [
-						'title' => __( 'Center', 'engitech' ),
+						'title' => __( 'Center', 'valkiriapps' ),
 						'icon' => 'eicon-text-align-center',
 					],
 					'right' => [
-						'title' => __( 'Right', 'engitech' ),
+						'title' => __( 'Right', 'valkiriapps' ),
 						'icon' => 'eicon-text-align-right',
 					]
 				],
@@ -385,7 +385,7 @@ class Engitech_Team_Carousel extends Widget_Base{
 		$this->add_control(
 			'heading_title',
 			[
-				'label' => __( 'Title', 'engitech' ),
+				'label' => __( 'Title', 'valkiriapps' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -394,7 +394,7 @@ class Engitech_Team_Carousel extends Widget_Base{
 		$this->add_responsive_control(
 			'title_space',
 			[
-				'label' => esc_html__( 'Spacing', 'engitech' ),
+				'label' => esc_html__( 'Spacing', 'valkiriapps' ),
 				'type'  => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -411,7 +411,7 @@ class Engitech_Team_Carousel extends Widget_Base{
 		$this->add_control(
 			'title_color',
 			[
-				'label'     => esc_html__( 'Color', 'engitech' ),
+				'label'     => esc_html__( 'Color', 'valkiriapps' ),
 				'type'      => Controls_Manager::COLOR,
 				'default'   => '',
 				'selectors' => [
@@ -422,7 +422,7 @@ class Engitech_Team_Carousel extends Widget_Base{
 		$this->add_control(
 			'title_hcolor',
 			[
-				'label'     => esc_html__( 'Color Hover', 'engitech' ),
+				'label'     => esc_html__( 'Color Hover', 'valkiriapps' ),
 				'type'      => Controls_Manager::COLOR,
 				'default'   => '',
 				'selectors' => [
@@ -434,7 +434,7 @@ class Engitech_Team_Carousel extends Widget_Base{
 			Group_Control_Typography::get_type(),
 			[
 				'name'     => 'title_typography',
-				'label'    => esc_html__( 'Typography', 'engitech' ),
+				'label'    => esc_html__( 'Typography', 'valkiriapps' ),
 				'selector' => '{{WRAPPER}} .ot-team__info h5',
 			]
 		);
@@ -443,7 +443,7 @@ class Engitech_Team_Carousel extends Widget_Base{
 		$this->add_control(
 			'heading_job',
 			[
-				'label' => __( 'Job', 'engitech' ),
+				'label' => __( 'Job', 'valkiriapps' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -452,7 +452,7 @@ class Engitech_Team_Carousel extends Widget_Base{
 		$this->add_responsive_control(
 			'job_space',
 			[
-				'label' => esc_html__( 'Spacing', 'engitech' ),
+				'label' => esc_html__( 'Spacing', 'valkiriapps' ),
 				'type'  => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -468,7 +468,7 @@ class Engitech_Team_Carousel extends Widget_Base{
 		$this->add_control(
 			'job_color',
 			[
-				'label'     => esc_html__( 'Color', 'engitech' ),
+				'label'     => esc_html__( 'Color', 'valkiriapps' ),
 				'type'      => Controls_Manager::COLOR,
 				'default'   => '',
 				'selectors' => [
@@ -480,7 +480,7 @@ class Engitech_Team_Carousel extends Widget_Base{
 			Group_Control_Typography::get_type(),
 				[
 					'name'     => 'job_typography',
-					'label'    => esc_html__( 'Typography', 'engitech' ),
+					'label'    => esc_html__( 'Typography', 'valkiriapps' ),
 					'selector' => '{{WRAPPER}} .ot-team__info span',
 				]
 		);
@@ -489,7 +489,7 @@ class Engitech_Team_Carousel extends Widget_Base{
 		$this->add_control(
 			'heading_desc',
 			[
-				'label' => __( 'Description', 'engitech' ),
+				'label' => __( 'Description', 'valkiriapps' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -497,7 +497,7 @@ class Engitech_Team_Carousel extends Widget_Base{
 		$this->add_responsive_control(
 			'desc_space',
 			[
-				'label' => esc_html__( 'Spacing', 'engitech' ),
+				'label' => esc_html__( 'Spacing', 'valkiriapps' ),
 				'type'  => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -513,7 +513,7 @@ class Engitech_Team_Carousel extends Widget_Base{
 		$this->add_control(
 			'desc_color',
 			[
-				'label'     => esc_html__( 'Color', 'engitech' ),
+				'label'     => esc_html__( 'Color', 'valkiriapps' ),
 				'type'      => Controls_Manager::COLOR,
 				'default'   => '',
 				'selectors' => [
@@ -525,7 +525,7 @@ class Engitech_Team_Carousel extends Widget_Base{
 			Group_Control_Typography::get_type(),
 				[
 					'name'     => 'desc_typography',
-					'label'    => esc_html__( 'Typography', 'engitech' ),
+					'label'    => esc_html__( 'Typography', 'valkiriapps' ),
 					'selector' => '{{WRAPPER}} .ot-team__info p',
 				]
 		);
@@ -536,7 +536,7 @@ class Engitech_Team_Carousel extends Widget_Base{
 		$this->start_controls_section(
 			'icon_style',
 			[
-				'label' => esc_html__( 'Socials', 'engitech' ),
+				'label' => esc_html__( 'Socials', 'valkiriapps' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -544,7 +544,7 @@ class Engitech_Team_Carousel extends Widget_Base{
 		$this->add_responsive_control(
 			'icon_social_space',
 			[
-				'label' => esc_html__( 'Spacing', 'engitech' ),
+				'label' => esc_html__( 'Spacing', 'valkiriapps' ),
 				'type'  => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -561,7 +561,7 @@ class Engitech_Team_Carousel extends Widget_Base{
 		$this->add_responsive_control(
 			'icon_social_size',
 			[
-				'label' => esc_html__( 'Size', 'engitech' ),
+				'label' => esc_html__( 'Size', 'valkiriapps' ),
 				'type'  => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -578,7 +578,7 @@ class Engitech_Team_Carousel extends Widget_Base{
 		$this->add_control(
 			'icon_social_color',
 			[
-				'label'     => esc_html__( 'Color', 'engitech' ),
+				'label'     => esc_html__( 'Color', 'valkiriapps' ),
 				'type'      => Controls_Manager::COLOR,
 				'default'   => '',
 				'selectors' => [
@@ -590,7 +590,7 @@ class Engitech_Team_Carousel extends Widget_Base{
 		$this->add_control(
 			'icon_hover_color',
 			[
-				'label'     => esc_html__( 'Color Hover', 'engitech' ),
+				'label'     => esc_html__( 'Color Hover', 'valkiriapps' ),
 				'type'      => Controls_Manager::COLOR,
 				'default'   => '',
 				'selectors' => [
@@ -606,7 +606,7 @@ class Engitech_Team_Carousel extends Widget_Base{
 		$this->start_controls_section(
 			'style_dots',
 			[
-				'label' => __( 'Dots', 'engitech' ),
+				'label' => __( 'Dots', 'valkiriapps' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 				'condition' => [
 					'tdots' => 'true',
@@ -616,7 +616,7 @@ class Engitech_Team_Carousel extends Widget_Base{
 		$this->add_responsive_control(
 			'spacing_dots',
 			[
-				'label' => __( 'Spacing', 'engitech' ),
+				'label' => __( 'Spacing', 'valkiriapps' ),
 				'type' => Controls_Manager::SLIDER,
 				'size_units' => [ 'px', '%' ],
 				'range' => [
@@ -637,7 +637,7 @@ class Engitech_Team_Carousel extends Widget_Base{
 		$this->add_control(
 			'dots_color',
 			[
-				'label' => __( 'Color', 'engitech' ),
+				'label' => __( 'Color', 'valkiriapps' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -648,7 +648,7 @@ class Engitech_Team_Carousel extends Widget_Base{
 		$this->add_control(
 			'dots_hcolor',
 			[
-				'label' => __( 'Color Active', 'engitech' ),
+				'label' => __( 'Color Active', 'valkiriapps' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -662,7 +662,7 @@ class Engitech_Team_Carousel extends Widget_Base{
 		$this->start_controls_section(
 			'style_nav',
 			[
-				'label' => __( 'Arrow', 'engitech' ),
+				'label' => __( 'Arrow', 'valkiriapps' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 				'condition' => [
 					'tarrow' => 'true',
@@ -672,19 +672,19 @@ class Engitech_Team_Carousel extends Widget_Base{
 		$this->add_responsive_control(
 			'nav_align',
 			[
-				'label' => __( 'Alignment', 'engitech' ),
+				'label' => __( 'Alignment', 'valkiriapps' ),
 				'type' => Controls_Manager::CHOOSE,
 				'options' => [
 					'left'    => [
-						'title' => __( 'Left', 'engitech' ),
+						'title' => __( 'Left', 'valkiriapps' ),
 						'icon' => 'eicon-text-align-left',
 					],
 					'center' => [
-						'title' => __( 'Center', 'engitech' ),
+						'title' => __( 'Center', 'valkiriapps' ),
 						'icon' => 'eicon-text-align-center',
 					],
 					'right' => [
-						'title' => __( 'Right', 'engitech' ),
+						'title' => __( 'Right', 'valkiriapps' ),
 						'icon' => 'eicon-text-align-right',
 					]
 				],
@@ -699,7 +699,7 @@ class Engitech_Team_Carousel extends Widget_Base{
 		$this->add_control(
 			'spacing_nav',
 			[
-				'label' => __( 'Spacing', 'engitech' ),
+				'label' => __( 'Spacing', 'valkiriapps' ),
 				'type' => Controls_Manager::SLIDER,
 				'size_units' => [ 'px', '%' ],
 				'range' => [
@@ -722,7 +722,7 @@ class Engitech_Team_Carousel extends Widget_Base{
 		$this->add_control(
 			'arrow_color',
 			[
-				'label' => __( 'Color', 'engitech' ),
+				'label' => __( 'Color', 'valkiriapps' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -734,7 +734,7 @@ class Engitech_Team_Carousel extends Widget_Base{
 		$this->add_control(
 			'arrow_hcolor',
 			[
-				'label' => __( 'Hover Color', 'engitech' ),
+				'label' => __( 'Hover Color', 'valkiriapps' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -746,7 +746,7 @@ class Engitech_Team_Carousel extends Widget_Base{
 		$this->add_control(
 			'arrow_bgcolor',
 			[
-				'label' => __( 'Background', 'engitech' ),
+				'label' => __( 'Background', 'valkiriapps' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -760,7 +760,7 @@ class Engitech_Team_Carousel extends Widget_Base{
 		$this->add_control(
 			'arrow_hbgcolor',
 			[
-				'label' => __( 'Background Hover', 'engitech' ),
+				'label' => __( 'Background Hover', 'valkiriapps' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -846,5 +846,5 @@ class Engitech_Team_Carousel extends Widget_Base{
 
 	protected function content_template() {}
 }
-// After the Engitech_Team_Carousel class is defined, I must register the new widget class with Elementor:
-Plugin::instance()->widgets_manager->register( new Engitech_Team_Carousel() );
+// After the Valkiriapps_Team_Carousel class is defined, I must register the new widget class with Elementor:
+Plugin::instance()->widgets_manager->register( new Valkiriapps_Team_Carousel() );

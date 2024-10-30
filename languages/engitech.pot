@@ -14,7 +14,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Loco https://localise.biz/\n"
 "X-Loco-Version: 2.6.4; wp-6.2.2\n"
-"X-Domain: engitech"
+"X-Domain: valkiriapps"
 
 #: inc/frontend/template-tags.php:42
 msgid " "
@@ -2608,7 +2608,7 @@ msgid "http://oceanthemes.net/"
 msgstr ""
 
 #. URI of the theme
-msgid "http://wpdemo.archiwp.com/engitech"
+msgid "http://wpdemo.archiwp.com/valkiriapps"
 msgstr ""
 
 #: inc/backend/elementor-widgets/team-2-carousel.php:84

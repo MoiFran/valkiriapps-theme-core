@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package Engitech
+ * @package valkiriapps
  */
 
 get_header(); ?>
@@ -12,8 +12,8 @@ get_header(); ?>
 <div class="entry-content">
 	<div class="container">
 		<div class="row">
-			<div id="primary" class="content-area <?php engitech_content_columns(); ?>">
-				<main id="main" class="site-main <?php engitech_blog_style(); ?>">
+			<div id="primary" class="content-area <?php valkiriapps_content_columns(); ?>">
+				<main id="main" class="site-main <?php valkiriapps_blog_style(); ?>">
 
 				<?php if( get_the_archive_description() ) { ?>
 				<div class="des-category">
@@ -35,7 +35,7 @@ get_header(); ?>
 
 					endwhile;
 
-						engitech_posts_navigation();
+						valkiriapps_posts_navigation();
 
 					else :
 

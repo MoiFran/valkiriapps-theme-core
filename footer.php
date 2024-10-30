@@ -14,7 +14,7 @@
 	</div><!-- #content -->
 	<?php
 		if ( ! function_exists( 'elementor_theme_do_location' ) || ! elementor_theme_do_location( 'footer' ) ) {
-			engitech_footer_builder();
+			valkiriapps_footer_builder();
 		}
 	?>
 </div><!-- #page -->

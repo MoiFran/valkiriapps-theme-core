@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly (security measu
 /**
  * Widget Name: Projects Carousel
  */
-class Engitech_PortfolioSliders extends Widget_Base{
+class Valkiriapps_PortfolioSliders extends Widget_Base{
 
  	// The get_name() method is a simple one, you just need to return a widget name that will be used in the code.
 	public function get_name() {
@@ -14,7 +14,7 @@ class Engitech_PortfolioSliders extends Widget_Base{
 
 	// The get_title() method, which again, is a very simple one, you need to return the widget title that will be displayed as the widget label.
 	public function get_title() {
-		return __( 'Engitech Portfolio Carousel', 'engitech' );
+		return __( 'Valkiriapps Portfolio Carousel', 'valkiriapps' );
 	}
 
 	// The get_icon() method, is an optional but recommended method, it lets you set the widget icon. you can use any of the eicon or font-awesome icons, simply return the class name as a string.
@@ -24,7 +24,7 @@ class Engitech_PortfolioSliders extends Widget_Base{
 
 	// The get_categories method, lets you set the category of the widget, return the category name as a string.
 	public function get_categories() {
-		return [ 'category_engitech' ];
+		return [ 'category_valkiriapps' ];
 	}
 
 	protected function register_controls() {
@@ -33,24 +33,24 @@ class Engitech_PortfolioSliders extends Widget_Base{
 		$this->start_controls_section(
 			'content_section',
 			[
-				'label' => __( 'Projects', 'engitech' ),
+				'label' => __( 'Projects', 'valkiriapps' ),
 			]
 		);
 		$this->add_control(
 			'project_cat',
 			[
-				'label' => __( 'Select Categories', 'engitech' ),
+				'label' => __( 'Select Categories', 'valkiriapps' ),
 				'type' => Controls_Manager::SELECT2,
 				'options' => $this->select_param_cate_project(),
 				'multiple' => true,
 				'label_block' => true,
-				'placeholder' => __( 'All Categories', 'engitech' ),
+				'placeholder' => __( 'All Categories', 'valkiriapps' ),
 			]
 		);
 		$this->add_control(
 			'project_num',
 			[
-				'label' => __( 'Show Number Projects', 'engitech' ),
+				'label' => __( 'Show Number Projects', 'valkiriapps' ),
 				'type' => Controls_Manager::NUMBER,
 				'default' => '9',
 			]
@@ -58,7 +58,7 @@ class Engitech_PortfolioSliders extends Widget_Base{
 		$this->add_control(
 			'heading_slider',
 			[
-				'label' => __( 'Slider', 'engitech' ),
+				'label' => __( 'Slider', 'valkiriapps' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -70,69 +70,69 @@ class Engitech_PortfolioSliders extends Widget_Base{
 				'type' => Controls_Manager::SELECT,
 				'default' => 'true',
 				'options' => [
-					'true' => __( 'Yes', 'engitech' ),
-					'false' => __( 'No', 'engitech' ),
+					'true' => __( 'Yes', 'valkiriapps' ),
+					'false' => __( 'No', 'valkiriapps' ),
 				]
 			]
 		);
 		$this->add_control(
 			'tshow',
 			[
-				'label' => __( 'Slides to Show', 'engitech' ),
+				'label' => __( 'Slides to Show', 'valkiriapps' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => '2',
 				'options' => [
-					'1' => __( '1', 'engitech' ),
-					'2' => __( '2', 'engitech' ),
-					'3' => __( '3', 'engitech' ),
-					'4' => __( '4', 'engitech' ),
-					'5' => __( '5', 'engitech' ),
+					'1' => __( '1', 'valkiriapps' ),
+					'2' => __( '2', 'valkiriapps' ),
+					'3' => __( '3', 'valkiriapps' ),
+					'4' => __( '4', 'valkiriapps' ),
+					'5' => __( '5', 'valkiriapps' ),
 				]
 			]
 		);
 		$this->add_control(
 			'scroll',
 			[
-				'label' => __( 'Slides to Scroll', 'engitech' ),
+				'label' => __( 'Slides to Scroll', 'valkiriapps' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => '2',
 				'options' => [
-					'1' => __( '1', 'engitech' ),
-					'2' => __( '2', 'engitech' ),
-					'3' => __( '3', 'engitech' ),
-					'4' => __( '4', 'engitech' ),
-					'5' => __( '5', 'engitech' ),
+					'1' => __( '1', 'valkiriapps' ),
+					'2' => __( '2', 'valkiriapps' ),
+					'3' => __( '3', 'valkiriapps' ),
+					'4' => __( '4', 'valkiriapps' ),
+					'5' => __( '5', 'valkiriapps' ),
 				]
 			]
 		);
 		$this->add_control(
 			'tarrow',
 			[
-				'label' => __( 'Nav Slider', 'engitech' ),
+				'label' => __( 'Nav Slider', 'valkiriapps' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'true',
 				'options' => [
-					'true' => __( 'Yes', 'engitech' ),
-					'false' => __( 'No', 'engitech' ),
+					'true' => __( 'Yes', 'valkiriapps' ),
+					'false' => __( 'No', 'valkiriapps' ),
 				]
 			]
 		);
 		$this->add_control(
 			'tdots',
 			[
-				'label' => __( 'Dots Slider', 'engitech' ),
+				'label' => __( 'Dots Slider', 'valkiriapps' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'false',
 				'options' => [
-					'true' => __( 'Yes', 'engitech' ),
-					'false' => __( 'No', 'engitech' ),
+					'true' => __( 'Yes', 'valkiriapps' ),
+					'false' => __( 'No', 'valkiriapps' ),
 				]
 			]
 		);
 		$this->add_responsive_control(
 			'w_gaps',
 			[
-				'label' => __( 'Gap Width', 'engitech' ),
+				'label' => __( 'Gap Width', 'valkiriapps' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -151,26 +151,26 @@ class Engitech_PortfolioSliders extends Widget_Base{
 		$this->start_controls_section(
 			'overlay_style_section',
 			[
-				'label' => __( 'Info Box', 'engitech' ),
+				'label' => __( 'Info Box', 'valkiriapps' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
 		$this->add_responsive_control(
 			'overlay_align',
 			[
-				'label' => __( 'Alignment', 'engitech' ),
+				'label' => __( 'Alignment', 'valkiriapps' ),
 				'type' => Controls_Manager::CHOOSE,
 				'options' => [
 					'left'    => [
-						'title' => __( 'Left', 'engitech' ),
+						'title' => __( 'Left', 'valkiriapps' ),
 						'icon' => 'eicon-text-align-left',
 					],
 					'center' => [
-						'title' => __( 'Center', 'engitech' ),
+						'title' => __( 'Center', 'valkiriapps' ),
 						'icon' => 'eicon-text-align-center',
 					],
 					'right' => [
-						'title' => __( 'Right', 'engitech' ),
+						'title' => __( 'Right', 'valkiriapps' ),
 						'icon' => 'eicon-text-align-right',
 					],
 				],				
@@ -193,7 +193,7 @@ class Engitech_PortfolioSliders extends Widget_Base{
 		$this->add_responsive_control(
 			'overlay_bottom',
 			[
-				'label' => __( 'Bottom', 'engitech' ),
+				'label' => __( 'Bottom', 'valkiriapps' ),
 				'type' => Controls_Manager::SLIDER,
 				'size_units' => [ 'px' ],
 				'range' => [
@@ -211,7 +211,7 @@ class Engitech_PortfolioSliders extends Widget_Base{
 		$this->add_responsive_control(
 			'overlay_padd',
 			[
-				'label' => __( 'Padding', 'engitech' ),
+				'label' => __( 'Padding', 'valkiriapps' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'range' => [
 					'px' => [
@@ -227,7 +227,7 @@ class Engitech_PortfolioSliders extends Widget_Base{
 		$this->add_responsive_control(
 			'overlay_radius',
 			[
-				'label' => __( 'Border Radius', 'engitech' ),
+				'label' => __( 'Border Radius', 'valkiriapps' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%' ],
 				'selectors' => [
@@ -239,7 +239,7 @@ class Engitech_PortfolioSliders extends Widget_Base{
 			Group_Control_Background::get_type(),
 			[
 				'name' => 'overlay_background',
-				'label' => __( 'Background', 'engitech' ),
+				'label' => __( 'Background', 'valkiriapps' ),
 				'types' => [ 'classic', 'gradient' ],
 				'selector' => '{{WRAPPER}} .projects-box .portfolio-info',
 			]			
@@ -249,7 +249,7 @@ class Engitech_PortfolioSliders extends Widget_Base{
 		$this->add_control(
 			'heading_title',
 			[
-				'label' => __( 'Title', 'engitech' ),
+				'label' => __( 'Title', 'valkiriapps' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -257,7 +257,7 @@ class Engitech_PortfolioSliders extends Widget_Base{
 		$this->add_responsive_control(
 			'title_spacing',
 			[
-				'label' => __( 'Spacing', 'engitech' ),
+				'label' => __( 'Spacing', 'valkiriapps' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -273,7 +273,7 @@ class Engitech_PortfolioSliders extends Widget_Base{
 		$this->add_control(
 			'title_color',
 			[
-				'label' => __( 'Color', 'engitech' ),
+				'label' => __( 'Color', 'valkiriapps' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -293,7 +293,7 @@ class Engitech_PortfolioSliders extends Widget_Base{
 		$this->add_control(
 			'heading_overlay',
 			[
-				'label' => __( 'Category', 'engitech' ),
+				'label' => __( 'Category', 'valkiriapps' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -301,10 +301,10 @@ class Engitech_PortfolioSliders extends Widget_Base{
 		$this->add_control(
 			'show_cat',
 			[
-				'label' => __( 'Show Category', 'engitech' ),
+				'label' => __( 'Show Category', 'valkiriapps' ),
 				'type' => Controls_Manager::SWITCHER,
-				'label_on' => __( 'Show', 'engitech' ),
-				'label_off' => __( 'Hide', 'engitech' ),
+				'label_on' => __( 'Show', 'valkiriapps' ),
+				'label_off' => __( 'Hide', 'valkiriapps' ),
 				'return_value' => 'yes',
 				'default' => 'yes',
 			]
@@ -312,7 +312,7 @@ class Engitech_PortfolioSliders extends Widget_Base{
 		$this->add_responsive_control(
 			'cat_spacing',
 			[
-				'label' => __( 'Spacing', 'engitech' ),
+				'label' => __( 'Spacing', 'valkiriapps' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -331,7 +331,7 @@ class Engitech_PortfolioSliders extends Widget_Base{
 		$this->add_control(
 			'cat_color',
 			[
-				'label' => __( 'Color', 'engitech' ),
+				'label' => __( 'Color', 'valkiriapps' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -357,7 +357,7 @@ class Engitech_PortfolioSliders extends Widget_Base{
 		$this->add_control(
 			'heading_btn',
 			[
-				'label' => __( 'Button', 'engitech' ),
+				'label' => __( 'Button', 'valkiriapps' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -365,7 +365,7 @@ class Engitech_PortfolioSliders extends Widget_Base{
 		$this->add_control(
 			'btn_color',
 			[
-				'label' => __( 'Color', 'engitech' ),
+				'label' => __( 'Color', 'valkiriapps' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -376,7 +376,7 @@ class Engitech_PortfolioSliders extends Widget_Base{
 		$this->add_control(
 			'btn_bg',
 			[
-				'label' => __( 'Background', 'engitech' ),
+				'label' => __( 'Background', 'valkiriapps' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -391,7 +391,7 @@ class Engitech_PortfolioSliders extends Widget_Base{
 		$this->start_controls_section(
 			'style_nav',
 			[
-				'label' => __( 'Arrow', 'engitech' ),
+				'label' => __( 'Arrow', 'valkiriapps' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 				'condition' => [
 					'tarrow' => 'true',
@@ -401,7 +401,7 @@ class Engitech_PortfolioSliders extends Widget_Base{
 		$this->add_responsive_control(
 			'spacing_nav',
 			[
-				'label' => __( 'Spacing', 'engitech' ),
+				'label' => __( 'Spacing', 'valkiriapps' ),
 				'type' => Controls_Manager::SLIDER,
 				'size_units' => [ 'px' ],
 				'range' => [
@@ -423,14 +423,14 @@ class Engitech_PortfolioSliders extends Widget_Base{
 		$this->start_controls_section(
 			'style_dots',
 			[
-				'label' => __( 'Dots', 'engitech' ),
+				'label' => __( 'Dots', 'valkiriapps' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 			]
 		);
 		$this->add_responsive_control(
 			'spacing_dots',
 			[
-				'label' => __( 'Spacing', 'engitech' ),
+				'label' => __( 'Spacing', 'valkiriapps' ),
 				'type' => Controls_Manager::SLIDER,
 				'size_units' => [ 'px', '%' ],
 				'range' => [
@@ -488,7 +488,7 @@ class Engitech_PortfolioSliders extends Widget_Base{
 						<a href="<?php the_permalink(); ?>">
 							<?php
 								if ( has_post_thumbnail() ) {
-									the_post_thumbnail( 'engitech-portfolio-thumbnail-carousel');		
+									the_post_thumbnail( 'valkiriapps-portfolio-thumbnail-carousel');		
 								}
 							?>
 							<span class="overlay"></span>
@@ -542,4 +542,4 @@ class Engitech_PortfolioSliders extends Widget_Base{
 	}
 }
 // After the Schedule class is defined, I must register the new widget class with Elementor:
-Plugin::instance()->widgets_manager->register( new Engitech_PortfolioSliders() );
+Plugin::instance()->widgets_manager->register( new Valkiriapps_PortfolioSliders() );

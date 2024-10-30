@@ -3,9 +3,9 @@ namespace Elementor; // Custom widgets must be defined in the Elementor namespac
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly (security measure)
 
 /**
- * Widget Name: Engitech Process List
+ * Widget Name: Valkiriapps Process List
  */
-class Engitech_Process_List extends Widget_Base{
+class Valkiriapps_Process_List extends Widget_Base{
 
  	// The get_name() method is a simple one, you just need to return a widget name that will be used in the code.
 	public function get_name() {
@@ -14,7 +14,7 @@ class Engitech_Process_List extends Widget_Base{
 
 	// The get_title() method, which again, is a very simple one, you need to return the widget title that will be displayed as the widget label.
 	public function get_title() {
-		return __( 'Engitech Process List', 'engitech' );
+		return __( 'Valkiriapps Process List', 'valkiriapps' );
 	}
 
 	// The get_icon() method, is an optional but recommended method, it lets you set the widget icon. you can use any of the eicon or font-awesome icons, simply return the class name as a string.
@@ -24,14 +24,14 @@ class Engitech_Process_List extends Widget_Base{
 
 	// The get_categories method, lets you set the category of the widget, return the category name as a string.
 	public function get_categories() {
-		return [ 'category_engitech' ];
+		return [ 'category_valkiriapps' ];
 	}
 
 	protected function register_controls() {
 		$this->start_controls_section(
 			'section_icon',
 			[
-				'label' => __( 'Process List', 'engitech' ),
+				'label' => __( 'Process List', 'valkiriapps' ),
 			]
 		);
 
@@ -40,18 +40,18 @@ class Engitech_Process_List extends Widget_Base{
 		$repeater->add_control(
 			'text',
 			[
-				'label' => __( 'Text', 'engitech' ),
+				'label' => __( 'Text', 'valkiriapps' ),
 				'type' => Controls_Manager::TEXT,
 				'label_block' => true,
-				'placeholder' => __( 'List Menu Item', 'engitech' ),
-				'default' => __( 'List Menu Item', 'engitech' ),
+				'placeholder' => __( 'List Menu Item', 'valkiriapps' ),
+				'default' => __( 'List Menu Item', 'valkiriapps' ),
 			]
 		);
 
 		$repeater->add_control(
 			'selected_icon',
 			[
-				'label' => __( 'Icon', 'engitech' ),
+				'label' => __( 'Icon', 'valkiriapps' ),
 				'type' => Controls_Manager::ICONS,
 				'label_block' => true,
 				'default' => [],
@@ -62,20 +62,20 @@ class Engitech_Process_List extends Widget_Base{
 		$repeater->add_control(
 			'p_time',
 			[
-				'label' => __( 'Time', 'engitech' ),
+				'label' => __( 'Time', 'valkiriapps' ),
 				'type' => Controls_Manager::TEXT,
 				'label_block' => true,
-				'placeholder' => __( 'List Menu Item', 'engitech' ),
-				'default' => __( '10:29 AM', 'engitech' ),
+				'placeholder' => __( 'List Menu Item', 'valkiriapps' ),
+				'default' => __( '10:29 AM', 'valkiriapps' ),
 			]
 		);
 		$repeater->add_control(
 			'is_current',
 			[
-				'label' => __( 'Is Current?', 'engitech' ),
+				'label' => __( 'Is Current?', 'valkiriapps' ),
 				'type' => Controls_Manager::SWITCHER,
-				'label_on' => __( 'Yes', 'engitech' ),
-				'label_off' => __( 'No', 'engitech' ),
+				'label_on' => __( 'Yes', 'valkiriapps' ),
+				'label_off' => __( 'No', 'valkiriapps' ),
 				'return_value' => 'yes',
 			]
 		);
@@ -88,19 +88,19 @@ class Engitech_Process_List extends Widget_Base{
 				'fields' => $repeater->get_controls(),
 				'default' => [
 					[
-						'text' => __( 'List Menu Item #1', 'engitech' ),
+						'text' => __( 'List Menu Item #1', 'valkiriapps' ),
 						'link' => [
 							'url' => '#'
 						]
 					],
 					[
-						'text' => __( 'List Menu Item #2', 'engitech' ),
+						'text' => __( 'List Menu Item #2', 'valkiriapps' ),
 						'link' => [
 							'url' => '#'
 						]
 					],
 					[
-						'text' => __( 'List Menu Item #3', 'engitech' ),
+						'text' => __( 'List Menu Item #3', 'valkiriapps' ),
 						'link' => [
 							'url' => '#'
 						]
@@ -115,14 +115,14 @@ class Engitech_Process_List extends Widget_Base{
 		$this->start_controls_section(
 			'section_data_process',
 			[
-				'label' => __( 'General', 'engitech' ),
+				'label' => __( 'General', 'valkiriapps' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 			]
 		);
 		$this->add_responsive_control(
 			'process_list_space',
 			[
-				'label' => __( 'Spacing', 'engitech' ),
+				'label' => __( 'Spacing', 'valkiriapps' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -139,7 +139,7 @@ class Engitech_Process_List extends Widget_Base{
 		$this->add_responsive_control(
 			'process_list_padding',
 			[
-				'label' => __( 'Padding', 'engitech' ),
+				'label' => __( 'Padding', 'valkiriapps' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', 'em', '%' ],
 				'selectors' => [
@@ -153,13 +153,13 @@ class Engitech_Process_List extends Widget_Base{
 		$this->start_controls_tab(
 			'process_list_normal',
 			[
-				'label' => __( 'Normal', 'engitech' ),
+				'label' => __( 'Normal', 'valkiriapps' ),
 			]
 		);
 		$this->add_control(
 			'plist_bgcolor',
 			[
-				'label' => __( 'Background', 'engitech' ),
+				'label' => __( 'Background', 'valkiriapps' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -170,7 +170,7 @@ class Engitech_Process_List extends Widget_Base{
 		$this->add_responsive_control(
 			'plist_bradius',
 			[
-				'label' => __( 'Border Radius', 'engitech' ),
+				'label' => __( 'Border Radius', 'valkiriapps' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%' ],
 				'selectors' => [
@@ -189,7 +189,7 @@ class Engitech_Process_List extends Widget_Base{
 		$this->add_control(
 			'icon_spacing',
 			[
-				'label' => __( 'Spacing', 'engitech' ),
+				'label' => __( 'Spacing', 'valkiriapps' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -204,7 +204,7 @@ class Engitech_Process_List extends Widget_Base{
 		$this->add_responsive_control(
 			'icon_size',
 			[
-				'label' => __( 'Size', 'engitech' ),
+				'label' => __( 'Size', 'valkiriapps' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -219,7 +219,7 @@ class Engitech_Process_List extends Widget_Base{
 		$this->add_control(
 			'icon_color',
 			[
-				'label' => __( 'Color', 'engitech' ),
+				'label' => __( 'Color', 'valkiriapps' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -239,7 +239,7 @@ class Engitech_Process_List extends Widget_Base{
 		$this->add_control(
 			'text_color',
 			[
-				'label' => __( 'Color', 'engitech' ),
+				'label' => __( 'Color', 'valkiriapps' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -260,13 +260,13 @@ class Engitech_Process_List extends Widget_Base{
 		$this->start_controls_tab(
 			'process_list_hover',
 			[
-				'label' => __( 'Active', 'engitech' ),
+				'label' => __( 'Active', 'valkiriapps' ),
 			]
 		);
 		$this->add_control(
 			'plist_scale',
 			[
-				'label' => __( 'Scale', 'engitech' ),
+				'label' => __( 'Scale', 'valkiriapps' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -283,7 +283,7 @@ class Engitech_Process_List extends Widget_Base{
 		$this->add_control(
 			'plist_bghcolor',
 			[
-				'label' => __( 'Background', 'engitech' ),
+				'label' => __( 'Background', 'valkiriapps' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -294,7 +294,7 @@ class Engitech_Process_List extends Widget_Base{
 		$this->add_responsive_control(
 			'plist_bhradius',
 			[
-				'label' => __( 'Border Radius', 'engitech' ),
+				'label' => __( 'Border Radius', 'valkiriapps' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%' ],
 				'selectors' => [
@@ -313,7 +313,7 @@ class Engitech_Process_List extends Widget_Base{
 		$this->add_responsive_control(
 			'icon_hsize',
 			[
-				'label' => __( 'Size', 'engitech' ),
+				'label' => __( 'Size', 'valkiriapps' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -329,7 +329,7 @@ class Engitech_Process_List extends Widget_Base{
 		$this->add_control(
 			'icon_color_hover',
 			[
-				'label' => __( 'Color', 'engitech' ),
+				'label' => __( 'Color', 'valkiriapps' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -349,7 +349,7 @@ class Engitech_Process_List extends Widget_Base{
 		$this->add_control(
 			'text_color_hover',
 			[
-				'label' => __( 'Color', 'engitech' ),
+				'label' => __( 'Color', 'valkiriapps' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -413,5 +413,5 @@ class Engitech_Process_List extends Widget_Base{
 
 	protected function content_template() {}
 }
-// After the Engitech_Process_List class is defined, I must register the new widget class with Elementor:
-Plugin::instance()->widgets_manager->register( new Engitech_Process_List() );
+// After the Valkiriapps_Process_List class is defined, I must register the new widget class with Elementor:
+Plugin::instance()->widgets_manager->register( new Valkiriapps_Process_List() );

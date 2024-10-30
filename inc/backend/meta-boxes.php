@@ -10,11 +10,11 @@
  *
  * @return array All registered meta boxes
  */
-function engitech_register_meta_boxes( $meta_boxes ) {
+function valkiriapps_register_meta_boxes( $meta_boxes ) {
 	// Page Settings
 	$meta_boxes[] = array(
 		'id'       => 'page-settings',
-		'title'    => esc_html__( 'Page Settings', 'engitech' ),
+		'title'    => esc_html__( 'Page Settings', 'valkiriapps' ),
 		'pages'    => array( 'page' ),
 		'context'  => 'normal',
 		'priority' => 'high',
@@ -22,7 +22,7 @@ function engitech_register_meta_boxes( $meta_boxes ) {
 		'fields'   => array(
             array(
                 'id'        => 'page_layout',
-                'name'      => esc_html__( 'Page Layout', 'engitech' ),
+                'name'      => esc_html__( 'Page Layout', 'valkiriapps' ),
                 'type'      => 'image_select',
                 'options'   => array(
                     'full-content'    => get_template_directory_uri() . '/inc/backend/images/full.png',
@@ -32,7 +32,7 @@ function engitech_register_meta_boxes( $meta_boxes ) {
                 'std'       => 'full-content'
             ),
             array(
-                'name'             => esc_html__( 'Page Header On/Off', 'engitech' ),
+                'name'             => esc_html__( 'Page Header On/Off', 'valkiriapps' ),
                 'id'               => 'pheader_switch',
                 'type'             => 'switch',
                 'style'            => 'rounded',
@@ -41,7 +41,7 @@ function engitech_register_meta_boxes( $meta_boxes ) {
                 'std'              => 'on'
             ),
             array(
-                'name'             => esc_html__( 'Background Page Header', 'engitech' ),
+                'name'             => esc_html__( 'Background Page Header', 'valkiriapps' ),
                 'id'               => 'pheader_bg_image',
                 'type'             => 'image_advanced',
                 'max_file_uploads' => 1,
@@ -51,14 +51,14 @@ function engitech_register_meta_boxes( $meta_boxes ) {
 
     $meta_boxes[] = array(
         'id'       => 'extra-settings',
-        'title'    => esc_html__( 'Extra Settings', 'engitech' ),
+        'title'    => esc_html__( 'Extra Settings', 'valkiriapps' ),
         'pages'    => array( 'ot_portfolio' ),
         'context'  => 'normal',
         'priority' => 'high',
         'autosave' => true,
         'fields'   => array(
             array(
-                'name'             => esc_html__( 'Page Header On/Off', 'engitech' ),
+                'name'             => esc_html__( 'Page Header On/Off', 'valkiriapps' ),
                 'id'               => 'pheader_switch',
                 'type'             => 'switch',
                 'style'            => 'rounded',
@@ -67,7 +67,7 @@ function engitech_register_meta_boxes( $meta_boxes ) {
                 'std'              => 'on'
             ),
             array(
-                'name'             => esc_html__( 'Background Page Header', 'engitech' ),
+                'name'             => esc_html__( 'Background Page Header', 'valkiriapps' ),
                 'id'               => 'pheader_bg_image',
                 'type'             => 'image_advanced',
                 'max_file_uploads' => 1,
@@ -97,7 +97,7 @@ function engitech_register_meta_boxes( $meta_boxes ) {
 		    	),
 			),
 			array(
-                'name'             => esc_html__( 'Header Transparent?', 'engitech' ),
+                'name'             => esc_html__( 'Header Transparent?', 'valkiriapps' ),
                 'id'               => 'is_trans',
 				'type'             => 'select',
 				'options'   => array(
@@ -141,14 +141,14 @@ function engitech_register_meta_boxes( $meta_boxes ) {
 	// Post format's meta box
 	$meta_boxes[] = array(
 		'id'       => 'format_detail',
-		'title'    => esc_html__( 'Format Details', 'engitech' ),
+		'title'    => esc_html__( 'Format Details', 'valkiriapps' ),
 		'pages'    => array( 'post' ),
 		'context'  => 'normal',
 		'priority' => 'high',
 		'autosave' => true,
 		'fields'   => array(
 			array(
-				'name'             => esc_html__( 'Image', 'engitech' ),
+				'name'             => esc_html__( 'Image', 'valkiriapps' ),
 				'id'               => 'post_image',
 				'type'             => 'image_advanced',
 				'class'            => 'image',
@@ -157,7 +157,7 @@ function engitech_register_meta_boxes( $meta_boxes ) {
     			'image_size'       => 'thumbnail',
 			),
 			array(
-				'name'  => esc_html__( 'Gallery', 'engitech' ),
+				'name'  => esc_html__( 'Gallery', 'valkiriapps' ),
 				'id'    => 'post_gallery',
 				'type'  => 'image_advanced',
 				'class' => 'gallery',
@@ -165,7 +165,7 @@ function engitech_register_meta_boxes( $meta_boxes ) {
     			'image_size'       => 'thumbnail',
 			),			
 			array(
-				'name'  => esc_html__( 'Audio', 'engitech' ),
+				'name'  => esc_html__( 'Audio', 'valkiriapps' ),
 				'id'    => 'post_audio',
 				'type'  => 'textarea',
 				'cols'  => 20,
@@ -174,7 +174,7 @@ function engitech_register_meta_boxes( $meta_boxes ) {
 				'desc'  => 'Example: https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/139083759',
 			),
 			array(
-				'name'  => esc_html__( 'Video', 'engitech' ),
+				'name'  => esc_html__( 'Video', 'valkiriapps' ),
 				'id'    => 'post_video',
 				'type'  => 'textarea',
 				'cols'  => 20,
@@ -183,14 +183,14 @@ function engitech_register_meta_boxes( $meta_boxes ) {
 				'desc'  => 'Example: https://vimeo.com/87959439',
 			),
 			array(
-				'name'  => esc_html__( 'Background Video', 'engitech' ),
+				'name'  => esc_html__( 'Background Video', 'valkiriapps' ),
 				'id'    => 'bg_video',
 				'type'  => 'image_advanced',
 				'class' => 'video',
 				'max_file_uploads' => 1,
 			),
 			array(
-				'name'  => esc_html__( 'Link', 'engitech' ),
+				'name'  => esc_html__( 'Link', 'valkiriapps' ),
 				'id'    => 'post_link',
 				'type'  => 'textarea',
 				'cols'  => 20,
@@ -198,7 +198,7 @@ function engitech_register_meta_boxes( $meta_boxes ) {
 				'class' => 'link',
 			),
 			array(
-				'name'  => esc_html__( 'Text Link', 'engitech' ),
+				'name'  => esc_html__( 'Text Link', 'valkiriapps' ),
 				'id'    => 'text_link',
 				'type'  => 'textarea',
 				'cols'  => 20,
@@ -206,13 +206,13 @@ function engitech_register_meta_boxes( $meta_boxes ) {
 				'class' => 'link',
 			),
 			array(
-				'name'  => esc_html__( 'Quote', 'engitech' ),
+				'name'  => esc_html__( 'Quote', 'valkiriapps' ),
 				'id'    => 'post_quote',
 				'type'  => 'textarea',
 				'class' => 'quote',
 			),
 			array(
-				'name'  => esc_html__( 'Quote Name', 'engitech' ),
+				'name'  => esc_html__( 'Quote Name', 'valkiriapps' ),
 				'id'    => 'quote_name',
 				'type'  => 'text',
 				'class' => 'quote',
@@ -223,4 +223,4 @@ function engitech_register_meta_boxes( $meta_boxes ) {
 	return $meta_boxes;
 }
 
-add_filter( 'rwmb_meta_boxes', 'engitech_register_meta_boxes' );
+add_filter( 'rwmb_meta_boxes', 'valkiriapps_register_meta_boxes' );

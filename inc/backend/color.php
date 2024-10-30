@@ -1,12 +1,12 @@
 <?php 
 
 //Custom Style Frontend
-if(!function_exists('engitech_color_scheme')){
-    function engitech_color_scheme(){
+if(!function_exists('valkiriapps_color_scheme')){
+    function valkiriapps_color_scheme(){
         $color_scheme = '';
 
         //Main Color
-        if( engitech_get_option('main_color') != '#43baff' || engitech_get_option('second_color') != '#7141b1' ){
+        if( valkiriapps_get_option('main_color') != '#43baff' || valkiriapps_get_option('second_color') != '#7141b1' ){
             $color_scheme = 
             '
         /****Main Color****/
@@ -37,13 +37,13 @@ if(!function_exists('engitech_color_scheme')){
             .ot-tabs .tab-link,
             .ot-tabs .tab-link.current, .ot-tabs .tab-link:hover,
             .ot-industries .indus-item .item-inner .overlay:after,
-            .mc4wp-form-fields .subscribe-inner-form .subscribe-btn-icon{background:'.engitech_get_option('main_color').';}
+            .mc4wp-form-fields .subscribe-inner-form .subscribe-btn-icon{background:'.valkiriapps_get_option('main_color').';}
 
             /*Border Color*/
             .post-box .btn-play:hover:before, .post-box .btn-play:hover:after,
             .page-pagination li span, .page-pagination li a:hover,
             .tech-box:hover,
-            .video-popup a:hover span{border-color:'.engitech_get_option('main_color').';}
+            .video-popup a:hover span{border-color:'.valkiriapps_get_option('main_color').';}
 
             /*Color*/
             .text-primary,
@@ -88,9 +88,9 @@ if(!function_exists('engitech_color_scheme')){
             .dc-text .elementor-drop-cap span,
             .footer-menu ul li a:hover,
             .mc4wp-form-fields .subscribe-inner-form .subscribe-btn-icon:hover,
-            #back-to-top{color: '.engitech_get_option('main_color').';}
+            #back-to-top{color: '.valkiriapps_get_option('main_color').';}
 
-            .wpcf7 .main-form{background-image: linear-gradient(90deg,'.engitech_get_option('main_color').' 0%,'.engitech_get_option('second_color').' 100%);}
+            .wpcf7 .main-form{background-image: linear-gradient(90deg,'.valkiriapps_get_option('main_color').' 0%,'.valkiriapps_get_option('second_color').' 100%);}
 			
 
 		/****Second Color****/
@@ -107,7 +107,7 @@ if(!function_exists('engitech_color_scheme')){
                   .icon-box-s1 .line-box:after,
                   .project_filters li a:after,
                   .ot-tabs .tab-link:hover, .ot-tabs .tab-link:focus,
-                  .wpcf7 .main-form button:hover{background:'.engitech_get_option('second_color').';}
+                  .wpcf7 .main-form button:hover{background:'.valkiriapps_get_option('second_color').';}
 
                   /*Color*/
                   blockquote:before,
@@ -133,7 +133,7 @@ if(!function_exists('engitech_color_scheme')){
                   .serv-box .content-box ul li:hover a, .serv-box .content-box ul li.active a,
                   .project_filters li a:hover, .project_filters li a.selected,
                   .ot-pricing-table .octf-btn:hover,
-                  .dc-text.dc-text-second .elementor-drop-cap span{color: '.engitech_get_option('second_color').';}
+                  .dc-text.dc-text-second .elementor-drop-cap span{color: '.valkiriapps_get_option('second_color').';}
 
 			';
         }
@@ -143,12 +143,12 @@ if(!function_exists('engitech_color_scheme')){
 		}
     }
 }
-add_action('wp_head', 'engitech_color_scheme');
+add_action('wp_head', 'valkiriapps_color_scheme');
 
 //Custom Second Font
-if(!function_exists('engitech_second_font')){
-      function engitech_second_font(){
-            $value = engitech_get_option( 'second_font', [] );
+if(!function_exists('valkiriapps_second_font')){
+      function valkiriapps_second_font(){
+            $value = valkiriapps_get_option( 'second_font', [] );
 
             if ( !empty( $value['font-family'] ) && $value['font-family'] != 'Montserrat' ) {
             $second_font = 
@@ -203,8 +203,8 @@ if(!function_exists('engitech_second_font')){
             }
 
             if(! empty($second_font)){
-                  echo '<style id="engitech-inline-styles" type="text/css">'.$second_font.'</style>';
+                  echo '<style id="valkiriapps-inline-styles" type="text/css">'.$second_font.'</style>';
             }
       }
 }
-add_action('wp_head', 'engitech_second_font');
+add_action('wp_head', 'valkiriapps_second_font');

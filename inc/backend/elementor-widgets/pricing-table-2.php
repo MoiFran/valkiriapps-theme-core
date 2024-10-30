@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly (security measu
 /**
  * Widget Name: Pricing Table 2
  */
-class Engitech_Pricing_Table2 extends Widget_Base{
+class Valkiriapps_Pricing_Table2 extends Widget_Base{
 
  	// The get_name() method is a simple one, you just need to return a widget name that will be used in the code.
 	public function get_name() {
@@ -14,7 +14,7 @@ class Engitech_Pricing_Table2 extends Widget_Base{
 
 	// The get_title() method, which again, is a very simple one, you need to return the widget title that will be displayed as the widget label.
 	public function get_title() {
-		return __( 'Engitech Pricing Table 2', 'engitech' );
+		return __( 'Valkiriapps Pricing Table 2', 'valkiriapps' );
 	}
 
 	// The get_icon() method, is an optional but recommended method, it lets you set the widget icon. you can use any of the eicon or font-awesome icons, simply return the class name as a string.
@@ -24,7 +24,7 @@ class Engitech_Pricing_Table2 extends Widget_Base{
 
 	// The get_categories method, lets you set the category of the widget, return the category name as a string.
 	public function get_categories() {
-		return [ 'category_engitech' ];
+		return [ 'category_valkiriapps' ];
 	}
 
 	protected function register_controls() {
@@ -33,41 +33,41 @@ class Engitech_Pricing_Table2 extends Widget_Base{
 		$this->start_controls_section(
 			'content_section',
 			[
-				'label' => __( 'Pricing Table', 'engitech' ),
+				'label' => __( 'Pricing Table', 'valkiriapps' ),
 			]
 		);
 		$this->add_control(
 			'box_style',
 			[
-				'label' => __( 'Style', 'engitech' ),
+				'label' => __( 'Style', 'valkiriapps' ),
 				'type'  => Controls_Manager::SELECT,
 				'default' => 's1',
 				'options' => [
-					's1' 	=> __( 'Style 1', 'engitech' ),
-					's2' 	=> __( 'Style 2', 'engitech' ),
+					's1' 	=> __( 'Style 1', 'valkiriapps' ),
+					's2' 	=> __( 'Style 2', 'valkiriapps' ),
 				]
 			]
 		);
 		$this->add_responsive_control(
 			'align',
 			[
-				'label' => __( 'Alignment', 'engitech' ),
+				'label' => __( 'Alignment', 'valkiriapps' ),
 				'type' => Controls_Manager::CHOOSE,
 				'options' => [
 					'left'    => [
-						'title' => __( 'Left', 'engitech' ),
+						'title' => __( 'Left', 'valkiriapps' ),
 						'icon' => 'eicon-text-align-left',
 					],
 					'center' => [
-						'title' => __( 'Center', 'engitech' ),
+						'title' => __( 'Center', 'valkiriapps' ),
 						'icon' => 'eicon-text-align-center',
 					],
 					'right' => [
-						'title' => __( 'Right', 'engitech' ),
+						'title' => __( 'Right', 'valkiriapps' ),
 						'icon' => 'eicon-text-align-right',
 					]
 				],
-				// 'prefix_class' => 'engitech%s-align-',
+				// 'prefix_class' => 'valkiriapps%s-align-',
 				'selectors' => [
 					'{{WRAPPER}} .ot-pricing-table-s2' => 'text-align: {{VALUE}};',
 				],
@@ -76,18 +76,18 @@ class Engitech_Pricing_Table2 extends Widget_Base{
 		$this->add_control(
 			'featured_text',
 			[
-				'label' => __( 'Featured?', 'engitech' ),
+				'label' => __( 'Featured?', 'valkiriapps' ),
 				'type' => Controls_Manager::TEXT,
-				'default' => __( '', 'engitech' ),
+				'default' => __( '', 'valkiriapps' ),
 			]
 		);
 
 		$this->add_control(
 			'title',
 			[
-				'label' => __( 'Title', 'engitech' ),
+				'label' => __( 'Title', 'valkiriapps' ),
 				'type' => Controls_Manager::TEXT,
-				'default' => __( 'business', 'engitech' ),
+				'default' => __( 'business', 'valkiriapps' ),
 				'label_block' => true,
 			]
 		);
@@ -95,9 +95,9 @@ class Engitech_Pricing_Table2 extends Widget_Base{
 		$this->add_control(
 			'price',
 			[
-				'label' => __( 'Price', 'engitech' ),
+				'label' => __( 'Price', 'valkiriapps' ),
 				'type' => Controls_Manager::TEXTAREA,
-				'default' => __( '<sup>$</sup>9.99', 'engitech' ),
+				'default' => __( '<sup>$</sup>9.99', 'valkiriapps' ),
 				'label_block' => true,
 			]
 		);
@@ -105,9 +105,9 @@ class Engitech_Pricing_Table2 extends Widget_Base{
 		$this->add_control(
 			'price_for',
 			[
-				'label' => __( 'Text Under Price', 'engitech' ),
+				'label' => __( 'Text Under Price', 'valkiriapps' ),
 				'type' => Controls_Manager::TEXT,
-				'default' => __( '/ month', 'engitech' ),
+				'default' => __( '/ month', 'valkiriapps' ),
 				'label_block' => true,
 			]
 		);
@@ -115,9 +115,9 @@ class Engitech_Pricing_Table2 extends Widget_Base{
 		$this->add_control(
 			'des',
 			[
-				'label' => __( 'Description', 'engitech' ),
+				'label' => __( 'Description', 'valkiriapps' ),
 				'type' => Controls_Manager::TEXTAREA,
-				'default' => __( '', 'engitech' ),
+				'default' => __( '', 'valkiriapps' ),
 				'label_block' => true,
 			]
 		);
@@ -127,7 +127,7 @@ class Engitech_Pricing_Table2 extends Widget_Base{
 			[
 				'label' => 'Details',
 				'type' => Controls_Manager::TEXTAREA,
-				'default' => __( '<ul><li>Social Media Marketing</li><li>2.100 Keywords</li><li>One Way Link Building</li></ul>', 'engitech' ),
+				'default' => __( '<ul><li>Social Media Marketing</li><li>2.100 Keywords</li><li>One Way Link Building</li></ul>', 'valkiriapps' ),
 			]
 		);
 
@@ -136,16 +136,16 @@ class Engitech_Pricing_Table2 extends Widget_Base{
 			[
 				'label' => 'Button',
 				'type' => Controls_Manager::TEXTAREA,
-				'default' => __( 'Get Started Now', 'engitech' ),
+				'default' => __( 'Get Started Now', 'valkiriapps' ),
 			]
 		);
 
 		$this->add_control(
 			'link',
 			[
-				'label' => __( 'Link', 'engitech' ),
+				'label' => __( 'Link', 'valkiriapps' ),
 				'type' => Controls_Manager::URL,
-				'placeholder' => __( 'https://your-link.com', 'engitech' )
+				'placeholder' => __( 'https://your-link.com', 'valkiriapps' )
 			]
 		);
 
@@ -155,14 +155,14 @@ class Engitech_Pricing_Table2 extends Widget_Base{
 		$this->start_controls_section(
 			'style_table_section',
 			[
-				'label' => __( 'Box Style', 'engitech' ),
+				'label' => __( 'Box Style', 'valkiriapps' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
 		$this->add_control(
 			'bg_box',
 			[
-				'label' => __( 'Background Color', 'engitech' ),
+				'label' => __( 'Background Color', 'valkiriapps' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -173,7 +173,7 @@ class Engitech_Pricing_Table2 extends Widget_Base{
 		$this->add_responsive_control(
 			'box_padding',
 			[
-				'label' => __( 'Padding', 'engitech' ),
+				'label' => __( 'Padding', 'valkiriapps' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', 'em', '%' ],
 				'selectors' => [
@@ -185,7 +185,7 @@ class Engitech_Pricing_Table2 extends Widget_Base{
 		$this->add_responsive_control(
 			'box_radius',
 			[
-				'label' => __( 'Border Radius', 'engitech' ),
+				'label' => __( 'Border Radius', 'valkiriapps' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', 'em', '%' ],
 				'selectors' => [
@@ -197,7 +197,7 @@ class Engitech_Pricing_Table2 extends Widget_Base{
 		$this->add_control(
 			'heading_shadow',
 			[
-				'label' => __( 'Hover Box Shadow', 'engitech' ),
+				'label' => __( 'Hover Box Shadow', 'valkiriapps' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -216,7 +216,7 @@ class Engitech_Pricing_Table2 extends Widget_Base{
 		$this->start_controls_section(
 			'style_content_section',
 			[
-				'label' => __( 'Content Style', 'engitech' ),
+				'label' => __( 'Content Style', 'valkiriapps' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -225,7 +225,7 @@ class Engitech_Pricing_Table2 extends Widget_Base{
 		$this->add_control(
 			'heading_featured',
 			[
-				'label' => __( 'Featured', 'engitech' ),
+				'label' => __( 'Featured', 'valkiriapps' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 				'condition' => [
@@ -236,7 +236,7 @@ class Engitech_Pricing_Table2 extends Widget_Base{
 		$this->add_control(
 			'featured_bg',
 			[
-				'label' => __( 'Background', 'engitech' ),
+				'label' => __( 'Background', 'valkiriapps' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -250,7 +250,7 @@ class Engitech_Pricing_Table2 extends Widget_Base{
 		$this->add_control(
 			'featured_color',
 			[
-				'label' => __( 'Color', 'engitech' ),
+				'label' => __( 'Color', 'valkiriapps' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -276,7 +276,7 @@ class Engitech_Pricing_Table2 extends Widget_Base{
 		$this->add_control(
 			'heading_title',
 			[
-				'label' => __( 'Title', 'engitech' ),
+				'label' => __( 'Title', 'valkiriapps' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -285,7 +285,7 @@ class Engitech_Pricing_Table2 extends Widget_Base{
 		$this->add_responsive_control(
 			'title_space',
 			[
-				'label' => __( 'Spacing', 'engitech' ),
+				'label' => __( 'Spacing', 'valkiriapps' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -301,7 +301,7 @@ class Engitech_Pricing_Table2 extends Widget_Base{
 		$this->add_control(
 			'title_color',
 			[
-				'label' => __( 'Color', 'engitech' ),
+				'label' => __( 'Color', 'valkiriapps' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -321,7 +321,7 @@ class Engitech_Pricing_Table2 extends Widget_Base{
 		$this->add_control(
 			'heading_price',
 			[
-				'label' => __( 'Price', 'engitech' ),
+				'label' => __( 'Price', 'valkiriapps' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -329,7 +329,7 @@ class Engitech_Pricing_Table2 extends Widget_Base{
 		$this->add_responsive_control(
 			'price_space',
 			[
-				'label' => __( 'Spacing', 'engitech' ),
+				'label' => __( 'Spacing', 'valkiriapps' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -345,7 +345,7 @@ class Engitech_Pricing_Table2 extends Widget_Base{
 		$this->add_control(
 			'price_color',
 			[
-				'label' => __( 'Color', 'engitech' ),
+				'label' => __( 'Color', 'valkiriapps' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -365,7 +365,7 @@ class Engitech_Pricing_Table2 extends Widget_Base{
 		$this->add_control(
 			'heading_price_for',
 			[
-				'label' => __( 'Under Price', 'engitech' ),
+				'label' => __( 'Under Price', 'valkiriapps' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -373,7 +373,7 @@ class Engitech_Pricing_Table2 extends Widget_Base{
 		$this->add_control(
 			'price_for_color',
 			[
-				'label' => __( 'Color', 'engitech' ),
+				'label' => __( 'Color', 'valkiriapps' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -393,7 +393,7 @@ class Engitech_Pricing_Table2 extends Widget_Base{
 		$this->add_control(
 			'heading_shortxt',
 			[
-				'label' => __( 'Description', 'engitech' ),
+				'label' => __( 'Description', 'valkiriapps' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 				'condition' => [
@@ -405,7 +405,7 @@ class Engitech_Pricing_Table2 extends Widget_Base{
 		$this->add_responsive_control(
 			'shortxt_space',
 			[
-				'label' => __( 'Spacing', 'engitech' ),
+				'label' => __( 'Spacing', 'valkiriapps' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -424,7 +424,7 @@ class Engitech_Pricing_Table2 extends Widget_Base{
 		$this->add_control(
 			'shortxt_color',
 			[
-				'label' => __( 'Color', 'engitech' ),
+				'label' => __( 'Color', 'valkiriapps' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -450,7 +450,7 @@ class Engitech_Pricing_Table2 extends Widget_Base{
 		$this->add_control(
 			'heading_des',
 			[
-				'label' => __( 'Details', 'engitech' ),
+				'label' => __( 'Details', 'valkiriapps' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -458,7 +458,7 @@ class Engitech_Pricing_Table2 extends Widget_Base{
 		$this->add_responsive_control(
 			'des_padding',
 			[
-				'label' => __( 'Spacing', 'engitech' ),
+				'label' => __( 'Spacing', 'valkiriapps' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -474,7 +474,7 @@ class Engitech_Pricing_Table2 extends Widget_Base{
 		$this->add_control(
 			'des_color',
 			[
-				'label' => __( 'Color', 'engitech' ),
+				'label' => __( 'Color', 'valkiriapps' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -485,7 +485,7 @@ class Engitech_Pricing_Table2 extends Widget_Base{
 		$this->add_control(
 			'des_border_color',
 			[
-				'label' => __( 'Border Color', 'engitech' ),
+				'label' => __( 'Border Color', 'valkiriapps' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -505,7 +505,7 @@ class Engitech_Pricing_Table2 extends Widget_Base{
 		$this->add_control(
 			'heading_btn',
 			[
-				'label' => __( 'Button', 'engitech' ),
+				'label' => __( 'Button', 'valkiriapps' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -521,7 +521,7 @@ class Engitech_Pricing_Table2 extends Widget_Base{
 		$this->add_control(
 			'btn_bg_color',
 			[
-				'label' => __( 'Background Color', 'engitech' ),
+				'label' => __( 'Background Color', 'valkiriapps' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -532,7 +532,7 @@ class Engitech_Pricing_Table2 extends Widget_Base{
 		$this->add_control(
 			'btn_color',
 			[
-				'label' => __( 'Color', 'engitech' ),
+				'label' => __( 'Color', 'valkiriapps' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -543,7 +543,7 @@ class Engitech_Pricing_Table2 extends Widget_Base{
 		$this->add_control(
 			'btn_hbg_color',
 			[
-				'label' => __( 'Hover Background Color', 'engitech' ),
+				'label' => __( 'Hover Background Color', 'valkiriapps' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -554,7 +554,7 @@ class Engitech_Pricing_Table2 extends Widget_Base{
 		$this->add_control(
 			'btn_hcolor',
 			[
-				'label' => __( 'Hover Color', 'engitech' ),
+				'label' => __( 'Hover Color', 'valkiriapps' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -602,4 +602,4 @@ class Engitech_Pricing_Table2 extends Widget_Base{
 	protected function content_template() {}
 }
 // After the Schedule class is defined, I must register the new widget class with Elementor:
-Plugin::instance()->widgets_manager->register( new Engitech_Pricing_Table2() );
+Plugin::instance()->widgets_manager->register( new Valkiriapps_Pricing_Table2() );

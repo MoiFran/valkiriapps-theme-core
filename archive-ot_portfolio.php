@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package Engitech
+ * @package valkiriapps
  */
 
 get_header(); ?>
@@ -16,7 +16,7 @@ get_header(); ?>
 				<main id="main" class="site-main">
 					
 					<ul class="project_filters">
-					    <li><a href="#" data-filter="*" class="selected"><?php esc_html_e('All', 'engitech'); ?></a></li>
+					    <li><a href="#" data-filter="*" class="selected"><?php esc_html_e('All', 'valkiriapps'); ?></a></li>
 						<?php 
 							$terms = get_terms("portfolio_cat"); // get all categories, but you can use any taxonomy
 							$count = count($terms); //How many are they?
@@ -30,7 +30,7 @@ get_header(); ?>
 					</ul>	
 
 					<?php if ( have_posts() ) : ?>
-						<div id="projects_grid" class="projects-grid <?php engitech_portfolio_option_class(); ?>">
+						<div id="projects_grid" class="projects-grid <?php valkiriapps_portfolio_option_class(); ?>">
 							<?php
 								/* Start the Loop */
 								while ( have_posts() ) : the_post();
@@ -46,7 +46,7 @@ get_header(); ?>
 							?>
 						</div>
 						<div class="pagination-wrapper">
-							<?php engitech_posts_navigation(); ?>
+							<?php valkiriapps_posts_navigation(); ?>
 						</div>
 					<?php 	
 					else :

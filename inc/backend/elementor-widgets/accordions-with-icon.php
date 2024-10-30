@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly (security measu
 /**
  * Widget Name: Accordions With Icon
  */
-class Engitech_Accordions_With_Icon extends Widget_Base{
+class Valkiriapps_Accordions_With_Icon extends Widget_Base{
 
  	// The get_name() method is a simple one, you just need to return a widget name that will be used in the code.
 	public function get_name() {
@@ -14,7 +14,7 @@ class Engitech_Accordions_With_Icon extends Widget_Base{
 
 	// The get_title() method, which again, is a very simple one, you need to return the widget title that will be displayed as the widget label.
 	public function get_title() {
-		return __( 'Engitech Accordions With Icon', 'engitech' );
+		return __( 'Valkiriapps Accordions With Icon', 'valkiriapps' );
 	}
 
 	// The get_icon() method, is an optional but recommended method, it lets you set the widget icon. you can use any of the eicon or font-awesome icons, simply return the class name as a string.
@@ -24,7 +24,7 @@ class Engitech_Accordions_With_Icon extends Widget_Base{
 
 	// The get_categories method, lets you set the category of the widget, return the category name as a string.
 	public function get_categories() {
-		return [ 'category_engitech' ];
+		return [ 'category_valkiriapps' ];
 	}
 
 	protected function register_controls() {
@@ -33,7 +33,7 @@ class Engitech_Accordions_With_Icon extends Widget_Base{
 		$this->start_controls_section(
 			'content_section',
 			[
-				'label' => __( 'Accordions', 'engitech' ),
+				'label' => __( 'Accordions', 'valkiriapps' ),
 			]
 		);
 
@@ -42,10 +42,10 @@ class Engitech_Accordions_With_Icon extends Widget_Base{
 		$repeater->add_control(
 			'acc_title',
 			[
-				'label' => __( 'Title & Content', 'engitech' ),
+				'label' => __( 'Title & Content', 'valkiriapps' ),
 				'type' => Controls_Manager::TEXT,
-				'default' => __( 'Accordion Title', 'engitech' ),
-				'placeholder' => __( 'Accordion Title', 'engitech' ),
+				'default' => __( 'Accordion Title', 'valkiriapps' ),
+				'placeholder' => __( 'Accordion Title', 'valkiriapps' ),
 				'label_block' => true,
 			]
 		);
@@ -53,9 +53,9 @@ class Engitech_Accordions_With_Icon extends Widget_Base{
 		$repeater->add_control(
 			'acc_content',
 			[
-				'label' => __( 'Content', 'engitech' ),
-				'default' => __( 'Accordion Content', 'engitech' ),
-				'placeholder' => __( 'Accordion Content', 'engitech' ),
+				'label' => __( 'Content', 'valkiriapps' ),
+				'default' => __( 'Accordion Content', 'valkiriapps' ),
+				'placeholder' => __( 'Accordion Content', 'valkiriapps' ),
 				'type' => Controls_Manager::WYSIWYG,
 				'show_label' => false,
 			]
@@ -63,7 +63,7 @@ class Engitech_Accordions_With_Icon extends Widget_Base{
 		$repeater->add_control(
 			'icon_title',
 			[
-				'label' => __( 'Icon Title', 'engitech' ),
+				'label' => __( 'Icon Title', 'valkiriapps' ),
 				'type' => Controls_Manager::ICONS,
 				'default' => [
 					'value' => 'fas fa-star',
@@ -75,17 +75,17 @@ class Engitech_Accordions_With_Icon extends Widget_Base{
 		$this->add_control(
 			'ot_accs',
 			[
-				'label' => __( 'Accordion Items', 'engitech' ),
+				'label' => __( 'Accordion Items', 'valkiriapps' ),
 				'type' => Controls_Manager::REPEATER,
 				'fields' => $repeater->get_controls(),
 				'default' => [
 					[
-						'acc_title' => __( 'Accordion #1', 'engitech' ),
-						'acc_content' => __( 'We reimburse all expenses of the Client for the payment of fines and penalties that were caused by mistakes made by us in accounting and tax accounting and reporting.', 'engitech' ),
+						'acc_title' => __( 'Accordion #1', 'valkiriapps' ),
+						'acc_content' => __( 'We reimburse all expenses of the Client for the payment of fines and penalties that were caused by mistakes made by us in accounting and tax accounting and reporting.', 'valkiriapps' ),
 					],
 					[
-						'acc_title' => __( 'Accordion #2', 'engitech' ),
-						'acc_content' => __( 'We reimburse all expenses of the Client for the payment of fines and penalties that were caused by mistakes made by us in accounting and tax accounting and reporting.', 'engitech' ),
+						'acc_title' => __( 'Accordion #2', 'valkiriapps' ),
+						'acc_content' => __( 'We reimburse all expenses of the Client for the payment of fines and penalties that were caused by mistakes made by us in accounting and tax accounting and reporting.', 'valkiriapps' ),
 					],
 				],
 				'title_field' => '{{{ acc_title }}}',
@@ -94,14 +94,14 @@ class Engitech_Accordions_With_Icon extends Widget_Base{
 		$this->add_control(
 			'default_active',
 			[
-				'label'   => esc_html__( 'Default Active', 'engitech' ),
+				'label'   => esc_html__( 'Default Active', 'valkiriapps' ),
 				'type'    => Controls_Manager::SWITCHER,
 			]
 		);
 		$this->add_control(
 			'item_active',
 			[
-				'label' => esc_html__( 'Item Active', 'engitech' ),
+				'label' => esc_html__( 'Item Active', 'valkiriapps' ),
 				'type' => Controls_Manager::NUMBER,
 				'min' => 1,
 				'step' => 1,
@@ -113,7 +113,7 @@ class Engitech_Accordions_With_Icon extends Widget_Base{
 		$this->add_control(
 			'icon_close',
 			[
-				'label' => __( 'Icon', 'engitech' ),
+				'label' => __( 'Icon', 'valkiriapps' ),
 				'type' => Controls_Manager::ICONS,
 				'separator' => 'before',
 				'fa4compatibility' => 'icon',
@@ -140,7 +140,7 @@ class Engitech_Accordions_With_Icon extends Widget_Base{
 		$this->add_control(
 			'icon_active',
 			[
-				'label' => __( 'Active Icon', 'engitech' ),
+				'label' => __( 'Active Icon', 'valkiriapps' ),
 				'type' => Controls_Manager::ICONS,
 				'fa4compatibility' => 'select_icon_active',
 				'default' => [
@@ -169,7 +169,7 @@ class Engitech_Accordions_With_Icon extends Widget_Base{
 		$this->add_control(
 			'header_size',
 			[
-				'label' => __( 'Title HTML Tag', 'engitech' ),
+				'label' => __( 'Title HTML Tag', 'valkiriapps' ),
 				'type' => Controls_Manager::SELECT,
 				'options' => [
 					'h1' => 'H1',
@@ -190,14 +190,14 @@ class Engitech_Accordions_With_Icon extends Widget_Base{
 		$this->start_controls_section(
 			'style_section',
 			[
-				'label' => __( 'Accordions', 'engitech' ),
+				'label' => __( 'Accordions', 'valkiriapps' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
 		$this->add_control(
 			'acc_spacing',
 			[
-				'label' => __( 'Spacing', 'engitech' ),
+				'label' => __( 'Spacing', 'valkiriapps' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -212,7 +212,7 @@ class Engitech_Accordions_With_Icon extends Widget_Base{
 		$this->add_responsive_control(
 			'acc_padding',
 			[
-				'label' => __( 'Padding', 'engitech' ),
+				'label' => __( 'Padding', 'valkiriapps' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', 'em', '%' ],
 				'selectors' => [
@@ -223,7 +223,7 @@ class Engitech_Accordions_With_Icon extends Widget_Base{
 		$this->add_responsive_control(
 			'acc_radius',
 			[
-				'label' => __( 'Border Radius', 'engitech' ),
+				'label' => __( 'Border Radius', 'valkiriapps' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', 'em', '%' ],
 				'selectors' => [
@@ -234,7 +234,7 @@ class Engitech_Accordions_With_Icon extends Widget_Base{
 		$this->add_control(
 			'bg_acc',
 			[
-				'label' => __( 'Background', 'engitech' ),
+				'label' => __( 'Background', 'valkiriapps' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -245,7 +245,7 @@ class Engitech_Accordions_With_Icon extends Widget_Base{
 		$this->add_control(
 			'bg_acc_active',
 			[
-				'label' => __( 'Background Active', 'engitech' ),
+				'label' => __( 'Background Active', 'valkiriapps' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -284,7 +284,7 @@ class Engitech_Accordions_With_Icon extends Widget_Base{
 		$this->start_controls_section(
 			'style_title_icon',
 			[
-				'label' => __( 'Title & Icon', 'engitech' ),
+				'label' => __( 'Title & Icon', 'valkiriapps' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -293,14 +293,14 @@ class Engitech_Accordions_With_Icon extends Widget_Base{
 		$this->add_control(
 			'heading_title',
 			[
-				'label' => __( 'Title', 'engitech' ),
+				'label' => __( 'Title', 'valkiriapps' ),
 				'type' => Controls_Manager::HEADING,
 			]
 		);
 		$this->add_control(
 			'title_color',
 			[
-				'label' => __( 'Color', 'engitech' ),
+				'label' => __( 'Color', 'valkiriapps' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -311,7 +311,7 @@ class Engitech_Accordions_With_Icon extends Widget_Base{
 		$this->add_control(
 			'title_color_active',
 			[
-				'label' => __( 'Active Color', 'engitech' ),
+				'label' => __( 'Active Color', 'valkiriapps' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -331,7 +331,7 @@ class Engitech_Accordions_With_Icon extends Widget_Base{
 		$this->add_control(
 			'heading_icon_title',
 			[
-				'label' => __( 'Icon', 'engitech' ),
+				'label' => __( 'Icon', 'valkiriapps' ),
 				'type' => Controls_Manager::HEADING,
 				'separator'	=> 'before'
 			]
@@ -352,7 +352,7 @@ class Engitech_Accordions_With_Icon extends Widget_Base{
 		$this->add_control(
 			'icon_title_spacing',
 			[
-				'label' => __( 'Spacing', 'engitech' ),
+				'label' => __( 'Spacing', 'valkiriapps' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -368,7 +368,7 @@ class Engitech_Accordions_With_Icon extends Widget_Base{
 		$this->add_responsive_control(
 			'icon_title_size',
 			[
-				'label' => __( 'Size', 'engitech' ),
+				'label' => __( 'Size', 'valkiriapps' ),
 				'type' => Controls_Manager::SLIDER,
 				'default' => [],
 				'range' => [
@@ -385,7 +385,7 @@ class Engitech_Accordions_With_Icon extends Widget_Base{
 		$this->add_control(
 			'icon_title_color',
 			[
-				'label' => __( 'Color', 'engitech' ),
+				'label' => __( 'Color', 'valkiriapps' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -398,7 +398,7 @@ class Engitech_Accordions_With_Icon extends Widget_Base{
 		$this->add_control(
 			'icon_title_color_active',
 			[
-				'label' => __( 'Active Color', 'engitech' ),
+				'label' => __( 'Active Color', 'valkiriapps' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -462,7 +462,7 @@ class Engitech_Accordions_With_Icon extends Widget_Base{
 		$this->add_control(
 			'heading_icon_toggle',
 			[
-				'label' => __( 'Icon Toggle', 'engitech' ),
+				'label' => __( 'Icon Toggle', 'valkiriapps' ),
 				'type' => Controls_Manager::HEADING,
 				'separator'	=> 'before'
 			]
@@ -471,7 +471,7 @@ class Engitech_Accordions_With_Icon extends Widget_Base{
 		$this->add_responsive_control(
 			'icon_toggle_size',
 			[
-				'label' => __( 'Size', 'engitech' ),
+				'label' => __( 'Size', 'valkiriapps' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -488,7 +488,7 @@ class Engitech_Accordions_With_Icon extends Widget_Base{
 		$this->add_control(
 			'icon_toggle_color',
 			[
-				'label' => __( 'Color', 'engitech' ),
+				'label' => __( 'Color', 'valkiriapps' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -501,7 +501,7 @@ class Engitech_Accordions_With_Icon extends Widget_Base{
 		$this->add_control(
 			'icon_toggle_color_active',
 			[
-				'label' => __( 'Active Color', 'engitech' ),
+				'label' => __( 'Active Color', 'valkiriapps' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -517,14 +517,14 @@ class Engitech_Accordions_With_Icon extends Widget_Base{
 		$this->start_controls_section(
 			'style_content',
 			[
-				'label' => __( 'Content', 'engitech' ),
+				'label' => __( 'Content', 'valkiriapps' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
 		$this->add_control(
 			'content_color',
 			[
-				'label' => __( 'Color', 'engitech' ),
+				'label' => __( 'Color', 'valkiriapps' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -542,7 +542,7 @@ class Engitech_Accordions_With_Icon extends Widget_Base{
 		$this->add_responsive_control(
 			'content_padding',
 			[
-				'label' => __( 'Padding', 'engitech' ),
+				'label' => __( 'Padding', 'valkiriapps' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', 'em', '%' ],
 				'selectors' => [
@@ -616,5 +616,5 @@ class Engitech_Accordions_With_Icon extends Widget_Base{
 	}
 
 }
-// After the Engitech_Accordions_With_Icon class is defined, I must register the new widget class with Elementor:
-Plugin::instance()->widgets_manager->register( new Engitech_Accordions_With_Icon() );
+// After the Valkiriapps_Accordions_With_Icon class is defined, I must register the new widget class with Elementor:
+Plugin::instance()->widgets_manager->register( new Valkiriapps_Accordions_With_Icon() );

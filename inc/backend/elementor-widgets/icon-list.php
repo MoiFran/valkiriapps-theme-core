@@ -3,9 +3,9 @@ namespace Elementor; // Custom widgets must be defined in the Elementor namespac
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly (security measure)
 
 /**
- * Widget Name: Engitech Icon List
+ * Widget Name: Valkiriapps Icon List
  */
-class Engitech_Icon_List extends Widget_Base{
+class Valkiriapps_Icon_List extends Widget_Base{
 
  	// The get_name() method is a simple one, you just need to return a widget name that will be used in the code.
 	public function get_name() {
@@ -14,7 +14,7 @@ class Engitech_Icon_List extends Widget_Base{
 
 	// The get_title() method, which again, is a very simple one, you need to return the widget title that will be displayed as the widget label.
 	public function get_title() {
-		return __( 'Engitech Icon List', 'engitech' );
+		return __( 'Valkiriapps Icon List', 'valkiriapps' );
 	}
 
 	// The get_icon() method, is an optional but recommended method, it lets you set the widget icon. you can use any of the eicon or font-awesome icons, simply return the class name as a string.
@@ -24,30 +24,30 @@ class Engitech_Icon_List extends Widget_Base{
 
 	// The get_categories method, lets you set the category of the widget, return the category name as a string.
 	public function get_categories() {
-		return [ 'category_engitech' ];
+		return [ 'category_valkiriapps' ];
 	}
 
 	protected function register_controls() {
 		$this->start_controls_section(
 			'section_icon',
 			[
-				'label' => __( 'Icon List', 'engitech' ),
+				'label' => __( 'Icon List', 'valkiriapps' ),
 			]
 		);
 
 		$this->add_control(
 			'view',
 			[
-				'label' => __( 'Layout', 'engitech' ),
+				'label' => __( 'Layout', 'valkiriapps' ),
 				'type' => Controls_Manager::CHOOSE,
 				'default' => 'vertical',
 				'options' => [
 					'vertical' => [
-						'title' => __( 'Default', 'engitech' ),
+						'title' => __( 'Default', 'valkiriapps' ),
 						'icon' => 'eicon-editor-list-ul',
 					],
 					'horizontal' => [
-						'title' => __( 'Inline', 'engitech' ),
+						'title' => __( 'Inline', 'valkiriapps' ),
 						'icon' => 'eicon-ellipsis-h',
 					],
 				],
@@ -60,18 +60,18 @@ class Engitech_Icon_List extends Widget_Base{
 		$repeater->add_control(
 			'text',
 			[
-				'label' => __( 'Text', 'engitech' ),
+				'label' => __( 'Text', 'valkiriapps' ),
 				'type' => Controls_Manager::TEXT,
 				'label_block' => true,
-				'placeholder' => __( 'List Menu Item', 'engitech' ),
-				'default' => __( 'List Menu Item', 'engitech' ),
+				'placeholder' => __( 'List Menu Item', 'valkiriapps' ),
+				'default' => __( 'List Menu Item', 'valkiriapps' ),
 			]
 		);
 
 		$repeater->add_control(
 			'selected_icon',
 			[
-				'label' => __( 'Icon', 'engitech' ),
+				'label' => __( 'Icon', 'valkiriapps' ),
 				'type' => Controls_Manager::ICONS,
 				'label_block' => true,
 				'default' => [],
@@ -82,10 +82,10 @@ class Engitech_Icon_List extends Widget_Base{
 		$repeater->add_control(
 			'link',
 			[
-				'label' => __( 'Link', 'engitech' ),
+				'label' => __( 'Link', 'valkiriapps' ),
 				'type' => Controls_Manager::URL,
 				'label_block' => true,
-				'placeholder' => __( 'https://your-link.com', 'engitech' ),
+				'placeholder' => __( 'https://your-link.com', 'valkiriapps' ),
 			]
 		);
 
@@ -97,13 +97,13 @@ class Engitech_Icon_List extends Widget_Base{
 				'fields' => $repeater->get_controls(),
 				'default' => [
 					[
-						'text' => __( 'List Menu Item #1', 'engitech' ),
+						'text' => __( 'List Menu Item #1', 'valkiriapps' ),
 					],
 					[
-						'text' => __( 'List Menu Item #2', 'engitech' ),
+						'text' => __( 'List Menu Item #2', 'valkiriapps' ),
 					],
 					[
-						'text' => __( 'List Menu Item #3', 'engitech' ),
+						'text' => __( 'List Menu Item #3', 'valkiriapps' ),
 					],
 				],
 				'title_field' => '{{{ text }}}',
@@ -113,11 +113,11 @@ class Engitech_Icon_List extends Widget_Base{
 		$this->add_control(
 			'icon_view',
 			[
-				'label' => __( 'View Icon', 'engitech' ),
+				'label' => __( 'View Icon', 'valkiriapps' ),
 				'type' => Controls_Manager::SELECT,
 				'options' => [
-					'default' => __( 'Default', 'engitech' ),
-					'stacked' => __( 'Stacked', 'engitech' ),
+					'default' => __( 'Default', 'valkiriapps' ),
+					'stacked' => __( 'Stacked', 'valkiriapps' ),
 				],
 				'default' => 'default',
 				'prefix_class' => 'ot-view-',
@@ -129,7 +129,7 @@ class Engitech_Icon_List extends Widget_Base{
 		$this->start_controls_section(
 			'section_menu_list',
 			[
-				'label' => __( 'List', 'engitech' ),
+				'label' => __( 'List', 'valkiriapps' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -137,7 +137,7 @@ class Engitech_Icon_List extends Widget_Base{
 		$this->add_responsive_control(
 			'space_between',
 			[
-				'label' => __( 'Space Between', 'engitech' ),
+				'label' => __( 'Space Between', 'valkiriapps' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -154,24 +154,24 @@ class Engitech_Icon_List extends Widget_Base{
 		$this->add_responsive_control(
 			'list_menu_align',
 			[
-				'label' => __( 'Alignment', 'engitech' ),
+				'label' => __( 'Alignment', 'valkiriapps' ),
 				'type' => Controls_Manager::CHOOSE,
 				'options' => [
 					'flex-start' => [
-						'title' => __( 'Left', 'engitech' ),
+						'title' => __( 'Left', 'valkiriapps' ),
 						'icon' => 'eicon-text-align-left',
 					],
 					'center' => [
-						'title' => __( 'Center', 'engitech' ),
+						'title' => __( 'Center', 'valkiriapps' ),
 						'icon' => 'eicon-text-align-center',
 					],
 					'flex-end' => [
-						'title' => __( 'Right', 'engitech' ),
+						'title' => __( 'Right', 'valkiriapps' ),
 						'icon' => 'eicon-text-align-right',
 					],
 
 					'space-between' => [
-						'title' => esc_html__( 'Justified', 'engitech' ),
+						'title' => esc_html__( 'Justified', 'valkiriapps' ),
 						'icon' => 'eicon-text-align-justify',
 					],
 				],
@@ -187,7 +187,7 @@ class Engitech_Icon_List extends Widget_Base{
 		$this->start_controls_section(
 			'section_icon_style',
 			[
-				'label' => __( 'Icon', 'engitech' ),
+				'label' => __( 'Icon', 'valkiriapps' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -195,7 +195,7 @@ class Engitech_Icon_List extends Widget_Base{
 		$this->add_control(
 			'icon_spacing',
 			[
-				'label' => __( 'Spacing', 'engitech' ),
+				'label' => __( 'Spacing', 'valkiriapps' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -211,7 +211,7 @@ class Engitech_Icon_List extends Widget_Base{
 		$this->add_responsive_control(
 			'icon_size',
 			[
-				'label' => __( 'Size', 'engitech' ),
+				'label' => __( 'Size', 'valkiriapps' ),
 				'type' => Controls_Manager::SLIDER,
 				'default' => [
 					'size' => 14,
@@ -230,7 +230,7 @@ class Engitech_Icon_List extends Widget_Base{
 		$this->add_control(
 			'icon_padding',
 			[
-				'label' => __( 'Padding', 'engitech' ),
+				'label' => __( 'Padding', 'valkiriapps' ),
 				'type' => Controls_Manager::SLIDER,
 				'selectors' => [
 					'{{WRAPPER}} .ot-icon-list-icon' => 'padding: {{SIZE}}{{UNIT}};',
@@ -249,7 +249,7 @@ class Engitech_Icon_List extends Widget_Base{
 		$this->add_control(
 			'border_radius',
 			[
-				'label' => __( 'Border Radius', 'engitech' ),
+				'label' => __( 'Border Radius', 'valkiriapps' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%' ],
 				'selectors' => [
@@ -266,13 +266,13 @@ class Engitech_Icon_List extends Widget_Base{
 		$this->start_controls_tab(
 			'ot_icon_colors_normal',
 			[
-				'label' => __( 'Normal', 'engitech' ),
+				'label' => __( 'Normal', 'valkiriapps' ),
 			]
 		);
 		$this->add_control(
 			'icon_color',
 			[
-				'label' => __( 'Color', 'engitech' ),
+				'label' => __( 'Color', 'valkiriapps' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -284,7 +284,7 @@ class Engitech_Icon_List extends Widget_Base{
 		$this->add_control(
 			'icon_bgcolor',
 			[
-				'label' => __( 'Background', 'engitech' ),
+				'label' => __( 'Background', 'valkiriapps' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -300,13 +300,13 @@ class Engitech_Icon_List extends Widget_Base{
 		$this->start_controls_tab(
 			'ot_icon_colors_hover',
 			[
-				'label' => __( 'Hover', 'engitech' ),
+				'label' => __( 'Hover', 'valkiriapps' ),
 			]
 		);
 		$this->add_control(
 			'icon_color_hover',
 			[
-				'label' => __( 'Color', 'engitech' ),
+				'label' => __( 'Color', 'valkiriapps' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -318,7 +318,7 @@ class Engitech_Icon_List extends Widget_Base{
 		$this->add_control(
 			'icon_bghcolor',
 			[
-				'label' => __( 'Background', 'engitech' ),
+				'label' => __( 'Background', 'valkiriapps' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -338,7 +338,7 @@ class Engitech_Icon_List extends Widget_Base{
 		$this->start_controls_section(
 			'section_text_style',
 			[
-				'label' => __( 'Text', 'engitech' ),
+				'label' => __( 'Text', 'valkiriapps' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -346,7 +346,7 @@ class Engitech_Icon_List extends Widget_Base{
 		$this->add_control(
 			'text_color',
 			[
-				'label' => __( 'Text Color', 'engitech' ),
+				'label' => __( 'Text Color', 'valkiriapps' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -358,7 +358,7 @@ class Engitech_Icon_List extends Widget_Base{
 		$this->add_control(
 			'text_color_hover',
 			[
-				'label' => __( 'Hover', 'engitech' ),
+				'label' => __( 'Hover', 'valkiriapps' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -444,5 +444,5 @@ class Engitech_Icon_List extends Widget_Base{
 
 	protected function content_template() {}
 }
-// After the Engitech_Icon_List class is defined, I must register the new widget class with Elementor:
-Plugin::instance()->widgets_manager->register( new Engitech_Icon_List() );
+// After the Valkiriapps_Icon_List class is defined, I must register the new widget class with Elementor:
+Plugin::instance()->widgets_manager->register( new Valkiriapps_Icon_List() );

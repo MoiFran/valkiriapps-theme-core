@@ -4,10 +4,10 @@
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package Engitech
+ * @package valkiriapps
  */
 
-if ( ! function_exists( 'engitech_setup' ) ) :
+if ( ! function_exists( 'valkiriapps_setup' ) ) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
 	 *
@@ -15,14 +15,14 @@ if ( ! function_exists( 'engitech_setup' ) ) :
 	 * runs before the init hook. The init hook is too late for some features, such
 	 * as indicating support for post thumbnails.
 	 */
-	function engitech_setup() {
+	function valkiriapps_setup() {
 		/*
 		 * Make theme available for translation.
 		 * Translations can be filed in the /languages/ directory.
 		 * If you're building a theme based on _s, use a find and replace
-		 * to change 'engitech' to the name of your theme in all the template files.
+		 * to change 'valkiriapps' to the name of your theme in all the template files.
 		 */
-		load_theme_textdomain( 'engitech', get_template_directory() . '/languages' );
+		load_theme_textdomain( 'valkiriapps', get_template_directory() . '/languages' );
 
 		// Add default posts and comments RSS feed links to head.
 		add_theme_support( 'automatic-feed-links' );
@@ -43,7 +43,7 @@ if ( ! function_exists( 'engitech_setup' ) ) :
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
-			'primary' => esc_html__( 'Primary', 'engitech' ),
+			'primary' => esc_html__( 'Primary', 'valkiriapps' ),
 		) );
 
 		/*
@@ -77,32 +77,32 @@ if ( ! function_exists( 'engitech_setup' ) ) :
 		* y_crop_position accepts ‘top’, ‘center’, or ‘bottom’.
 		* 750 pixels wide by 500 pixels tall
 		*/
-		add_image_size( 'engitech-slider-post-thumbnail', 601, 520, array( 'center', 'center' ) );
-		add_image_size( 'engitech-portfolio-thumbnail-carousel', 720, 520, array( 'left', 'center' ) );
-		add_image_size( 'engitech-portfolio-thumbnail-grid', 720, 720, array( 'center', 'center' ) );      
-		add_image_size( 'engitech-portfolio-thumbnail-masonry', 720 ); // 780 pixels wide (and unlimited height)
+		add_image_size( 'valkiriapps-slider-post-thumbnail', 601, 520, array( 'center', 'center' ) );
+		add_image_size( 'valkiriapps-portfolio-thumbnail-carousel', 720, 520, array( 'left', 'center' ) );
+		add_image_size( 'valkiriapps-portfolio-thumbnail-grid', 720, 720, array( 'center', 'center' ) );      
+		add_image_size( 'valkiriapps-portfolio-thumbnail-masonry', 720 ); // 780 pixels wide (and unlimited height)
 
 		/*
 		 * This theme styles the visual editor to resemble the theme style,
 		 * specifically font, colors, and column width.
 	 	 */
-		add_editor_style( array( 'css/editor-style.css', engitech_fonts_url() ) );
+		add_editor_style( array( 'css/editor-style.css', valkiriapps_fonts_url() ) );
 		
 	}
 endif;
-add_action( 'after_setup_theme', 'engitech_setup' );
+add_action( 'after_setup_theme', 'valkiriapps_setup' );
 
 /**
  * Register widget area.
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
-function engitech_widgets_init() {
+function valkiriapps_widgets_init() {
 	/* Register the 'primary' sidebar. */
 	register_sidebar( array(
-		'name'          => esc_html__( 'Primary Sidebar', 'engitech' ),
+		'name'          => esc_html__( 'Primary Sidebar', 'valkiriapps' ),
 		'id'            => 'primary',
-		'description'   => esc_html__( 'Add widgets here.', 'engitech' ),
+		'description'   => esc_html__( 'Add widgets here.', 'valkiriapps' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h5 class="widget-title">',
@@ -110,27 +110,27 @@ function engitech_widgets_init() {
 	) );
 	/* Repeat register_sidebar() code for additional sidebars. */
 }
-add_action( 'widgets_init', 'engitech_widgets_init' );
+add_action( 'widgets_init', 'valkiriapps_widgets_init' );
 
 /**
  * Register custom fonts.
  */
-if ( ! function_exists( 'engitech_fonts_url' ) ) :
+if ( ! function_exists( 'valkiriapps_fonts_url' ) ) :
 /**
  * Register Google fonts for Engitech.
  *
- * Create your own engitech_fonts_url() function to override in a child theme.
+ * Create your own valkiriapps_fonts_url() function to override in a child theme.
  *
  * @since Engitech 1.0
  *
  * @return string Google fonts URL for the theme.
  */
-function engitech_fonts_url() {
+function valkiriapps_fonts_url() {
 	$fonts_url = '';
 	$font_families     = array();
 	$subsets   = 'latin,latin-ext';
-	$mfont = engitech_get_option( 'body_typo', [] );
-	$sfont = engitech_get_option( 'second_font', [] );
+	$mfont = valkiriapps_get_option( 'body_typo', [] );
+	$sfont = valkiriapps_get_option( 'second_font', [] );
 
 	if ( empty( $sfont['font-family'] ) ) {
 		$font_families[] = 'Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i';
@@ -153,17 +153,17 @@ endif;
 /**
  * Enqueue scripts and styles.
  */
-function engitech_scripts() {
+function valkiriapps_scripts() {
 
 	// Add custom fonts, used in the main stylesheet.
-	wp_enqueue_style( 'engitech-fonts', engitech_fonts_url(), array(), null );
+	wp_enqueue_style( 'valkiriapps-fonts', valkiriapps_fonts_url(), array(), null );
 
 	/** All frontend css files **/ 
 	wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/css/bootstrap.css', array(), '4.0', 'all');
 
 	/** load fonts **/
-    wp_enqueue_style( 'engitech-awesome-font', get_template_directory_uri().'/css/font-awesome.min.css');
-    wp_enqueue_style( 'engitech-flaticon-font', get_template_directory_uri().'/css/flaticon.css');
+    wp_enqueue_style( 'valkiriapps-awesome-font', get_template_directory_uri().'/css/font-awesome.min.css');
+    wp_enqueue_style( 'valkiriapps-flaticon-font', get_template_directory_uri().'/css/flaticon.css');
 
     /** Slick slider **/
     wp_enqueue_style( 'slick-slider', get_template_directory_uri().'/css/slick.css');
@@ -176,9 +176,9 @@ function engitech_scripts() {
 	$theme = wp_get_theme();
 	if( is_child_theme() ) { $theme = wp_get_theme()->parent(); }
 	
-	wp_enqueue_style( 'engitech-style', get_template_directory_uri() . '/style.css', array(), $theme->version );	
+	wp_enqueue_style( 'valkiriapps-style', get_template_directory_uri() . '/style.css', array(), $theme->version );	
 
-	if( engitech_get_option('preload') != false ){
+	if( valkiriapps_get_option('preload') != false ){
 		wp_enqueue_script( 'royal-preloader', get_template_directory_uri()."/js/royal_preloader.min.js", array('jquery'), '20180910', true);
 	}
 	wp_enqueue_script( 'imagesloaded' );
@@ -187,16 +187,18 @@ function engitech_scripts() {
 	wp_enqueue_script( 'slick-slider', get_template_directory_uri() . '/js/slick.min.js', array( 'jquery' ), '20180910', true );
 	wp_enqueue_script( 'easypiechart', get_template_directory_uri() . '/js/easypiechart.min.js', array( 'jquery' ), '20190829', true );
 	wp_enqueue_script( 'countdown', get_template_directory_uri() . '/js/jquery.countdown.min.js', array( 'jquery' ), '20180910', true );
-	wp_enqueue_script( 'engitech-elementor', get_template_directory_uri() . '/js/elementor.js', array( 'jquery' ), '20180910', true );
-	wp_enqueue_script( 'engitech-elementor-header', get_template_directory_uri() . '/js/elementor-header.js', array( 'jquery' ), '20180910', true );
-	wp_enqueue_script( 'engitech-scripts', get_template_directory_uri() . '/js/scripts.js', array( 'jquery' ), '20180910', true );
-	wp_enqueue_script( 'engitech-header-mobile-scripts', get_template_directory_uri() . '/js/header-mobile.js', array('jquery'), '20180910', true );
+	wp_enqueue_script( 'valkiriapps-elementor', get_template_directory_uri() . '/js/elementor.js', array( 'jquery' ), '20180910', true );
+	wp_enqueue_script( 'valkiriapps-elementor-header', get_template_directory_uri() . '/js/elementor-header.js', array( 'jquery' ), '20180910', true );
+	wp_enqueue_script( 'valkiriapps-scripts', get_template_directory_uri() . '/js/scripts.js', array( 'jquery' ), '20180910', true );
+	wp_enqueue_script( 'valkiriapps-header-mobile-scripts', get_template_directory_uri() . '/js/header-mobile.js', array('jquery'), '20180910', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
-add_action( 'wp_enqueue_scripts', 'engitech_scripts' );
+add_action( 'wp_enqueue_scripts', 'valkiriapps_scripts' );
+
+
 
 /**
  * Post Like System.
